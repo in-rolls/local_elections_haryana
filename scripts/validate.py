@@ -15,14 +15,27 @@ import sys
 DATA = pathlib.Path(__file__).resolve().parent.parent / "data"
 YEAR = "2022"
 
-# Official totals published for the 2022 Haryana panchayat general election.
-OFFICIAL = {"2022": {"gram_panchayats": 6220, "panches": 61993, "blocks": 143}}
+# Official totals published by the State Election Commission.
+# "basis" says what the published figure counts. 2022's was announced before
+# polling and counts seats to be filled; 2016's was published afterwards and
+# counts people actually elected, which excludes seats left vacant. Comparing
+# our seat rows against an "elected" figure made 2016 look like a 102%
+# over-count when it was really 98.8%.
+OFFICIAL = {
+    "2022": {"gram_panchayats": 6220, "panches": 61993, "blocks": 143,
+             "basis": "seats"},
+    "2016": {"gram_panchayats": 6193, "panches": 60438, "basis": "elected"},
+}
 
-# Haryana reserves half of all sarpanch seats for women and 8% for BC(A), and
-# both are applied block by block, not statewide. That makes a per-block check
-# far sharper than a state total: offsetting errors cannot hide in it.
-WOMEN_SHARE = 0.50
-BC_A_SHARE = 0.08
+# Haryana applies its reservations block by block, not statewide, which makes a
+# per-block check far sharper than a state total: offsetting errors cannot hide
+# in it. The shares themselves changed between the two elections - the women's
+# quota went from one third to one half, and BC(A) reservation in panchayats
+# did not exist before the 2021 amendment.
+STATUTE = {
+    "2022": {"women": 0.50, "bc_a": 0.08},
+    "2016": {"women": 0.33, "bc_a": None},
+}
 
 
 class Report:
@@ -60,6 +73,7 @@ def main():
     ward = read_csv(year_dir / "ward_reservation.csv")
     manifest = read_csv(year_dir / "manifest.csv") if (year_dir / "manifest.csv").exists() else []
     official = OFFICIAL.get(args.year, {})
+    statute = STATUTE.get(args.year, STATUTE["2022"])
     report = Report()
 
     print(f"\n=== {args.year} Haryana gram panchayat reservation ===\n")
@@ -68,14 +82,27 @@ def main():
     print("Coverage")
     blocks = {(r["district"], r["block"]) for r in gp}
     if official:
-        got, want = len(gp), official["gram_panchayats"]
+        # compare like with like: against an "elected" figure, drop vacant seats
+        if official.get("basis") == "elected":
+            gp_count = [r for r in gp if r.get("vacant") != "1"]
+            ward_count = [r for r in ward if r.get("vacant") != "1"]
+            print(f"  [INFO] basis - official figures count people elected; "
+                  f"{len(gp) - len(gp_count)} GP and {len(ward) - len(ward_count)} "
+                  f"ward seats were vacant")
+        else:
+            gp_count, ward_count = gp, ward
+        got, want = len(gp_count), official["gram_panchayats"]
         report.check(pct(got, want) >= 97, "gram panchayats vs official total",
                      f"{got} of {want} ({pct(got, want):.1f}%)", hard=False)
-        got_w, want_w = len(ward), official["panches"]
+        got_w, want_w = len(ward_count), official["panches"]
         report.check(pct(got_w, want_w) >= 97, "panch seats vs official total",
                      f"{got_w} of {want_w} ({pct(got_w, want_w):.1f}%)", hard=False)
-        report.check(abs(len(blocks) - official["blocks"]) <= 2, "block count",
-                     f"{len(blocks)} parsed, {official['blocks']} expected", hard=False)
+        if "blocks" in official:
+            report.check(abs(len(blocks) - official["blocks"]) <= 2, "block count",
+                         f"{len(blocks)} parsed, {official['blocks']} expected",
+                         hard=False)
+        else:
+            print(f"  [INFO] blocks parsed - {len(blocks)}")
 
     if manifest:
         seats = {r["source_pdf"] for r in gp} | {r["source_pdf"] for r in ward}
@@ -141,9 +168,10 @@ def main():
 
     # --------------------------------------------------------------- statutory
     print("\nStatutory shares (the sharpest check: these bind per block)")
+    women_share, bc_share = statute["women"], statute["bc_a"]
     women = sum(int(r["woman_reserved"]) for r in gp)
-    report.check(abs(pct(women, len(gp)) - 100 * WOMEN_SHARE) <= 2,
-                 "statewide women's share is 50%",
+    report.check(abs(pct(women, len(gp)) - 100 * women_share) <= 3,
+                 f"statewide women's share is {women_share * 100:.0f}%",
                  f"{women}/{len(gp)} = {pct(women, len(gp)):.1f}%")
 
     by_block = collections.defaultdict(list)
@@ -153,21 +181,31 @@ def main():
     off_women, off_bc = [], []
     for key, rows in by_block.items():
         w = pct(sum(int(x["woman_reserved"]) for x in rows), len(rows))
-        if abs(w - 100 * WOMEN_SHARE) > 6:
+        if abs(w - 100 * women_share) > 6:
             off_women.append((key, len(rows), w))
-        b = pct(sum(x["caste_reservation"] == "BC_A" for x in rows), len(rows))
-        if abs(b - 100 * BC_A_SHARE) > 6:
-            off_bc.append((key, len(rows), b))
+        if bc_share is not None:
+            b = pct(sum(x["caste_reservation"] == "BC_A" for x in rows), len(rows))
+            if abs(b - 100 * bc_share) > 6:
+                off_bc.append((key, len(rows), b))
 
     report.check(len(off_women) <= 0.05 * len(by_block),
-                 "per-block women's share within 6pp of 50%",
+                 f"per-block women's share within 6pp of {women_share * 100:.0f}%",
                  f"{len(off_women)} of {len(by_block)} blocks off")
-    report.check(len(off_bc) <= 0.15 * len(by_block),
-                 "per-block BC(A) share within 6pp of 8%",
-                 f"{len(off_bc)} of {len(by_block)} blocks off", hard=False)
+    if bc_share is None:
+        # Panchayat BC(A) reservation only arrived with the 2021 amendment, so a
+        # handful of 2016 rows labelled "Backward Class" is plausible as a
+        # stray, but a real share would mean the parse is wrong.
+        bc_rows = sum(r["caste_reservation"] == "BC_A" for r in gp)
+        report.check(pct(bc_rows, len(gp)) < 0.5,
+                     "BC(A) seats negligible (not a category until 2021)",
+                     f"{bc_rows} rows = {pct(bc_rows, len(gp)):.2f}%")
+    else:
+        report.check(len(off_bc) <= 0.15 * len(by_block),
+                     f"per-block BC(A) share within 6pp of {bc_share * 100:.0f}%",
+                     f"{len(off_bc)} of {len(by_block)} blocks off", hard=False)
 
     for title, offenders in (("women", off_women), ("BC(A)", off_bc)):
-        shown = sorted(offenders, key=lambda x: -abs(x[2] - 50))
+        shown = sorted(offenders, key=lambda x: -abs(x[2] - 100 * women_share))
         for key, n, share in (shown if args.verbose else shown[:5]):
             print(f"        {title:6s} {key[0]}/{key[1]}: n={n}, {share:.0f}%")
 

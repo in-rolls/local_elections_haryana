@@ -29,7 +29,7 @@ KD_BC = "fiNM"  # pichhda/pichhde varg
 KD_WOMAN = "efgyk"  # mahila (also efgykvksa, efgyk,a)
 KD_OTHER_THAN = "flok;"  # sivay ("other than")
 
-VACANT = ("rikt", "fjDr")
+VACANT = ("rikt", "riet", "vacant", "fjDr", "[kkyh")
 
 
 def _squash(s):
@@ -51,8 +51,10 @@ def _undouble(s):
 
 
 def is_vacant(name):
-    n = _squash(name).lower()
-    return any(n.startswith(v.lower()) for v in VACANT)
+    """True when nobody holds the seat - it went unfilled, or the election there
+    was countermanded. Official "elected" totals exclude these."""
+    n = _squash(name).lstrip("*").strip().lower()
+    return not n or any(n.startswith(v.lower()) for v in VACANT)
 
 
 def strip_unopposed(name):
@@ -111,11 +113,14 @@ def normalize_reservation(raw):
     # "BC (A) Other than Women". 188 and 117 occurrences respectively.
     tokens = {re.sub(r"[^a-z]", "", t) for t in low.split()}
 
+    # "sched" decides it even when the head noun is wrong: the 2016 gazette
+    # prints "Scheduled Class" for several blocks, which is Scheduled Caste
+    # misspelt, not Backward Class.
     if "trib" in tight or "st" in tokens:
         caste = "ST"
-    elif "cast" in tight or "sc" in tokens:
+    elif "cast" in tight or "sched" in tight or "sc" in tokens:
         caste = "SC"
-    elif "clas" in tight or "bc" in tokens or "bca" in tokens:
+    elif "clas" in tight or "back" in tight or "bc" in tokens or "bca" in tokens:
         caste = "BC_A"
     else:
         caste = "NONE"

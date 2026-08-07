@@ -27,7 +27,7 @@ import sys
 
 import pdfplumber
 
-from normalize import label, normalize_reservation, strip_unopposed
+from normalize import is_vacant, label, normalize_reservation, strip_unopposed
 
 DATA = pathlib.Path(__file__).resolve().parent.parent / "data"
 YEAR = "2022"
@@ -39,7 +39,9 @@ PANCH = {"panch", "iap", "ipa"}
 RE_BLOCK_EN = re.compile(
     r"Block\s*[-–—]?\s*['‘\"]?\s*(?P<block>[A-Za-z][A-Za-z0-9 .&\-]{1,30}?)\s*['’\"]?\s*,?\s*"
     r"(?:and\s+)?District\s*[-–—:]?\s*['‘\"]?\s*(?P<district>[A-Za-z][A-Za-z .&\-]{1,25}?)"
-    r"\s*(?:during|for|,|$)",
+    # 2022 ends "... during General Elections-2022", 2016 "... in the General
+    # Election held in the month of January, 2016"
+    r"\s*(?:during|for|in\b|,|$)",
     re.I,
 )
 # Kruti Dev: [k.M&<block>] ftyk&<district>
@@ -53,11 +55,21 @@ RE_BLOCK_HI = re.compile(r"\[k\.M&\s*(?P<block>[^\]]{1,30}?)\]\s*ftyk&\s*(?P<dis
 # and once or twice in English - and every copy carries the same number. The
 # trailing s.161 phrase is required because the same number format also appears
 # inside table cells, in footnotes citing *other* notifications.
-RE_NOTIF = re.compile(
-    r"2022\s*[@/]\s*(\d{3,5})\s*[.,\-–—&]{0,3}\s*"
-    r"(?:In\s+pursuance|gfj;k\.kk\s+iapk;rh\s+jkt|,rn)",
-    re.I,
-)
+def notification_re(year):
+    """The notification's own serial number, e.g. "No. SEC/4E-II/2022/7385.- In
+    pursuance ..." or, in Kruti Dev, "...@2022@7385-& gfj;k.kk iapk;rh jkt".
+
+    This is the join key that makes the corpus tractable. The trailing s.161
+    phrase is required because the same number format also appears inside table
+    cells, in footnotes citing *other* notifications. The 2016 notifications put
+    a "Dated: 10.02.2016" between the number and that phrase.
+    """
+    return re.compile(
+        rf"{year}\s*[@/]\s*(\d{{3,5}})\s*[.,\-–—&]{{0,3}}\s*"
+        rf"(?:Dated\s*:?\s*[\d.\-/]+\s*)?"
+        rf"(?:In\s+pursuance|gfj;k\.kk\s+iapk;rh\s+jkt|,rn)",
+        re.I,
+    )
 
 
 def clean(cell):
@@ -215,7 +227,7 @@ def find_place(text):
     return None
 
 
-def parse_pdf(path):
+def parse_pdf(path, notif_pattern=None):
     """Yield seat dicts for one notification PDF.
 
     Each PDF holds exactly one block's notification, printed two or three times:
@@ -227,6 +239,7 @@ def parse_pdf(path):
     sometimes render their preamble as doubled characters ("22002222") and defeat
     any text match.
     """
+    notif_pattern = notif_pattern or notification_re("2022")
     ctx: dict[str, str | None] = {"notif": None, "block": None, "district": None}
     printing = 0
     last_sr = None
@@ -252,7 +265,7 @@ def parse_pdf(path):
     with pdfplumber.open(str(path)) as pdf:
         for page in pdf.pages:
             text = clean(page.extract_text() or "")
-            match = RE_NOTIF.search(text)
+            match = notif_pattern.search(text)
             if match:
                 ctx["notif"] = match.group(1)
             place = find_place(text)
@@ -312,6 +325,7 @@ def parse_pdf(path):
                         "winner": name,
                         "father_husband": strip_unopposed(raw_father)[0],
                         "unopposed": int(unopposed),
+                        "vacant": int(is_vacant(name)),
                         "gp_column": gp_column if kind == "sarpanch" else None,
                     }
     yield from finish(pending)
@@ -354,16 +368,30 @@ def select_printing(rows):
     most complete one, since a printing can be cut short by a page the table
     finder could not read.
     """
+    # A notification number is only missing before the first preamble a file
+    # yields - some Kruti Dev printings render theirs as doubled characters and
+    # defeat the match. Those rows belong to that file's first notification.
+    first = {}
+    for r in rows:
+        if r["notification"]:
+            first.setdefault(r["source_pdf"], r["notification"])
+    for r in rows:
+        if not r["notification"]:
+            r["notification"] = first.get(r["source_pdf"])
+
     printings = collections.defaultdict(list)
     for r in rows:
-        printings[(r["source_pdf"], r["printing"])].append(r)
+        printings[(r["source_pdf"], r["notification"], r["printing"])].append(r)
 
-    by_file = collections.defaultdict(list)
-    for (pdf_name, _), group in printings.items():
-        by_file[pdf_name].append(group)
+    # Group by notification rather than by file: a 2022 PDF holds one
+    # notification printed two or three times, but a 2016 district PDF holds a
+    # separate notification for each of its blocks, all of which must survive.
+    by_notification = collections.defaultdict(list)
+    for (pdf_name, notif, _), group in printings.items():
+        by_notification[(pdf_name, notif)].append(group)
 
     kept = []
-    for groups in by_file.values():
+    for groups in by_notification.values():
         kept += max(
             groups,
             key=lambda g: (
@@ -386,6 +414,7 @@ def main():
     pdfs = sorted(pdf_dir.glob("*.pdf"))[: args.limit]
     if not pdfs:
         sys.exit(f"no PDFs in {pdf_dir} - run harvest.py first")
+    notif_pattern = notification_re(args.year)
     manifest = load_manifest(out / "manifest.csv")
     if not manifest:
         print("warning: no manifest.csv - run harvest.py", file=sys.stderr)
@@ -393,7 +422,7 @@ def main():
     rows = []
     for i, path in enumerate(pdfs, 1):
         try:
-            rows.extend(parse_pdf(path))
+            rows.extend(parse_pdf(path, notif_pattern))
         except Exception as exc:  # noqa: BLE001 - keep going, report at the end
             print(f"\nERROR {path.name}: {exc}", file=sys.stderr)
         print(f"\r  {i}/{len(pdfs)} {path.name:24s} rows={len(rows)}", end="", file=sys.stderr)
@@ -415,7 +444,7 @@ def main():
     gp_cols = [
         "district", "block", "sr_no", "gram_panchayat", "reservation",
         "caste_reservation", "woman_reserved", "winner", "father_husband",
-        "unopposed", "reservation_raw", "script", "printings_agree",
+        "unopposed", "vacant", "reservation_raw", "script", "printings_agree",
         "notification", "source_pdf",
     ]
     ward_cols = gp_cols[:4] + ["ward_no"] + gp_cols[4:]
