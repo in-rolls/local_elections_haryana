@@ -1,7 +1,8 @@
 ## Haryana Gram Panchayat Seat Reservation Status
 
-Reservation status of every gram panchayat (sarpanch) seat in Haryana, plus the
-ward-level (panch) seats within each GP.
+Reservation status of every gram panchayat (sarpanch) seat in Haryana for the
+2022 and 2016 panchayat general elections, plus the ward-level (panch) seats
+within each GP.
 
 Haryana reserves GP seats along two independent dimensions — caste
 (Scheduled Caste / Backward Class 'A' / open) and gender (woman-reserved or not)
@@ -16,13 +17,25 @@ person elected to the seat.
 Data is partitioned by election year:
 
 ```
-data/2022/
-  manifest.csv           one row per source notification: district, block, SHA-256, URL
-  gp_reservation.csv     one row per gram panchayat        <- the main file
-  ward_reservation.csv   one row per GP ward (panch seat)
-  index.pdf              the SEC's statewide index
-  pdfs/                  the 187 notification PDFs
+data/2022/                 data/2016/
+  manifest.csv               manifest.csv
+  gp_reservation.csv         gp_reservation.csv     <- the main file
+  ward_reservation.csv       ward_reservation.csv
+  index.pdf                  pdfs/   (21 district PDFs)
+  pdfs/   (187 block PDFs)
 ```
+
+| | gram panchayats | ward seats | blocks | districts |
+|---|---|---|---|---|
+| 2022 | 6,159 (99.0% of official) | 61,362 (99.0%) | 143 | 22 |
+| 2016 | 6,079 (98.0%) | 61,618 (98.8% of elected) | 126 | 21 |
+
+2016 has fewer blocks and districts because Charkhi Dadri was not created until
+December 2016 and Nuh was still called Mewat. Joining the years on district and
+gram panchayat name matches 4,269 GPs, which is enough to see reservation
+rotate: only 50 of the 775 SC-reserved seats in 2016 were still SC-reserved in
+2022. Raising that match rate needs fuzzy name matching — the gazettes
+transliterate inconsistently ("Ado Majra" in 2016, "Adho Majra" in 2022).
 
 The source PDFs are committed, under readable names built from the index
 (`Rohtak__Meham.pdf`, not `2022120213-3.pdf`), so any row can be checked against
@@ -44,6 +57,7 @@ fetched the same bytes. It is about 150 MB per election year.
 | `winner` | person elected to the seat |
 | `father_husband` | as printed |
 | `unopposed` | 1 if elected unopposed (a `*` in the source) |
+| `vacant` | 1 if the seat went unfilled; official "elected" totals exclude these |
 | `reservation_raw` | the source cell, unmodified, for auditing |
 | `script` | `latin` or `krutidev` — which typesetting the row was read from |
 | `printings_agree` | 1 if the Hindi and English printings agree on this seat, 0 if not, blank if only one printing exists |
@@ -68,9 +82,15 @@ make all        # all three, in order
 `make harvest` is idempotent — it skips files already downloaded, and re-checksums
 everything. Pass `YEAR=` to any target.
 
-### Source
+### Sources
 
-The State Election Commission's statutory notification under s.161(4) of the
+**2016** is published as one PDF per district, each containing a separate
+notification per block, linked from the SEC's [5th general elections
+page](https://secharyana.gov.in/notifications-of-elected-candidates-of-panchayati-raj-institution-in-5th-general-elections-2016-in-the-state-of-haryana/).
+The NIC host serving those files no longer answers, so `harvest.py` fetches them
+from the Internet Archive and pins the exact snapshot in `manifest.csv`.
+
+**2022.** The State Election Commission's statutory notification under s.161(4) of the
 Haryana Panchayati Raj Act, 1994, published in the Haryana Government Gazette
 (Extraordinary) of 30 November 2022. A [statewide index
 PDF](https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/12/2022121338.pdf)
@@ -130,18 +150,24 @@ totals, and the statute. Two of its checks are worth trusting:
   printings is evidence of a misread. Seats that still disagree are marked in
   `printings_agree` rather than quietly resolved in favour of English.
 
-Reference totals for 2022: 6,220 gram panchayats, 61,993 panches, 143 blocks.
+Reference totals: 6,220 gram panchayats / 61,993 panches / 143 blocks for 2022,
+and 6,193 / 60,438 for 2016. These are not the same kind of number — the 2022
+figures were announced before polling and count *seats*, the 2016 figures were
+published afterwards and count *people elected*, which excludes vacancies.
+`validate.py` records that basis per year and compares like with like.
+
+The statutory shares also differ: the women's quota rose from one third to one
+half, and BC(A) reservation in panchayats did not exist before the 2021
+amendment. Asserting the 2022 rules against 2016 would be wrong.
 
 ### Not included
 
 * **No LGD or census village codes.** GP names are free text; joining to other
   data needs fuzzy matching against the Local Government Directory.
-* **2022 only.** The 2016 (5th) general election is published in the same
-  7-column format, in English, per district, and is reachable through the
-  Wayback Machine — the original host (`164.100.137.42`) is dead. The same GP
-  joins across the two years, so a 2016+2022 panel is feasible, and rotation of
-  reservation across cycles is what makes this data useful for identification.
-  The normalizer already handles the 2016 vocabulary; only a harvester for that
-  year is missing.
+* **No crosswalk between the two years.** The 70% match above is on exact
+  normalised names. Closing the rest needs fuzzy matching, ideally against the
+  Local Government Directory so both years get stable codes.
+* **2010 and 2005** are not built. 2005 exists on the live CDN but as scanned
+  images, so it would need OCR.
 * **Bye-elections since 2022** are not folded in; this is the roster as elected
   in November 2022.
