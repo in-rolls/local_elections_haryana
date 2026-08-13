@@ -135,6 +135,46 @@ def main():
     report.check(not dupes, "gram panchayat names unique within block",
                  f"{len(dupes)} repeated: {dupes[:3]}", hard=False)
 
+    # A panchayat's wards are numbered 1..N, so a gap is a seat we did not
+    # read and a repeat is a seat we read twice. Nothing else here can see
+    # either: every other check counts rows that exist, and the failures this
+    # was written for **deleted** rows - a gazette typo that made
+    # normalize_reservation return None, which discards the whole row rather
+    # than blanking a field, and a wrapped line extracted as two rows where the
+    # half carrying the ward number had no office cell to anchor on. Barnala
+    # shipped five of its nine panches and every count said it was fine.
+    wards_of = collections.defaultdict(list)
+    for r in ward:
+        if r["ward_no"].isdigit():
+            wards_of[(r["district"], r["block"], r["gram_panchayat"])].append(
+                int(r["ward_no"]))
+    gaps, repeats, absent = [], [], 0
+    for place, numbers in wards_of.items():
+        missing = sorted(set(range(1, max(numbers) + 1)) - set(numbers))
+        if missing:
+            gaps.append((place, missing))
+            absent += len(missing)
+        if len(numbers) != len(set(numbers)):
+            repeats.append(place)
+    report.check(not gaps, "ward numbers run 1..N within a panchayat",
+                 f"{len(gaps)} panchayats have a gap, {absent} seats absent; "
+                 f"e.g. {[(p[2], m[:4]) for p, m in gaps[:3]]}", hard=False)
+    report.check(not repeats, "no ward number appears twice in a panchayat",
+                 f"{len(repeats)} panchayats repeat a ward: "
+                 f"{[p[2] for p in repeats[:3]]}", hard=False)
+
+    unnumbered = [r for r in ward if not r["ward_no"].strip()]
+    report.check(not unnumbered, "every ward seat states its ward number",
+                 f"{len(unnumbered)} rows have none, so they share a seat key "
+                 f"with their neighbours", hard=False)
+
+    fabricated = [r for r in ward
+                  if r["winner"].strip().lower().startswith("ward ")]
+    report.check(not fabricated, "no winner is a column label",
+                 f"{len(fabricated)} rows name a person 'Ward N' - the English "
+                 f"printing writes 'Ward 1' where the Hindi writes '1', and a "
+                 f"parser that wants a bare digit shifts every field right")
+
     srs = collections.defaultdict(set)
     for r in gp:
         if r["sr_no"].isdigit():

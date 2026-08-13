@@ -95,6 +95,21 @@ def is_ward_dash(cell):
     return bool(RE_WARD_DASH.match(cell))
 
 
+# A ward cell is usually a bare number, but Karnal and Palwal 2022 print the
+# notification twice - Hindi, then English - and the English table writes
+# "Ward 1" in that column. `isdigit()` is false there, so the cell was left
+# behind and every field after it shifted one place right: the ward number
+# ended up in `winner` and the winner's name in `father_husband`. 1,678 rows
+# shipped with "Ward 1" where a person's name belongs.
+RE_WARD_NUMBER = re.compile(r"^\s*(?:ward\s*(?:no\.?)?\s*)?(\d{1,3})\s*$", re.I)
+
+
+def ward_number(cell):
+    """The ward number a cell states, or None if it does not state one."""
+    match = RE_WARD_NUMBER.match(cell or "")
+    return match.group(1) if match else None
+
+
 # Words a reservation label is built from, in both scripts. A table row made up
 # of nothing but these is not a seat - it is the tail of the row above, whose
 # reservation label wrapped onto a second line and was ruled as its own row.
@@ -194,7 +209,9 @@ def split_row(cells):
         ward = ""
     else:
         left = [x for x in left if not is_ward_dash(x[1])]
-        ward = left.pop(0)[1] if left and left[0][1].isdigit() else ""
+        ward = ""
+        if left and ward_number(left[0][1]) is not None:
+            ward = ward_number(left.pop(0)[1])
         sr = None
 
     name = left[0][1] if left else ""
@@ -242,6 +259,8 @@ def parse_pdf(path, notif_pattern=None):
     notif_pattern = notif_pattern or notification_re("2022")
     ctx: dict[str, str | None] = {"notif": None, "block": None, "district": None}
     printing = 0
+    # (ward, category) found on a row of their own, waiting for the row below
+    stranded = None
     last_sr = None
     sr = gp = None
     pending = None
@@ -280,6 +299,26 @@ def parse_pdf(path, notif_pattern=None):
                     cells = [clean(c) for c in raw]
                     parsed = split_row(cells)
                     if not parsed:
+                        # A row holding a ward number and nothing but a
+                        # category belongs to the row *below* it, not above.
+                        # Where the category text wraps, the ward digit and the
+                        # category are top-aligned in their cells while the
+                        # name is baseline-aligned lower, so one printed line
+                        # comes out as two: this one, and the next carrying the
+                        # person and the office.
+                        #
+                        # Both halves were being read wrongly. split_row
+                        # anchors on the office cell, so this half was dropped
+                        # and its ward lost - and the continuation logic below,
+                        # which exists for tails that really do belong to the
+                        # row above, then attached this row's category to the
+                        # *previous* seat. 1,014 rows of Kaithal, Mewat and
+                        # Sirsa 2016 carried the neighbouring seat's
+                        # reservation, which is worse than carrying none.
+                        lone = [c for c in cells if c]
+                        if lone and ward_number(lone[0]) is not None:
+                            stranded = lone
+                            continue
                         # a stranded reservation tail belongs to the row above
                         if pending:
                             tail = continuation_tail(cells)
@@ -298,6 +337,23 @@ def parse_pdf(path, notif_pattern=None):
                                     # so repair the carried-forward copy too
                                     gp = pending["gram_panchayat"]
                         continue
+                    if stranded:
+                        # Re-split the two halves as one row. The reservation
+                        # is moved behind the office cell because that is where
+                        # split_row expects it - on a wrapped line it is
+                        # printed before the office, not after.
+                        head = list(stranded)
+                        res = (head.pop() if len(head) > 1
+                               and normalize_reservation(head[-1]) else None)
+                        rejoined = split_row(head + cells + ([res] if res else []))
+                        # only where the row is actually missing its ward. A
+                        # row that already states one is not a continuation of
+                        # anything, and merging into it shifts the seat by one:
+                        # Karnal produced ward 5 carrying ward 6's contents.
+                        if (rejoined and rejoined[0] == "panch" and rejoined[3]
+                                and not parsed[3]):
+                            parsed = rejoined
+                        stranded = None
                     yield from finish(pending)
                     (kind, row_sr, row_gp, ward, raw_name, raw_father, raw_res,
                      gp_column) = parsed

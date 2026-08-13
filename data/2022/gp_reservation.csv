@@ -781,7 +781,7 @@ Charkhi Dadri,Baund,19,Rankoli,Other than Woman,NONE,0,Prem Singh,Lakhi Ram,0,0,
 Charkhi Dadri,Baund,20,Sanjarwas,Woman,NONE,1,Meena Kumari,Vishwajeet,0,0,Women,latin,1,6979,Charkhi-Dadri__Baund.pdf
 Charkhi Dadri,Baund,21,Sankrod,Other than Woman,NONE,0,Omparkash,Sadhu,0,0,Other than Women,latin,1,6979,Charkhi-Dadri__Baund.pdf
 Charkhi Dadri,Baund,22,Sanwar,Woman,NONE,1,Shivani,Gaurav,0,0,Women,latin,1,6979,Charkhi-Dadri__Baund.pdf
-Charkhi Dadri,Baund,23,Sonf,BC-A Other than Woman,BC_A,0,Pardeep,Satnaryan,0,0,Backward Class 'A' other than Women Backward Class 'A' other than Women,latin,1,6979,Charkhi-Dadri__Baund.pdf
+Charkhi Dadri,Baund,23,Sonf,BC-A Other than Woman,BC_A,0,Pardeep,Satnaryan,0,0,Backward Class 'A' other than Women,latin,1,6979,Charkhi-Dadri__Baund.pdf
 Charkhi Dadri,Baund,24,Unn,Woman,NONE,1,Pinki Devi,Virender,0,0,Women,latin,1,6979,Charkhi-Dadri__Baund.pdf
 Charkhi Dadri,Charkhi Dadri,1,Akhtiyarpura,Other than Woman,NONE,0,Yashvir,Sheoram,0,0,Other than Women,latin,1,6970,Charkhi-Dadri__Charkhi-Dadri.pdf
 Charkhi Dadri,Charkhi Dadri,2,Atela Kalan,SC Other than Woman,SC,0,Partap Singh,Mithu Ram,0,0,Scheduled Caste Other than Women,latin,1,6970,Charkhi-Dadri__Charkhi-Dadri.pdf
@@ -1208,12 +1208,12 @@ Fatehabad,Ratia,48,Sehnal,Other than Woman,NONE,0,Satpal Singh,Ram Chander,0,0,O
 Fatehabad,Ratia,49,Shekhupur Sotter,BC-A Woman,BC_A,1,Hardeep Kaur,Gagandeep Singh,0,0,Backward Class 'A' Women,latin,0,8065,Fatehabad__Ratia.pdf
 Fatehabad,Ratia,50,Sukhmanpur,Other than Woman,NONE,0,Gurmit Singh,Birsa Singh,0,0,Other than Women,latin,1,8065,Fatehabad__Ratia.pdf
 Fatehabad,Tohana,1,Akanwali,Other than Woman,NONE,0,Jaspal Singh,Santokh Singh,0,0,Other than Women,latin,1,8056,Fatehabad__Tohana.pdf
-Fatehabad,Tohana,2,Amani,Woman,NONE,1,Mukesh Rani,Gurpal Singh,0,0,Women,latin,0,8056,Fatehabad__Tohana.pdf
+Fatehabad,Tohana,2,Amani,Woman,NONE,1,Mukesh Rani,Gurpal Singh,0,0,Women,latin,1,8056,Fatehabad__Tohana.pdf
 Fatehabad,Tohana,3,Baliawala,Other than Woman,NONE,0,Dharam Singh,Jagat Ram,0,0,Other than Women,latin,1,8056,Fatehabad__Tohana.pdf
 Fatehabad,Tohana,4,Bhimewala,Woman,NONE,1,Nirmla,Suresh Kumar,0,0,Women,latin,1,8056,Fatehabad__Tohana.pdf
 Fatehabad,Tohana,5,Bhodi,SC Other than Woman,SC,0,Piyara Singh,Bachna Ram,0,0,Scheduled Caste Other than Women,latin,1,8056,Fatehabad__Tohana.pdf
 Fatehabad,Tohana,6,Bhodia Khera,SC Woman,SC,1,Sukhwinder Kaur,Ravi kumar,0,0,Scheduled Caste Women,latin,1,8056,Fatehabad__Tohana.pdf
-Fatehabad,Tohana,7,Bidhai Khera,SC Other than Woman,SC,0,Ramesh,Jagdish,0,0,Other than Women Scheduled Caste Other than Women,latin,1,8056,Fatehabad__Tohana.pdf
+Fatehabad,Tohana,7,Bidhai Khera,Other than Woman,NONE,0,Ramesh,Jagdish,0,0,Other than Women,latin,1,8056,Fatehabad__Tohana.pdf
 Fatehabad,Tohana,8,Chander Kalan,Woman,NONE,1,Parvinder Kaur,Harinder Singh,0,0,Women,latin,1,8056,Fatehabad__Tohana.pdf
 Fatehabad,Tohana,9,Chander Khurd,Other than Woman,NONE,0,Darshan Ram,Sunder Ram,0,0,Other than Women,latin,1,8056,Fatehabad__Tohana.pdf
 Fatehabad,Tohana,10,Chilewal,BC-A Woman,BC_A,1,Gurmeet Kaur,Sarabjeet Singh,0,0,Backward Class 'A' Women,latin,1,8056,Fatehabad__Tohana.pdf
@@ -1397,7 +1397,7 @@ Gurugram,Sohna,16,Hariyaheda,Woman,NONE,1,Priyanka,Naresh Kumar,0,0,Women,latin,
 Gurugram,Sohna,17,Jolhaka,Other than Woman,NONE,0,Kanwar Pal,Gopi Ram,0,0,Other than Women,latin,1,7061,Gurugram__Sohna.pdf
 Gurugram,Sohna,18,Kharoda,SC Other than Woman,SC,0,Ganga Ram,Jeeta,0,0,Scheduled Caste other than Women,latin,1,7061,Gurugram__Sohna.pdf
 Gurugram,Sohna,19,Kherla,Woman,NONE,1,Sonia,Akash,0,0,Women,latin,1,7061,Gurugram__Sohna.pdf
-Gurugram,Sohna,20,Kherli Lala,SC Other than Woman,SC,0,Raj Rani,Kishanpal,0,0,Scheduled Caste Women Other than Women,latin,0,7061,Gurugram__Sohna.pdf
+Gurugram,Sohna,20,Kherli Lala,SC Woman,SC,1,Raj Rani,Kishanpal,0,0,Scheduled Caste Women,latin,1,7061,Gurugram__Sohna.pdf
 Gurugram,Sohna,21,Khuntpuri,Other than Woman,NONE,0,Sunil Kumar,Kishan Singh,0,0,Other than Women,latin,1,7061,Gurugram__Sohna.pdf
 Gurugram,Sohna,22,Kiranki Kherli,BC-A Woman,BC_A,1,Muskan,Javed,0,0,Backward Class 'A' Women,latin,1,7061,Gurugram__Sohna.pdf
 Gurugram,Sohna,23,Kuliyaka,Other than Woman,NONE,0,Sahun,Sabbir,0,0,Other than Women,latin,1,7061,Gurugram__Sohna.pdf
@@ -1725,7 +1725,7 @@ Jhajjar,Badli,2,Bamnola,Other than Woman,NONE,0,Anuraj,Vijaypal,0,0,Other than W
 Jhajjar,Badli,3,Bupania,Woman,NONE,1,Sikha,Anil Kumar,0,0,Women,latin,1,7869,Jhajjar__Badli.pdf
 Jhajjar,Badli,4,Dadri Toe,Other than Woman,NONE,0,Sunil Kumar,Balwan Singh,0,0,Other than Women,latin,1,7869,Jhajjar__Badli.pdf
 Jhajjar,Badli,5,Dariapur,Woman,NONE,1,Sangita,Pawanpal,0,0,Women,latin,1,7869,Jhajjar__Badli.pdf
-Jhajjar,Badli,6,Deshalpur,Other than Woman,NONE,0,Naveen,Puranmal,0,0,Other than Women Other than Women,latin,0,7869,Jhajjar__Badli.pdf
+Jhajjar,Badli,6,Deshalpur,Other than Woman,NONE,0,Naveen,Puranmal,0,0,Other than Women,latin,1,7869,Jhajjar__Badli.pdf
 Jhajjar,Badli,7,Devar Khana,BC-A Woman,BC_A,1,Jyoti,Inderjeet,0,0,Back Class 'A' Women,latin,1,7869,Jhajjar__Badli.pdf
 Jhajjar,Badli,8,Fatehpur,SC Woman,SC,1,Pooja Devi,Kuldeep,0,0,Sarpanch Scheduled Caste Women,latin,1,7869,Jhajjar__Badli.pdf
 Jhajjar,Badli,9,Gangarwa,SC Other than Woman,SC,0,Jitender,Hawa Singh,0,0,Sarpanch Scheduled Caste other than Women,latin,1,7869,Jhajjar__Badli.pdf
@@ -1814,7 +1814,7 @@ Jhajjar,Beri,18,Dubaldha n Kirman,BC-A Woman,BC_A,1,Anita,Raj Kumar,0,0,Backward
 Jhajjar,Beri,19,Gangtan,Other than Woman,NONE,0,Dalbir Singh,Fateh Singh,0,0,Other than Women,latin,1,7860,Jhajjar__Beri.pdf
 Jhajjar,Beri,20,Gochhi,Woman,NONE,1,Kumari Neeraj,Vijender,0,0,Women,latin,1,7860,Jhajjar__Beri.pdf
 Jhajjar,Beri,21,Godhari,Other than Woman,NONE,0,Manbir,Sukhbir,0,0,Other than Women,latin,1,7860,Jhajjar__Beri.pdf
-Jhajjar,Beri,22,Jahaz Garh,Other than Woman,NONE,0,Suman,Sachin,0,0,Women Other than Women,latin,1,7860,Jhajjar__Beri.pdf
+Jhajjar,Beri,22,Jahaz Garh,Woman,NONE,1,Suman,Sachin,0,0,Women,latin,1,7860,Jhajjar__Beri.pdf
 Jhajjar,Beri,23,Lakaria,Other than Woman,NONE,0,Silak Ram,Duli Chand,0,0,Other than Women,latin,1,7860,Jhajjar__Beri.pdf
 Jhajjar,Beri,24,Madana Kalan,SC Other than Woman,SC,0,Amit,Dhanraj,0,0,Scheduled Caste other than Women,latin,1,7860,Jhajjar__Beri.pdf
 Jhajjar,Beri,25,Madana Khurd,Woman,NONE,1,Kamla Devi,Jogender,0,0,Women,latin,1,7860,Jhajjar__Beri.pdf
@@ -1898,7 +1898,7 @@ Jhajjar,Machhrauli,18,IkVkluh,Woman,NONE,1,dfork dqekjh ;kno,johUnz,0,0,efgyk,kr
 Jhajjar,Machhrauli,19,ikVksnk,Other than Woman,NONE,0,xksfoUn dqekj,lkoar flag,0,0,efgyk ds flok;,krutidev,,7904,Jhajjar__Machhrauli.pdf
 Jhajjar,Machhrauli,20,jk;iqj,Woman,NONE,1,eksfudk,nhid dqekj,0,0,efgyk,krutidev,,7904,Jhajjar__Machhrauli.pdf
 Jhajjar,Machhrauli,21,leliqj ektjk,Other than Woman,NONE,0,lR;iky,jkeHkxr,0,0,efgyk ds flok;,krutidev,,7904,Jhajjar__Machhrauli.pdf
-Jhajjar,Machhrauli,22,ljksyk,SC Other than Woman,SC,0,lkfgy jkuh,"euh""k dqekj",0,0,efgyk vuqlwfpr tkfr efgyk ds flok;,krutidev,,7904,Jhajjar__Machhrauli.pdf
+Jhajjar,Machhrauli,22,ljksyk,Woman,NONE,1,lkfgy jkuh,"euh""k dqekj",0,0,efgyk,krutidev,,7904,Jhajjar__Machhrauli.pdf
 Jhajjar,Matanhail,1,Akehri Madanpur,BC-A Other than Woman,BC_A,0,Suresh Kumar,Suraj Bhan,0,0,Backward Class ‘A’ other than Women,latin,1,7877,Jhajjar__Matanhail.pdf
 Jhajjar,Matanhail,2,Amadal Shahpur,Woman,NONE,1,Rajbala,Mahesh Kumar,0,0,Women,latin,1,7877,Jhajjar__Matanhail.pdf
 Jhajjar,Matanhail,3,Azadnagar,Other than Woman,NONE,0,Mahender Singh,Jaichand,0,0,Other than Women,latin,1,7877,Jhajjar__Matanhail.pdf
@@ -1947,7 +1947,7 @@ Jhajjar,Sahlawas,5,Bithla,SC Woman,SC,1,Neetu Rani,Devender,0,0,Scheduled Caste 
 Jhajjar,Sahlawas,6,Chandol,Woman,NONE,1,Sonia,Jeet Singh,0,0,Women,latin,1,7895,Jhajjar__Sahlawas.pdf
 Jhajjar,Sahlawas,7,Dhakla,Other than Woman,NONE,0,Sonu Sharma,Balwan Singh,0,0,Other than Women,latin,1,7895,Jhajjar__Sahlawas.pdf
 Jhajjar,Sahlawas,8,Dhana,Woman,NONE,1,Meena Kumari,Surender Singh,0,0,Women,latin,1,7895,Jhajjar__Sahlawas.pdf
-Jhajjar,Sahlawas,9,Dhani Salhawas,Other than Woman,NONE,0,Krishan,Attar Singh,0,0,Other than Women,latin,0,7895,Jhajjar__Sahlawas.pdf
+Jhajjar,Sahlawas,9,Dhani Salhawas,Other than Woman,NONE,0,Krishan,Attar Singh,0,0,Other than Women,latin,1,7895,Jhajjar__Sahlawas.pdf
 Jhajjar,Sahlawas,10,Dhania,Woman,NONE,1,Saroj Devi,Mangturam,0,0,Women,latin,1,7895,Jhajjar__Sahlawas.pdf
 Jhajjar,Sahlawas,11,Dhanirwas,Other than Woman,NONE,0,Rakesh Kumar,Kartar Singh,0,0,Other than Women,latin,1,7895,Jhajjar__Sahlawas.pdf
 Jhajjar,Sahlawas,12,Dharoli,Woman,NONE,1,Suresh Kumari,Narender Kumar,0,0,Women,latin,1,7895,Jhajjar__Sahlawas.pdf
@@ -2403,15 +2403,15 @@ Kaithal,Kaithal,59,Sisla,Other than Woman,NONE,0,Tarsem Singh,Nathu Ram,0,0,Othe
 Kaithal,Kaithal,60,Sismore,Woman,NONE,1,Rani,Vikas,0,0,Women,latin,1,8191,Kaithal__Kaithal.pdf
 Kaithal,Kaithal,61,Titram,Other than Woman,NONE,0,Amarjit,Rishipal,0,0,Other than Women,latin,1,8191,Kaithal__Kaithal.pdf
 Kaithal,Kaithal,62,Ujhana,Woman,NONE,1,Reena Devi,Hakam Singh,0,0,Women,latin,1,8191,Kaithal__Kaithal.pdf
-Kaithal,Kalayat,1,Badsikri Kalan,Other than Woman,NONE,0,Amritpal,Balwinder Singh,0,0,Other than Women,latin,0,8218,Kaithal__Kalayat.pdf
+Kaithal,Kalayat,1,Badsikri Kalan,Other than Woman,NONE,0,Amritpal,Balwinder Singh,0,0,Other than Women,latin,1,8218,Kaithal__Kalayat.pdf
 Kaithal,Kalayat,2,Badsikri Khurd,SC Other than Woman,SC,0,Satbir Singh,Mahabir Parsad,0,0,Scheduled Caste other than Women,latin,1,8218,Kaithal__Kalayat.pdf
-Kaithal,Kalayat,3,Balu Bidhan,Woman,NONE,1,Meena Rani,Sahil,0,0,Women,latin,0,8218,Kaithal__Kalayat.pdf
-Kaithal,Kalayat,4,Balu Gadran,Other than Woman,NONE,0,Dinesh,Balbir Singh,0,0,Other than Women,latin,0,8218,Kaithal__Kalayat.pdf
-Kaithal,Kalayat,5,Balu Rapria,Woman,NONE,1,Sonia,Binder,0,0,Women,latin,0,8218,Kaithal__Kalayat.pdf
-Kaithal,Kalayat,6,Batta,SC Woman,SC,1,Neetu,Narender Kumar,0,0,Scheduled Caste Women,latin,0,8218,Kaithal__Kalayat.pdf
+Kaithal,Kalayat,3,Balu Bidhan,Woman,NONE,1,Meena Rani,Sahil,0,0,Women,latin,1,8218,Kaithal__Kalayat.pdf
+Kaithal,Kalayat,4,Balu Gadran,Other than Woman,NONE,0,Dinesh,Balbir Singh,0,0,Other than Women,latin,1,8218,Kaithal__Kalayat.pdf
+Kaithal,Kalayat,5,Balu Rapria,Woman,NONE,1,Sonia,Binder,0,0,Women,latin,1,8218,Kaithal__Kalayat.pdf
+Kaithal,Kalayat,6,Batta,SC Woman,SC,1,Neetu,Narender Kumar,0,0,Scheduled Caste Women,latin,1,8218,Kaithal__Kalayat.pdf
 Kaithal,Kalayat,7,Bhalang,Other than Woman,NONE,0,Satish Kumar,Narpat Singh,0,0,Other than Women,latin,1,8218,Kaithal__Kalayat.pdf
 Kaithal,Kalayat,8,Brahmaniwala,SC Other than Woman,SC,0,Phool Kumar,Satpal,0,0,Scheduled Caste other than Women,latin,1,8218,Kaithal__Kalayat.pdf
-Kaithal,Kalayat,9,Chausala,Woman,NONE,1,Usha Devi,Dilbag Singh,0,0,Women,latin,0,8218,Kaithal__Kalayat.pdf
+Kaithal,Kalayat,9,Chausala,Woman,NONE,1,Usha Devi,Dilbag Singh,0,0,Women,latin,1,8218,Kaithal__Kalayat.pdf
 Kaithal,Pundri,1,Ahmedpur,BC-A Other than Woman,BC_A,0,Anil Kumar,Sube Singh,0,0,Backward Class ‘A’ other than Women,latin,1,8209,Kaithal__Pundri.pdf
 Kaithal,Pundri,2,Badnara,Woman,NONE,1,Savita Sharma,Rajiv Kumar,0,0,Women,latin,1,8209,Kaithal__Pundri.pdf
 Kaithal,Pundri,3,Bakal,Other than Woman,NONE,0,Narender Singh,Randhir Singh,0,0,Other than Women,latin,1,8209,Kaithal__Pundri.pdf
@@ -2562,7 +2562,7 @@ Karnal,Chirao,10,Dabri,BC-A Other than Woman,BC_A,0,Suresh Kumar,Hukam Chand,1,0
 Karnal,Chirao,11,Dadupur Roran,SC Other than Woman,SC,0,,,0,1,Scheduled,latin,0,7618,Karnal__Chirao.pdf
 Karnal,Chirao,12,Ghogripur,Woman,NONE,1,Sangeeta,Ashok Kumar,0,0,Women,latin,1,7618,Karnal__Chirao.pdf
 Karnal,Chirao,13,Hathlana,Other than Woman,NONE,0,Randhir Singh,Sundra,0,0,Other than Women,latin,1,7618,Karnal__Chirao.pdf
-Karnal,Chirao,14,Kheri Naru,SC Other than Woman,SC,0,,,0,1,Scheduled Caste Other than Women,latin,1,7618,Karnal__Chirao.pdf
+Karnal,Chirao,14,Kheri Naru,SC Other than Woman,SC,0,,,0,1,Scheduled Caste,latin,1,7618,Karnal__Chirao.pdf
 Karnal,Chirao,16,Manjura,Other than Woman,NONE,0,Babu Ram,Mukhtiar Singh,0,0,Other than Women,latin,1,7618,Karnal__Chirao.pdf
 Karnal,Chirao,17,Pingli,Woman,NONE,1,Apurva Sharma,Sagar Sharma,0,0,Women,latin,1,7618,Karnal__Chirao.pdf
 Karnal,Chirao,18,Shahpur,Other than Woman,NONE,0,Charnder Bhan,Baru Ram,0,0,Other than Women,latin,,7618,Karnal__Chirao.pdf
@@ -2725,7 +2725,7 @@ Karnal,Kunjpura,5,Chorpura,Other than Woman,NONE,0,Pawan Kumar,Ram Singh,0,0,Oth
 Karnal,Kunjpura,6,Dabkoli Kalan,Woman,NONE,1,Manisha,Vikas Mandhan,0,0,Women,latin,1,7600,Karnal__Kunjpura.pdf
 Karnal,Kunjpura,7,Dabkoli Khurd,SC Other than Woman,SC,0,,,0,1,Scheduled Caste other than Women,latin,1,7600,Karnal__Kunjpura.pdf
 Karnal,Kunjpura,8,Daniyalpur,SC Other than Woman,SC,0,Narender Kumar,Jeeta Ram,0,0,Other than Women Scheduled Caste Women,latin,0,7600,Karnal__Kunjpura.pdf
-Karnal,Kunjpura,9,Gheer,SC Other than Woman,SC,0,Sonia Rani,Sushil Kumar,0,0,Scheduled Caste Women Other than Women,latin,0,7600,Karnal__Kunjpura.pdf
+Karnal,Kunjpura,9,Gheer,SC Woman,SC,1,Sonia Rani,Sushil Kumar,0,0,Scheduled Caste Women,latin,1,7600,Karnal__Kunjpura.pdf
 Karnal,Kunjpura,10,Jairampur (Landora),Other than Woman,NONE,0,,,0,1, Other than Women,latin,1,7600,Karnal__Kunjpura.pdf
 Karnal,Kunjpura,11,Jarauli,SC Other than Woman,SC,0,Neesha Rani,Pankaj Chawla,0,0,Women Scheduled Caste other than Women,latin,0,7600,Karnal__Kunjpura.pdf
 Karnal,Kunjpura,12,Kalvaheri,Woman,NONE,1,Amrit Bala,Suresh Kumar,0,0,Women,latin,1,7600,Karnal__Kunjpura.pdf
@@ -2873,7 +2873,7 @@ Karnal,Nissing,15,Kuchpura,BC-A Woman,BC_A,1,Ekta,Naveen,0,0,Backward Class - A 
 Karnal,Nissing,16,Motia,Other than Woman,NONE,0,Jai Chand,Iswar Singh,0,0,Other than Women,latin,1,7582,Karnal__Nissing.pdf
 Karnal,Nissing,17,Nissang( Rural),Woman,NONE,1,,,0,1, women,latin,1,7582,Karnal__Nissing.pdf
 Karnal,Nissing,18,Prem Khera,Other than Woman,NONE,0,Narender Kumar,Dharam Singh,0,0,Other than Women,latin,1,7582,Karnal__Nissing.pdf
-Karnal,Nissing,19,Ranjit Nagar,Other than Woman,NONE,0,Simerjeet Kaur,Ranjeet Singh,0,0,women A other than women,latin,0,7582,Karnal__Nissing.pdf
+Karnal,Nissing,19,Ranjit Nagar,Woman,NONE,1,Simerjeet Kaur,Ranjeet Singh,0,0,women women,latin,1,7582,Karnal__Nissing.pdf
 Karnal,Nissing,20,Sambhli,SC Woman,SC,1,,,0,1,Scheduled Caste women,latin,1,7582,Karnal__Nissing.pdf
 Karnal,Nissing,21,Shodapur,BC-A Other than Woman,BC_A,0,,,0,1,Backward Class - A other than women,latin,1,7582,Karnal__Nissing.pdf
 Karnal,Nissing,22,Singhra,Woman,NONE,1,Kanwaljeet Kaur,Lakhwinder Singh,0,0,women,latin,1,7582,Karnal__Nissing.pdf
@@ -2912,8 +2912,8 @@ Kurukshetra,Babain,31,Mercheri,Other than Woman,NONE,0,Gurmeet Singh,Same Singh,
 Kurukshetra,Babain,32,Nakhrojpur,Woman,NONE,1,Gunjandeep,Rajender Singh,1,0,Women,latin,1,7725,Kurukshetra__Babain.pdf
 Kurukshetra,Babain,33,Phalsanda Jattan,Other than Woman,NONE,0,Naresh Pal,Amrow Singh,0,0,Other than Women,latin,1,7725,Kurukshetra__Babain.pdf
 Kurukshetra,Babain,34,Phalsanda Rangran,Woman,NONE,1,Geeta Devi,Rajesh Kumar,0,0,Women,latin,1,7725,Kurukshetra__Babain.pdf
-Kurukshetra,Babain,35,Ram Nagar 112,Other than Woman,NONE,0,Gurbachan,Shyam Lal,1,0,Other than Women,latin,1,7725,Kurukshetra__Babain.pdf
-Kurukshetra,Babain,36,Ram Nagar 156,SC Other than Woman,SC,0,Gurmeet Singh,Jaipal,0,0,Scheduled Caste Other than Women,latin,1,7725,Kurukshetra__Babain.pdf
+Kurukshetra,Babain,35,Ram Nagar,Other than Woman,NONE,0,Gurbachan,Shyam Lal,1,0,Other than Women,latin,1,7725,Kurukshetra__Babain.pdf
+Kurukshetra,Babain,36,Ram Nagar,SC Other than Woman,SC,0,Gurmeet Singh,Jaipal,0,0,Scheduled Caste Other than Women,latin,1,7725,Kurukshetra__Babain.pdf
 Kurukshetra,Babain,37,Ram Saran Majra,Woman,NONE,1,Reena Devi,Neeraj Kumar,0,0,Women,latin,1,7725,Kurukshetra__Babain.pdf
 Kurukshetra,Babain,38,Rampura,Other than Woman,NONE,0,Nawab Singh,Parkash Singh,0,0,Other than Women,latin,1,7725,Kurukshetra__Babain.pdf
 Kurukshetra,Babain,39,Rurki,SC Woman,SC,1,Rajwant Kaur,Kulwinder,0,0,Scheduled Caste Women,latin,1,7725,Kurukshetra__Babain.pdf
@@ -3968,7 +3968,7 @@ Palwal,Hassanpur,2,Amroli,SC Other than Woman,SC,0,Sanjay Kumar Chadha,Ashok Kum
 Palwal,Hassanpur,3,Atwa,Woman,NONE,1,Rajwala Sharma,Pravesh Kumar,0,0,Women,latin,1,7975,Palwal__Hassanpur.pdf
 Palwal,Hassanpur,4,Bamariyaka,Other than Woman,NONE,0,Rishiraj,Balvir Singh,0,0,Other than woman,latin,1,7975,Palwal__Hassanpur.pdf
 Palwal,Hassanpur,5,Bata,Woman,NONE,1,Chandni Sharma,Devichara n,0,0,Women,latin,1,7975,Palwal__Hassanpur.pdf
-Palwal,Hassanpur,6,Bela,BC-A Other than Woman,BC_A,0,Mahipal,Mahabir,0,0,"Backward Class A"" other than Women Other than woman",latin,1,7975,Palwal__Hassanpur.pdf
+Palwal,Hassanpur,6,Bela,BC-A Other than Woman,BC_A,0,Mahipal,Mahabir,0,0,"Backward Class A"" other than Women",latin,1,7975,Palwal__Hassanpur.pdf
 Palwal,Hassanpur,7,Bhandoli,Woman,NONE,1,Kavita,Ravi Kumar,0,0,Women,latin,1,7975,Palwal__Hassanpur.pdf
 Palwal,Hassanpur,8,Bharatgarh Urf Sehdev Ka Nangla,Other than Woman,NONE,0,Dharmender Kumar,Hargopal Singh,0,0,Other than woman,latin,1,7975,Palwal__Hassanpur.pdf
 Palwal,Hassanpur,9,Bhavana,Woman,NONE,1,Kamlesh,Ragvir Singh,0,0,Women,latin,1,7975,Palwal__Hassanpur.pdf
@@ -4224,29 +4224,29 @@ Palwal,Prithla,33,Sehrala,Other than Woman,NONE,0,Sanjay Kumar,Babu Ram,0,0,Othe
 Palwal,Prithla,34,Sikanderpur,Woman,NONE,1,Poonam,Jagmal,0,0,Women,latin,,7966,Palwal__Prithla.pdf
 Palwal,Prithla,35,Softa,SC Other than Woman,SC,0,Sunder Lal,Gopal,0,0,Scheduled Caste Other Than Women,latin,,7966,Palwal__Prithla.pdf
 Palwal,Prithla,36,Tatarpur,Other than Woman,NONE,0,Surender Kumar Sharma,Devi Charan Sharma,0,0,Other than Women,latin,,7966,Palwal__Prithla.pdf
-Panchkula,Barwala,1,Barwala,Other than Woman,NONE,0,Om Singh,Ranbir Singh,0,0,Other than Women,latin,0,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,2,Bataur,Woman,NONE,1,Prem Lata,Mohinder Singh,0,0,Women,latin,0,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,1,Barwala,Other than Woman,NONE,0,Om Singh,Ranbir Singh,0,0,Other than Women,latin,1,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,2,Bataur,Woman,NONE,1,Prem Lata,Mohinder Singh,0,0,Women,latin,1,7196,Panchkula__Barwala.pdf
 Panchkula,Barwala,3,Batwal,Other than Woman,NONE,0,Vidhi Chand Sharma,Hari Prasad Sharma,0,0,Other than Women,latin,1,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,4,Berwala Nandla,Woman,NONE,1,Akbari,Salim,0,0,Women,latin,0,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,5,Bhagwanpur,Other than Woman,NONE,0,Harcharan Singh,Taloka Ram,0,0,Other than Women,latin,0,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,6,Bharauli,Woman,NONE,1,Suman Lata,Rajender Pal,0,0,Women,latin,0,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,7,Bhareli,Other than Woman,NONE,0,Aman Kumar,Tarsem Singh,0,0,Other than Women,latin,0,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,8,Bunga,Woman,NONE,1,Kavita,Jaswinder Singh,0,0,Women,latin,0,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,9,Dhandardu,Other than Woman,NONE,0,Ravi Sharma,Susheel Kumar,0,0,Other than Women,latin,0,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,4,Berwala Nandla,Woman,NONE,1,Akbari,Salim,0,0,Women,latin,1,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,5,Bhagwanpur,Other than Woman,NONE,0,Harcharan Singh,Taloka Ram,0,0,Other than Women,latin,1,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,6,Bharauli,Woman,NONE,1,Suman Lata,Rajender Pal,0,0,Women,latin,1,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,7,Bhareli,Other than Woman,NONE,0,Aman Kumar,Tarsem Singh,0,0,Other than Women,latin,1,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,8,Bunga,Woman,NONE,1,Kavita,Jaswinder Singh,0,0,Women,latin,1,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,9,Dhandardu,Other than Woman,NONE,0,Ravi Sharma,Susheel Kumar,0,0,Other than Women,latin,1,7196,Panchkula__Barwala.pdf
 Panchkula,Barwala,10,Kami,SC Other than Woman,SC,0,Charanjeet,Suresh Kumar,0,0,Scheduled Caste other than Women,latin,1,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,11,Kanoli,Woman,NONE,1,Sonam Devi,Satbir Singh,0,0,Women,latin,0,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,12,Khairwali Parwala,Other than Woman,NONE,0,Mahavir Singh,Satpal Singh,0,0,Other than Women,latin,0,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,13,Khetpurali,Woman,NONE,1,Sarita Sharma,Devinder Kumar,0,0,Women,latin,0,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,14,Manaktabra,Other than Woman,NONE,0,Devinder Singh Walia,Pritam Singh,0,0,Other than Women,latin,0,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,15,Naya Goan,Woman,NONE,1,Balwinder Kaur,Mandeep Singh,0,0,Women,latin,0,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,16,Rattewali,Other than Woman,NONE,0,Vishal Sharma,Bansi Lal,0,0,Other than Women,latin,0,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,17,Rehore,SC Woman,SC,1,Neha,Naresh Kumar,0,0,Scheduled Caste Women,latin,0,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,18,Shahpur,BC-A Woman,BC_A,1,Sunita Rani,Ajaib Singh,0,0,Backward Class ‘A’ Women,latin,0,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,11,Kanoli,Woman,NONE,1,Sonam Devi,Satbir Singh,0,0,Women,latin,1,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,12,Khairwali Parwala,Other than Woman,NONE,0,Mahavir Singh,Satpal Singh,0,0,Other than Women,latin,1,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,13,Khetpurali,Woman,NONE,1,Sarita Sharma,Devinder Kumar,0,0,Women,latin,1,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,14,Manaktabra,Other than Woman,NONE,0,Devinder Singh Walia,Pritam Singh,0,0,Other than Women,latin,1,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,15,Naya Goan,Woman,NONE,1,Balwinder Kaur,Mandeep Singh,0,0,Women,latin,1,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,16,Rattewali,Other than Woman,NONE,0,Vishal Sharma,Bansi Lal,0,0,Other than Women,latin,1,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,17,Rehore,SC Woman,SC,1,Neha,Naresh Kumar,0,0,Scheduled Caste Women,latin,1,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,18,Shahpur,BC-A Woman,BC_A,1,Sunita Rani,Ajaib Singh,0,0,Backward Class ‘A’ Women,latin,1,7196,Panchkula__Barwala.pdf
 Panchkula,Barwala,19,Shyamtoo,SC Other than Woman,SC,0,Balram Singh,Pawan Kumar,1,0,Scheduled Caste other than Women,latin,1,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,20,Sultanpur,Other than Woman,NONE,0,Paramjit Singh Rana,Ratan Singh,0,0,Other than Women,latin,0,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,21,Sunderpur,Woman,NONE,1,Preeti,Subhash Dhiman,0,0,Women,latin,0,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,22,Taprian,Other than Woman,NONE,0,Anil Kumar,Avtar Singh,0,0,Other than Women,latin,0,7196,Panchkula__Barwala.pdf
-Panchkula,Barwala,23,Tibbi,Woman,NONE,1,Usha Rani,Charanjeet,0,0,Women,latin,0,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,20,Sultanpur,Other than Woman,NONE,0,Paramjit Singh Rana,Ratan Singh,0,0,Other than Women,latin,1,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,21,Sunderpur,Woman,NONE,1,Preeti,Subhash Dhiman,0,0,Women,latin,1,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,22,Taprian,Other than Woman,NONE,0,Anil Kumar,Avtar Singh,0,0,Other than Women,latin,1,7196,Panchkula__Barwala.pdf
+Panchkula,Barwala,23,Tibbi,Woman,NONE,1,Usha Rani,Charanjeet,0,0,Women,latin,1,7196,Panchkula__Barwala.pdf
 Panchkula,Barwala,24,Trilokpur,BC-A Other than Woman,BC_A,0,Vinod Kumar,Mangat Ram,0,0,Backward Class ‘A’ other than Women,latin,1,7196,Panchkula__Barwala.pdf
 Panchkula,Morni,1,Baladwala,Other than Woman,NONE,0,Vinod Kumar,Jangsher,0,0,Other than Women,latin,1,7079,Panchkula__Morni.pdf
 Panchkula,Morni,2,Balauti,Woman,NONE,1,Nisha Rani,Ravi Singh,0,0,Women,latin,1,7079,Panchkula__Morni.pdf
@@ -4282,7 +4282,7 @@ Panchkula,Pinjore,5,Charnia,Woman,NONE,1,Savita,Rakesh Kumar,0,0,Women,latin,1,7
 Panchkula,Pinjore,6,Chikan,Other than Woman,NONE,0,Gurdev Singh,Jeet Ram,0,0,Other than Women,latin,1,7070,Panchkula__Pinjore.pdf
 Panchkula,Pinjore,7,Dakhrog,Woman,NONE,1,Santosh,Baldev Singh,0,0,Women,latin,1,7070,Panchkula__Pinjore.pdf
 Panchkula,Pinjore,8,Dhaluwal,SC Other than Woman,SC,0,Bhim Sen,Heera Lal,0,0,Scheduled Caste other than Women,latin,1,7070,Panchkula__Pinjore.pdf
-Panchkula,Pinjore,9,Fatehpur Diwanwala,Other than Woman,NONE,0,Rajesh,Mohinder Singh,0,0,Other than Women,latin,0,7070,Panchkula__Pinjore.pdf
+Panchkula,Pinjore,9,Fatehpur Diwanwala,Other than Woman,NONE,0,Rajesh,Mohinder Singh,0,0,Other than Women,latin,1,7070,Panchkula__Pinjore.pdf
 Panchkula,Pinjore,10,Ganeshpur Bhoria,Woman,NONE,1,Champa Devi,Lekh Raj,0,0,Women,latin,1,7070,Panchkula__Pinjore.pdf
 Panchkula,Pinjore,11,Gariran,Other than Woman,NONE,0,Jasbir Singh,Gurubaskh,0,0,Other than Women,latin,1,7070,Panchkula__Pinjore.pdf
 Panchkula,Pinjore,12,Gorakh Nath,Woman,NONE,1,Bimla Devi,Gurdyal Chand,1,0,Women,latin,1,7070,Panchkula__Pinjore.pdf
@@ -4315,7 +4315,7 @@ Panchkula,Pinjore,38,Rampur Jangi,Other than Woman,NONE,0,Maan Singh,Shiv Sharan
 Panchkula,Pinjore,39,Shahpur,SC Woman,SC,1,Saroj,Baldev Singh,0,0,Scheduled Caste Women,latin,1,7070,Panchkula__Pinjore.pdf
 Panchkula,Pinjore,40,Tanda Johluwal,Woman,NONE,1,Karmo,Manjeet Singh,0,0,Women,latin,1,7070,Panchkula__Pinjore.pdf
 Panchkula,Pinjore,41,Thane Ki Sair,Other than Woman,NONE,0,Sunil Kumar,Ramesh Chand,0,0,Other than Women,latin,1,7070,Panchkula__Pinjore.pdf
-Panchkula,Pinjore,42,Toran,Woman,NONE,1,Gurmeet Kaur,Ashok Kumar,0,0,Women,latin,0,7070,Panchkula__Pinjore.pdf
+Panchkula,Pinjore,42,Toran,Woman,NONE,1,Gurmeet Kaur,Ashok Kumar,0,0,Women,latin,1,7070,Panchkula__Pinjore.pdf
 Panchkula,Raipur Rani,1,Badhour,SC Other than Woman,SC,0,...,Sukhchain,0,0,Scheduled Caste other than Women,latin,1,7088,Panchkula__Raipur-Rani.pdf
 Panchkula,Raipur Rani,2,Bagwala,Woman,NONE,1,...,Rita Devi,0,0,Women,latin,1,7088,Panchkula__Raipur-Rani.pdf
 Panchkula,Raipur Rani,3,Bagwali,BC-A Other than Woman,BC_A,0,...,Bharat,0,0,Backward Class ‘A’ other than Women,latin,1,7088,Panchkula__Raipur-Rani.pdf
@@ -4814,7 +4814,7 @@ Rewari,Nahar,21,Jholri,Woman,NONE,1,Rajesh Devi,Sunil Kumar,0,0,Women,latin,1,74
 Rewari,Nahar,22,Juddi,Other than Woman,NONE,0,Ajit Kumar,Ram Sharan Singh,0,0,Other Than Women,latin,1,7465,Rewari__Nahar.pdf
 Rewari,Nahar,23,Kanharwas,SC Woman,SC,1,Seema Bai,Mahesh Kumar,0,0,Sc Women,latin,1,7465,Rewari__Nahar.pdf
 Rewari,Nahar,24,Karoli,Woman,NONE,1,Sharmila,Ramesh Kumar,0,0,Women,latin,1,7465,Rewari__Nahar.pdf
-Rewari,Nahar,25,Khurshid Nagar,Other than Woman,NONE,0,Mahabir Singh,Ganpat Singh,0,0,Other Than Women Other Than Women,latin,1,7465,Rewari__Nahar.pdf
+Rewari,Nahar,25,Khurshid Nagar,Other than Woman,NONE,0,Mahabir Singh,Ganpat Singh,0,0,Other Than Women,latin,1,7465,Rewari__Nahar.pdf
 Rewari,Nahar,26,Koharar,Woman,NONE,1,Kiran,Ranbir,0,0,Women,latin,1,7465,Rewari__Nahar.pdf
 Rewari,Nahar,27,Kosli,BC-A Other than Woman,BC_A,0,Ram Kishan,Jag Ram,0,0,BackClass (A) Other Than Women,latin,1,7465,Rewari__Nahar.pdf
 Rewari,Nahar,28,Lilodh,Woman,NONE,1,Laxmi Bai,Bhagwan Dev,0,0,Women,latin,1,7465,Rewari__Nahar.pdf
@@ -5204,7 +5204,7 @@ Sirsa,Nathusari Chopta,19,Jassania,Other than Woman,NONE,0,Rajender,Khyali Ram,0
 Sirsa,Nathusari Chopta,20,Jodhakan,SC Other than Woman,SC,0,Anand Sawroop,Jagdish Chander,0,0,Scheduled Caste Other than Women,latin,1,7115,Sirsa__Nathusari-Chopta.pdf
 Sirsa,Nathusari Chopta,21,Jogiwala,Woman,NONE,1,Samesta,Anil Kumar,1,0,Women,latin,1,7115,Sirsa__Nathusari-Chopta.pdf
 Sirsa,Nathusari Chopta,22,Jorian,Other than Woman,NONE,0,Rakesh Kumar,Mahavir,0,0,Other than Women,latin,1,7115,Sirsa__Nathusari-Chopta.pdf
-Sirsa,Nathusari Chopta,23,Kagdana,SC Other than Woman,SC,0,Promila Devi,Mange Ram,0,0,Women Scheduled Caste Other than Women,latin,0,7115,Sirsa__Nathusari-Chopta.pdf
+Sirsa,Nathusari Chopta,23,Kagdana,Other than Woman,NONE,0,Promila Devi,Mange Ram,0,0,Women Other than Women,latin,0,7115,Sirsa__Nathusari-Chopta.pdf
 Sirsa,Nathusari Chopta,24,Kheri,Other than Woman,NONE,0,Suresh Kumar,Mahabir,0,0,Other than Women,latin,1,7115,Sirsa__Nathusari-Chopta.pdf
 Sirsa,Nathusari Chopta,25,Kukarthana,Woman,NONE,1,Kamla Devi,Krishan Kumar,0,0,Women,latin,1,7115,Sirsa__Nathusari-Chopta.pdf
 Sirsa,Nathusari Chopta,26,Kumharia,Other than Woman,NONE,0,Rupesh Kumar,Ram Kumar,0,0,Sarpanch Other than Women,latin,1,7115,Sirsa__Nathusari-Chopta.pdf
@@ -5289,7 +5289,7 @@ Sirsa,Rania,17,Dhanoor,SC Other than Woman,SC,0,Chiman Lal,Sh.Pala Ram,0,0,Sched
 Sirsa,Rania,18,Dhottar,Other than Woman,NONE,0,Rajesh,Sh.Mohan Lal,0,0,Other than Women,latin,1,7106,Sirsa__Rania.pdf
 Sirsa,Rania,19,Dhudianwali,Woman,NONE,1,Anita,Sh.Mahabir,0,0,Women,latin,1,7106,Sirsa__Rania.pdf
 Sirsa,Rania,20,Fatehpuria,Other than Woman,NONE,0,Kulwant Singh,Sh.Satnarain,0,0,Other than Women,latin,1,7106,Sirsa__Rania.pdf
-Sirsa,Rania,21,Ferozabad,SC Other than Woman,SC,0,Charanjeet Kaur,Sh.Tarsem Singh,0,0,Scheduled Caste Women Other than Women,latin,0,7106,Sirsa__Rania.pdf
+Sirsa,Rania,21,Ferozabad,SC Woman,SC,1,Charanjeet Kaur,Sh.Tarsem Singh,0,0,Scheduled Caste Women,latin,1,7106,Sirsa__Rania.pdf
 Sirsa,Rania,22,Ghoranwali,SC Other than Woman,SC,0,Lachhaman Ram,Sh.Basti Ram,0,0,Scheduled Caste Other than Women,latin,1,7106,Sirsa__Rania.pdf
 Sirsa,Rania,23,Gidranwali,BC-A Woman,BC_A,1,Parmjit Kaur,Sh.Sukhdev Singh,0,0,Backward Class 'A' Women,latin,1,7106,Sirsa__Rania.pdf
 Sirsa,Rania,24,Gindran,Other than Woman,NONE,0,Jaswant Singh,Sh.Madan Lal,0,0,Other than Women,latin,1,7106,Sirsa__Rania.pdf
@@ -5479,7 +5479,7 @@ Sonipat,Kathura,8,Chhichhrana,Other than Woman,NONE,0,Rajesh,Raghbir Singh,0,0,O
 Sonipat,Kathura,9,Dhanana,Woman,NONE,1,Munni,Anil,0,0,Women,latin,,7537,Sonipat__Kathura.pdf
 Sonipat,Kathura,10,Gharwal,Other than Woman,NONE,0,Yashpal,Bhim Singh,0,0,Other than Women,latin,,7537,Sonipat__Kathura.pdf
 Sonipat,Kathura,11,Gharwal Pana Tihai,Woman,NONE,1,Kusum,Ankit,0,0,Women,latin,,7537,Sonipat__Kathura.pdf
-Sonipat,Kathura,12,Gudha,BC-A Other than Woman,BC_A,0,Samunder Singh,Mahender Singh,0,0,Other than Women Backward Class ‘A’ other than Women,latin,,7537,Sonipat__Kathura.pdf
+Sonipat,Kathura,12,Gudha,Other than Woman,NONE,0,Samunder Singh,Mahender Singh,0,0,Other than Women,latin,,7537,Sonipat__Kathura.pdf
 Sonipat,Kathura,13,Kathura,SC Woman,SC,1,Nisha,Naveen,0,0,Scheduled Caste Women,latin,,7537,Sonipat__Kathura.pdf
 Sonipat,Kathura,14,Kehlpa,BC-A Woman,BC_A,1,Sonia,Monu,0,0,Backward Class ‘A’ Women,latin,,7537,Sonipat__Kathura.pdf
 Sonipat,Kathura,15,Madina,Other than Woman,NONE,0,Amit,Rammehar,0,0,Other than Women,latin,,7537,Sonipat__Kathura.pdf
@@ -5636,7 +5636,7 @@ Sonipat,Rai,21,Katlupur,SC Other than Woman,SC,0,Tirath Ram,Chunni Lal,0,0,Sched
 Sonipat,Rai,22,Khatkar,Other than Woman,NONE,0,Yogesh Kumar,Radhe,0,0,Other Than Women,latin,1,7501,Sonipat__Rai.pdf
 Sonipat,Rai,23,Kheri Manajat,Woman,NONE,1,Reena,Sandeep,0,0,Women,latin,1,7501,Sonipat__Rai.pdf
 Sonipat,Rai,24,Khurampur,Other than Woman,NONE,0,Naresh Kumar,Tika Ram,0,0,Other Than Women,latin,1,7501,Sonipat__Rai.pdf
-Sonipat,Rai,25,Malha Majra,Woman,NONE,1,Suman Devi,Sandeep,0,0,Women,latin,0,7501,Sonipat__Rai.pdf
+Sonipat,Rai,25,Malha Majra,Woman,NONE,1,Suman Devi,Sandeep,0,0,Women,latin,1,7501,Sonipat__Rai.pdf
 Sonipat,Rai,26,Manoli,Other than Woman,NONE,0,Dharambir Singh,Om Dutt,0,0,Other Than Women,latin,,7501,Sonipat__Rai.pdf
 Sonipat,Rai,27,Mohamdabad,Woman,NONE,1,Rani,Umesh Kumar,0,0,Women,latin,1,7501,Sonipat__Rai.pdf
 Sonipat,Rai,28,Nahara,Other than Woman,NONE,0,Umesh Dahiya,Sultan Singh,0,0,Other Than Women,latin,1,7501,Sonipat__Rai.pdf
@@ -5652,7 +5652,7 @@ Sonipat,Rai,37,Rasoi,SC Other than Woman,SC,0,Ashok Kumar,Kitab Singh,0,0,Schedu
 Sonipat,Rai,38,Safiyabad,Other than Woman,NONE,0,Sukhbir Dutt,Rishi Ram,0,0,Other Than Women,latin,1,7501,Sonipat__Rai.pdf
 Sonipat,Rai,39,Sersa,Woman,NONE,1,Renu,Surender Kumar,0,0,Women,latin,1,7501,Sonipat__Rai.pdf
 Sonipat,Rai,40,Sevli,BC-A Other than Woman,BC_A,0,Parshant,Rakesh,0,0,Back Class 'A' Other Than Women,latin,1,7501,Sonipat__Rai.pdf
-Sonipat,Rai,41,Toki,Other than Woman,NONE,0,Anshu,Mahesh Pal,0,0,Women Other Than Women Women Other Than Women Women,latin,1,7501,Sonipat__Rai.pdf
+Sonipat,Rai,41,Toki,Woman,NONE,1,Anshu,Mahesh Pal,0,0,Women,latin,1,7501,Sonipat__Rai.pdf
 Sonipat,Sonipat,1,Badsahpur Machhri,Other than Woman,NONE,0,Rajbir Singh,Mange Ram,0,0,Other Than Women,latin,,7483,Sonipat__Sonipat.pdf
 Sonipat,Sonipat,2,Bagru,SC Other than Woman,SC,0,Parveen,Partap Singh,0,0,Sarpanch Scheduled Caste Other Than Women,latin,,7483,Sonipat__Sonipat.pdf
 Sonipat,Sonipat,3,Barwasani,Woman,NONE,1,Sheela Devi,Shab Singh,0,0,Women,latin,1,7483,Sonipat__Sonipat.pdf

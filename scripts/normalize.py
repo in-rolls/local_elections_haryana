@@ -127,9 +127,16 @@ def normalize_reservation(raw):
 
     # 2022 uses "Woman"/"Other than Woman" on every seat; 2016 uses
     # "Unreserved" for open seats and a bare caste name for reserved-but-open.
+    # "unres" rather than "unreserved", for the same reason "cast" is used
+    # above rather than "caste": Ambala prints "Unresreved" 79 times, and an
+    # exact match returns None there - which does not blank a field, it
+    # **deletes the row**, taking the elected member's name with it. One
+    # panchayat, Barnala, lost four of its nine panches to that typo, and
+    # nothing counted them as missing because a row never written leaves
+    # nothing to count. No other term in this vocabulary begins "unres".
     if "wom" in tight:
         woman = 0 if "otherthan" in tight else 1
-    elif "unreserved" in tight or "general" in low or caste != "NONE":
+    elif "unres" in tight or "general" in low or caste != "NONE":
         woman = 0
     else:
         return None
