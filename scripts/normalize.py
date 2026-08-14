@@ -64,6 +64,16 @@ def strip_unopposed(name):
     return n.lstrip("*").strip(), unopposed
 
 
+# The same words the Kruti Dev constants encode, in Unicode. "अनुसूचित जाति"
+# is scheduled caste and "अनुसूचित जनजाति" scheduled tribe, so the tribe test
+# must come first: the second contains the first.
+DEV_WOMAN = "महिला"
+DEV_OTHER_THAN = "सिवाय"
+DEV_ST = "जनजाति"
+DEV_SC = "अनुसूचित"
+DEV_BC = "पिछड़ा"
+
+
 def normalize_reservation(raw):
     """Return (caste_reservation, woman_reserved, script) or None if unparseable.
 
@@ -79,6 +89,25 @@ def normalize_reservation(raw):
     # collapsed and spaces removed as well as the plain one.
     # "+" is a diacritic mark that floats: "fiNM+k" is also typeset "fiN+Mk",
     # which hides the "fiNM" stem. Drop it for matching.
+    # Devanagari, which is what Surya returns for the pages pdfplumber cannot
+    # read as a grid. Same vocabulary as the Kruti Dev branch below - Kruti Dev
+    # *is* this text in a legacy encoding - so it is keyed the same way, on the
+    # head noun rather than the qualifier.
+    #
+    # It has to exist before any OCR row is parsed: this function returning
+    # None does not blank a field, it discards the row, which is how a gazette
+    # typo once deleted four of Barnala's nine panches.
+    if DEV_WOMAN in s:
+        if DEV_ST in s:
+            caste = "ST"
+        elif DEV_SC in s:
+            caste = "SC"
+        elif DEV_BC in s:
+            caste = "BC_A"
+        else:
+            caste = "NONE"
+        return caste, 0 if DEV_OTHER_THAN in s else 1, "devanagari"
+
     kd = _undouble(s).replace("+", "")
     kd_tight = _undouble(re.sub(r"[\s+]", "", s))
     if KD_WOMAN in kd or KD_WOMAN in kd_tight:  # Hindi (Kruti Dev) row

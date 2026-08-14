@@ -32,8 +32,11 @@ from normalize import is_vacant, label, normalize_reservation, strip_unopposed
 DATA = pathlib.Path(__file__).resolve().parent.parent / "data"
 YEAR = "2022"
 
-SARPANCH = {"sarpanch", "ljiap", "ljaip", "ljip", "lliap"}
-PANCH = {"panch", "iap", "ipa"}
+# Latin, Kruti Dev, and Devanagari - the last because Surya reads the pages
+# pdfplumber cannot as Unicode rather than as the legacy encoding. Membership
+# is exact, so "सरपंच" containing "पंच" is not a hazard.
+SARPANCH = {"sarpanch", "ljiap", "ljaip", "ljip", "lliap", "सरपंच"}
+PANCH = {"panch", "iap", "ipa", "पंच"}
 
 # "... Block-Narnaul, District-Mahendergarh during General Elections-2022"
 RE_BLOCK_EN = re.compile(
@@ -122,6 +125,30 @@ def clean(cell):
 # Surya is not the answer here, and was checked: the text layer is exact, so
 # OCR would read a picture of text we can already extract, and would lose the
 # cell merging exactly as attempt 4 did.
+
+
+OCR_ROW = re.compile(r"<tr>(.*?)</tr>", re.S | re.I)
+OCR_CELL = re.compile(r"<t[dh][^>]*>(.*?)</t[dh]>", re.S | re.I)
+
+
+def ocr_rows(path, page_no):
+    """The cells Surya read for this page, or [] where it was not read.
+
+    Only 67 pages of 1,606 are cached, and only because pdfplumber returns
+    their fully-ruled seven-column grid as two tables - see scripts/ocr.py.
+    The reading is committed, so a re-parse never needs the model.
+    """
+    cached = path.parent.parent / "ocr" / f"{path.stem}-{page_no:03d}.html"
+    if not cached.exists():
+        return []
+    text = cached.read_text(encoding="utf-8")
+    out = []
+    for row in OCR_ROW.findall(text):
+        cells = [clean(re.sub(r"<[^>]+>", " ", c))
+                 for c in OCR_CELL.findall(row)]
+        if cells:
+            out.append(cells)
+    return out
 
 
 def office_kind(cell):
@@ -330,7 +357,7 @@ def parse_pdf(path, notif_pattern=None):
         yield row
 
     with pdfplumber.open(str(path)) as pdf:
-        for page in pdf.pages:
+        for page_no, page in enumerate(pdf.pages, 1):
             text = clean(page.extract_text() or "")
             match = notif_pattern.search(text)
             if match:
@@ -342,96 +369,107 @@ def parse_pdf(path, notif_pattern=None):
                 if place[2] == "latin" or ctx["district"] is None:
                     ctx["block"], ctx["district"] = place[0], place[1]
 
-            for table in page.find_tables():
-                for raw in table.extract():
-                    cells = [clean(c) for c in raw]
-                    parsed = split_row(cells)
-                    if not parsed:
-                        # A row holding a ward number and nothing but a
-                        # category belongs to the row *below* it, not above.
-                        # Where the category text wraps, the ward digit and the
-                        # category are top-aligned in their cells while the
-                        # name is baseline-aligned lower, so one printed line
-                        # comes out as two: this one, and the next carrying the
-                        # person and the office.
-                        #
-                        # Both halves were being read wrongly. split_row
-                        # anchors on the office cell, so this half was dropped
-                        # and its ward lost - and the continuation logic below,
-                        # which exists for tails that really do belong to the
-                        # row above, then attached this row's category to the
-                        # *previous* seat. 1,014 rows of Kaithal, Mewat and
-                        # Sirsa 2016 carried the neighbouring seat's
-                        # reservation, which is worse than carrying none.
-                        lone = [c for c in cells if c]
-                        if lone and ward_number(lone[0]) is not None:
-                            stranded = lone
-                            continue
-                        # a stranded reservation tail belongs to the row above
-                        if pending:
-                            tail = continuation_tail(cells)
-                            if tail:
-                                pending["reservation_raw"] += " " + tail
-                            # a long GP name wraps onto this row at the same
-                            # cell index it occupied on the seat row
-                            col = pending.get("gp_column")
-                            if col is not None and col < len(cells):
-                                frag = cells[col]
-                                if frag and not _all_continuation_words(frag) \
-                                        and not is_ward_dash(frag):
-                                    pending["gram_panchayat"] = \
-                                        f"{pending['gram_panchayat']} {frag}".strip()
-                                    # the panch rows below inherit the GP name,
-                                    # so repair the carried-forward copy too
-                                    gp = pending["gram_panchayat"]
+            found = [[clean(c) for c in raw]
+                     for table in page.find_tables() for raw in table.extract()]
+            # The OCR reading replaces pdfplumber's only where pdfplumber
+            # returned fragments and Surya returned whole rows. Seven cells is
+            # the test, and it is a property of the extraction rather than a
+            # guess about the result - which is what three earlier attempts got
+            # wrong by choosing on "more wards found" and letting collisions
+            # triple.
+            spare = ocr_rows(path, page_no)
+            if spare:
+                whole = sum(1 for cells in spare if len(cells) >= 7)
+                if whole > len(spare) / 2:
+                    found = spare
+            for cells in found:
+                parsed = split_row(cells)
+                if not parsed:
+                    # A row holding a ward number and nothing but a
+                    # category belongs to the row *below* it, not above.
+                    # Where the category text wraps, the ward digit and the
+                    # category are top-aligned in their cells while the
+                    # name is baseline-aligned lower, so one printed line
+                    # comes out as two: this one, and the next carrying the
+                    # person and the office.
+                    #
+                    # Both halves were being read wrongly. split_row
+                    # anchors on the office cell, so this half was dropped
+                    # and its ward lost - and the continuation logic below,
+                    # which exists for tails that really do belong to the
+                    # row above, then attached this row's category to the
+                    # *previous* seat. 1,014 rows of Kaithal, Mewat and
+                    # Sirsa 2016 carried the neighbouring seat's
+                    # reservation, which is worse than carrying none.
+                    lone = [c for c in cells if c]
+                    if lone and ward_number(lone[0]) is not None:
+                        stranded = lone
                         continue
-                    if stranded:
-                        # Re-split the two halves as one row. The reservation
-                        # is moved behind the office cell because that is where
-                        # split_row expects it - on a wrapped line it is
-                        # printed before the office, not after.
-                        head = list(stranded)
-                        res = (head.pop() if len(head) > 1
-                               and normalize_reservation(head[-1]) else None)
-                        rejoined = split_row(head + cells + ([res] if res else []))
-                        # only where the row is actually missing its ward. A
-                        # row that already states one is not a continuation of
-                        # anything, and merging into it shifts the seat by one:
-                        # Karnal produced ward 5 carrying ward 6's contents.
-                        if (rejoined and rejoined[0] == "panch" and rejoined[3]
-                                and not parsed[3]):
-                            parsed = rejoined
-                        stranded = None
-                    yield from finish(pending)
-                    (kind, row_sr, row_gp, ward, raw_name, raw_father, raw_res,
-                     gp_column) = parsed
-                    # Sarpanch rows carry the GP identity; the Panch rows under
-                    # them leave those cells blank.
-                    if row_sr:
-                        if last_sr is not None and int(row_sr) <= last_sr:
-                            printing += 1  # numbering restarted: next printing
-                        last_sr = int(row_sr)
-                        sr = row_sr
-                    if row_gp:
-                        gp = row_gp
-                    name, unopposed = strip_unopposed(raw_name)
-                    pending = {
-                        "source_pdf": path.name,
-                        "notification": ctx["notif"],
-                        "printing": printing,
-                        "district": ctx["district"],
-                        "block": ctx["block"],
-                        "sr_no": sr,
-                        "gram_panchayat": gp,
-                        "ward_no": ward,
-                        "office": kind,
-                        "reservation_raw": raw_res,
-                        "winner": name,
-                        "father_husband": strip_unopposed(raw_father)[0],
-                        "unopposed": int(unopposed),
-                        "vacant": int(is_vacant(name)),
-                        "gp_column": gp_column if kind == "sarpanch" else None,
-                    }
+                    # a stranded reservation tail belongs to the row above
+                    if pending:
+                        tail = continuation_tail(cells)
+                        if tail:
+                            pending["reservation_raw"] += " " + tail
+                        # a long GP name wraps onto this row at the same
+                        # cell index it occupied on the seat row
+                        col = pending.get("gp_column")
+                        if col is not None and col < len(cells):
+                            frag = cells[col]
+                            if frag and not _all_continuation_words(frag) \
+                                    and not is_ward_dash(frag):
+                                pending["gram_panchayat"] = \
+                                    f"{pending['gram_panchayat']} {frag}".strip()
+                                # the panch rows below inherit the GP name,
+                                # so repair the carried-forward copy too
+                                gp = pending["gram_panchayat"]
+                    continue
+                if stranded:
+                    # Re-split the two halves as one row. The reservation
+                    # is moved behind the office cell because that is where
+                    # split_row expects it - on a wrapped line it is
+                    # printed before the office, not after.
+                    head = list(stranded)
+                    res = (head.pop() if len(head) > 1
+                           and normalize_reservation(head[-1]) else None)
+                    rejoined = split_row(head + cells + ([res] if res else []))
+                    # only where the row is actually missing its ward. A
+                    # row that already states one is not a continuation of
+                    # anything, and merging into it shifts the seat by one:
+                    # Karnal produced ward 5 carrying ward 6's contents.
+                    if (rejoined and rejoined[0] == "panch" and rejoined[3]
+                            and not parsed[3]):
+                        parsed = rejoined
+                    stranded = None
+                yield from finish(pending)
+                (kind, row_sr, row_gp, ward, raw_name, raw_father, raw_res,
+                 gp_column) = parsed
+                # Sarpanch rows carry the GP identity; the Panch rows under
+                # them leave those cells blank.
+                if row_sr:
+                    if last_sr is not None and int(row_sr) <= last_sr:
+                        printing += 1  # numbering restarted: next printing
+                    last_sr = int(row_sr)
+                    sr = row_sr
+                if row_gp:
+                    gp = row_gp
+                name, unopposed = strip_unopposed(raw_name)
+                pending = {
+                    "source_pdf": path.name,
+                    "notification": ctx["notif"],
+                    "printing": printing,
+                    "district": ctx["district"],
+                    "block": ctx["block"],
+                    "sr_no": sr,
+                    "gram_panchayat": gp,
+                    "ward_no": ward,
+                    "office": kind,
+                    "reservation_raw": raw_res,
+                    "winner": name,
+                    "father_husband": strip_unopposed(raw_father)[0],
+                    "unopposed": int(unopposed),
+                    "vacant": int(is_vacant(name)),
+                    "gp_column": gp_column if kind == "sarpanch" else None,
+                }
     yield from finish(pending)
 
 def crosscheck(rows):
