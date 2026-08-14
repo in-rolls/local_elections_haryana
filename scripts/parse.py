@@ -76,6 +76,54 @@ def clean(cell):
     return re.sub(r"\s+", " ", (cell or "").replace("\n", " ")).strip()
 
 
+# **A known defect, diagnosed and not yet fixed.** Four attempts are recorded
+# here so the fifth starts from evidence rather than from the beginning.
+#
+# pdfplumber.find_tables() splits one fully-ruled seven-column grid into two
+# tables on some of these gazettes. Palwal/Prithla page 2 comes back as two,
+# the right-hand one holding [father, office, reservation] - so split_row,
+# which anchors on the office cell, parses all 29 rows happily while reading
+# **the father as the winner with no ward at all**. That single failure is the
+# source of both open entries on the worklist: 883 rows with no ward number,
+# and 1,157 sharing a seat key, because the panchayat name is printed once per
+# panchayat and blank on the ward rows beneath, so a panchayat whose column is
+# never read lets its wards inherit the previous one's. Machhrauli had 23
+# different people filed under one ward.
+#
+# The page is not at fault. It renders correctly in Devanagari and its text
+# layer is faithful Kruti Dev; word positions are stable to the pixel, with the
+# panchayat at x=99, the ward at 180, the name at 225 and the office at 377.
+#
+# What was tried, and what each cost:
+#
+#   1. Fall back to a positional read where the page has no office cell.
+#      Never fired: the fragment has one.
+#   2. Fall back where most panch rows lack a ward. Fired too widely and cost
+#      365 rows of 2016 while fixing 2022.
+#   3. Read both ways, keep whichever finds more numbered wards. 2022 improved;
+#      2016 still lost 357 rows and colliding keys tripled. Maximising one
+#      number let the others move.
+#   4. Drop find_tables and always read positionally. Measurably worse: only
+#      747 of 2,040 rows on Bhiwani come out identical, because a line-based
+#      read loses the wrapped continuation lines that find_tables merges into
+#      one cell - "vuqlwfpr ttkfr efgyk ds flok;" truncates to "... efgyk" -
+#      and it reads preamble prose as rows.
+#   5. Pass the page's own vertical rules as explicit_vertical_lines. On three
+#      documents this looked right - Prithla gained 91 wards, Bhiwani and
+#      Ambala were untouched - and across all 187 it lost 447 rows of 2022 and
+#      raised ward-number holes from 713 to 972.
+#
+# The lesson from 3 and 5 is the same: a sample of three documents and a single
+# scalar are both too small to choose between two readings of 187 files. A
+# working fix has to be judged per document against several criteria at once -
+# rows must not fall, numbered wards must rise, collisions and ward holes must
+# not - and the criteria checked before the run rather than after.
+#
+# Surya is not the answer here, and was checked: the text layer is exact, so
+# OCR would read a picture of text we can already extract, and would lose the
+# cell merging exactly as attempt 4 did.
+
+
 def office_kind(cell):
     key = re.sub(r"[^a-z]", "", clean(cell).lower()) or re.sub(r"\s+", "", clean(cell))
     if key in SARPANCH:
