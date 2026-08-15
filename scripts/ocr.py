@@ -78,20 +78,6 @@ def bad_pages(path):
     return out
 
 
-def reads_badly(page):
-    """Whether pdfplumber lost this page's grid.
-
-    The panch rows are the test: on a page read correctly almost all of them
-    carry a ward number, and on a fragmented one none does. Deliberately
-    generous - an unnecessary OCR costs half a minute and is discarded at parse
-    time, where the check is structural rather than a guess.
-    """
-    got = [split_row([clean(c) for c in raw])
-           for table in page.find_tables() for raw in table.extract()]
-    panch = [g for g in got if g and g[0] == "panch"]
-    return bool(panch) and sum(1 for g in panch if not g[3]) > len(panch) / 2
-
-
 def ocr_page(engine, pdf_path, page_no):
     with tempfile.TemporaryDirectory() as tmp:
         stem = pathlib.Path(tmp) / "p"
