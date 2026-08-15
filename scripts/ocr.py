@@ -26,6 +26,24 @@ one passed the page's own rules and lost 447 rows elsewhere.
 
 Only the bad pages are read, and the output is cached and committed, so a
 re-parse never needs the model. Apple Silicon only.
+
+**2016 is read but not used, and the cache is kept so the next attempt starts
+from it.** Applying it there fixed 123 of the 164 wardless rows and cut ward
+holes from 487 to 338 - and attached fourteen people to the wrong panchayat.
+Theh Taranwali in Siwan had nine clean rows before and came out with fifteen,
+its wards duplicated and one numbered 45.
+
+The cause is the long-form layout, from the other side. A ward row leaves the
+panchayat column blank, so it inherits the name carried forward - and where an
+OCR'd page begins part-way through a panchayat, or its sarpanch row is not
+read, the rows inherit the *previous* panchayat instead of their own. 2022 did
+not show this because its bad pages happen to start at a panchayat boundary.
+
+A wrong row misleads where a missing row only shrinks, so this is worse than
+the 164 it would fix. The next attempt needs the panchayat identity established
+for an OCR'd page independently - from the page's own first sarpanch row, or by
+refusing the page when it has none - rather than inherited across a boundary
+the OCR cannot see.
 """
 
 import argparse
