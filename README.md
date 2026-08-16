@@ -175,7 +175,7 @@ amendment. Asserting the 2022 rules against 2016 would be wrong.
 ## 🔗 Adjacent Repositories
 
 - [in-rolls/quota_raj](https://github.com/in-rolls/quota_raj) — The Effect of Gender Quotas in Local Bodies on Women's Representation in Rural India
-- [in-rolls/quota_elite_quality](https://github.com/in-rolls/quota_elite_quality) — Effect of Gender Quotas on Some Qualities of Elites
-- [in-rolls/pds_pradhan](https://github.com/in-rolls/pds_pradhan) — Do women pradhans reduce corruption in the PDS? Forensics on 16M Rajasthan ration cards x GP reservation lottery: precise nulls, clean placebos.
+- [in-rolls/up-2023-electoral-rolls](https://github.com/in-rolls/up-2023-electoral-rolls)
 - [in-rolls/pai](https://github.com/in-rolls/pai) — Panchayat Advancement Index (PAI) Scores from https://pai.gov.in/ for 2022-2023 and 2023-2024
-- [in-rolls/local_elections_kerala](https://github.com/in-rolls/local_elections_kerala) — Kerala Local Government Seat Reservation Data and Winner Attributes
+- [in-rolls/local_elections_bihar](https://github.com/in-rolls/local_elections_bihar) — Candidate Info. + Valid Votes Won by Cands. in the 2016 Bihar Panchayat Elections
+- [in-rolls/quota](https://github.com/in-rolls/quota) — Effects of Randomly Assigned Reservations for Women Leaders in Indian Local Government on Allocation and Development Outcomes
