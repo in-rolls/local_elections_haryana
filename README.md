@@ -174,8 +174,8 @@ amendment. Asserting the 2022 rules against 2016 would be wrong.
 
 ## 🔗 Adjacent Repositories
 
-- [in-rolls/quota_raj](https://github.com/in-rolls/quota_raj) — The Effect of Gender Quotas in Local Bodies on Women's Representation in Rural India
 - [in-rolls/up-2023-electoral-rolls](https://github.com/in-rolls/up-2023-electoral-rolls)
-- [in-rolls/pai](https://github.com/in-rolls/pai) — Panchayat Advancement Index (PAI) Scores from https://pai.gov.in/ for 2022-2023 and 2023-2024
-- [in-rolls/local_elections_bihar](https://github.com/in-rolls/local_elections_bihar) — Candidate Info. + Valid Votes Won by Cands. in the 2016 Bihar Panchayat Elections
+- [in-rolls/local_elections_up](https://github.com/in-rolls/local_elections_up) — UP Local Election Data --- GP and ULB. Seat reservation, winner, and candidates for some elections
 - [in-rolls/quota](https://github.com/in-rolls/quota) — Effects of Randomly Assigned Reservations for Women Leaders in Indian Local Government on Allocation and Development Outcomes
+- [in-rolls/quota_raj](https://github.com/in-rolls/quota_raj) — The Effect of Gender Quotas in Local Bodies on Women's Representation in Rural India
+- [in-rolls/local_elections_bihar](https://github.com/in-rolls/local_elections_bihar) — Candidate Info. + Valid Votes Won by Cands. in the 2016 Bihar Panchayat Elections
