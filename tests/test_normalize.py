@@ -1,7 +1,6 @@
 """Every reservation string variant observed across the 2016 and 2022 corpora."""
 
 import pytest
-
 from normalize import is_vacant, label, normalize_reservation, strip_unopposed
 
 # (raw cell, caste, woman_reserved, script)
@@ -102,9 +101,17 @@ def test_rejects_non_categories(raw):
 
 
 def test_wrapped_cell_is_whitespace_insensitive():
-    """pdfplumber joins wrapped cells with a newline; that must not change the result."""
-    assert normalize_reservation("Scheduled Caste\nOther than Women") == ("SC", 0, "latin")
-    assert normalize_reservation("vuqlwfpr tkfr efgyk\nds flok;") == ("SC", 0, "krutidev")
+    """Wrapped cells must normalize the same way as single-line cells."""
+    assert normalize_reservation("Scheduled Caste\nOther than Women") == (
+        "SC",
+        0,
+        "latin",
+    )
+    assert normalize_reservation("vuqlwfpr tkfr efgyk\nds flok;") == (
+        "SC",
+        0,
+        "krutidev",
+    )
 
 
 def test_labels():

@@ -1,176 +1,144 @@
-## Haryana Gram Panchayat Seat Reservation Status
+# Haryana Local Election Data
 
-Reservation status of every gram panchayat (sarpanch) seat in Haryana for the
-2022 and 2016 panchayat general elections, plus the ward-level (panch) seats
-within each GP.
+[![CI](https://github.com/in-rolls/local_elections_haryana/actions/workflows/ci.yml/badge.svg)](https://github.com/in-rolls/local_elections_haryana/actions/workflows/ci.yml)
+[![Code license: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 
-Haryana reserves GP seats along two independent dimensions — caste
-(Scheduled Caste / Backward Class 'A' / open) and gender (woman-reserved or not)
-— assigned by rotation and draw of lots. Both are recorded here, along with the
-person elected to the seat.
+Gram panchayat head (sarpanch) and ward member (panch) records from Haryana's 2016 and 2022 local elections. The data record seat reservations and elected candidates from State Election Commission notifications. Source PDFs, acquisition manifests, published CSVs, and typed Parquet exports are included.
 
-* [data](data/)
-* [scripts](scripts/)
+## Data
 
-### Layout
+Each row is a seat record recovered from a notification. Coverage is incomplete, and repeated names and missing ward numbers prevent treating the usual geographic columns as a universally unique key.
 
-Data is partitioned by election year:
+| File | Election | Unit | Rows |
+|---|---:|---|---:|
+| [gp_reservation_2016.parquet](data/fin/gp_reservation_2016.parquet) | 2016 | GP head seat | 6,090 |
+| [ward_reservation_2016.parquet](data/fin/ward_reservation_2016.parquet) | 2016 | GP ward seat | 61,879 |
+| [gp_reservation_2022.parquet](data/fin/gp_reservation_2022.parquet) | 2022 | GP head seat | 6,123 |
+| [ward_reservation_2022.parquet](data/fin/ward_reservation_2022.parquet) | 2022 | GP ward seat | 60,981 |
 
+[MANIFEST.json](data/fin/MANIFEST.json) records each export's schema, row count, SHA-256, and input CSV checksum. CSV snapshots remain in [data/2016/](data/2016/) and [data/2022/](data/2022/), alongside the source manifests, PDFs, and cached OCR. `make verify-data` checks every exported value against its CSV and verifies the notification PDFs against their acquisition checksums.
+
+No dataset DOI is recorded in this repository. Cite the repository using [CITATION.cff](CITATION.cff), and record the commit used in your analysis.
+
+## Column dictionary
+
+Parquet adds `year` to the CSV fields. Empty CSV cells become null; `0`/`1` flags become booleans. Other values, row order, and repeated observations are preserved. Identifiers remain strings, including any leading zeroes.
+
+| Column | Parquet type | Meaning |
+|---|---|---|
+| `year` | int16 | Election year |
+| `district`, `block` | string | Administrative location from the index or notification |
+| `sr_no` | string | GP serial within a block notification; not a statewide identifier |
+| `gram_panchayat` | string | GP name recovered from the source |
+| `ward_no` | string | Printed ward number; ward export only; can be null |
+| `reservation` | string | Harmonized seat-reservation label |
+| `caste_reservation` | string | `SC`, `ST`, `BC_A`, or `NONE`; `NONE` means no caste reservation |
+| `woman_reserved` | bool | Whether the seat is reserved for a woman |
+| `winner` | string | Elected person's name or the source's vacancy text |
+| `father_husband` | string | Relation-name column as printed |
+| `unopposed` | bool | Elected unopposed, indicated by a source asterisk |
+| `vacant` | bool | Source records an unfilled seat |
+| `reservation_raw` | string | Extracted category cell before normalization |
+| `script` | string | `latin` or `krutidev`, as identified by the category normalizer |
+| `printings_agree` | bool | Agreement on the GP reservation across printings; null when unchecked |
+| `notification`, `source_pdf` | string | Notification identifier and saved source filename |
+
+Caste and women's reservations are separate dimensions. An SC-reserved seat can also be woman-reserved. Seat reservation is not the elected person's caste or gender. `printings_agree` is a GP-level comparison propagated to its ward rows; it does not establish independent agreement on each ward's category.
+
+## Coverage and known gaps
+
+The 2016 files cover 126 blocks in 21 districts; 2022 covers 143 blocks in 22 districts. Administrative boundaries and names changed between elections, including the creation of Charkhi Dadri and the Mewat/Nuh name change. There is no validated cross-year crosswalk or LGD/census identifier. Exact names can differ across publications, and fuzzy matching requires review.
+
+The validator retains the original SEC reference totals and their different denominators. Its 2016 totals count people elected, excluding vacant seats: the data contain 6,081 non-vacant GP records and 59,980 non-vacant ward records. Its 2022 totals count seats: 6,123 of 6,220 GP seats and 60,981 of 61,993 ward seats are represented. These coverage checks do not establish that every recovered record is correct.
+
+Current validation findings include:
+
+| Finding | 2016 | 2022 |
+|---|---:|---:|
+| GP names repeated within a district/block | 13 names | 1 name |
+| Ward rows without a ward number | 164 | 259 |
+| GPs with gaps in their numbered wards | 166 | 305 |
+| GPs with repeated ward numbers | 32 | 37 |
+| GP rows marked as Kruti Dev | 0 | 45 |
+| GP rows with cross-printing disagreement | Not checked | 144 |
+
+Do not deduplicate on district, block, and GP name without examining the notification. Missing ward numbers remain missing. A successful `make validate` means its required checks passed; warnings remain visible and are not recoded into successful readings.
+
+The published files exclude 2000, 2005, 2010, and later bye-elections. Work on the 2000 sources using Muse Spark Contributor is underway in the [local_reservations project](https://github.com/in-rolls/local_reservations). Those outputs remain under review and are not included in these releases.
+
+## How collected
+
+| Election | Source | Extraction |
+|---|---|---|
+| 2016 | [SEC fifth-general-election notifications](https://secharyana.gov.in/notifications-of-elected-candidates-of-panchayati-raj-institution-in-5th-general-elections-2016-in-the-state-of-haryana/), 21 district PDFs | Offline PDF table extraction; one printing retained per notification |
+| 2022 | [SEC notifications](https://secharyana.gov.in/orders-notifications-related-to-panchayat-elections-2021/) and [statewide index](https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/12/2022121338.pdf), 187 linked PDFs | Offline PDF table extraction with retained Surya OCR for 26 pages whose table grids were fragmented |
+
+The 2022 index includes Zila Parishad and Panchayat Samiti notifications as well as GP notifications; all 187 files are retained, but only sarpanch and panch rows enter these exports. The older NIC URLs for 2016 were unavailable during acquisition. The source manifest records the exact Wayback URLs used to recover them. Saved filenames identify the district and block where available, and manifests preserve the original filename, URL, byte count, and SHA-256.
+
+Notifications can contain multiple Hindi and English printings with restarted serials. The parser groups rows by notification and chooses one printing, preferring English. It handles wrapped reservation labels, doubled glyphs, and Kruti Dev text encoding. These are consequential cases: a detached `Women` label can otherwise turn a woman-reserved seat into a plausible but incorrect record.
+
+Cached OCR from 41 pages of the 2016 PDFs is retained for research but excluded from parsing. Earlier evaluation found it could attach ward rows to the wrong GP across page boundaries. Ordinary parsing requires neither a model nor paid API calls. The optional [OCR tool](scripts/ocr.py) documents its separate environment and the rejected 2016 experiment.
+
+The [original implementation](https://github.com/in-rolls/local_elections_haryana/tree/2981e75) records the collection history. Existing published CSVs are preserved; a new parse writes to `data/derived/` for comparison before any release update.
+
+## Usage
+
+```sh
+git clone https://github.com/in-rolls/local_elections_haryana.git
+cd local_elections_haryana
+uv sync --frozen --group dev
+make verify-data
 ```
-data/2022/                 data/2016/
-  manifest.csv               manifest.csv
-  gp_reservation.csv         gp_reservation.csv     <- the main file
-  ward_reservation.csv       ward_reservation.csv
-  index.pdf                  pdfs/   (21 district PDFs)
-  pdfs/   (187 block PDFs)
+
+Read a published file:
+
+```python
+import pyarrow.parquet as pq
+
+table = pq.read_table("data/fin/gp_reservation_2022.parquet")
+print(table.num_rows)
+print(table.schema)
 ```
 
-| | gram panchayats | ward seats | blocks | districts |
-|---|---|---|---|---|
-| 2022 | 6,159 (99.0% of official) | 61,362 (99.0%) | 143 | 22 |
-| 2016 | 6,079 (98.0%) | 61,618 (98.8% of elected) | 126 | 21 |
+Rebuild the four Parquet exports from their existing CSV inputs:
 
-2016 has fewer blocks and districts because Charkhi Dadri was not created until
-December 2016 and Nuh was still called Mewat. Joining the years on district and
-gram panchayat name matches 4,269 GPs, which is enough to see reservation
-rotate: only 50 of the 775 SC-reserved seats in 2016 were still SC-reserved in
-2022. Raising that match rate needs fuzzy name matching — the gazettes
-transliterate inconsistently ("Ado Majra" in 2016, "Adho Majra" in 2022).
-
-The source PDFs are committed, under readable names built from the index
-(`Rohtak__Meham.pdf`, not `2022120213-3.pdf`), so any row can be checked against
-the gazette page it came from without a network round trip. `manifest.csv`
-carries the URL, byte count and SHA-256 of each, so a re-harvest can prove it
-fetched the same bytes. It is about 150 MB per election year.
-
-### Columns
-
-| column | meaning |
-|---|---|
-| `district`, `block` | administrative location, taken from the SEC index |
-| `sr_no` | serial number within the block notification |
-| `gram_panchayat` | GP name as printed |
-| `ward_no` | ward number (ward file only) |
-| `reservation` | harmonised label, e.g. `Woman`, `SC Other than Woman` |
-| `caste_reservation` | `SC` / `ST` / `BC_A` / `NONE` |
-| `woman_reserved` | 1 if the seat is reserved for a woman |
-| `winner` | person elected to the seat |
-| `father_husband` | as printed |
-| `unopposed` | 1 if elected unopposed (a `*` in the source) |
-| `vacant` | 1 if the seat went unfilled; official "elected" totals exclude these |
-| `reservation_raw` | the source cell, unmodified, for auditing |
-| `script` | `latin` or `krutidev` — which typesetting the row was read from |
-| `printings_agree` | 1 if the Hindi and English printings agree on this seat, 0 if not, blank if only one printing exists |
-| `notification`, `source_pdf` | provenance |
-
-`caste_reservation` and `woman_reserved` are orthogonal: a seat can be
-SC-reserved and woman-reserved at once.
-
-### Pipeline
-
-Three stages, deliberately separated — only the first touches the network, and
-only the second reads PDFs, so the checks in the third are cheap to re-run.
-
-```
-make harvest    # index PDF -> 187 notification PDFs + manifest.csv (network)
-make parse      # PDFs -> gp_reservation.csv, ward_reservation.csv  (offline)
-make validate   # check the CSVs; non-zero exit on failure          (CSV only)
-make test       # unit tests for the normalizer and row splitter
-make all        # all three, in order
+```sh
+make to-parquet
+make verify-data
 ```
 
-`make harvest` is idempotent — it skips files already downloaded, and re-checksums
-everything. Pass `YEAR=` to any target.
+Re-parse a small local source sample:
 
-### Sources
+```sh
+uv run python scripts/parse.py --year 2022 --limit 1 --out data/derived/smoke
+```
 
-**2016** is published as one PDF per district, each containing a separate
-notification per block, linked from the SEC's [5th general elections
-page](https://secharyana.gov.in/notifications-of-elected-candidates-of-panchayati-raj-institution-in-5th-general-elections-2016-in-the-state-of-haryana/).
-The NIC host serving those files no longer answers, so `harvest.py` fetches them
-from the Internet Archive and pins the exact snapshot in `manifest.csv`.
+`make parse YEAR=2022` processes that year's saved PDFs and writes derived CSVs under `data/derived/2022/`. Failed PDF reads stop publication of the run's outputs. A limited parse cannot overwrite the published CSV directory. Run `make validate-derived YEAR=2022` on a complete derived year and compare it with the existing release before replacing any published files.
 
-**2022.** The State Election Commission's statutory notification under s.161(4) of the
-Haryana Panchayati Raj Act, 1994, published in the Haryana Government Gazette
-(Extraordinary) of 30 November 2022. A [statewide index
-PDF](https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/12/2022121338.pdf)
-carries one hyperlink per Zila Parishad, Panchayat Samiti and block — 187 in all.
-Listed on the SEC's [2021–22 orders and
-notifications](https://secharyana.gov.in/orders-notifications-related-to-panchayat-elections-2021/)
-page.
+Harvesting is a separate, explicitly invoked network operation:
 
-All 187 PDFs are digitally generated text, not scans, so no OCR is involved.
+```sh
+make harvest YEAR=2022
+```
 
-### Four things worth knowing about the source
+Downloads must contain a readable PDF and match any advertised content length before they replace a saved file. Existing downloads are reused unless `--refresh` is passed to `scripts/harvest.py`. Use `make verify-data` to check the retained source bytes before relying on a cache.
 
-**Each PDF prints its notification two or three times** — typeset in Kruti Dev
-Hindi, then in English, sometimes in English twice — with the gram panchayats
-renumbered from 1 in each printing. Parse it naively and every GP appears two or
-three times. `parse.py` detects printings by the serial number restarting and
-keeps one, preferring English.
+## Development
 
-That redundancy is also the best check available: the printings are independent
-typesettings of the same seats, so agreement on a seat is real evidence rather
-than self-consistency.
+```sh
+make check
+make ci-docker
+```
 
-**Reservation labels wrap**, sometimes to a second line inside the cell and
-sometimes into a ruled row of their own. The second case is the dangerous one:
-`Scheduled Caste` with `Women` stranded on the next row reads as a perfectly
-plausible SC-but-not-woman seat, so the error is silent rather than loud. Worse,
-that stranded row often also carries the tail of a long name
-(`['Singh', 'other than Women']`), so only the reservation part can be merged.
+`make check` runs Ruff, formatting, pytest, pre-commit, both years' data validators, CSV-to-Parquet equality checks, and source checksums. CI tests Python 3.12 and 3.14. The Docker target uses the standard Python images. The environment is a data-repository environment managed by uv; the scripts do not require an installed library package.
 
-**Roughly a third of blocks are typeset in legacy Kruti Dev font encoding**
-rather than Unicode, so their text extracts as mojibake: `vuqlwfpr tkfr efgyk ds
-flok;` is अनुसूचित जाति महिला के सिवाय, "SC other than Woman". This is a
-deterministic byte mapping, not corruption.
+## Citation
 
-**The vocabulary is not standardised, and some of it is damaged.** Beyond the
-expected variants — `Other than Women` / `Other Than Women` / `Other than
-Woman`, `Scheduled Caste` / `Schedule Caste` / `Schedulded Caste`, and
-`Backward Class 'A'` with three different apostrophe characters — the
-typesetting itself breaks words. `Scheduled Cast e Women` in English; nine
-distinct spellings of *anusuchit* in Kruti Dev (`vuqlwfpr`, `vuqlqfpr`,
-`vuqlfpr`, `vuqwlwfpr` …); whole lines rendered with every character doubled
-(`EEXXTTRRAAOORRDDIINNAARRYY`). Each unmatched variant silently downgraded a
-reserved seat to an open one, so the matchers are pattern-based rather than
-literal. `scripts/test_normalize.py` pins every string observed in the corpus.
+Gaurav Sood. *Haryana Gram Panchayat and Ward Seat Reservation Data, 2016 and 2022*. Include the repository URL and commit used. Machine-readable metadata are in [CITATION.cff](CITATION.cff). Contact: [contact@gsood.com](mailto:contact@gsood.com).
 
-### Validation
+## License
 
-`make validate` checks the parsed CSVs against the manifest, the official
-totals, and the statute. Two of its checks are worth trusting:
-
-* **Per-block statutory shares.** Haryana's 50% women's reservation and 8%
-  BC(A) reservation bind *per block*, not statewide, so a block far off those
-  shares means rows were dropped or misread there. Offsetting errors cannot hide
-  in a per-block check the way they can in a state total. This is what caught
-  the wrapped-label bug.
-* **Cross-printing agreement.** Disagreement between the Hindi and English
-  printings is evidence of a misread. Seats that still disagree are marked in
-  `printings_agree` rather than quietly resolved in favour of English.
-
-Reference totals: 6,220 gram panchayats / 61,993 panches / 143 blocks for 2022,
-and 6,193 / 60,438 for 2016. These are not the same kind of number — the 2022
-figures were announced before polling and count *seats*, the 2016 figures were
-published afterwards and count *people elected*, which excludes vacancies.
-`validate.py` records that basis per year and compares like with like.
-
-The statutory shares also differ: the women's quota rose from one third to one
-half, and BC(A) reservation in panchayats did not exist before the 2021
-amendment. Asserting the 2022 rules against 2016 would be wrong.
-
-### Not included
-
-* **No LGD or census village codes.** GP names are free text; joining to other
-  data needs fuzzy matching against the Local Government Directory.
-* **No crosswalk between the two years.** The 70% match above is on exact
-  normalised names. Closing the rest needs fuzzy matching, ideally against the
-  Local Government Directory so both years get stable codes.
-* **2010 and 2005** are not built. 2005 exists on the live CDN but as scanned
-  images, so it would need OCR.
-* **Bye-elections since 2022** are not folded in; this is the roster as elected
-  in November 2022.
+The code is [MIT licensed](LICENSE). Source notifications are publications of the Haryana State Election Commission. The code license does not grant rights over those documents; no separate data license is asserted here.
 
 ## 🔗 Adjacent Repositories
 

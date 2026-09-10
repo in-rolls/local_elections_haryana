@@ -31,18 +31,27 @@ def read(path):
         for page_no, page in enumerate(pdf.pages):
             words = page.extract_words()
             serials = sorted(
-                (w for w in words
-                 if SERIAL_X[0] <= w["x0"] <= SERIAL_X[1]
-                 and re.fullmatch(r"\d+\.?", w["text"])),
+                (
+                    w
+                    for w in words
+                    if SERIAL_X[0] <= w["x0"] <= SERIAL_X[1]
+                    and re.fullmatch(r"\d+\.?", w["text"])
+                ),
                 key=lambda w: w["top"],
             )
             for i, w in enumerate(serials):
-                end = serials[i + 1]["top"] - 2 if i + 1 < len(serials) else float("inf")
+                end = (
+                    serials[i + 1]["top"] - 2 if i + 1 < len(serials) else float("inf")
+                )
                 name = " ".join(
-                    x["text"] for x in sorted(
-                        (x for x in words
-                         if DISTRICT_X[0] <= x["x0"] <= DISTRICT_X[1]
-                         and w["top"] - 3 <= x["top"] < end),
+                    x["text"]
+                    for x in sorted(
+                        (
+                            x
+                            for x in words
+                            if DISTRICT_X[0] <= x["x0"] <= DISTRICT_X[1]
+                            and w["top"] - 3 <= x["top"] < end
+                        ),
                         key=lambda x: (x["top"], x["x0"]),
                     )
                 )
@@ -53,9 +62,12 @@ def read(path):
                 if not uri.endswith(".pdf"):
                     continue
                 block = " ".join(
-                    x["text"] for x in words
-                    if x["x0"] >= annot["x0"] - 2 and x["x1"] <= annot["x1"] + 2
-                    and x["top"] >= annot["top"] - 3 and x["bottom"] <= annot["bottom"] + 3
+                    x["text"]
+                    for x in words
+                    if x["x0"] >= annot["x0"] - 2
+                    and x["x1"] <= annot["x1"] + 2
+                    and x["top"] >= annot["top"] - 3
+                    and x["bottom"] <= annot["bottom"] + 3
                 )
                 links.append((page_no, annot["top"], uri, block.strip()))
 
@@ -69,10 +81,12 @@ def read(path):
         if filename in seen:
             continue
         seen.add(filename)
-        out.append({
-            "url": uri,
-            "filename": filename,
-            "district": above[-1] if above else "",
-            "block": block,
-        })
+        out.append(
+            {
+                "url": uri,
+                "filename": filename,
+                "district": above[-1] if above else "",
+                "block": block,
+            }
+        )
     return out

@@ -13,6 +13,7 @@ import concurrent.futures
 import csv
 import hashlib
 import html
+import io
 import json
 import pathlib
 import re
@@ -20,6 +21,7 @@ import sys
 import urllib.request
 
 import index_pdf
+import pdfplumber
 
 YEAR = "2022"
 
@@ -33,31 +35,53 @@ SOURCES = {
     "2022": {
         "style": "index-pdf",
         "url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c"
-               "/uploads/2022/12/2022121338.pdf",
+        "/uploads/2022/12/2022121338.pdf",
     },
     "2016": {
         "style": "page-list",
         "url": "https://secharyana.gov.in/notifications-of-elected-candidates-of-"
-               "panchayati-raj-institution-in-5th-general-elections-2016-in-the-"
-               "state-of-haryana/",
-        "prefer": "-e.pdf",   # the English printing; each district also has -H
+        "panchayati-raj-institution-in-5th-general-elections-2016-in-the-"
+        "state-of-haryana/",
+        "prefer": "-e.pdf",  # the English printing; each district also has -H
         "via_wayback": True,
     },
 }
 
-CDX = ("http://web.archive.org/cdx/search/cdx?url={prefix}*&output=json"
-       "&fl=timestamp,original,statuscode&collapse=urlkey&limit=500")
+CDX = (
+    "https://web.archive.org/cdx/search/cdx?url={prefix}*&output=json"
+    "&fl=timestamp,original,statuscode&collapse=urlkey&limit=500"
+)
 
 DATA = pathlib.Path(__file__).resolve().parent.parent / "data"
-MANIFEST_COLUMNS = ["district", "block", "saved_as", "sha256", "bytes",
-                    "source_filename", "url"]
+MANIFEST_COLUMNS = [
+    "district",
+    "block",
+    "saved_as",
+    "sha256",
+    "bytes",
+    "source_filename",
+    "url",
+]
 
 
 def fetch(url, dest, timeout=180):
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(request, timeout=timeout) as response:
         payload = response.read()
-    dest.write_bytes(payload)
+        expected = response.headers.get("Content-Length")
+        if expected is not None and len(payload) != int(expected):
+            raise ValueError(f"Incomplete download: {url}")
+    if not payload.lstrip().startswith(b"%PDF-"):
+        raise ValueError(f"Response is not a PDF: {url}")
+    with pdfplumber.open(io.BytesIO(payload)) as pdf:
+        if not pdf.pages:
+            raise ValueError(f"PDF has no pages: {url}")
+    temporary = dest.with_suffix(dest.suffix + ".part")
+    try:
+        temporary.write_bytes(payload)
+        temporary.replace(dest)
+    finally:
+        temporary.unlink(missing_ok=True)
     return payload
 
 
@@ -70,27 +94,42 @@ def wayback_urls(prefix):
     with urllib.request.urlopen(CDX.format(prefix=prefix), timeout=120) as response:
         rows = json.load(response)[1:]
     # "id_" asks the Archive for the original bytes, without its own banner
-    return {url: f"https://web.archive.org/web/{ts}id_/{url}"
-            for ts, url, status in rows if status == "200"}
+    return {
+        url: f"https://web.archive.org/web/{ts}id_/{url}"
+        for ts, url, status in rows
+        if status == "200"
+    }
 
 
 def page_list(source):
     """Discover one PDF per district from the SEC's HTML listing page."""
-    request = urllib.request.Request(source["url"], headers={"User-Agent": "Mozilla/5.0"})
+    request = urllib.request.Request(
+        source["url"], headers={"User-Agent": "Mozilla/5.0"}
+    )
     with urllib.request.urlopen(request, timeout=120) as response:
         page = response.read().decode("utf-8", "replace")
 
     entries = []
     for row in re.findall(r"<tr[^>]*>(.*?)</tr>", page, re.S | re.I):
-        cells = [re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", c))).strip()
-                 for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", row, re.S | re.I)]
+        cells = [
+            re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", c))).strip()
+            for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", row, re.S | re.I)
+        ]
         urls = re.findall(r'href="([^"]+\.pdf)"', row, re.I)
         wanted = [u for u in urls if u.lower().endswith(source["prefer"])]
         district = next((c for c in cells if c and not c.rstrip(".").isdigit()), "")
         if wanted and district:
-            entries.append({"url": wanted[0], "district": district.title(), "block": "",
-                            "filename": wanted[0].rsplit("/", 1)[-1]})
+            entries.append(
+                {
+                    "url": wanted[0],
+                    "district": district.title(),
+                    "block": "",
+                    "filename": wanted[0].rsplit("/", 1)[-1],
+                }
+            )
 
+    if not entries:
+        raise ValueError("The listing page contained no matching PDF links")
     if source.get("via_wayback"):
         prefix = entries[0]["url"].split("//", 1)[1].rsplit("/", 1)[0]
         archived = wayback_urls(prefix)
@@ -104,15 +143,18 @@ def page_list(source):
 
 def slug(district, block, fallback):
     """Readable, collision-free filename stem for a notification."""
-    parts = [re.sub(r"[^A-Za-z0-9]+", "-", p).strip("-") for p in (district, block) if p]
+    parts = [
+        re.sub(r"[^A-Za-z0-9]+", "-", p).strip("-") for p in (district, block) if p
+    ]
     return "__".join(parts) or pathlib.Path(fallback).stem
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--year", default=YEAR)
-    ap.add_argument("--refresh", action="store_true",
-                    help="re-download files already present")
+    ap.add_argument(
+        "--refresh", action="store_true", help="re-download files already present"
+    )
     ap.add_argument("--workers", type=int, default=8)
     args = ap.parse_args()
 
@@ -143,19 +185,21 @@ def main():
             stem = f"{stem}-{used[stem]}"
         entry["saved_as"] = f"{stem}.pdf"
 
-    todo = [e for e in entries
-            if args.refresh or not (pdf_dir / e["saved_as"]).exists()]
+    todo = [
+        e for e in entries if args.refresh or not (pdf_dir / e["saved_as"]).exists()
+    ]
     if todo:
         print(f"downloading {len(todo)} of {len(entries)}")
         failures = []
         with concurrent.futures.ThreadPoolExecutor(args.workers) as pool:
-            futures = {pool.submit(fetch, e["url"], pdf_dir / e["saved_as"]): e
-                       for e in todo}
+            futures = {
+                pool.submit(fetch, e["url"], pdf_dir / e["saved_as"]): e for e in todo
+            }
             for done, future in enumerate(concurrent.futures.as_completed(futures), 1):
                 entry = futures[future]
                 try:
                     future.result()
-                except Exception as exc:  # noqa: BLE001 - collect and report
+                except Exception as exc:
                     failures.append((entry["saved_as"], exc))
                 print(f"\r  {done}/{len(todo)}", end="", file=sys.stderr)
         print(file=sys.stderr)
@@ -174,8 +218,9 @@ def main():
 
     manifest = year_dir / "manifest.csv"
     with manifest.open("w", newline="", encoding="utf-8") as fh:
-        writer = csv.DictWriter(fh, fieldnames=MANIFEST_COLUMNS, extrasaction="ignore",
-                                lineterminator="\n")
+        writer = csv.DictWriter(
+            fh, fieldnames=MANIFEST_COLUMNS, extrasaction="ignore", lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(entries)
 

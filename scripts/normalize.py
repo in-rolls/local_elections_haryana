@@ -122,8 +122,12 @@ def normalize_reservation(raw):
         # "ke sivay" = other than; its absence means the seat is woman-reserved.
         # A label truncated to a trailing "ds" (के) is still "ke sivay": that
         # word occurs nowhere else in this vocabulary.
-        other_than = (KD_OTHER_THAN in kd or KD_OTHER_THAN in kd_tight
-                      or kd.rstrip().endswith(" ds") or kd_tight.endswith("ds"))
+        other_than = (
+            KD_OTHER_THAN in kd
+            or KD_OTHER_THAN in kd_tight
+            or kd.rstrip().endswith(" ds")
+            or kd_tight.endswith("ds")
+        )
         return caste, 0 if other_than else 1, "krutidev"
 
     # Words are broken by stray spaces in some printings - "Scheduled Cast e
