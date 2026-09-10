@@ -1,4 +1,4 @@
-"""Parse the 2022 Haryana SEC notifications into GP-level reservation data.
+"""Parse Haryana SEC notifications into GP and ward reservation data.
 
 Each block notification is a 7-column table:
 
@@ -26,7 +26,6 @@ import re
 import sys
 
 import pdfplumber
-
 from normalize import is_vacant, label, normalize_reservation, strip_unopposed
 
 DATA = pathlib.Path(__file__).resolve().parent.parent / "data"
@@ -40,15 +39,20 @@ PANCH = {"panch", "iap", "ipa", "पंच"}
 
 # "... Block-Narnaul, District-Mahendergarh during General Elections-2022"
 RE_BLOCK_EN = re.compile(
-    r"Block\s*[-–—]?\s*['‘\"]?\s*(?P<block>[A-Za-z][A-Za-z0-9 .&\-]{1,30}?)\s*['’\"]?\s*,?\s*"
-    r"(?:and\s+)?District\s*[-–—:]?\s*['‘\"]?\s*(?P<district>[A-Za-z][A-Za-z .&\-]{1,25}?)"
+    r"Block\s*[-–—]?\s*['‘\"]?\s*"
+    r"(?P<block>[A-Za-z][A-Za-z0-9 .&\-]{1,30}?)\s*['’\"]?\s*,?\s*"
+    r"(?:and\s+)?District\s*[-–—:]?\s*['‘\"]?\s*"
+    r"(?P<district>[A-Za-z][A-Za-z .&\-]{1,25}?)"
     # 2022 ends "... during General Elections-2022", 2016 "... in the General
     # Election held in the month of January, 2016"
     r"\s*(?:during|for|in\b|,|$)",
     re.I,
 )
 # Kruti Dev: [k.M&<block>] ftyk&<district>
-RE_BLOCK_HI = re.compile(r"\[k\.M&\s*(?P<block>[^\]]{1,30}?)\]\s*ftyk&\s*(?P<district>\S{1,30}?)\s")
+RE_BLOCK_HI = re.compile(
+    r"\[k\.M&\s*(?P<block>[^\]]{1,30}?)\]\s*ftyk&\s*(?P<district>\S{1,30}?)\s"
+)
+
 
 # The notification's own serial number, e.g. "No. SEC/4E-II/2022/7385.- In
 # pursuance ..." or, in Kruti Dev, "...@4bZ&AA@2022@7385-& gfj;k.kk iapk;rh jkt".
@@ -144,8 +148,7 @@ def ocr_rows(path, page_no):
     text = cached.read_text(encoding="utf-8")
     out = []
     for row in OCR_ROW.findall(text):
-        cells = [clean(re.sub(r"<[^>]+>", " ", c))
-                 for c in OCR_CELL.findall(row)]
+        cells = [clean(re.sub(r"<[^>]+>", " ", c)) for c in OCR_CELL.findall(row)]
         if cells:
             out.append(cells)
     return out
@@ -193,11 +196,40 @@ def ward_number(cell):
 # the next line reads as a perfectly plausible SC-but-not-woman seat, so the
 # error is silent. Merging must happen before the label is interpreted.
 CONTINUATION = {
-    "other", "than", "women", "woman", "(women)", "(woman)", "caste", "class",
-    "scheduled", "schedule", "schedulded", "backward", "tribe", "unreserved",
-    "a", "'a'", "‘a’", "(a)",
-    "ds", "d¢", "flok;", "vu;", "efgyk", "efgyk,a", "efgykvksa", "tkfr",
-    "tutkfr", "vuqlwfpr", "oxz", "finmk", "finm+k", "finms", "¼,½", "d",
+    "other",
+    "than",
+    "women",
+    "woman",
+    "(women)",
+    "(woman)",
+    "caste",
+    "class",
+    "scheduled",
+    "schedule",
+    "schedulded",
+    "backward",
+    "tribe",
+    "unreserved",
+    "a",
+    "'a'",
+    "‘a’",
+    "(a)",
+    "ds",
+    "d¢",
+    "flok;",
+    "vu;",
+    "efgyk",
+    "efgyk,a",
+    "efgykvksa",
+    "tkfr",
+    "tutkfr",
+    "vuqlwfpr",
+    "oxz",
+    "finmk",
+    "finm+k",
+    "finms",
+    "¼,½",
+    "d",
 }
 
 
@@ -258,7 +290,7 @@ def split_row(cells):
     if not kind:
         return None
 
-    reservation = " ".join(c for c in cells[office_index + 1:] if c)
+    reservation = " ".join(c for c in cells[office_index + 1 :] if c)
 
     # Some notifications render every glyph run twice, so cells arrive doubled
     # ("4", "4", "*iqtk", "*iqtk"). Collapse the repeats before reading columns,
@@ -276,8 +308,11 @@ def split_row(cells):
         boundary = next((k for k, (_, c) in enumerate(left) if is_ward_dash(c)), None)
         # with the dash present the GP name is everything before it; without it,
         # fall back to a single cell
-        head, rest = (left[:boundary], left[boundary + 1:]) if boundary is not None \
+        head, rest = (
+            (left[:boundary], left[boundary + 1 :])
+            if boundary is not None
             else (left[:1], left[1:])
+        )
         gp = " ".join(c for _, c in head) or None
         gp_column = head[0][0] if head else None
         left = rest
@@ -319,17 +354,13 @@ def find_place(text):
     return None
 
 
-def parse_pdf(path, notif_pattern=None):
+def parse_pdf(path, notif_pattern=None, *, use_cached_ocr=False):
     """Yield seat dicts for one notification PDF.
 
-    Each PDF holds exactly one block's notification, printed two or three times:
-    typeset in Kruti Dev Hindi, then in English, occasionally in English twice.
-    Every printing renumbers its gram panchayats from 1, so a drop in the serial
-    number marks the start of the next printing. Rows are tagged with a
-    ``printing`` index and one printing is chosen per file downstream - the seat
-    numbering is the only reliable boundary, because the Hindi printings
-    sometimes render their preamble as doubled characters ("22002222") and defeat
-    any text match.
+    District PDFs from 2016 contain several block notifications; 2022 files
+    usually contain one. Notifications can have multiple printings. Rows retain
+    notification and printing identifiers so selection can keep each block.
+    Cached OCR is used only when explicitly enabled; the CLI enables it for 2022.
     """
     notif_pattern = notif_pattern or notification_re("2022")
     ctx: dict[str, str | None] = {"notif": None, "block": None, "district": None}
@@ -369,15 +400,18 @@ def parse_pdf(path, notif_pattern=None):
                 if place[2] == "latin" or ctx["district"] is None:
                     ctx["block"], ctx["district"] = place[0], place[1]
 
-            found = [[clean(c) for c in raw]
-                     for table in page.find_tables() for raw in table.extract()]
+            found = [
+                [clean(c) for c in raw]
+                for table in page.find_tables()
+                for raw in table.extract()
+            ]
             # The OCR reading replaces pdfplumber's only where pdfplumber
             # returned fragments and Surya returned whole rows. Seven cells is
             # the test, and it is a property of the extraction rather than a
             # guess about the result - which is what three earlier attempts got
             # wrong by choosing on "more wards found" and letting collisions
             # triple.
-            spare = ocr_rows(path, page_no)
+            spare = ocr_rows(path, page_no) if use_cached_ocr else []
             if spare:
                 whole = sum(1 for cells in spare if len(cells) >= 7)
                 if whole > len(spare) / 2:
@@ -415,10 +449,14 @@ def parse_pdf(path, notif_pattern=None):
                         col = pending.get("gp_column")
                         if col is not None and col < len(cells):
                             frag = cells[col]
-                            if frag and not _all_continuation_words(frag) \
-                                    and not is_ward_dash(frag):
-                                pending["gram_panchayat"] = \
+                            if (
+                                frag
+                                and not _all_continuation_words(frag)
+                                and not is_ward_dash(frag)
+                            ):
+                                pending["gram_panchayat"] = (
                                     f"{pending['gram_panchayat']} {frag}".strip()
+                                )
                                 # the panch rows below inherit the GP name,
                                 # so repair the carried-forward copy too
                                 gp = pending["gram_panchayat"]
@@ -429,20 +467,35 @@ def parse_pdf(path, notif_pattern=None):
                     # split_row expects it - on a wrapped line it is
                     # printed before the office, not after.
                     head = list(stranded)
-                    res = (head.pop() if len(head) > 1
-                           and normalize_reservation(head[-1]) else None)
+                    res = (
+                        head.pop()
+                        if len(head) > 1 and normalize_reservation(head[-1])
+                        else None
+                    )
                     rejoined = split_row(head + cells + ([res] if res else []))
                     # only where the row is actually missing its ward. A
                     # row that already states one is not a continuation of
                     # anything, and merging into it shifts the seat by one:
                     # Karnal produced ward 5 carrying ward 6's contents.
-                    if (rejoined and rejoined[0] == "panch" and rejoined[3]
-                            and not parsed[3]):
+                    if (
+                        rejoined
+                        and rejoined[0] == "panch"
+                        and rejoined[3]
+                        and not parsed[3]
+                    ):
                         parsed = rejoined
                     stranded = None
                 yield from finish(pending)
-                (kind, row_sr, row_gp, ward, raw_name, raw_father, raw_res,
-                 gp_column) = parsed
+                (
+                    kind,
+                    row_sr,
+                    row_gp,
+                    ward,
+                    raw_name,
+                    raw_father,
+                    raw_res,
+                    gp_column,
+                ) = parsed
                 # Sarpanch rows carry the GP identity; the Panch rows under
                 # them leave those cells blank.
                 if row_sr:
@@ -472,6 +525,7 @@ def parse_pdf(path, notif_pattern=None):
                 }
     yield from finish(pending)
 
+
 def crosscheck(rows):
     """Compare the Hindi and English printings of each notification.
 
@@ -495,8 +549,10 @@ def crosscheck(rows):
 
     if both:
         agreed = len(both) - len(disagree)
-        print(f"\ncross-printing check: {agreed}/{len(both)} GPs agree between "
-              f"the Hindi and English printings ({agreed / len(both) * 100:.1f}%)")
+        print(
+            f"\ncross-printing check: {agreed}/{len(both)} GPs agree between "
+            f"the Hindi and English printings ({agreed / len(both) * 100:.1f}%)"
+        )
         for k in list(disagree)[:5]:
             print(f"    disagree: {both[k]}")
     return both, disagree
@@ -545,30 +601,48 @@ def select_printing(rows):
     return kept
 
 
-def main():
+def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, help="parse only the first N PDFs")
-    ap.add_argument("--year", default=YEAR, help="election year to parse")
-    args = ap.parse_args()
+    ap.add_argument("--year", default=YEAR, choices=("2016", "2022"))
+    ap.add_argument("--out", type=pathlib.Path, help="directory for derived CSVs")
+    args = ap.parse_args(argv)
+    if args.limit is not None and args.limit < 1:
+        ap.error("--limit must be positive")
 
-    out = DATA / args.year
-    pdf_dir = out / "pdfs"
+    source = DATA / args.year
+    out = args.out or DATA / "derived" / args.year
+    if args.limit is not None and out.resolve() == source.resolve():
+        ap.error("a limited parse cannot replace the published CSVs")
+    pdf_dir = source / "pdfs"
     pdfs = sorted(pdf_dir.glob("*.pdf"))[: args.limit]
     if not pdfs:
         sys.exit(f"no PDFs in {pdf_dir} - run harvest.py first")
     notif_pattern = notification_re(args.year)
-    manifest = load_manifest(out / "manifest.csv")
+    manifest = load_manifest(source / "manifest.csv")
     if not manifest:
         print("warning: no manifest.csv - run harvest.py", file=sys.stderr)
 
     rows = []
+    failures = []
     for i, path in enumerate(pdfs, 1):
         try:
-            rows.extend(parse_pdf(path, notif_pattern))
-        except Exception as exc:  # noqa: BLE001 - keep going, report at the end
+            rows.extend(
+                parse_pdf(path, notif_pattern, use_cached_ocr=args.year == "2022")
+            )
+        except Exception as exc:
+            failures.append(path.name)
             print(f"\nERROR {path.name}: {exc}", file=sys.stderr)
-        print(f"\r  {i}/{len(pdfs)} {path.name:24s} rows={len(rows)}", end="", file=sys.stderr)
+        print(
+            f"\r  {i}/{len(pdfs)} {path.name:24s} rows={len(rows)}",
+            end="",
+            file=sys.stderr,
+        )
     print(file=sys.stderr)
+
+    if failures or not rows:
+        print("Parsing failed; output files were not replaced.", file=sys.stderr)
+        return 1
 
     # the index is authoritative for where a notification belongs; the preamble
     # inside the PDF is only a fallback, and is missing entirely for the one
@@ -584,31 +658,58 @@ def main():
     ward = [r for r in rows if r["office"] == "panch"]
 
     gp_cols = [
-        "district", "block", "sr_no", "gram_panchayat", "reservation",
-        "caste_reservation", "woman_reserved", "winner", "father_husband",
-        "unopposed", "vacant", "reservation_raw", "script", "printings_agree",
-        "notification", "source_pdf",
+        "district",
+        "block",
+        "sr_no",
+        "gram_panchayat",
+        "reservation",
+        "caste_reservation",
+        "woman_reserved",
+        "winner",
+        "father_husband",
+        "unopposed",
+        "vacant",
+        "reservation_raw",
+        "script",
+        "printings_agree",
+        "notification",
+        "source_pdf",
     ]
-    ward_cols = gp_cols[:4] + ["ward_no"] + gp_cols[4:]
+    ward_cols = [*gp_cols[:4], "ward_no", *gp_cols[4:]]
+    out.mkdir(parents=True, exist_ok=True)
 
     for name, data, cols in (
         ("gp_reservation.csv", gp, gp_cols),
         ("ward_reservation.csv", ward, ward_cols),
     ):
-        data.sort(key=lambda r: ((r["district"] or ""), (r["block"] or ""),
-                                 int(r["sr_no"]) if (r["sr_no"] or "").isdigit() else 0,
-                                 int(r["ward_no"]) if (r["ward_no"] or "").isdigit() else 0))
-        with (out / name).open("w", newline="", encoding="utf-8") as fh:
-            w = csv.DictWriter(fh, fieldnames=cols, extrasaction="ignore",
-                                lineterminator="\n")
-            w.writeheader()
-            w.writerows(data)
+        data.sort(
+            key=lambda r: (
+                (r["district"] or ""),
+                (r["block"] or ""),
+                int(r["sr_no"]) if (r["sr_no"] or "").isdigit() else 0,
+                int(r["ward_no"]) if (r["ward_no"] or "").isdigit() else 0,
+            )
+        )
+        temporary = out / (name + ".part")
+        try:
+            with temporary.open("w", newline="", encoding="utf-8") as fh:
+                w = csv.DictWriter(
+                    fh, fieldnames=cols, extrasaction="ignore", lineterminator="\n"
+                )
+                w.writeheader()
+                w.writerows(data)
+            temporary.replace(out / name)
+        finally:
+            temporary.unlink(missing_ok=True)
         print(f"wrote {out / name}  ({len(data)} rows)")
 
-    print(f"\nparsed {len(gp)} gram panchayats and {len(ward)} ward seats "
-          f"from {len(pdfs)} notifications")
-    print("run validate.py for the data checks")
+    print(
+        f"\nparsed {len(gp)} gram panchayats and {len(ward)} ward seats "
+        f"from {len(pdfs)} notifications"
+    )
+    print("Compare derived files with the published snapshots before replacing them.")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

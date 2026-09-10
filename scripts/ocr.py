@@ -1,7 +1,7 @@
 """Read the pages whose grid pdfplumber cannot see.
 
     python scripts/ocr.py --plan --year 2022        # which pages, and why
-    uv run --with savitr==0.2.0 --with pillow==10.4.0 \
+    uv run --no-project --with savitr==0.2.0 --with pillow==10.4.0 \
         python scripts/ocr.py --read --year 2022    # read them
 
 Two steps because they cannot share an interpreter: savitr pins pillow<11 and
@@ -63,27 +63,43 @@ def bad_pages(path):
     # savitr, which pins pillow<11 where pdfplumber needs >=12.2, so the two
     # halves cannot share an interpreter and must not share imports either.
     import pdfplumber
-
     from parse import clean, split_row
+
     out = []
     with pdfplumber.open(str(path)) as pdf:
         for index, page in enumerate(pdf.pages, 1):
-            got = [split_row([clean(c) for c in raw])
-                   for table in page.find_tables() for raw in table.extract()]
+            got = [
+                split_row([clean(c) for c in raw])
+                for table in page.find_tables()
+                for raw in table.extract()
+            ]
             panch = [g for g in got if g and g[0] == "panch"]
             wardless = sum(1 for g in panch if not g[3])
             if panch and wardless > len(panch) / 2:
-                out.append((index, f"{wardless} of {len(panch)} panch rows "
-                                   f"carry no ward"))
+                out.append(
+                    (index, f"{wardless} of {len(panch)} panch rows carry no ward")
+                )
     return out
 
 
 def ocr_page(engine, pdf_path, page_no):
     with tempfile.TemporaryDirectory() as tmp:
         stem = pathlib.Path(tmp) / "p"
-        subprocess.run(["pdftoppm", "-f", str(page_no), "-l", str(page_no),
-                        "-r", str(DPI), "-png", str(pdf_path), str(stem)],
-                       capture_output=True)
+        subprocess.run(
+            [
+                "pdftoppm",
+                "-f",
+                str(page_no),
+                "-l",
+                str(page_no),
+                "-r",
+                str(DPI),
+                "-png",
+                str(pdf_path),
+                str(stem),
+            ],
+            capture_output=True,
+        )
         images = sorted(pathlib.Path(tmp).glob("p-*.png"))
         if not images:
             return None
@@ -93,10 +109,12 @@ def ocr_page(engine, pdf_path, page_no):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--plan", action="store_true",
-                    help="list the pages that need reading, and write the plan")
-    ap.add_argument("--read", action="store_true",
-                    help="read the pages the plan names")
+    ap.add_argument(
+        "--plan",
+        action="store_true",
+        help="list the pages that need reading, and write the plan",
+    )
+    ap.add_argument("--read", action="store_true", help="read the pages the plan names")
     ap.add_argument("--year", default="2022")
     ap.add_argument("--only", help="substring of a filename to limit to")
     args = ap.parse_args()
@@ -117,13 +135,16 @@ def main():
         print(file=sys.stderr)
         plan_path.parent.mkdir(parents=True, exist_ok=True)
         with plan_path.open("w", newline="", encoding="utf-8") as fh:
-            writer = csv.DictWriter(fh, fieldnames=["document", "page", "why"],
-                                    lineterminator="\n")
+            writer = csv.DictWriter(
+                fh, fieldnames=["document", "page", "why"], lineterminator="\n"
+            )
             writer.writeheader()
             writer.writerows(rows)
         docs = len({r["document"] for r in rows})
-        print(f"  {len(rows)} page(s) across {docs} document(s) -> "
-              f"{plan_path.relative_to(DATA.parent)}")
+        print(
+            f"  {len(rows)} page(s) across {docs} document(s) -> "
+            f"{plan_path.relative_to(DATA.parent)}"
+        )
         return 0
 
     if not args.read:
@@ -132,10 +153,15 @@ def main():
         sys.exit(f"no plan at {plan_path} - run --plan first")
 
     import os
+
     from savitr import MLXSuryaOCR
-    engine = MLXSuryaOCR(os.environ.get(
-        "SURYA_MLX_PATH",
-        os.path.expanduser("~/Documents/GitHub/savitr/models/surya-mlx-4bit")))
+
+    engine = MLXSuryaOCR(
+        os.environ.get(
+            "SURYA_MLX_PATH",
+            os.path.expanduser("~/Documents/GitHub/savitr/models/surya-mlx-4bit"),
+        )
+    )
     out.mkdir(parents=True, exist_ok=True)
     with plan_path.open(encoding="utf-8") as fh:
         plan = list(csv.DictReader(fh))
@@ -155,11 +181,17 @@ def main():
             continue
         target.write_text(text, encoding="utf-8")
         read += 1
-        print(f"\r  {stem[:28]:30s} p{page:<4} read={read} cached={cached}",
-              end="", file=sys.stderr, flush=True)
+        print(
+            f"\r  {stem[:28]:30s} p{page:<4} read={read} cached={cached}",
+            end="",
+            file=sys.stderr,
+            flush=True,
+        )
     print(file=sys.stderr)
-    print(f"  {read} page(s) read, {cached} already cached -> "
-          f"{out.relative_to(DATA.parent)}")
+    print(
+        f"  {read} page(s) read, {cached} already cached -> "
+        f"{out.relative_to(DATA.parent)}"
+    )
     return 0
 
 
