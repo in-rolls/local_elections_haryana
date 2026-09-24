@@ -64,7 +64,7 @@ Current validation findings include:
 
 Do not deduplicate on district, block, and GP name without examining the notification. Missing ward numbers remain missing. A successful `make validate` means its required checks passed; warnings remain visible and are not recoded into successful readings.
 
-The published files exclude 2000, 2005, 2010, and later bye-elections. Work on the 2000 sources using Muse Spark Contributor is underway in the [local_reservations project](https://github.com/in-rolls/local_reservations). Those outputs remain under review and are not included in these releases.
+The published files exclude 2000, 2005, 2010, and later bye-elections. Work on the 2000 sources using Muse Spark Contributor is underway in the [local_elections project](https://github.com/in-rolls/local_elections). Those outputs remain under review and are not included in these releases.
 
 ## How collected
 
