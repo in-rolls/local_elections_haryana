@@ -1,7 +1,7 @@
 YEAR ?= 2022
 PY   ?= uv run python
 
-.PHONY: all harvest parse validate validate-derived test clean help
+.PHONY: all harvest parse validate validate-derived test clean help release raw-verify raw-archive
 
 help:
 	@echo "make harvest  YEAR=$(YEAR)   download index + notification PDFs, write manifest.csv"
@@ -50,6 +50,17 @@ verify-data:
 
 ci-docker:
 	@for version in 3.12 3.14; do \
-	  COPYFILE_DISABLE=1 tar --exclude=._* --exclude=__pycache__ --exclude=.DS_Store --exclude=.git --exclude=.venv --exclude=.ruff_cache --exclude=.pytest_cache -cf - . | \
+	  COPYFILE_DISABLE=1 tar --exclude=._* --exclude=__pycache__ --exclude=.DS_Store --exclude=.git --exclude=./data/raw_archive/national --exclude=./data/raw_archive/2022121688.pdf --exclude=.venv --exclude=.ruff_cache --exclude=.pytest_cache -cf - . | \
 	  docker run --rm -i python:$$version-slim sh -ec 'mkdir /work; tar -xf - -C /work; cd /work; pip install -q uv; uv sync --frozen --group dev; uv run ruff check .; uv run ruff format --check .; uv run pytest -q; uv run python scripts/validate.py --year 2016; uv run python scripts/validate.py --year 2022; uv run python scripts/to_parquet.py --check' || exit $$?; \
 	done
+
+# Haryana 2000 historical release (tracked inputs only; no raw archive needed)
+release:
+	$(PY) -m local_elections_haryana.build_release
+
+# Raw-data archive (see data/raw_archive/README.md)
+raw-verify:
+	$(PY) scripts/raw_archive.py verify
+
+raw-archive:
+	$(PY) scripts/raw_archive.py pack $(if $(OUT),--out $(OUT),)

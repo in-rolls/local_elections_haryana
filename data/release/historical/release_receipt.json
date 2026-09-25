@@ -1,0 +1,47 @@
+{
+  "code_provenance": [
+    {
+      "path": "src/local_elections_haryana/build_release.py",
+      "sha256": "569aca31c189a56f8b91709b13159621ab6c5b018b9e0c7b0b445a4c4c364ef0"
+    }
+  ],
+  "historical": {
+    "included_source_reviewed_occurrences": 2761,
+    "input_observations": 70592,
+    "missing_heading_quarantine": 32,
+    "provisional_or_nonseat_preserved_outside_release": 67770,
+    "provisional_unvalidated": 67750,
+    "quarantine_reasons_overlapping": {
+      "body_context_missing": 32,
+      "original_samiti_heading_missing": 32,
+      "reservation_category_missing_or_unverified": 30
+    },
+    "reviewed_nonseat": 20,
+    "reviewed_unresolved_quarantine": 61
+  },
+  "inputs": [
+    {
+      "path": "data/release/observations/6ad3161f4b7c750e4446542bc4cf48dc5acd822c7897c4efeffdfbc56021da34/seat_rows.parquet",
+      "sha256": "6e4aced101ffd3ded738830dc2a31075f66fa19cabb39637557b3803bcc72218"
+    },
+    {
+      "path": "data/release/inputs/missing_headings_exceptions_f5bbbf70907e340aa17b9fa7225e1d26971f869b7c7a1a97278b0b5f8990d0df.json",
+      "sha256": "f5bbbf70907e340aa17b9fa7225e1d26971f869b7c7a1a97278b0b5f8990d0df"
+    }
+  ],
+  "limitations": [
+    "The historical table is occurrence-level and cannot be appended to the modern 2016/2022 seat tables.",
+    "Provisional historical OCR remains evidence, not released reservation assignments."
+  ],
+  "policies": {
+    "historical_scope": "Publish only reviewed, field-complete seat occurrences; preserve automated observations separately.",
+    "missing_headings": "INDRI and BABAIN remain candidates/corroboration only; no heading assigned.",
+    "raw_literals": "Preserved in the historical OCR columns."
+  },
+  "release_ready": true,
+  "row_units": {
+    "historical": "one source-reviewed 2000 printed occurrence; not a unique-seat denominator"
+  },
+  "schema_version": 2,
+  "status": "release_ready_with_explicit_quarantines"
+}

@@ -8,14 +8,32 @@ authors = [{ name = "Gaurav Sood", email = "contact@gsood.com" }]
 license = "MIT"
 license-files = ["LICENSE"]
 keywords = ["Haryana", "elections", "panchayats", "reservation", "data"]
-dependencies = ["pdfplumber>=0.11", "pyarrow>=21"]
+dependencies = [
+    "pdfplumber>=0.11",
+    "pyarrow>=21",
+    "pandas>=2.0",
+    "requests",
+    # Shared helpers (run logging, checksums, observation paths) from the central
+    # repository, vendored as local_elections_up does.
+    "local-elections==0.7.0",
+]
 
 [project.urls]
 Repository = "https://github.com/in-rolls/local_elections_haryana"
 Issues = "https://github.com/in-rolls/local_elections_haryana/issues"
 
 [tool.uv]
-package = false
+package = true
+
+[tool.uv.sources]
+local-elections = { path = "vendor/local_elections-0.7.0-py3-none-any.whl" }
+
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/local_elections_haryana"]
 
 [dependency-groups]
 dev = ["ruff>=0.14", "pre-commit>=4", { include-group = "test" }]
@@ -29,10 +47,15 @@ target-version = "py312"
 select = ["E", "W", "F", "I", "B", "C4", "UP", "RUF"]
 allowed-confusables = ["‘", "’", "‛", "–"]
 
+[tool.ruff.lint.per-file-ignores]
+# Cell-cropping closures are defined and called inside the same loop iteration,
+# so the loop variables they read are always the current ones.
+"src/local_elections_haryana/{parse_annexures,parse_gazettes,parse_report}.py" = ["B023"]
+
 [tool.pytest.ini_options]
 minversion = "8"
 testpaths = ["tests"]
-pythonpath = ["scripts"]
+pythonpath = ["scripts", "src"]
 log_level = "INFO"
 xfail_strict = true
 filterwarnings = ["error"]
