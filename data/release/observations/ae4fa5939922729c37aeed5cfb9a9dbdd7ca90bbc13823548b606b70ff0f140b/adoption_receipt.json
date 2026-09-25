@@ -1,0 +1,41 @@
+{
+  "adopted_at_utc": "2026-09-13T11:53:09.451714+00:00",
+  "assignment_usable": false,
+  "authorized_api_budget_usd": 10,
+  "baseline_export_sha256": "9388ddcb5e6529ce3407347344c79a792aee09a032a7f7a58b02762d473a0ed0",
+  "central_adoption_performed": true,
+  "central_copy": "/Users/soodoku/Documents/GitHub/local_elections/data/master/observations/haryana/ae4fa5939922729c37aeed5cfb9a9dbdd7ca90bbc13823548b606b70ff0f140b/seat_rows.parquet",
+  "central_copy_sha256": "6848e08364de033b0a938c16c4ea19f660c92c81a2369229928ad295260881fe",
+  "central_snapshot": "/Users/soodoku/Documents/GitHub/local_elections/data/master/observations/haryana/ae4fa5939922729c37aeed5cfb9a9dbdd7ca90bbc13823548b606b70ff0f140b",
+  "cumulative_paid_api_cost_usd": 7.2622586,
+  "export_sha256": "6848e08364de033b0a938c16c4ea19f660c92c81a2369229928ad295260881fe",
+  "new_columns": [
+    "relation_source_review_raw"
+  ],
+  "new_paid_api_cost_usd": 0,
+  "ocr_reading_corrections": 1,
+  "other_rows_unchanged": 70590,
+  "pre_normalization_export_sha256": "3f73ede04977d00be68c4627b6008e497f2d2eb2533cb006067b107ed335d2f3",
+  "raw_values_checked": 423552,
+  "raw_values_modified": 0,
+  "relation_source_review_raw": "BHURA RAM",
+  "reviewed_keys": [
+    {
+      "source_page": 1,
+      "source_row_on_page": 3,
+      "source_sha256": "1ab6467bc1b8ab406c524789ccda1d6ad39905d9b5c1b5ce13ee8254ac6b0839"
+    },
+    {
+      "source_page": 24,
+      "source_row_on_page": 3,
+      "source_sha256": "a40c3b4600ee2c3183284d89afff8f4d497f64b5498ed2bd596b8c4a4af00866"
+    }
+  ],
+  "reviewed_rows": 2,
+  "rows": 70592,
+  "run": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/sirsa_relation_adoption_20260913T053254830778Z",
+  "schema_policy": "Previous Arrow field types retained; new reviewed relation is a nullable string.",
+  "source_confirmations": 1,
+  "status": "centrally_adopted_provisional_source_observations",
+  "winner_ward_office_category_vacancy_and_context_fields_unchanged": true
+}
