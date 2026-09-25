@@ -1,0 +1,2708 @@
+{
+  "counts_by_notification": {
+    "12507": 22,
+    "13051": 10
+  },
+  "heading_policy": "All assigned_block_heading values remain null. Candidates and independent person/body corroboration must not be used as heading assignments.",
+  "immutability_policy": "Content-addressed exception filename, SHA-256 manifest, read-only files and directory. Never amend; create a superseding package for new evidence. Read-only permissions are not a privileged tamper-proof storage guarantee.",
+  "key_fields": [
+    "source_sha256",
+    "source_page",
+    "source_row_on_page"
+  ],
+  "observation_snapshot": {
+    "bytes": 1161341,
+    "path": "/Users/soodoku/Documents/GitHub/local_elections/data/master/observations/haryana/6ad3161f4b7c750e4446542bc4cf48dc5acd822c7897c4efeffdfbc56021da34/seat_rows.parquet",
+    "sha256": "6e4aced101ffd3ded738830dc2a31075f66fa19cabb39637557b3803bcc72218"
+  },
+  "row_count": 32,
+  "row_order": "Original observation-snapshot order; original page and within-section ordinals retained.",
+  "rows": [
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "independent_first_row_person_body_corroboration",
+          "supports_original_heading": false,
+          "value": "BABAIN"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "SC",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "S.C. Woman",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 1,
+        "woman_reserved": true
+      },
+      "district_source_review_raw": "KURUKSHETRA",
+      "exception_key": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784:p2:r31",
+      "existing_incoming_body_candidate": null,
+      "first_row_anchor": {
+        "relation_raw": "JOGINDER SINGH",
+        "source_page": 2,
+        "source_row_on_page": 31,
+        "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+        "ward_raw": "1",
+        "winner_raw": "SATYA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "13051",
+      "observation_row_ordinal_1based": 2667,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": "913 (2070)",
+      "printed_page_status": "recorded_in_existing_row_review",
+      "quality_flags_literal": "samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The ten-row section restarts wards after THANESAR and before PEHOWA, but its original block heading remains missing. The dated March 2000 vice-chairperson roster explicitly associates the first-row name pair with BABAIN; it does not reproduce notification 13051 or establish the heading and scope of these ten ward-member rows.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "section_first_row_corroboration": {
+        "annexure": "61",
+        "applies_directly_to_this_row": true,
+        "date_context_physical_page": 85,
+        "evidence": {
+          "bytes": 2614,
+          "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/corroboration_evidence.json",
+          "sha256": "8cf22fd662d49fe43aca70b0fec929bf35746c8a92d9665fa9f0c395cb67d999"
+        },
+        "scope": "Only the first-row person/body association is explicit; no section-heading or all-wards inference.",
+        "source_physical_page": 229,
+        "source_printed_page": "227"
+      },
+      "source_data_row_in_unresolved_section_1based": 1,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "S.C. Woman",
+        "office_raw": null,
+        "relation_raw": "JOGINDER SINGH",
+        "ward_raw": "1",
+        "winner_raw": "SATYA DEVI"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "source_row_on_page": 31,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0031_kurukshetra.json",
+        "bytes": 2327,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0031_kurukshetra.json",
+        "sha256": "d7c39e854e7cabbb95ecc42ce6d29b3bff8a27b4788b19c8ea1f174d2ad5fefe"
+      },
+      "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062853.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "1",
+      "ward_source_review_raw": "1 *",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "independent_first_row_person_body_corroboration",
+          "supports_original_heading": false,
+          "value": "BABAIN"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 2,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KURUKSHETRA",
+      "exception_key": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784:p2:r32",
+      "existing_incoming_body_candidate": null,
+      "first_row_anchor": {
+        "relation_raw": "JOGINDER SINGH",
+        "source_page": 2,
+        "source_row_on_page": 31,
+        "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+        "ward_raw": "1",
+        "winner_raw": "SATYA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "13051",
+      "observation_row_ordinal_1based": 2668,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": "913 (2070)",
+      "printed_page_status": "recorded_in_existing_row_review",
+      "quality_flags_literal": "samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The ten-row section restarts wards after THANESAR and before PEHOWA, but its original block heading remains missing. The dated March 2000 vice-chairperson roster explicitly associates the first-row name pair with BABAIN; it does not reproduce notification 13051 or establish the heading and scope of these ten ward-member rows.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "section_first_row_corroboration": {
+        "annexure": "61",
+        "applies_directly_to_this_row": false,
+        "date_context_physical_page": 85,
+        "evidence": {
+          "bytes": 2614,
+          "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/corroboration_evidence.json",
+          "sha256": "8cf22fd662d49fe43aca70b0fec929bf35746c8a92d9665fa9f0c395cb67d999"
+        },
+        "scope": "Only the first-row person/body association is explicit; no section-heading or all-wards inference.",
+        "source_physical_page": 229,
+        "source_printed_page": "227"
+      },
+      "source_data_row_in_unresolved_section_1based": 2,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General",
+        "office_raw": null,
+        "relation_raw": "KEHAR SINGH",
+        "ward_raw": "2",
+        "winner_raw": "TARSEM RAI"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "source_row_on_page": 32,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0032_kurukshetra.json",
+        "bytes": 2316,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0032_kurukshetra.json",
+        "sha256": "18b5b83c35a4581f17f914b8cc31c00f2b13bcbb34de22f7f289c97c0c7af8fb"
+      },
+      "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062853.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "2",
+      "ward_source_review_raw": "2",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "independent_first_row_person_body_corroboration",
+          "supports_original_heading": false,
+          "value": "BABAIN"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "BC",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "B.C.",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 3,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KURUKSHETRA",
+      "exception_key": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784:p2:r33",
+      "existing_incoming_body_candidate": null,
+      "first_row_anchor": {
+        "relation_raw": "JOGINDER SINGH",
+        "source_page": 2,
+        "source_row_on_page": 31,
+        "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+        "ward_raw": "1",
+        "winner_raw": "SATYA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "13051",
+      "observation_row_ordinal_1based": 2669,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": "913 (2070)",
+      "printed_page_status": "recorded_in_existing_row_review",
+      "quality_flags_literal": "samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The ten-row section restarts wards after THANESAR and before PEHOWA, but its original block heading remains missing. The dated March 2000 vice-chairperson roster explicitly associates the first-row name pair with BABAIN; it does not reproduce notification 13051 or establish the heading and scope of these ten ward-member rows.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "section_first_row_corroboration": {
+        "annexure": "61",
+        "applies_directly_to_this_row": false,
+        "date_context_physical_page": 85,
+        "evidence": {
+          "bytes": 2614,
+          "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/corroboration_evidence.json",
+          "sha256": "8cf22fd662d49fe43aca70b0fec929bf35746c8a92d9665fa9f0c395cb67d999"
+        },
+        "scope": "Only the first-row person/body association is explicit; no section-heading or all-wards inference.",
+        "source_physical_page": 229,
+        "source_printed_page": "227"
+      },
+      "source_data_row_in_unresolved_section_1based": 3,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "B.C.",
+        "office_raw": null,
+        "relation_raw": "BABU RAM",
+        "ward_raw": "3",
+        "winner_raw": "JAI PAL"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "source_row_on_page": 33,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0033_kurukshetra.json",
+        "bytes": 2299,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0033_kurukshetra.json",
+        "sha256": "ce388edb9204ee4f7aae9802e6d17a9f4b8c8e09bf33c64dc7ecbf6dbf095f02"
+      },
+      "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062853.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "3",
+      "ward_source_review_raw": "3",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "independent_first_row_person_body_corroboration",
+          "supports_original_heading": false,
+          "value": "BABAIN"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 4,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KURUKSHETRA",
+      "exception_key": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784:p2:r34",
+      "existing_incoming_body_candidate": null,
+      "first_row_anchor": {
+        "relation_raw": "JOGINDER SINGH",
+        "source_page": 2,
+        "source_row_on_page": 31,
+        "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+        "ward_raw": "1",
+        "winner_raw": "SATYA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "13051",
+      "observation_row_ordinal_1based": 2670,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": "913 (2070)",
+      "printed_page_status": "recorded_in_existing_row_review",
+      "quality_flags_literal": "samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The ten-row section restarts wards after THANESAR and before PEHOWA, but its original block heading remains missing. The dated March 2000 vice-chairperson roster explicitly associates the first-row name pair with BABAIN; it does not reproduce notification 13051 or establish the heading and scope of these ten ward-member rows.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "section_first_row_corroboration": {
+        "annexure": "61",
+        "applies_directly_to_this_row": false,
+        "date_context_physical_page": 85,
+        "evidence": {
+          "bytes": 2614,
+          "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/corroboration_evidence.json",
+          "sha256": "8cf22fd662d49fe43aca70b0fec929bf35746c8a92d9665fa9f0c395cb67d999"
+        },
+        "scope": "Only the first-row person/body association is explicit; no section-heading or all-wards inference.",
+        "source_physical_page": 229,
+        "source_printed_page": "227"
+      },
+      "source_data_row_in_unresolved_section_1based": 4,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General",
+        "office_raw": null,
+        "relation_raw": "SINGH RAM",
+        "ward_raw": "4",
+        "winner_raw": "KRISHAN LAL"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "source_row_on_page": 34,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0034_kurukshetra.json",
+        "bytes": 2317,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0034_kurukshetra.json",
+        "sha256": "d7345e9d0512e2ef242409434fd54a94ddb472d26934f7f0753c9902165adf7c"
+      },
+      "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062853.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "4",
+      "ward_source_review_raw": "4 *",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "independent_first_row_person_body_corroboration",
+          "supports_original_heading": false,
+          "value": "BABAIN"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 5,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KURUKSHETRA",
+      "exception_key": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784:p2:r35",
+      "existing_incoming_body_candidate": null,
+      "first_row_anchor": {
+        "relation_raw": "JOGINDER SINGH",
+        "source_page": 2,
+        "source_row_on_page": 31,
+        "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+        "ward_raw": "1",
+        "winner_raw": "SATYA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "13051",
+      "observation_row_ordinal_1based": 2671,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": "913 (2070)",
+      "printed_page_status": "recorded_in_existing_row_review",
+      "quality_flags_literal": "samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The ten-row section restarts wards after THANESAR and before PEHOWA, but its original block heading remains missing. The dated March 2000 vice-chairperson roster explicitly associates the first-row name pair with BABAIN; it does not reproduce notification 13051 or establish the heading and scope of these ten ward-member rows.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "section_first_row_corroboration": {
+        "annexure": "61",
+        "applies_directly_to_this_row": false,
+        "date_context_physical_page": 85,
+        "evidence": {
+          "bytes": 2614,
+          "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/corroboration_evidence.json",
+          "sha256": "8cf22fd662d49fe43aca70b0fec929bf35746c8a92d9665fa9f0c395cb67d999"
+        },
+        "scope": "Only the first-row person/body association is explicit; no section-heading or all-wards inference.",
+        "source_physical_page": 229,
+        "source_printed_page": "227"
+      },
+      "source_data_row_in_unresolved_section_1based": 5,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General",
+        "office_raw": null,
+        "relation_raw": "JAGIR SINGH",
+        "ward_raw": "5",
+        "winner_raw": "SHYAM SINGH"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "source_row_on_page": 35,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0035_kurukshetra.json",
+        "bytes": 2317,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0035_kurukshetra.json",
+        "sha256": "2aec251506952d19c53c9862214e3d2df254fddbb320c12de469614e05cedda5"
+      },
+      "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062853.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "5",
+      "ward_source_review_raw": "5",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "independent_first_row_person_body_corroboration",
+          "supports_original_heading": false,
+          "value": "BABAIN"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 6,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KURUKSHETRA",
+      "exception_key": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784:p2:r36",
+      "existing_incoming_body_candidate": null,
+      "first_row_anchor": {
+        "relation_raw": "JOGINDER SINGH",
+        "source_page": 2,
+        "source_row_on_page": 31,
+        "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+        "ward_raw": "1",
+        "winner_raw": "SATYA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "13051",
+      "observation_row_ordinal_1based": 2672,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": "913 (2070)",
+      "printed_page_status": "recorded_in_existing_row_review",
+      "quality_flags_literal": "samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The ten-row section restarts wards after THANESAR and before PEHOWA, but its original block heading remains missing. The dated March 2000 vice-chairperson roster explicitly associates the first-row name pair with BABAIN; it does not reproduce notification 13051 or establish the heading and scope of these ten ward-member rows.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "section_first_row_corroboration": {
+        "annexure": "61",
+        "applies_directly_to_this_row": false,
+        "date_context_physical_page": 85,
+        "evidence": {
+          "bytes": 2614,
+          "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/corroboration_evidence.json",
+          "sha256": "8cf22fd662d49fe43aca70b0fec929bf35746c8a92d9665fa9f0c395cb67d999"
+        },
+        "scope": "Only the first-row person/body association is explicit; no section-heading or all-wards inference.",
+        "source_physical_page": 229,
+        "source_printed_page": "227"
+      },
+      "source_data_row_in_unresolved_section_1based": 6,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General",
+        "office_raw": null,
+        "relation_raw": "BABU RAM",
+        "ward_raw": "6",
+        "winner_raw": "DHARAM RAJ"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "source_row_on_page": 36,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0036_kurukshetra.json",
+        "bytes": 2313,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0036_kurukshetra.json",
+        "sha256": "69ff03a9d7b2384d74d0003a0df6afc67923d0fa2f8d7bcabc311e258f964bc8"
+      },
+      "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062853.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "6",
+      "ward_source_review_raw": "6",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "independent_first_row_person_body_corroboration",
+          "supports_original_heading": false,
+          "value": "BABAIN"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 7,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KURUKSHETRA",
+      "exception_key": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784:p2:r37",
+      "existing_incoming_body_candidate": null,
+      "first_row_anchor": {
+        "relation_raw": "JOGINDER SINGH",
+        "source_page": 2,
+        "source_row_on_page": 31,
+        "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+        "ward_raw": "1",
+        "winner_raw": "SATYA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "13051",
+      "observation_row_ordinal_1based": 2673,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": "913 (2070)",
+      "printed_page_status": "recorded_in_existing_row_review",
+      "quality_flags_literal": "samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The ten-row section restarts wards after THANESAR and before PEHOWA, but its original block heading remains missing. The dated March 2000 vice-chairperson roster explicitly associates the first-row name pair with BABAIN; it does not reproduce notification 13051 or establish the heading and scope of these ten ward-member rows.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "section_first_row_corroboration": {
+        "annexure": "61",
+        "applies_directly_to_this_row": false,
+        "date_context_physical_page": 85,
+        "evidence": {
+          "bytes": 2614,
+          "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/corroboration_evidence.json",
+          "sha256": "8cf22fd662d49fe43aca70b0fec929bf35746c8a92d9665fa9f0c395cb67d999"
+        },
+        "scope": "Only the first-row person/body association is explicit; no section-heading or all-wards inference.",
+        "source_physical_page": 229,
+        "source_printed_page": "227"
+      },
+      "source_data_row_in_unresolved_section_1based": 7,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General",
+        "office_raw": null,
+        "relation_raw": "PARAS RAM",
+        "ward_raw": "7",
+        "winner_raw": "MOHAN LAL"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "source_row_on_page": 37,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0037_kurukshetra.json",
+        "bytes": 2313,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0037_kurukshetra.json",
+        "sha256": "b657fca163ca8d0ea2ef57bd09aa70bacee49cc896db2fcef9c083bf3ab325cb"
+      },
+      "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062853.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "7",
+      "ward_source_review_raw": "7",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "independent_first_row_person_body_corroboration",
+          "supports_original_heading": false,
+          "value": "BABAIN"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "SC",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "S.C.",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 8,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KURUKSHETRA",
+      "exception_key": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784:p2:r38",
+      "existing_incoming_body_candidate": null,
+      "first_row_anchor": {
+        "relation_raw": "JOGINDER SINGH",
+        "source_page": 2,
+        "source_row_on_page": 31,
+        "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+        "ward_raw": "1",
+        "winner_raw": "SATYA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "13051",
+      "observation_row_ordinal_1based": 2674,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": "913 (2070)",
+      "printed_page_status": "recorded_in_existing_row_review",
+      "quality_flags_literal": "samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The ten-row section restarts wards after THANESAR and before PEHOWA, but its original block heading remains missing. The dated March 2000 vice-chairperson roster explicitly associates the first-row name pair with BABAIN; it does not reproduce notification 13051 or establish the heading and scope of these ten ward-member rows.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "section_first_row_corroboration": {
+        "annexure": "61",
+        "applies_directly_to_this_row": false,
+        "date_context_physical_page": 85,
+        "evidence": {
+          "bytes": 2614,
+          "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/corroboration_evidence.json",
+          "sha256": "8cf22fd662d49fe43aca70b0fec929bf35746c8a92d9665fa9f0c395cb67d999"
+        },
+        "scope": "Only the first-row person/body association is explicit; no section-heading or all-wards inference.",
+        "source_physical_page": 229,
+        "source_printed_page": "227"
+      },
+      "source_data_row_in_unresolved_section_1based": 8,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "S.C.",
+        "office_raw": null,
+        "relation_raw": "BANARSI DASS",
+        "ward_raw": "8",
+        "winner_raw": "MAN SINGH"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "source_row_on_page": 38,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0038_kurukshetra.json",
+        "bytes": 2305,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0038_kurukshetra.json",
+        "sha256": "b5432e7997dfbbaa50005df0b16eef5c6ef70947b9e035b744257139711f0f5b"
+      },
+      "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062853.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "8",
+      "ward_source_review_raw": "8",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "independent_first_row_person_body_corroboration",
+          "supports_original_heading": false,
+          "value": "BABAIN"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General Woman",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 9,
+        "woman_reserved": true
+      },
+      "district_source_review_raw": "KURUKSHETRA",
+      "exception_key": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784:p2:r39",
+      "existing_incoming_body_candidate": null,
+      "first_row_anchor": {
+        "relation_raw": "JOGINDER SINGH",
+        "source_page": 2,
+        "source_row_on_page": 31,
+        "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+        "ward_raw": "1",
+        "winner_raw": "SATYA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "13051",
+      "observation_row_ordinal_1based": 2675,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": "913 (2070)",
+      "printed_page_status": "recorded_in_existing_row_review",
+      "quality_flags_literal": "samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The ten-row section restarts wards after THANESAR and before PEHOWA, but its original block heading remains missing. The dated March 2000 vice-chairperson roster explicitly associates the first-row name pair with BABAIN; it does not reproduce notification 13051 or establish the heading and scope of these ten ward-member rows.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "section_first_row_corroboration": {
+        "annexure": "61",
+        "applies_directly_to_this_row": false,
+        "date_context_physical_page": 85,
+        "evidence": {
+          "bytes": 2614,
+          "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/corroboration_evidence.json",
+          "sha256": "8cf22fd662d49fe43aca70b0fec929bf35746c8a92d9665fa9f0c395cb67d999"
+        },
+        "scope": "Only the first-row person/body association is explicit; no section-heading or all-wards inference.",
+        "source_physical_page": 229,
+        "source_printed_page": "227"
+      },
+      "source_data_row_in_unresolved_section_1based": 9,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General Woman",
+        "office_raw": null,
+        "relation_raw": "KARNAIL SINGH",
+        "ward_raw": "9",
+        "winner_raw": "SURJEETO DEVI"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "source_row_on_page": 39,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0039_kurukshetra.json",
+        "bytes": 2340,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0039_kurukshetra.json",
+        "sha256": "97e8cfe4e4602e08a4f8e4549ca9ee8ecbe673dc7c4524e81fe7caf89f27253b"
+      },
+      "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062853.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "9",
+      "ward_source_review_raw": "9 *",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "independent_first_row_person_body_corroboration",
+          "supports_original_heading": false,
+          "value": "BABAIN"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General Woman",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 10,
+        "woman_reserved": true
+      },
+      "district_source_review_raw": "KURUKSHETRA",
+      "exception_key": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784:p2:r40",
+      "existing_incoming_body_candidate": null,
+      "first_row_anchor": {
+        "relation_raw": "JOGINDER SINGH",
+        "source_page": 2,
+        "source_row_on_page": 31,
+        "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+        "ward_raw": "1",
+        "winner_raw": "SATYA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "13051",
+      "observation_row_ordinal_1based": 2676,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": "913 (2070)",
+      "printed_page_status": "recorded_in_existing_row_review",
+      "quality_flags_literal": "samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The ten-row section restarts wards after THANESAR and before PEHOWA, but its original block heading remains missing. The dated March 2000 vice-chairperson roster explicitly associates the first-row name pair with BABAIN; it does not reproduce notification 13051 or establish the heading and scope of these ten ward-member rows.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "section_first_row_corroboration": {
+        "annexure": "61",
+        "applies_directly_to_this_row": false,
+        "date_context_physical_page": 85,
+        "evidence": {
+          "bytes": 2614,
+          "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/corroboration_evidence.json",
+          "sha256": "8cf22fd662d49fe43aca70b0fec929bf35746c8a92d9665fa9f0c395cb67d999"
+        },
+        "scope": "Only the first-row person/body association is explicit; no section-heading or all-wards inference.",
+        "source_physical_page": 229,
+        "source_printed_page": "227"
+      },
+      "source_data_row_in_unresolved_section_1based": 10,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General Woman",
+        "office_raw": null,
+        "relation_raw": "NARINDER KUMAR",
+        "ward_raw": "10",
+        "winner_raw": "SHANKUNTLA DEVI"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/9e627ee2ff62eff32247_06b4553bb26c.pdf",
+      "source_row_on_page": 40,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0040_kurukshetra.json",
+        "bytes": 2346,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784-p0002-r0040_kurukshetra.json",
+        "sha256": "4359bc3e8281c2dbc8d2eb671df87a26df5e28d67597c2df4c112fb1a8f1638b"
+      },
+      "source_sha256": "06b4553bb26cea0473acaead73ad3ab926d5d6b9a11e3f890d5348064f948784",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062853.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "10",
+      "ward_source_review_raw": "10 *",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": null,
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": "Wom",
+        "samiti_category_authority": "handwritten_amendment_unverified",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 1,
+        "woman_reserved": null
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r24",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31632,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "category_unresolved;handwritten_category_amendment_requires_authority_review;incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 1,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General Women",
+        "office_raw": null,
+        "relation_raw": "YUDHVIR",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 24,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0024.json",
+        "bytes": 2765,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0024.json",
+        "sha256": "dd9f1acfd1a85c63fd4fdbdacf34f4075619b40551a0cf8ea09af389eaa2b74f"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "1",
+      "ward_source_review_raw": "1",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "SC",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "S.C.",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 2,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r25",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31633,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 2,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "S.C.",
+        "office_raw": null,
+        "relation_raw": "SURJA RAM",
+        "ward_raw": "2",
+        "winner_raw": "HIND PAL"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 25,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0025.json",
+        "bytes": 2586,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0025.json",
+        "sha256": "5b9800a9a5218251920d036d3035a94a44132b6bc6d7349c1d5ad565b296c9f7"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "2",
+      "ward_source_review_raw": "2 *",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 3,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r26",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31634,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 3,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General",
+        "office_raw": null,
+        "relation_raw": "HARI SINGH",
+        "ward_raw": "3",
+        "winner_raw": "KARAM SINGH"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 26,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0026.json",
+        "bytes": 2599,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0026.json",
+        "sha256": "c990332649a65a303463ad0e71c2a4a3a2c01eaebf786c10e44775f27c1eb161"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "3",
+      "ward_source_review_raw": "3",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General Woman",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 4,
+        "woman_reserved": true
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r27",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31635,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 4,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General Woman",
+        "office_raw": null,
+        "relation_raw": "NARESH KUMAR",
+        "ward_raw": "4",
+        "winner_raw": "NIRMALA DEVI"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 27,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0027.json",
+        "bytes": 2621,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0027.json",
+        "sha256": "5882ce9b01d7bd8b4ed53b2cde1dc8bee8889c1f83581b52954c15352d08fce2"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "4",
+      "ward_source_review_raw": "4 *",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 5,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r28",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31636,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 5,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General",
+        "office_raw": null,
+        "relation_raw": "BALBIR SINGH",
+        "ward_raw": "5",
+        "winner_raw": "HUKAM CHAND"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 28,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0028.json",
+        "bytes": 2601,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0028.json",
+        "sha256": "b963fe06c27fd219320fcba48de73ccc1daf014b3c91abee1a674e5b89363625"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "5",
+      "ward_source_review_raw": "5",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "SC",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "S.C. Woman",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 6,
+        "woman_reserved": true
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r29",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31637,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 6,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "S.C. Woman",
+        "office_raw": null,
+        "relation_raw": "RAJ KUMAR",
+        "ward_raw": "6",
+        "winner_raw": "SUDESH RANI"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 29,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0029.json",
+        "bytes": 2604,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0029.json",
+        "sha256": "affbb79a70c736e4e4530c61f4ef53d91728a715a2a2a6cb13029428e7068edf"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "6",
+      "ward_source_review_raw": "6",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 7,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r30",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31638,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 7,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General",
+        "office_raw": null,
+        "relation_raw": "JAI SINGH",
+        "ward_raw": "7",
+        "winner_raw": "MADAN LAL"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 30,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0030.json",
+        "bytes": 2596,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0030.json",
+        "sha256": "f1f8824e5832e7c2f4c2346a895da10d1fd3ed7892ff78fc7e4be3044c307283"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "7",
+      "ward_source_review_raw": "7",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 8,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r31",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31639,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 8,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General",
+        "office_raw": null,
+        "relation_raw": "BHAGAT RAM",
+        "ward_raw": "8",
+        "winner_raw": "PAWAN KUMAR"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 31,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0031.json",
+        "bytes": 2599,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0031.json",
+        "sha256": "67601dbee45edc6a0cd0741c5eeda1f39caefe1eeb532c25edd9d77c743e6743"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "8",
+      "ward_source_review_raw": "8",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 9,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r32",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31640,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 9,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General",
+        "office_raw": null,
+        "relation_raw": "SINGH RAM",
+        "ward_raw": "9",
+        "winner_raw": "SHYAM SINGH"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 32,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0032.json",
+        "bytes": 2598,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0032.json",
+        "sha256": "31d748c383f91c074f9a4547d23dd1fc17c8226bfc5c11b7f78c60b02ca32763"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "9",
+      "ward_source_review_raw": "9",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 10,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r33",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31641,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 10,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General",
+        "office_raw": null,
+        "relation_raw": "KARTA RAM",
+        "ward_raw": "10",
+        "winner_raw": "SUKHDEV"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 33,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0033.json",
+        "bytes": 2597,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0033.json",
+        "sha256": "a62b9293cd295a7db2e9ae2ce1743397e084a74263d6aa8d36164237fb2cbcea"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "10",
+      "ward_source_review_raw": "10",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 11,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r34",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31642,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 11,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General",
+        "office_raw": null,
+        "relation_raw": "MEGH NATH",
+        "ward_raw": "11",
+        "winner_raw": "ASHOK KUMAR"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 34,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0034.json",
+        "bytes": 2601,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0034.json",
+        "sha256": "fc3742e9b28ec5cded8ad1f9659f4d59bd5cb0f10ec2c4f31aaf2300c99a13a6"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "11",
+      "ward_source_review_raw": "11",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General Woman",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 12,
+        "woman_reserved": true
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r35",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31643,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 12,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General Woman",
+        "office_raw": null,
+        "relation_raw": "VINOD KUMAR",
+        "ward_raw": "12",
+        "winner_raw": "ANITA DEVI"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 35,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0035.json",
+        "bytes": 2621,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0035.json",
+        "sha256": "cc412ef6a0de7f81dd8040ee2712da3621466ba82a626ef858a775d6ab425161"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "12",
+      "ward_source_review_raw": "12 *",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General Woman",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 13,
+        "woman_reserved": true
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r36",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31644,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 13,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General Woman",
+        "office_raw": null,
+        "relation_raw": "SHARAB SINGH",
+        "ward_raw": "13",
+        "winner_raw": "MEENA DEVI"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 36,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0036.json",
+        "bytes": 2620,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0036.json",
+        "sha256": "1c4fb18117ec02dcf398eb7fc18b899eae03d295b0daa8c0796d20cfd2573dd1"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "13",
+      "ward_source_review_raw": "13",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General Woman",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 14,
+        "woman_reserved": true
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r37",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31645,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 14,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General Woman",
+        "office_raw": null,
+        "relation_raw": "RAJ KUMAR",
+        "ward_raw": "14",
+        "winner_raw": "SHYAMO DEVI"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 37,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0037.json",
+        "bytes": 2620,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0037.json",
+        "sha256": "30cc53c191da29800cc8eb5e931b34b3d0bc7c58b62627bd1b620e55bf6ccd18"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "14",
+      "ward_source_review_raw": "14 *",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 15,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r38",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31646,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 15,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General",
+        "office_raw": null,
+        "relation_raw": "BALWAN",
+        "ward_raw": "15",
+        "winner_raw": "GUDDI"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 38,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0038.json",
+        "bytes": 2594,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0038.json",
+        "sha256": "ba38007a1aece134cc76431bf47f233d14c4607e5c35d9f4108c56ec94de8b7a"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "15",
+      "ward_source_review_raw": "15 *",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "SC",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "S.C.",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 16,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r39",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31647,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 16,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "S.C.",
+        "office_raw": null,
+        "relation_raw": "MITTHA SINGH",
+        "ward_raw": "16",
+        "winner_raw": "PARTAP SINGH"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 39,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0039.json",
+        "bytes": 2594,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0039.json",
+        "sha256": "8b8498d0f83dc47150c4e4ca9ad3c21a37bc334f17b8e4273a4559eb8ad26c68"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "16",
+      "ward_source_review_raw": "16",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "SC",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "S.C.",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 17,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r40",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31648,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 17,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "S.C.",
+        "office_raw": null,
+        "relation_raw": "RAMAN SINGH",
+        "ward_raw": "17",
+        "winner_raw": "MAM CHAND"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 40,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0040.json",
+        "bytes": 2592,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0040.json",
+        "sha256": "85c15e13603a832a8ace7f38b2b154f8d19f8c16c84c0b407e5a566f29e15eec"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "17",
+      "ward_source_review_raw": "17 *",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 18,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r41",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31649,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 18,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General",
+        "office_raw": null,
+        "relation_raw": "RAJKISHAN",
+        "ward_raw": "18",
+        "winner_raw": "SUKHBIR"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 41,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0041.json",
+        "bytes": 2597,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0041.json",
+        "sha256": "1867374d1ffd686b3494ef46cc475c8b43d0f915a242b78e0af29ae2e52a5e77"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "18",
+      "ward_source_review_raw": "18",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "BC",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "B.C.",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 19,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r42",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31650,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 19,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "B.C.",
+        "office_raw": null,
+        "relation_raw": "SUMER CHAND",
+        "ward_raw": "19",
+        "winner_raw": "RAJ BALA"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 42,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0042.json",
+        "bytes": 2591,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0042.json",
+        "sha256": "802746c31226b56c9b7c418d3adb3c300abf27b0f41657a9608f30a147a7d620"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "19",
+      "ward_source_review_raw": "19 *",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "SC",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "S.C. Woman",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 20,
+        "woman_reserved": true
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r43",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31651,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 20,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "S.C. Woman",
+        "office_raw": null,
+        "relation_raw": "JAGDISH",
+        "ward_raw": "20",
+        "winner_raw": "RAJ BALA"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 43,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0043.json",
+        "bytes": 2602,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0043.json",
+        "sha256": "38ad28a5a760e11cbaae437e6f049069ab4f0ab23d63a321c395e291bfebb8f9"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "20",
+      "ward_source_review_raw": "20",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 21,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r44",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31652,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 21,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General",
+        "office_raw": null,
+        "relation_raw": "KARTA RAM",
+        "ward_raw": "21",
+        "winner_raw": "SUBA SINGH"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 44,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0044.json",
+        "bytes": 2600,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0044.json",
+        "sha256": "239e7a3a57c5ae75790f329eb781a75a9919f026535dce793df91129696563f8"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "21",
+      "ward_source_review_raw": "21",
+      "year_context": 2000
+    },
+    {
+      "archive_followup": {
+        "bytes": 11012,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/missing_heading_followup/20260913T225005666311Z_archivemain_publications/source_review.json",
+        "sha256": "f7323221401813acd833be76590d9cab74e3768d9480f010f0d072639a2587a9"
+      },
+      "assigned_block_heading": null,
+      "assignment_usable": false,
+      "candidates": [
+        {
+          "assignment_permitted": false,
+          "role": "unconfirmed_search_lead",
+          "supports_original_heading": false,
+          "value": "INDRI"
+        },
+        {
+          "assignment_permitted": false,
+          "role": "existing_unvalidated_incoming_context_preserved",
+          "supports_original_heading": false,
+          "value": "NILOKHERI"
+        }
+      ],
+      "current_reviewed_values": {
+        "body_within_page": null,
+        "caste_reservation": "NONE",
+        "office_normalized": "PANCHAYAT_SAMITI_MEMBER",
+        "samiti_body_source_raw": null,
+        "samiti_category_annotation_raw": null,
+        "samiti_category_authority": "printed",
+        "samiti_category_printed_raw": "General",
+        "source_samiti_review_status": "applied",
+        "tier": "block_member",
+        "ward": 22,
+        "woman_reserved": false
+      },
+      "district_source_review_raw": "KARNAL",
+      "exception_key": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47:p2:r45",
+      "existing_incoming_body_candidate": "NILOKHERI",
+      "first_row_anchor": {
+        "relation_raw": "YUDHVIR",
+        "source_page": 2,
+        "source_row_on_page": 24,
+        "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+        "ward_raw": "1",
+        "winner_raw": "SUNITA DEVI"
+      },
+      "notification_locator_basis": "Bounded notification identification carried from the missing-heading source-search reviews; not invented as a row identifier.",
+      "notification_number": "12507",
+      "observation_row_ordinal_1based": 31653,
+      "original_heading_recovered": false,
+      "printed_date": "2000-04-21",
+      "printed_page": null,
+      "printed_page_status": "not_recorded_in_existing_row_review_not_inferred",
+      "quality_flags_literal": "incoming_body_context_unvalidated;samiti_body_context_requires_source_review;samiti_printed_category_source_reviewed;samiti_section_source_reviewed_raw_preserved",
+      "reason_remains_unassigned": "The original notification section has no recovered block heading. INDRI is an unconfirmed search lead, not source-heading evidence. The existing NILOKHERI incoming-context candidate is unvalidated and cannot be inherited into this section. The archive follow-up did not find the target SUNITA DEVI / YUDHVIR pair or notification 12507 in the dated report text.",
+      "resolved_source_path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "section_first_row_corroboration": null,
+      "source_data_row_in_unresolved_section_1based": 22,
+      "source_literals": {
+        "body_raw": null,
+        "category_raw": "General",
+        "office_raw": null,
+        "relation_raw": "RANJEET SINGH",
+        "ward_raw": "22",
+        "winner_raw": "SUBHASH CHAND"
+      },
+      "source_page": 2,
+      "source_path_literal": "raw/c11e01f76dd878837bb6_7ede08820334.pdf",
+      "source_row_on_page": 45,
+      "source_row_review": {
+        "archive_member": "row_reviews/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0045.json",
+        "bytes": 2607,
+        "path": "/Users/soodoku/Documents/GitHub/local_elections/data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_samiti_review_prepared_karnal_7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47-p0002-r0045.json",
+        "sha256": "9403198f0166e978edf1a65fc43c98d1982b70f6bf06dcb8e7cbe30d377ba270"
+      },
+      "source_sha256": "7ede088203343eff95b544404bcc729a19e7b6ef39b52fc0be12a5d8c9a7db47",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/06/2022062842-1.pdf",
+      "status": "final_unassigned_source_heading_exception",
+      "ward_raw": "22",
+      "ward_source_review_raw": "22",
+      "year_context": 2000
+    }
+  ],
+  "schema_version": 1,
+  "status": "immutable_final_exception_set_for_pinned_snapshot"
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": "data_dictionary.md",
+      "bytes": 832,
+      "sha256": "7ef4cda650c41eac024fe5fa3b91c49f5d04c8558247f061b2c447fc7433d8e5"
+    },
+    {
+      "path": "flag_reconciliation.json",
+      "bytes": 18560,
+      "sha256": "fb82a0e274766ea6e76ca52acecbae038d549c53e5c27856e45e952fe93f2de0"
+    },
+    {
+      "path": "historical_provisional_observations.parquet",
+      "bytes": 1368305,
+      "sha256": "5cd24230018c8746f207fae44e641137dceefb62dd73332138e8504c34da13a6"
+    },
+    {
+      "path": "historical_quarantine.parquet",
+      "bytes": 106540,
+      "sha256": "3ec45f267c968a736b23c3832394ad30c98319eda366759f9958570a8fe6c27f"
+    },
+    {
+      "path": "historical_reviewed_occurrences.parquet",
+      "bytes": 405467,
+      "sha256": "512cc30cfaed8a374c86193f30d6f59a7179c6b54dbc3ccb9e63b8c294967073"
+    },
+    {
+      "path": "recode_ledger.md",
+      "bytes": 428,
+      "sha256": "9a395e18fd5293309e02a0b8b9f9f2193b120709c5c90e75cc0b627c24bbe702"
+    },
+    {
+      "path": "release_receipt.json",
+      "bytes": 1909,
+      "sha256": "e361540d628e3caa9154e419c7b423949a4ff03e586ee1ec571f559d8d70d058"
+    }
+  ]
+}

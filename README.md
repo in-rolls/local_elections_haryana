@@ -123,6 +123,17 @@ make harvest YEAR=2022
 
 Downloads must contain a readable PDF and match any advertised content length before they replace a saved file. Existing downloads are reused unless `--refresh` is passed to `scripts/harvest.py`. Use `make verify-data` to check the retained source bytes before relying on a cache.
 
+## Historical 2000 gazette pipeline
+
+The 2000 and 2005 gazette work (OCR, parsing, source review, and the 2000 release) moved here from the central [in-rolls/local_elections](https://github.com/in-rolls/local_elections). It is the `local_elections_haryana` package in `src/`.
+
+- `make release` rebuilds `data/release/historical/` (reviewed occurrences, quarantine, provisional observations, with a receipt and `SHA256SUMS`) from tracked inputs only: `data/release/observations/` and `data/release/inputs/`.
+- The source PDFs, OCR corpus and review ledgers are in the [raw-data archive](data/raw_archive/README.md). They are git-ignored, with a tracked SHA-256 manifest and a tarball for download.
+- Shared helpers (run logging, checksums) come from the central package, vendored as `vendor/local_elections-0.7.0-py3-none-any.whl`.
+- Hosted-OCR tools read `MODEL_API_KEY`, or `~/.config/local_elections/haryana_ocr.toml`.
+
+The historical tables are occurrence-level. They must not be appended to the 2016/2022 seat CSVs.
+
 ## Development
 
 ```sh
