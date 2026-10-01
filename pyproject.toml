@@ -36,7 +36,7 @@ build-backend = "hatchling.build"
 packages = ["src/local_elections_haryana"]
 
 [dependency-groups]
-dev = ["ruff>=0.14", "pre-commit>=4", { include-group = "test" }]
+dev = ["ruff>=0.14", { include-group = "test" }]
 test = ["pytest>=8"]
 
 [tool.ruff]
