@@ -1,6 +1,5 @@
 # Haryana Local Election Data
 
-[![CI](https://github.com/in-rolls/local_elections_haryana/actions/workflows/ci.yml/badge.svg)](https://github.com/in-rolls/local_elections_haryana/actions/workflows/ci.yml)
 [![Code license: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 
 Gram panchayat head (sarpanch) and ward member (panch) records from Haryana's 2016 and 2022 local elections. The data record seat reservations and elected candidates from State Election Commission notifications. Source PDFs, acquisition manifests, published CSVs, and typed Parquet exports are included.
@@ -138,10 +137,9 @@ The historical tables are occurrence-level. They must not be appended to the 201
 
 ```sh
 make check
-make ci-docker
 ```
 
-`make check` runs Ruff, formatting, pytest, pre-commit, both years' data validators, CSV-to-Parquet equality checks, and source checksums. CI tests Python 3.12 and 3.14. The Docker target uses the standard Python images. The environment is a data-repository environment managed by uv; the scripts do not require an installed library package.
+`make check` runs Ruff, formatting checks and pytest. When data change, run `make validate YEAR=2016`, `make validate YEAR=2022` and `make verify-data` explicitly. The environment is managed by uv; the scripts do not require an installed library package.
 
 ## Citation
 
@@ -160,3 +158,7 @@ The code is [MIT licensed](LICENSE). Source notifications are publications of th
 - [in-rolls/local_elections_up](https://github.com/in-rolls/local_elections_up) — UP Local Election Data --- GP and ULB. Seat reservation, winner, and candidates for some elections
 
 ✨ _Powered by [Adjacent](https://github.com/gojiplus/adjacent)_ 🚀
+
+## Maintenance
+
+This is a point-in-time data collection; see the [shared maintenance policy](https://github.com/soodoku/data-repos#maintenance-policy). Run the affected parser tests when code changes and the relevant data validators when inputs or outputs change. Full-data checks and publication are explicit operations. Routine edits do not require hosted CI, Docker, a Python-version matrix, Preen or pre-commit.
