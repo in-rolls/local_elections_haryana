@@ -8,14 +8,57 @@ Gram panchayat head (sarpanch) and ward member (panch) records from Haryana's 20
 
 Each row is a seat record recovered from a notification. Coverage is incomplete, and repeated names and missing ward numbers prevent treating the usual geographic columns as a universally unique key.
 
-| File | Election | Unit | Rows |
-|---|---:|---|---:|
-| [gp_reservation_2016.parquet](data/fin/gp_reservation_2016.parquet) | 2016 | GP head seat | 6,090 |
-| [ward_reservation_2016.parquet](data/fin/ward_reservation_2016.parquet) | 2016 | GP ward seat | 61,879 |
-| [gp_reservation_2022.parquet](data/fin/gp_reservation_2022.parquet) | 2022 | GP head seat | 6,123 |
-| [ward_reservation_2022.parquet](data/fin/ward_reservation_2022.parquet) | 2022 | GP ward seat | 60,981 |
+<!-- datasets:start -->
 
-[MANIFEST.json](data/fin/MANIFEST.json) records each export's schema, row count, SHA-256, and input CSV checksum. CSV snapshots remain in [data/2016/](data/2016/) and [data/2022/](data/2022/), alongside the source manifests, PDFs, and cached OCR. `make verify-data` checks every exported value against its CSV and verifies the notification PDFs against their acquisition checksums.
+| File | Rows | Each row represents |
+| --- | ---: | --- |
+| [fin/gp_reservation_2016.parquet](data/fin/gp_reservation_2016.parquet) | 6,090 | GP head seat record |
+| [fin/gp_reservation_2022.parquet](data/fin/gp_reservation_2022.parquet) | 6,123 | GP head seat record |
+| [fin/ward_reservation_2016.parquet](data/fin/ward_reservation_2016.parquet) | 61,879 | GP ward seat record |
+| [fin/ward_reservation_2022.parquet](data/fin/ward_reservation_2022.parquet) | 60,981 | GP ward seat record |
+| [release/historical/historical_provisional_observations.parquet](data/release/historical/historical_provisional_observations.parquet) | 67,770 | Provisional OCR or reviewed non-seat occurrence |
+| [release/historical/historical_quarantine.parquet](data/release/historical/historical_quarantine.parquet) | 61 | Reviewed 2000 occurrence with unresolved fields |
+| [release/historical/historical_reviewed_occurrences.parquet](data/release/historical/historical_reviewed_occurrences.parquet) | 2,761 | Reviewed 2000 printed occurrence |
+
+<details>
+<summary>Retained observation snapshots</summary>
+
+| File | Rows | Each row represents |
+| --- | ---: | --- |
+| [observations/00a6da628624/seat_rows.parquet](data/release/observations/00a6da6286242535c6f7ed6d7434e1fe58f97972b71ed3fdfed5ef1f949b6b80/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/1e6f85e0692d/seat_rows.parquet](data/release/observations/1e6f85e0692d5b7d87fffcaeb733db48665f70951f42e525d654d8115a352b39/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/20f6f91fea7f/seat_rows.parquet](data/release/observations/20f6f91fea7f6f32e7b87900ce79a5cc933e9c06542be3239fdb7bde88150af4/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/28a794b45d44/seat_rows.parquet](data/release/observations/28a794b45d444830079dd758b316af358149c9895872564ef70c56e8e4868aea/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/2f043cbcd088/seat_rows.parquet](data/release/observations/2f043cbcd088859de5bf5dcdbdaad145125039071629a052b86533a7713eb8f9/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/5c6160d7c982/seat_rows.parquet](data/release/observations/5c6160d7c982d0cb55743f88ba90d95d82dc5fa1d47402bb5493fa6d443bc7fa/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/6ad3161f4b7c/seat_rows.parquet](data/release/observations/6ad3161f4b7c750e4446542bc4cf48dc5acd822c7897c4efeffdfbc56021da34/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/6f92fe34f6a5/seat_rows.parquet](data/release/observations/6f92fe34f6a54dd011dadc1602556a0935b9434c44a2452b4a01d8f0f0e98b34/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/7715dfc0287a/seat_rows.parquet](data/release/observations/7715dfc0287adec5a8aa072f0762e56150210c2653580114fe995b8f44fb82aa/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/88adc00fa2d6/seat_rows.parquet](data/release/observations/88adc00fa2d60b6e6f6d33bafd827e60afd38f4763202985e8b2e9001b1bd335/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/951e414ba7a6/seat_rows.parquet](data/release/observations/951e414ba7a68c948cf11d3870dedf2d3d792a054797feb6595ab78d890bb67a/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/99cc306ae058/seat_rows.parquet](data/release/observations/99cc306ae058ef8824515602b5a2b3e56465c28dc5c44580d791b9be1525081e/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/a00a66abee45/seat_rows.parquet](data/release/observations/a00a66abee459c7e0a4ed1e457f3ebf6591d6463e57c0a4e717e84405146a768/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/a2128bd97e57/seat_rows.parquet](data/release/observations/a2128bd97e575b9e779478b6622d63a06e73bb796a05374a571ea4ef0defd17c/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/ae4fa5939922/seat_rows.parquet](data/release/observations/ae4fa5939922729c37aeed5cfb9a9dbdd7ca90bbc13823548b606b70ff0f140b/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/bc94a933c77a/seat_rows.parquet](data/release/observations/bc94a933c77aac8e4386a202e0597b384bfa295c89591fa2cf7907aecf077062/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/c3b40ce51cf0/seat_rows.parquet](data/release/observations/c3b40ce51cf00467ec0e85d18c78272a32aafc7d0ab8309d7bc34edd540e4651/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/de78517b40a1/seat_rows.parquet](data/release/observations/de78517b40a12fc843ca8852cca3639bd44c19f2cc4ef69d3b070ffd7e6795b6/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/e22fc34f7116/seat_rows.parquet](data/release/observations/e22fc34f7116bf3dd93d6284f6004f075b4fa2ef65d74d2a44ae968a930dea06/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/e35273b41413/seat_rows.parquet](data/release/observations/e35273b4141320ac6984fc437779be2744ec24dcf8c07880153d4a70fbcdafd3/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/e9f6fd031efc/seat_rows.parquet](data/release/observations/e9f6fd031efc80233b64b9c1e9fdafed6121de22b17016c0c2f129a3812c8b7c/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/edef31fd37bd/seat_rows.parquet](data/release/observations/edef31fd37bdc0af3b49561a796f1b6cc0c918125431e969cd48ec23ce59ff3a/seat_rows.parquet) | 70,592 | Archived OCR/review observation; not a unique seat |
+| [observations/fb220eb88315/historical_provisional_observations.parquet](data/release/observations/fb220eb883155fa07df14b1aa9d1c709441463d8ff9f16f965d20df96ee28637/historical_provisional_observations.parquet) | 67,770 | Provisional OCR or reviewed non-seat occurrence |
+| [observations/fb220eb88315/historical_quarantine.parquet](data/release/observations/fb220eb883155fa07df14b1aa9d1c709441463d8ff9f16f965d20df96ee28637/historical_quarantine.parquet) | 61 | Reviewed 2000 occurrence with unresolved fields |
+| [observations/fb220eb88315/historical_reviewed_occurrences.parquet](data/release/observations/fb220eb883155fa07df14b1aa9d1c709441463d8ff9f16f965d20df96ee28637/historical_reviewed_occurrences.parquet) | 2,761 | Reviewed 2000 printed occurrence |
+| [observations/fb220eb88315/modern_quarantine.parquet](data/release/observations/fb220eb883155fa07df14b1aa9d1c709441463d8ff9f16f965d20df96ee28637/modern_quarantine.parquet) | 1,202 | Archived modern record requiring review |
+| [observations/fb220eb88315/modern_seats.parquet](data/release/observations/fb220eb883155fa07df14b1aa9d1c709441463d8ff9f16f965d20df96ee28637/modern_seats.parquet) | 133,871 | Archived modern seat record |
+| [observations/fb220eb88315/printing_reconciliation.parquet](data/release/observations/fb220eb883155fa07df14b1aa9d1c709441463d8ff9f16f965d20df96ee28637/printing_reconciliation.parquet) | 1,536 | Archived comparison of printed occurrences |
+
+</details>
+
+<!-- datasets:end -->
+
+[MANIFEST.json](data/fin/MANIFEST.json) records each export's schema, row count, SHA-256, and input CSV checksum. CSV snapshots remain in [data/2016/](data/2016/) and [data/2022/](data/2022/), alongside the source manifests, PDFs, and cached OCR. `make verify` checks every exported value against its CSV and verifies the notification PDFs against their acquisition checksums.
 
 No dataset DOI is recorded in this repository. Cite the repository using [CITATION.cff](CITATION.cff), and record the commit used in your analysis.
 
@@ -76,7 +119,7 @@ The 2022 index includes Zila Parishad and Panchayat Samiti notifications as well
 
 Notifications can contain multiple Hindi and English printings with restarted serials. The parser groups rows by notification and chooses one printing, preferring English. It handles wrapped reservation labels, doubled glyphs, and Kruti Dev text encoding. These are consequential cases: a detached `Women` label can otherwise turn a woman-reserved seat into a plausible but incorrect record.
 
-Cached OCR from 41 pages of the 2016 PDFs is retained for research but excluded from parsing. Earlier evaluation found it could attach ward rows to the wrong GP across page boundaries. Ordinary parsing requires neither a model nor paid API calls. The optional [OCR tool](scripts/ocr.py) documents its separate environment and the rejected 2016 experiment.
+Cached OCR from 41 pages of the 2016 PDFs is retained for research but excluded from parsing. Earlier evaluation found it could attach ward rows to the wrong GP across page boundaries. Ordinary parsing requires neither a model nor paid API calls. The optional [OCR tool](src/local_elections_haryana/parse/ocr.py) documents its separate environment and the rejected 2016 experiment.
 
 The [original implementation](https://github.com/in-rolls/local_elections_haryana/tree/2981e75) records the collection history. Existing published CSVs are preserved; a new parse writes to `data/derived/` for comparison before any release update.
 
@@ -86,7 +129,7 @@ The [original implementation](https://github.com/in-rolls/local_elections_haryan
 git clone https://github.com/in-rolls/local_elections_haryana.git
 cd local_elections_haryana
 uv sync --frozen --group dev
-make verify-data
+make verify
 ```
 
 Read a published file:
@@ -102,14 +145,14 @@ print(table.schema)
 Rebuild the four Parquet exports from their existing CSV inputs:
 
 ```sh
-make to-parquet
-make verify-data
+make data
+make verify
 ```
 
 Re-parse a small local source sample:
 
 ```sh
-uv run python scripts/parse.py --year 2022 --limit 1 --out data/derived/smoke
+uv run python -m local_elections_haryana.parse.parse --year 2022 --limit 1 --out data/derived/smoke
 ```
 
 `make parse YEAR=2022` processes that year's saved PDFs and writes derived CSVs under `data/derived/2022/`. Failed PDF reads stop publication of the run's outputs. A limited parse cannot overwrite the published CSV directory. Run `make validate-derived YEAR=2022` on a complete derived year and compare it with the existing release before replacing any published files.
@@ -120,15 +163,15 @@ Harvesting is a separate, explicitly invoked network operation:
 make harvest YEAR=2022
 ```
 
-Downloads must contain a readable PDF and match any advertised content length before they replace a saved file. Existing downloads are reused unless `--refresh` is passed to `scripts/harvest.py`. Use `make verify-data` to check the retained source bytes before relying on a cache.
+Downloads must contain a readable PDF and match any advertised content length before they replace a saved file. Existing downloads are reused unless `--refresh` is passed to `src/local_elections_haryana/acquire/harvest.py`. Use `make verify` to check the retained source bytes before relying on a cache.
 
 ## Historical 2000 gazette pipeline
 
 The 2000 and 2005 gazette work (OCR, parsing, source review, and the 2000 release) moved here from the central [in-rolls/local_elections](https://github.com/in-rolls/local_elections). It is the `local_elections_haryana` package in `src/`.
 
-- `make release` rebuilds `data/release/historical/` (reviewed occurrences, quarantine, provisional observations, with a receipt and `SHA256SUMS`) from tracked inputs only: `data/release/observations/` and `data/release/inputs/`.
+- `make historical` rebuilds `data/release/historical/` (reviewed occurrences, quarantine, provisional observations, with a receipt and `SHA256SUMS`) from tracked inputs only: `data/release/observations/` and `data/release/inputs/`.
 - The source PDFs, OCR corpus and review ledgers are in the [raw-data archive](data/raw_archive/README.md). They are git-ignored, with a tracked SHA-256 manifest and a tarball for download.
-- Shared helpers (run logging, checksums) come from the central package, vendored as `vendor/local_elections-0.7.0-py3-none-any.whl`.
+- Logging, checksum and HTML-link helpers live in the package; their MIT attribution is in `THIRD_PARTY_NOTICES`.
 - Hosted-OCR tools read `MODEL_API_KEY`, or `~/.config/local_elections/haryana_ocr.toml`.
 
 The historical tables are occurrence-level. They must not be appended to the 2016/2022 seat CSVs.
@@ -139,7 +182,7 @@ The historical tables are occurrence-level. They must not be appended to the 201
 make check
 ```
 
-`make check` runs Ruff, formatting checks and pytest. When data change, run `make validate YEAR=2016`, `make validate YEAR=2022` and `make verify-data` explicitly. The environment is managed by uv; the scripts do not require an installed library package.
+`make check` runs Ruff and compares the published Parquet fields against the retained sources. The historical release is rebuilt in a temporary directory and compared before accepting its values. Maintained Python code lives under `src/local_elections_haryana/{acquire,parse,build}`.
 
 ## Citation
 
@@ -161,4 +204,4 @@ The code is [MIT licensed](LICENSE). Source notifications are publications of th
 
 ## Maintenance
 
-This is a point-in-time data collection; see the [shared maintenance policy](https://github.com/soodoku/data-repos#maintenance-policy). Run the affected parser tests when code changes and the relevant data validators when inputs or outputs change. Full-data checks and publication are explicit operations. Routine edits do not require hosted CI, Docker, a Python-version matrix, Preen or pre-commit.
+This is a point-in-time data collection; see the [shared maintenance policy](https://github.com/soodoku/data-repos#maintenance-policy). Run the affected parsers on retained inputs when code changes and the relevant data validators when inputs or outputs change. Full-data checks and publication are explicit operations. Routine edits do not require hosted CI, Docker, a Python-version matrix, Preen or pre-commit.

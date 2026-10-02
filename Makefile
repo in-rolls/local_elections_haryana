@@ -1,56 +1,42 @@
 YEAR ?= 2022
-PY   ?= uv run python
+PY ?= uv run python
+RUFF ?= uv run ruff
 
-.PHONY: all harvest parse validate validate-derived test clean help release raw-verify raw-archive
+.PHONY: sync data harvest parse validate lint verify check data-summary historical raw-verify raw-archive
 
-help:
-	@echo "make harvest  YEAR=$(YEAR)   download index + notification PDFs, write manifest.csv"
-	@echo "make parse    YEAR=$(YEAR)   PDFs -> data/derived/$(YEAR)/ CSVs"
-	@echo "make validate YEAR=$(YEAR)   check the CSVs; non-zero exit on failure"
-	@echo "make test                    unit tests for the normalizer and row splitter"
-	@echo "make all                     harvest, parse, validate"
+sync:
+	uv sync --frozen --group dev
 
-all: harvest parse validate-derived
+data:
+	$(PY) -m local_elections_haryana.parse.to_parquet
+	$(MAKE) historical data-summary
+
+historical:
+	$(PY) -m local_elections_haryana.build.build_release
 
 harvest:
-	cd scripts && $(PY) harvest.py --year $(YEAR)
+	$(PY) -m local_elections_haryana.acquire.harvest --year $(YEAR)
 
 parse:
-	cd scripts && $(PY) parse.py --year $(YEAR)
+	$(PY) -m local_elections_haryana.parse.parse --year $(YEAR)
 
 validate:
-	cd scripts && $(PY) validate.py --year $(YEAR)
+	$(PY) -m local_elections_haryana.build.validate --year $(YEAR)
 
-validate-derived:
-	$(PY) scripts/validate.py --year $(YEAR) --input-dir data/derived/$(YEAR)
+lint:
+	$(RUFF) check .
+	$(RUFF) format --check .
 
-test:
-	uv run pytest -q
+verify:
+	$(PY) -m local_elections_haryana.build.release verify
 
-clean:
-	rm -f data/derived/$(YEAR)/gp_reservation.csv data/derived/$(YEAR)/ward_reservation.csv
+data-summary:
+	$(PY) -m local_elections_haryana.build.release summary
 
-.PHONY: check to-parquet verify-data
+check: lint verify
 
-check:
-	uv sync --frozen --group dev
-	uv run ruff check .
-	uv run ruff format --check .
-	uv run pytest -q
-
-to-parquet:
-	$(PY) scripts/to_parquet.py
-
-verify-data:
-	$(PY) scripts/to_parquet.py --check
-
-# Haryana 2000 historical release (tracked inputs only; no raw archive needed)
-release:
-	$(PY) -m local_elections_haryana.build_release
-
-# Raw-data archive (see data/raw_archive/README.md)
 raw-verify:
-	$(PY) scripts/raw_archive.py verify
+	$(PY) -m local_elections_haryana.acquire.raw_archive verify
 
 raw-archive:
-	$(PY) scripts/raw_archive.py pack $(if $(OUT),--out $(OUT),)
+	$(PY) -m local_elections_haryana.acquire.raw_archive pack $(if $(OUT),--out $(OUT),)
