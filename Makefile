@@ -2,7 +2,8 @@ YEAR ?= 2022
 PY ?= uv run python
 RUFF ?= uv run ruff
 
-.PHONY: sync data harvest parse validate lint verify check data-summary historical raw-verify raw-archive
+.PHONY: sync data harvest parse validate lint verify check data-summary historical raw-verify raw-archive \
+	infer link
 
 sync:
 	uv sync --frozen --group dev
@@ -40,3 +41,10 @@ raw-verify:
 
 raw-archive:
 	$(PY) -m local_elections_haryana.acquire.raw_archive pack $(if $(OUT),--out $(OUT),)
+
+infer:
+	$(PY) -m local_elections_haryana.infer.kruti_names
+	$(PY) -m local_elections_haryana.infer.winner_sex
+
+link:
+	$(PY) -m local_elections_haryana.linkage.gp_2016_2022

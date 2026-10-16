@@ -1,0 +1,34 @@
+{
+  "purpose": "Research crosswalk between 2016 and 2022 sarpanch seats. A link states that names agree inside a reviewed block pair, not that boundaries are unchanged.",
+  "matcher": {
+    "preclink": "1.2.0",
+    "name_threshold": 0.8,
+    "ward_pass_threshold": 0.85
+  },
+  "inputs": {
+    "data/fin/gp_reservation_2016.parquet": "3c687f930d2d70a991d2c098b3e2eb9250495d66c82e7446485ee9a6c9b0c2f5",
+    "data/fin/gp_reservation_2022.parquet": "50462f39a0df59419297e1c779dccebb2e94f4fffa252ac3c69b7a8993880314",
+    "data/fin/ward_reservation_2016.parquet": "193b41bfab6bde2f73423a088ae2e1703d4b89dc3ff0cf79c17a693a3c3addb5",
+    "data/fin/ward_reservation_2022.parquet": "90b57d794b369da8fa4016c46a96bbcd4124e1365d396f5f21e39eed35dee231",
+    "data/crosswalks/district_2016_2022.csv": "652bedb43d503c477c3a1bbd6702fdc6e0bf91a90303e21cc410cb35200f4d5e",
+    "data/crosswalks/block_2016_2022.csv": "9e9d6d91a8af970fb8fa383c195a8625612e29392111eaf5e4d5aac86e340c76",
+    "data/inferred/kruti_dev_names_2022.csv": "5cec4ee897f88272d04babf1d8d0dc2242abdaddd26ad21c590ff7b4fab4dede"
+  },
+  "code_sha256": "2971790312f1e2880541f72ba54088745bfa3754a8d14020912b4193d425f68f",
+  "validation": {
+    "gps_2016": 6090,
+    "gps_2022": 6123,
+    "linked": 5715,
+    "linked_by_name": 5680,
+    "linked_by_name_and_wards": 35,
+    "ward_count_agreement_name_pass": 0.9194,
+    "ward_count_agreement_shuffled_within_block": 0.1477
+  },
+  "files": [
+    {
+      "path": "gp_2016_2022.parquet",
+      "rows": 5715,
+      "sha256": "fa3a17f4322e2cdfb8be422920f93fda7dd5c4bf60ebe60a69faf4922bb7d7e8"
+    }
+  ]
+}

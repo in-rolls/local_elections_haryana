@@ -87,6 +87,14 @@ Parquet adds `year` to the CSV fields. Empty CSV cells become null; `0`/`1` flag
 
 Caste and women's reservations are separate dimensions. An SC-reserved seat can also be woman-reserved. Seat reservation is not the elected person's caste or gender. `printings_agree` is a GP-level comparison propagated to its ward rows; it does not establish independent agreement on each ward's category.
 
+## Derived crosswalks, links and inferred values
+
+These sit beside the source exports and never change them.
+
+- [District and block crosswalks](data/crosswalks/README.md): reviewed 2016→2022 correspondences, with evidence and a reason for each decision.
+- [Sarpanch seat links](data/linkage/README.md): 2016→2022 GP pairs within reviewed block pairs. Ward counts agree for 91.9% of name links, against 14.8% at random.
+- [Inferred values](data/inferred/README.md): romanized Kruti Dev names, and the probability that each elected sarpanch is a woman. The probability is validated against 2022 winners, whose sex the 2020 law fixes (cross-validated AUC 0.993).
+
 ## Coverage and known gaps
 
 The 2016 files cover 126 blocks in 21 districts; 2022 covers 143 blocks in 22 districts. Administrative boundaries and names changed between elections, including the creation of Charkhi Dadri and the Mewat/Nuh name change. There is no validated cross-year crosswalk or LGD/census identifier. Exact names can differ across publications, and fuzzy matching requires review.
