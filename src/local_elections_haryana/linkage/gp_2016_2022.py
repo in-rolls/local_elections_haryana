@@ -58,7 +58,7 @@ DIRECTIONS = {
     "east": r"purv|poorv|purab",
     "west": r"pash?chim|pachim",
     "north": r"uttar|utter",
-    "south": r"dakshin|dakhin|dachhin",
+    "south": r"daksh[ai]n|dakhin|dachhin",
     # Twin villages are distinguished by these; Surpura Kalan is not Surpura Khurd.
     "kalan": r"\bkal[ae]?n\b|\bkalaan\b",
     "khurd": r"\bkhurd\b|\bkhurad\b",
@@ -66,6 +66,18 @@ DIRECTIONS = {
     "khas": r"\bkhas\b|\bkhaas\b",
 }
 ROMAN = {"i": 1, "ii": 2, "iii": 3, "iv": 4}
+
+
+# A name may state a direction, a twin-village qualifier, both or neither. Two
+# names conflict only when both state one from the same family and they differ.
+QUALIFIER_FAMILIES = (
+    frozenset({"east", "west", "north", "south"}),
+    frozenset({"kalan", "khurd", "buzurg", "khas"}),
+)
+
+
+def qualifiers_conflict(a, b):
+    return any((a & f) and (b & f) and (a & f) != (b & f) for f in QUALIFIER_FAMILIES)
 
 
 def fold(name):
@@ -108,8 +120,8 @@ class PlaceName:
         for (a, a_num, a_dir, a_block), (b, b_num, b_dir, b_block) in zip(
             left, right, strict=True
         ):
-            conflict = (a_num and b_num and a_num != b_num) or (
-                a_dir and b_dir and a_dir != b_dir
+            conflict = (a_num and b_num and a_num != b_num) or qualifiers_conflict(
+                a_dir, b_dir
             )
             allowed = (a_block, b_block) in ALLOWED
             scores.append(similarity(a, b) if allowed and not conflict else 0.0)

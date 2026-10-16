@@ -68,3 +68,17 @@ def test_links_are_one_to_one_within_linked_block_pairs():
         strict=True,
     )
     assert set(pairs) <= allowed
+
+
+def test_qualifiers_conflict_only_within_a_family():
+    from local_elections_haryana.linkage.gp_2016_2022 import qualifiers_conflict
+
+    assert qualifiers_conflict(
+        name_key("Surpura Kalan")[2], name_key("Surpura Khurd")[2]
+    )
+    assert not qualifiers_conflict(
+        name_key("Beharwala Khurd Uttari")[2], name_key("Beharwala Khurd")[2]
+    )
+    assert qualifiers_conflict(
+        name_key("Sanha Purvi")[2], name_key("Sanha Paschimi")[2]
+    )
