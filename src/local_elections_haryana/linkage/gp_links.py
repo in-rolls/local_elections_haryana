@@ -1,7 +1,7 @@
-"""Link sarpanch seats between the 2016 and 2022 elections.
+"""Link sarpanch seats between consecutive elections (2010-2016, 2016-2022).
 
-No GP identifier survives between the two notifications, and blocks were split
-and renamed in between. Districts and blocks are therefore matched through the
+No GP identifier survives between notifications, and blocks were split and
+renamed in between. Districts and blocks are therefore matched through the
 reviewed crosswalks in `data/crosswalks/`, and a GP pair is a candidate only when
 its two blocks form a `linked` row there. Inside those block pairs, GP names are
 folded to absorb romanization variants and paired one-to-one with preclink.
@@ -129,25 +129,29 @@ class PlaceName:
 
 
 ALLOWED: set = set()
+# Districts whose blocks moved between them share one blocking group.
+PAIRS = {
+    "2010_2016": {"years": (2010, 2016), "family": {}},
+    "2016_2022": {"years": (2016, 2022), "family": {"Charkhi Dadri": "Bhiwani"}},
+}
 
 
-def crosswalks():
-    districts = pd.read_csv(CROSSWALKS / "district_2016_2022.csv")
-    blocks = pd.read_csv(CROSSWALKS / "block_2016_2022.csv")
+def crosswalks(a, b):
+    districts = pd.read_csv(CROSSWALKS / f"district_{a}_{b}.csv")
+    blocks = pd.read_csv(CROSSWALKS / f"block_{a}_{b}.csv")
     linked = blocks[blocks["decision"] == "linked"]
-    # Districts whose blocks moved between them share one blocking group.
-    family = {"Charkhi Dadri": "Bhiwani"}
-    to_2022 = dict(
-        zip(districts["district_2016"], districts["district_2022"], strict=True)
+    to_later = dict(
+        zip(districts[f"district_{a}"], districts[f"district_{b}"], strict=True)
     )
     pairs = {
-        ((r.district_2016, r.block_2016), (r.district_2022, r.block_2022))
+        ((getattr(r, f"district_{a}"), getattr(r, f"block_{a}")),
+         (getattr(r, f"district_{b}"), getattr(r, f"block_{b}")))
         for r in linked.itertuples()
-    }
-    return to_2022, family, pairs, blocks
+    }  # fmt: skip
+    return to_later, pairs
 
 
-def gps(year, to_2022, family):
+def gps(year, later, to_later, family):
     d = pd.read_parquet(DATA / "fin" / f"gp_reservation_{year}.parquet")
     wards = (
         pd.read_parquet(DATA / "fin" / f"ward_reservation_{year}.parquet")
@@ -163,8 +167,8 @@ def gps(year, to_2022, family):
         latin = kruti.set_index(["district", "block", "sr_no", "gram_panchayat"])
         romanized = latin["gram_panchayat_latin"].reindex(d.set_index(KEY).index)
         d["name"] = romanized.where(romanized.notna(), d["name"].to_numpy()).to_numpy()
-    district_2022 = d["district"] if year == 2022 else d["district"].map(to_2022)
-    d["group"] = district_2022.replace(family)
+    district_later = d["district"] if year == later else d["district"].map(to_later)
+    d["group"] = district_later.replace(family)
     d["key"] = d[KEY].astype(str).agg("|".join, axis=1)
     d["name_key"] = [
         (*name_key(n), (dist, blk))
@@ -194,8 +198,8 @@ def link(left, right, comparisons, threshold):
         found.append(
             pd.DataFrame(
                 {
-                    "key_2016": lg.loc[matches["left_index"], "key"].to_numpy(),
-                    "key_2022": rg.loc[matches["right_index"], "key"].to_numpy(),
+                    "key_a": lg.loc[matches["left_index"], "key"].to_numpy(),
+                    "key_b": rg.loc[matches["right_index"], "key"].to_numpy(),
                     "name_score": matches["name_key_score"].to_numpy(),
                 }
             )
@@ -207,72 +211,79 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def build(out=OUT):
-    to_2022, family, pairs, _ = crosswalks()
+def build_pair(label):
+    a, b = PAIRS[label]["years"]
+    to_later, pairs = crosswalks(a, b)
     ALLOWED.clear()
     ALLOWED.update(pairs)
-    g16, g22 = gps(2016, to_2022, family), gps(2022, to_2022, family)
-    first = link(g16, g22, [PlaceName()], NAME_THRESHOLD).assign(link_pass="name")
-    rest16 = g16[~g16["key"].isin(first["key_2016"])]
-    rest22 = g22[~g22["key"].isin(first["key_2022"])]
+    family = PAIRS[label]["family"]
+    ga, gb = gps(a, b, to_later, family), gps(b, b, to_later, family)
+    first = link(ga, gb, [PlaceName()], NAME_THRESHOLD).assign(link_pass="name")
+    rest_a = ga[~ga["key"].isin(first["key_a"])]
+    rest_b = gb[~gb["key"].isin(first["key_b"])]
     second = link(
-        rest16, rest22, [PlaceName(), ExactComparison("wards")], WARD_PASS_THRESHOLD
+        rest_a, rest_b, [PlaceName(), ExactComparison("wards")], WARD_PASS_THRESHOLD
     ).assign(link_pass="name_and_wards")
-    pairs_found = pd.concat([first, second], ignore_index=True)
-    side = {
-        2016: g16.set_index("key")[[*KEY, "name", "wards"]],
-        2022: g22.set_index("key")[[*KEY, "name", "wards"]],
-    }
-    table = pairs_found.join(side[2016].add_suffix("_2016"), on="key_2016").join(
-        side[2022].add_suffix("_2022"), on="key_2022"
+    found = pd.concat([first, second], ignore_index=True)
+    cols = [*KEY, "name", "wards"]
+    table = found.join(ga.set_index("key")[cols].add_suffix(f"_{a}"), on="key_a").join(
+        gb.set_index("key")[cols].add_suffix(f"_{b}"), on="key_b"
     )
-    table = table.drop(columns=["key_2016", "key_2022"]).sort_values(
-        ["district_2016", "block_2016", "sr_no_2016"]
+    table = table.drop(columns=["key_a", "key_b"]).sort_values(
+        [f"district_{a}", f"block_{a}", f"sr_no_{a}"]
     )
     named = table[table["link_pass"] == "name"]
-    agree = (named["wards_2016"] == named["wards_2022"]).mean()
-    shuffled = named.groupby("block_2022")["wards_2022"].transform(
+    agree = (named[f"wards_{a}"] == named[f"wards_{b}"]).mean()
+    shuffled = named.groupby(f"block_{b}")[f"wards_{b}"].transform(
         lambda s: s.sample(frac=1, random_state=1).to_numpy()
     )
     checks = {
-        "gps_2016": len(g16),
-        "gps_2022": len(g22),
+        f"gps_{a}": len(ga),
+        f"gps_{b}": len(gb),
         "linked": len(table),
         "linked_by_name": len(named),
         "linked_by_name_and_wards": len(table) - len(named),
         "ward_count_agreement_name_pass": round(agree, 4),
         "ward_count_agreement_shuffled_within_block": round(
-            (named["wards_2016"] == shuffled).mean(), 4
+            (named[f"wards_{a}"] == shuffled).mean(), 4
         ),
     }
-    out.mkdir(parents=True, exist_ok=True)
-    path = out / "gp_2016_2022.parquet"
+    OUT.mkdir(parents=True, exist_ok=True)
+    path = OUT / f"gp_{a}_{b}.parquet"
     table.to_parquet(path, index=False)
     inputs = [
         *(DATA / "fin" / f"{t}_reservation_{y}.parquet" for t in ("gp", "ward")
-          for y in (2016, 2022)),
-        CROSSWALKS / "district_2016_2022.csv",
-        CROSSWALKS / "block_2016_2022.csv",
-        KRUTI,
+          for y in (a, b)),
+        CROSSWALKS / f"district_{a}_{b}.csv",
+        CROSSWALKS / f"block_{a}_{b}.csv",
+        *([KRUTI] if 2022 in (a, b) else []),
     ]  # fmt: skip
+    return {
+        "inputs": {str(p): sha(p) for p in inputs},
+        "validation": checks,
+        "file": {"path": path.name, "rows": len(table), "sha256": sha(path)},
+    }
+
+
+def build():
     manifest = {
         "purpose": (
-            "Research crosswalk between 2016 and 2022 sarpanch seats. A link states "
-            "that names agree inside a reviewed block pair, not that boundaries "
-            "are unchanged."
+            "Research crosswalks between sarpanch seats of consecutive elections. "
+            "A link states that names agree inside a reviewed block pair, not that "
+            "boundaries are unchanged."
         ),
         "matcher": {
             "preclink": version("preclink"),
             "name_threshold": NAME_THRESHOLD,
             "ward_pass_threshold": WARD_PASS_THRESHOLD,
         },
-        "inputs": {str(p): sha(p) for p in inputs},
         "code_sha256": sha(__file__),
-        "validation": checks,
-        "files": [{"path": path.name, "rows": len(table), "sha256": sha(path)}],
+        "pairs": {label: build_pair(label) for label in PAIRS},
     }
-    (out / "MANIFEST.json").write_text(json.dumps(manifest, indent=2) + "\n")
-    print(json.dumps(checks, indent=2))
+    (OUT / "MANIFEST.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    print(
+        json.dumps({k: v["validation"] for k, v in manifest["pairs"].items()}, indent=2)
+    )
 
 
 if __name__ == "__main__":

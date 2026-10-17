@@ -6,8 +6,9 @@ keeps its inputs beside the result, and is never written back into `data/fin/`.
 | File | Row | What is inferred |
 | --- | --- | --- |
 | `kruti_dev_names_2022.csv` | A 2022 GP record printed in Kruti Dev | Unicode and romanized GP, winner and relation names |
-| `winner_female_probability_2016.parquet` | An elected 2016 sarpanch | Probability that the winner is a woman |
-| `winner_female_probability_2022.parquet` | An elected 2022 sarpanch | Probability that the winner is a woman |
+| `winner_female_probability_2010.parquet` | An elected 2010 sarpanch | `winner_female_probability_from_name` |
+| `winner_female_probability_2016.parquet` | An elected 2016 sarpanch | `winner_female_probability_from_name` |
+| `winner_female_probability_2022.parquet` | An elected 2022 sarpanch | `winner_female_probability_from_name` |
 
 ## Kruti Dev names
 
@@ -28,8 +29,11 @@ printed name:
   Ram, Chand, ...), because Haryana names often carry sex in the last word;
 - an "Smt"/"Kumari" title marker.
 
-A logistic regression combines them. It is fit on 2022 winners, whose sex is
-fixed by law: the 2020 amendment to section 9 of the Haryana Panchayati Raj Act
+A logistic regression combines them. The result is the column
+`winner_female_probability_from_name`, with the method and package version in
+`winner_female_probability_method`. No recorded sex is ever written to these
+files, and no inferred value is written to a recorded-sex column elsewhere.
+It is fit on 2022 winners, whose sex is fixed by law: the 2020 amendment to section 9 of the Haryana Panchayati Raj Act
 lets only women contest the women's offices and only persons other than women
 contest the rest. Performance is cross-validated with folds grouped by first
 name, so no first name is in both a training and a test fold.

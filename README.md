@@ -12,8 +12,10 @@ Each row is a seat record recovered from a notification. Coverage is incomplete,
 
 | File | Rows | Each row represents |
 | --- | ---: | --- |
+| [fin/gp_reservation_2010.parquet](data/fin/gp_reservation_2010.parquet) | 5,924 | GP head seat record |
 | [fin/gp_reservation_2016.parquet](data/fin/gp_reservation_2016.parquet) | 6,090 | GP head seat record |
 | [fin/gp_reservation_2022.parquet](data/fin/gp_reservation_2022.parquet) | 6,123 | GP head seat record |
+| [fin/ward_reservation_2010.parquet](data/fin/ward_reservation_2010.parquet) | 57,856 | GP ward seat record |
 | [fin/ward_reservation_2016.parquet](data/fin/ward_reservation_2016.parquet) | 61,879 | GP ward seat record |
 | [fin/ward_reservation_2022.parquet](data/fin/ward_reservation_2022.parquet) | 60,981 | GP ward seat record |
 | [release/historical/historical_provisional_observations.parquet](data/release/historical/historical_provisional_observations.parquet) | 67,770 | Provisional OCR or reviewed non-seat occurrence |
@@ -97,7 +99,9 @@ These sit beside the source exports and never change them.
 
 ## Coverage and known gaps
 
-The 2016 files cover 126 blocks in 21 districts; 2022 covers 143 blocks in 22 districts. Administrative boundaries and names changed between elections, including the creation of Charkhi Dadri and the Mewat/Nuh name change. There is no validated cross-year crosswalk or LGD/census identifier. Exact names can differ across publications, and fuzzy matching requires review.
+**2010 categories.** The 2010 notifications were recovered from Wayback captures of the SEC site (see `data/2010/manifest.csv`). In seven blocks they print far fewer women's seats than the statutory third: Palwal/Palwal, Sirsa/Nathusari Chopta, Sirsa/Baruguda, Karnal/Assandh, Rewari/Bawal, Jhajjar/Matanhail and Yamuna Nagar/Mustafabad. The Hindi printings of the same notifications agree with the English. The SEC's own reservation table and the winners' names disagree with both. [`data/2010/reference/category_defects.csv`](data/2010/reference/category_defects.csv) records each block, its evidence and the decision `reservation_unreliable`. The printed values are published unchanged.
+
+The 2010 files cover 118 blocks in 21 districts; 2016 covers 126 blocks in 21 districts; 2022 covers 143 blocks in 22 districts. Administrative boundaries and names changed between elections, including the creation of Charkhi Dadri and the Mewat/Nuh name change. There is no validated cross-year crosswalk or LGD/census identifier. Exact names can differ across publications, and fuzzy matching requires review.
 
 The validator retains the original SEC reference totals and their different denominators. Its 2016 totals count people elected, excluding vacant seats: the data contain 6,081 non-vacant GP records and 59,980 non-vacant ward records. Its 2022 totals count seats: 6,123 of 6,220 GP seats and 60,981 of 61,993 ward seats are represented. These coverage checks do not establish that every recovered record is correct.
 
@@ -114,7 +118,7 @@ Current validation findings include:
 
 Do not deduplicate on district, block, and GP name without examining the notification. Missing ward numbers remain missing. A successful `make validate` means its required checks passed; warnings remain visible and are not recoded into successful readings.
 
-The published 2016/2022 files exclude 2000, 2005, 2010, and later bye-elections. The 2000 and 2005 gazette work, built with Muse Spark Contributor, is released separately; see [Historical 2000 gazette pipeline](#historical-2000-gazette-pipeline).
+The published files cover 2010, 2016 and 2022, and exclude 2000, 2005 and later bye-elections. The 2000 and 2005 gazette work, built with Muse Spark Contributor, is released separately; see [Historical 2000 gazette pipeline](#historical-2000-gazette-pipeline).
 
 ## How collected
 

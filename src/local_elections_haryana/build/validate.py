@@ -29,6 +29,9 @@ OFFICIAL = {
         "basis": "seats",
     },
     "2016": {"gram_panchayats": 6193, "panches": 60438, "basis": "elected"},
+    # SEC report on the 2010 general elections, sections 15.4-15.5: seats for
+    # which elections were held.
+    "2010": {"gram_panchayats": 6075, "panches": 58608, "basis": "seats"},
 }
 
 # Haryana applies its reservations block by block, not statewide, which makes a
@@ -39,6 +42,7 @@ OFFICIAL = {
 STATUTE = {
     "2022": {"women": 0.50, "bc_a": 0.08},
     "2016": {"women": 0.33, "bc_a": None},
+    "2010": {"women": 0.33, "bc_a": None},
 }
 
 
@@ -68,7 +72,7 @@ def pct(part, whole):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--year", default=YEAR, choices=("2016", "2022"))
+    ap.add_argument("--year", default=YEAR, choices=("2010", "2016", "2022"))
     ap.add_argument("--input-dir", type=pathlib.Path, help="directory of derived CSVs")
     ap.add_argument("--verbose", action="store_true", help="list every offending block")
     args = ap.parse_args()
@@ -291,6 +295,14 @@ def main():
     for r in gp:
         by_block[(r["district"], r["block"])].append(r)
 
+    # Blocks whose printed categories were reviewed and found defective in the
+    # source itself are reported, not failed; an unreviewed block still fails.
+    defects_path = year_dir / "reference" / "category_defects.csv"
+    reviewed = (
+        {(r["district"], r["block"]): r["decision"] for r in read_csv(defects_path)}
+        if defects_path.exists()
+        else {}
+    )
     off_women, off_bc = [], []
     for key, rows in by_block.items():
         w = pct(sum(int(x["woman_reserved"]) for x in rows), len(rows))
@@ -301,20 +313,26 @@ def main():
             if abs(b - 100 * bc_share) > 6:
                 off_bc.append((key, len(rows), b))
 
+    unreviewed = [o for o in off_women if o[0] not in reviewed]
     report.check(
-        len(off_women) <= 0.05 * len(by_block),
+        len(unreviewed) <= 0.05 * len(by_block),
         f"per-block women's share within 6pp of {women_share * 100:.0f}%",
-        f"{len(off_women)} of {len(by_block)} blocks off",
+        f"{len(off_women)} of {len(by_block)} blocks off, "
+        f"{len(off_women) - len(unreviewed)} of them reviewed in {defects_path.name}",
     )
     if bc_share is None:
         # Panchayat BC(A) reservation only arrived with the 2021 amendment, so a
         # handful of 2016 rows labelled "Backward Class" is plausible as a
         # stray, but a real share would mean the parse is wrong.
-        bc_rows = sum(r["caste_reservation"] == "BC_A" for r in gp)
+        bc_rows = sum(
+            r["caste_reservation"] == "BC_A"
+            and (r["district"], r["block"]) not in reviewed
+            for r in gp
+        )
         report.check(
             pct(bc_rows, len(gp)) < 0.5,
             "BC(A) seats negligible (not a category until 2021)",
-            f"{bc_rows} rows = {pct(bc_rows, len(gp)):.2f}%",
+            f"{bc_rows} rows = {pct(bc_rows, len(gp)):.2f}% outside reviewed blocks",
         )
     else:
         report.check(

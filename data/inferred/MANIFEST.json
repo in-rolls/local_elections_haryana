@@ -5,10 +5,11 @@
     "scikit-learn": "1.9.1"
   },
   "inputs": {
-    "data/fin/gp_reservation_2016.parquet": "3c687f930d2d70a991d2c098b3e2eb9250495d66c82e7446485ee9a6c9b0c2f5",
-    "data/fin/gp_reservation_2022.parquet": "50462f39a0df59419297e1c779dccebb2e94f4fffa252ac3c69b7a8993880314"
+    "data/fin/gp_reservation_2010.parquet": "04d0262f8c6e68af3b29f6e195251ed9f0de83f43867270e9f9c7432e09d145a",
+    "data/fin/gp_reservation_2016.parquet": "d4f8e2e917c016ff9504917ba40a5efda52da41f4f5e35ffad7b1c5f87a3ad81",
+    "data/fin/gp_reservation_2022.parquet": "d10999f41c892d3bf31044972a1313dc021193ce3b7e66390cee5a85881e94eb"
   },
-  "code_sha256": "8701c0143fcf9e6dc773f68dd657c72b0959ad5612b6b0eed1306ea1c10136d3",
+  "code_sha256": "912d99dc72ef6336804a4f634a01a199f853ec39076ec5101a80db45a31e0947",
   "validation": {
     "training": {
       "year": 2022,
@@ -74,19 +75,25 @@
       "male_marker": -3.876183511432248,
       "female_title": 1.0746873901555962
     },
+    "mean_probability_2010_women_reserved": 0.9156,
     "mean_probability_2016_women_reserved": 0.9459,
     "mean_probability_2022_women_reserved": 0.9424
   },
   "files": [
     {
+      "path": "winner_female_probability_2010.parquet",
+      "rows": 5919,
+      "sha256": "a8ad8f160dc814bc25b9f2c352d5783ad54a8c080daba629631fd1956fa5b6b2"
+    },
+    {
       "path": "winner_female_probability_2016.parquet",
       "rows": 6081,
-      "sha256": "f73de0ee5f31a347367180b8224eb44b83deb75aed1b8042e9918c4c98af5277"
+      "sha256": "28d63dc1cd836a3dcaedcf8db22510734b0df2a08cd890b566cffd7c013d5cf6"
     },
     {
       "path": "winner_female_probability_2022.parquet",
       "rows": 6085,
-      "sha256": "e54f50d007983139f0310ea6da1ed3561a78c3c32401e0e1f3bfdc1e3d981f41"
+      "sha256": "d55f3cab9a6cac760ec417c2786dbda73fad0a509116407d5fcdde01fd0c3ea0"
     }
   ]
 }

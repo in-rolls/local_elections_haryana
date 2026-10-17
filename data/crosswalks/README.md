@@ -1,12 +1,12 @@
-# District and block crosswalks, 2016 to 2022
+# District and block crosswalks between consecutive elections
 
 These two files are reviewed by hand. They are the record of which administrative
 units continue between the elections, and they are not regenerated.
 
 | File | Row |
 | --- | --- |
-| `district_2016_2022.csv` | A 2016 district and the 2022 district it became (`same`, `renamed`, `split`) |
-| `block_2016_2022.csv` | A candidate pair of a 2016 block and a 2022 block, with evidence and a decision |
+| `district_2010_2016.csv`, `district_2016_2022.csv` | A district and the district it became (`same`, `renamed`, `split`) |
+| `block_2010_2016.csv`, `block_2016_2022.csv` | A candidate pair of an earlier and a later block, with evidence and a decision |
 
 Districts: Gurgaon became Gurugram and Mewat became Nuh. Mahendergarh is printed
 "M/garh" in 2022. Charkhi Dadri was formed from Bhiwani's Badhra, Dadri-I and
@@ -30,3 +30,15 @@ fifth of the 2022 block. Pairs sharing three common village names are
 
 `note` gives the reason for every decision. GP links in `data/linkage/` use
 only `linked` pairs.
+
+## 2010 to 2016
+
+Districts are unchanged. Blocks created by 2016 take their GPs from the parents
+shown in the evidence: Satnali from Mahendergarh (all 25 GP names), Sihma and
+Nizampur from Ateli Nangal, Narnaul and Nangal Chaudhary, Ismailabad from Pehowa,
+Shahabad and Thanesar, Prithla from Palwal, Murthal from Ganaur, Rai and
+Sonepat, and Sanauli Khurd from Bapoli. Three blocks are excluded because the
+2010 parse holds too few of their rows: Palwal/Hassanpur (no rows; the Hindi
+printing lists 32), Karnal/Nissing (21 of 47) and Fatehabad/Bhuna (1 of about
+29).
+

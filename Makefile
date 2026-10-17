@@ -47,4 +47,4 @@ infer:
 	$(PY) -m local_elections_haryana.infer.winner_sex
 
 link:
-	$(PY) -m local_elections_haryana.linkage.gp_2016_2022
+	$(PY) -m local_elections_haryana.linkage.gp_links

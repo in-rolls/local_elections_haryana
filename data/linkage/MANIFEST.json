@@ -1,34 +1,60 @@
 {
-  "purpose": "Research crosswalk between 2016 and 2022 sarpanch seats. A link states that names agree inside a reviewed block pair, not that boundaries are unchanged.",
+  "purpose": "Research crosswalks between sarpanch seats of consecutive elections. A link states that names agree inside a reviewed block pair, not that boundaries are unchanged.",
   "matcher": {
     "preclink": "1.2.0",
     "name_threshold": 0.8,
     "ward_pass_threshold": 0.85
   },
-  "inputs": {
-    "data/fin/gp_reservation_2016.parquet": "3c687f930d2d70a991d2c098b3e2eb9250495d66c82e7446485ee9a6c9b0c2f5",
-    "data/fin/gp_reservation_2022.parquet": "50462f39a0df59419297e1c779dccebb2e94f4fffa252ac3c69b7a8993880314",
-    "data/fin/ward_reservation_2016.parquet": "193b41bfab6bde2f73423a088ae2e1703d4b89dc3ff0cf79c17a693a3c3addb5",
-    "data/fin/ward_reservation_2022.parquet": "90b57d794b369da8fa4016c46a96bbcd4124e1365d396f5f21e39eed35dee231",
-    "data/crosswalks/district_2016_2022.csv": "652bedb43d503c477c3a1bbd6702fdc6e0bf91a90303e21cc410cb35200f4d5e",
-    "data/crosswalks/block_2016_2022.csv": "9e9d6d91a8af970fb8fa383c195a8625612e29392111eaf5e4d5aac86e340c76",
-    "data/inferred/kruti_dev_names_2022.csv": "5cec4ee897f88272d04babf1d8d0dc2242abdaddd26ad21c590ff7b4fab4dede"
-  },
-  "code_sha256": "040cd6e30c2cef6a4750f59711b2183c94a26e733858f0e37b2197109865123c",
-  "validation": {
-    "gps_2016": 6090,
-    "gps_2022": 6123,
-    "linked": 5715,
-    "linked_by_name": 5680,
-    "linked_by_name_and_wards": 35,
-    "ward_count_agreement_name_pass": 0.9194,
-    "ward_count_agreement_shuffled_within_block": 0.1477
-  },
-  "files": [
-    {
-      "path": "gp_2016_2022.parquet",
-      "rows": 5715,
-      "sha256": "fa3a17f4322e2cdfb8be422920f93fda7dd5c4bf60ebe60a69faf4922bb7d7e8"
+  "code_sha256": "0c1a10e5488c7c808fd26ac97634919bb11000659f1991347f91f077bf94cc5e",
+  "pairs": {
+    "2010_2016": {
+      "inputs": {
+        "data/fin/gp_reservation_2010.parquet": "04d0262f8c6e68af3b29f6e195251ed9f0de83f43867270e9f9c7432e09d145a",
+        "data/fin/gp_reservation_2016.parquet": "d4f8e2e917c016ff9504917ba40a5efda52da41f4f5e35ffad7b1c5f87a3ad81",
+        "data/fin/ward_reservation_2010.parquet": "1d54ef4944f9b2a6cfdd570f61dc6e3de4cf64b692669c4069057190b9df828a",
+        "data/fin/ward_reservation_2016.parquet": "96055f13ec187f23d4bf824348a3db76ce56727215a01cbec6ad37de423ef270",
+        "data/crosswalks/district_2010_2016.csv": "4314171ba9e4edf32751864f158ebd1762f8e432947b35613f1eb9149cc1e802",
+        "data/crosswalks/block_2010_2016.csv": "04cd8bf617d701f7b26f1c036873cc3b656ce74221f8cbcb5e859f69da4401ea"
+      },
+      "validation": {
+        "gps_2010": 5916,
+        "gps_2016": 6090,
+        "linked": 5623,
+        "linked_by_name": 5600,
+        "linked_by_name_and_wards": 23,
+        "ward_count_agreement_name_pass": 0.4825,
+        "ward_count_agreement_shuffled_within_block": 0.1427
+      },
+      "file": {
+        "path": "gp_2010_2016.parquet",
+        "rows": 5623,
+        "sha256": "0035333d40c547114cb3f2374f89dca38df0ade44079b8658ef0f90495e929c4"
+      }
+    },
+    "2016_2022": {
+      "inputs": {
+        "data/fin/gp_reservation_2016.parquet": "d4f8e2e917c016ff9504917ba40a5efda52da41f4f5e35ffad7b1c5f87a3ad81",
+        "data/fin/gp_reservation_2022.parquet": "d10999f41c892d3bf31044972a1313dc021193ce3b7e66390cee5a85881e94eb",
+        "data/fin/ward_reservation_2016.parquet": "96055f13ec187f23d4bf824348a3db76ce56727215a01cbec6ad37de423ef270",
+        "data/fin/ward_reservation_2022.parquet": "b82e8264d7f4886d1eaef3113a6d06e776feb4f9dbdc8828548815e61b149fad",
+        "data/crosswalks/district_2016_2022.csv": "652bedb43d503c477c3a1bbd6702fdc6e0bf91a90303e21cc410cb35200f4d5e",
+        "data/crosswalks/block_2016_2022.csv": "9e9d6d91a8af970fb8fa383c195a8625612e29392111eaf5e4d5aac86e340c76",
+        "data/inferred/kruti_dev_names_2022.csv": "5cec4ee897f88272d04babf1d8d0dc2242abdaddd26ad21c590ff7b4fab4dede"
+      },
+      "validation": {
+        "gps_2016": 6090,
+        "gps_2022": 6123,
+        "linked": 5715,
+        "linked_by_name": 5680,
+        "linked_by_name_and_wards": 35,
+        "ward_count_agreement_name_pass": 0.9194,
+        "ward_count_agreement_shuffled_within_block": 0.1477
+      },
+      "file": {
+        "path": "gp_2016_2022.parquet",
+        "rows": 5715,
+        "sha256": "fa3a17f4322e2cdfb8be422920f93fda7dd5c4bf60ebe60a69faf4922bb7d7e8"
+      }
     }
-  ]
+  }
 }

@@ -35,7 +35,7 @@ DATA = Path("data")
 OUT = DATA / "inferred"
 KRUTI = OUT / "kruti_dev_names_2022.csv"
 TRAINING_YEAR = 2022
-YEARS = (2016, 2022)
+YEARS = (2010, 2016, 2022)
 # Honorifics and titles stripped before the first name is read. "Smt"/"Shrimati"
 # and "Kumari" also mark a woman; the rest are uninformative here.
 FEMALE_TITLES = {"smt", "shrimati", "srimati", "kumari", "km", "mrs", "ms"}
@@ -194,12 +194,18 @@ def build(out=OUT):
             "winner_read",
         ]
         table = pd.concat([d[keep], f], axis=1)
-        table["female_probability"] = model.predict_proba(f[FEATURES])[:, 1]
-        table.loc[f["first_name"].isna(), "female_probability"] = np.nan
-        table["method"] = "naampy first-name score + fixed name markers, logistic"
+        # Named for what they are: an inference from the printed name, never a
+        # recorded sex.
+        prob = "winner_female_probability_from_name"
+        table[prob] = model.predict_proba(f[FEATURES])[:, 1]
+        table.loc[f["first_name"].isna(), prob] = np.nan
+        table["winner_female_probability_method"] = (
+            f"naampy {version('naampy')} first-name score + fixed name markers, "
+            f"logistic recalibration on {TRAINING_YEAR} winners"
+        )
         reserved = d["woman_reserved"].astype(bool)
         validation[f"mean_probability_{year}_women_reserved"] = round(
-            table.loc[reserved, "female_probability"].mean(), 4
+            table.loc[reserved, prob].mean(), 4
         )
         path = out / f"winner_female_probability_{year}.parquet"
         table.to_parquet(path, index=False)
