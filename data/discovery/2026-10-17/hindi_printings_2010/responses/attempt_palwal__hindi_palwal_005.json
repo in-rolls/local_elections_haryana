@@ -1,0 +1,26 @@
+{
+  "label": "palwal__hindi_palwal_005",
+  "source_sha256": "b108bffdb75a299466ff338e5e8e2df832650d8aee3f175ad25df1a6c2a888d6",
+  "source_page": 5,
+  "image_sha256": "16976b6e27a068100246a6f98b3c9b422d41b5016832115f4d18ccb46d82d184",
+  "request_sha256": "0a944162fbd3f26f716242dbc0a0378ea8d93f7cdb17d0fa00ce72137a423695",
+  "prompt_sha256": "d4540b15c735ac03edd4c9f6c39d3501ee646b074a1da689439db9ea73079f19",
+  "model": "muse-spark-1.3-contributor",
+  "code_sha256": "d7184dbd53b66275bce359df4d7b794512ae3895125eeb2839c232ce55e57039",
+  "reserved_usd": 0.1081344,
+  "status": "response_saved; accuracy_unvalidated",
+  "response_sha256": "0fa18490634327d8343084a0f237d0f4f68c95b214a9fec890eb297e7a5a6b97",
+  "usage": {
+    "completion_tokens": 4761,
+    "prompt_tokens": 3226,
+    "total_tokens": 7987,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2323
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "usage_priced_usd": 0.0012748000000000002,
+  "rows": 47
+}

@@ -610,7 +610,7 @@ def select_printing(rows):
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, help="parse only the first N PDFs")
-    ap.add_argument("--year", default=YEAR, choices=("2016", "2022"))
+    ap.add_argument("--year", default=YEAR, choices=("2010", "2016", "2022"))
     ap.add_argument("--out", type=pathlib.Path, help="directory for derived CSVs")
     args = ap.parse_args(argv)
     if args.limit is not None and args.limit < 1:

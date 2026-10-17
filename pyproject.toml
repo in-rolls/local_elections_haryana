@@ -12,6 +12,7 @@ dependencies = [
     "pdfplumber>=0.11",
     "pyarrow>=21",
     "pandas>=2.0",
+    "preclink>=1.2",
     "requests",
 ]
 
@@ -30,7 +31,9 @@ build-backend = "hatchling.build"
 packages = ["src/local_elections_haryana"]
 
 [dependency-groups]
-dev = ["ruff>=0.14"]
+dev = ["ruff>=0.14", "pytest>=8"]
+infer = ["naampy>=0.11", "scikit-learn>=1.5"]
+transliterate = ["indicate>=0.10; python_version >= '3.13'"]
 
 [tool.ruff]
 line-length = 88

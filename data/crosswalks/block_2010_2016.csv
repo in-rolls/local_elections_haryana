@@ -1,0 +1,149 @@
+district_2010,block_2010,district_2016,block_2016,decision,shared_gp_names,gps_2010,gps_2016,shared_share_of_2016,note
+Ambala,Ambala-I,Ambala,Ambala-I,linked,89,101,101,0.881,shared GP names
+Ambala,Saha,Ambala,Ambala-I,excluded,3,60,101,0.03,only a few common village names shared
+Ambala,Ambala-II,Ambala,Ambala-II,linked,24,26,27,0.889,shared GP names
+Ambala,Barara,Ambala,Barara,linked,52,67,66,0.788,shared GP names
+Ambala,Naraingarh,Ambala,Naraingarh,linked,58,84,86,0.674,shared GP names
+Ambala,Saha,Ambala,Naraingarh,excluded,3,60,86,0.035,only a few common village names shared
+Ambala,Saha,Ambala,Saha,linked,56,60,60,0.933,shared GP names
+Ambala,Naraingarh,Ambala,Saha,excluded,4,84,60,0.067,only a few common village names shared
+Ambala,Ambala-I,Ambala,Saha,excluded,3,101,60,0.05,only a few common village names shared
+Ambala,Shahzadpur,Ambala,Shahzadpur,linked,60,67,68,0.882,shared GP names
+Bhiwani,Badhra,Bhiwani,Badhra,linked,55,62,65,0.846,shared GP names
+Bhiwani,Bawani Khera,Bhiwani,Bawani Khera,linked,22,32,33,0.667,shared GP names
+Bhiwani,Behal,Bhiwani,Behal,linked,23,28,28,0.821,shared GP names
+Bhiwani,Badhra,Bhiwani,Behal,excluded,3,62,28,0.107,only a few common village names shared
+Bhiwani,Bhiwani,Bhiwani,Bhiwani,linked,60,75,79,0.759,shared GP names
+Bhiwani,Dadri-I,Bhiwani,Dadri-I,linked,43,48,48,0.896,shared GP names
+Bhiwani,Dadri-II,Bhiwani,Dadri-II,linked,49,53,53,0.925,shared GP names
+Bhiwani,Kairu,Bhiwani,Kairu,linked,22,35,35,0.629,shared GP names
+Bhiwani,Loharu,Bhiwani,Loharu,linked,25,38,26,0.962,shared GP names
+Bhiwani,Siwani,Bhiwani,Siwani,linked,35,40,40,0.875,shared GP names
+Bhiwani,Tosham,Bhiwani,Tosham,linked,43,47,49,0.878,shared GP names
+Faridabad,Ballabhgarh,Faridabad,Ballabhgarh,linked,44,65,67,0.657,shared GP names
+Faridabad,Faridabad,Faridabad,Faridabad,linked,36,46,49,0.735,shared GP names
+Fatehabad,Bhattu Kalan,Fatehabad,Bhattu Kalan,linked,22,28,24,0.917,shared GP names
+Fatehabad,Bhuna,Fatehabad,Bhuna,excluded,0,1,29,0.0,2010 parse holds one GP of the block; see data/2010/reference/category_defects.csv
+Fatehabad,Fatehabad,Fatehabad,Fatehabad,linked,41,55,67,0.612,shared GP names
+Fatehabad,Jakhal,Fatehabad,Jakhal,linked,21,23,23,0.913,shared GP names
+Fatehabad,Ratia,Fatehabad,Ratia,linked,57,64,65,0.877,shared GP names
+Fatehabad,Tohana,Fatehabad,Tohana,linked,39,44,49,0.796,shared GP names
+Gurgaon,Farukh Nagar,Gurgaon,Farukh Nagar,linked,32,48,50,0.64,shared GP names
+Gurgaon,Gurgaon,Gurgaon,Gurgaon,linked,28,33,30,0.933,shared GP names
+Gurgaon,Pataudi,Gurgaon,Pataudi,linked,31,60,75,0.413,shared GP names
+Gurgaon,Sohna,Gurgaon,Sohna,linked,28,57,44,0.636,shared GP names
+Hisar,Adampur,Hisar,Adampur,linked,19,23,28,0.679,shared GP names
+Hisar,Agroha,Hisar,Agroha,linked,21,23,22,0.955,shared GP names
+Hisar,Barwala,Hisar,Barwala,linked,24,40,41,0.585,shared GP names
+Hisar,Hansi-1,Hisar,Hansi-I,linked,48,56,58,0.828,shared GP names
+Hisar,Hansi-2,Hisar,Hansi-II,linked,19,23,23,0.826,shared GP names
+Hisar,Hisar-1,Hisar,Hisar-I,linked,39,46,46,0.848,shared GP names
+Hisar,Hisar-2,Hisar,Hisar-II,linked,28,41,42,0.667,shared GP names
+Hisar,Narnaund,Hisar,Narnaund,linked,19,24,30,0.633,shared GP names
+Hisar,Uklana,Hisar,Uklana,linked,15,24,18,0.833,shared GP names
+Jhajjar,Bahadurgarh,Jhajjar,Bahadurgarh,linked,47,63,62,0.758,shared GP names
+Jhajjar,Beri,Jhajjar,Beri,linked,23,36,36,0.639,shared GP names
+Jhajjar,Jhajjar,Jhajjar,Jhajjar,linked,57,71,71,0.803,shared GP names
+Jhajjar,Matanhail,Jhajjar,Matanhail,linked,24,42,43,0.558,shared GP names
+Jhajjar,Salhawas,Jhajjar,Salhawas,linked,29,36,37,0.784,shared GP names
+Jind,Alewa,Jind,Alewa,linked,14,21,21,0.667,shared GP names
+Jind,Jind,Jind,Jind,linked,58,65,66,0.879,shared GP names
+Jind,Julana,Jind,Julana,linked,34,38,38,0.895,shared GP names
+Jind,Narwana,Jind,Narwana,linked,44,59,59,0.746,shared GP names
+Jind,Pillukhera,Jind,Pillukhera,linked,26,27,27,0.963,shared GP names
+Jind,Safidon,Jind,Safidon,linked,36,43,45,0.8,shared GP names
+Jind,Uchana,Jind,Uchana,linked,29,45,45,0.644,shared GP names
+Kaithal,Guhla,Kaithal,Guhla,linked,53,61,66,0.803,shared GP names
+Kaithal,Kaithal,Kaithal,Kaithal,linked,55,64,66,0.833,shared GP names
+Kaithal,Kalayat,Kaithal,Kalayat,linked,17,28,29,0.586,shared GP names
+Kaithal,Pundri,Kaithal,Pundri,linked,34,44,46,0.739,shared GP names
+Kaithal,Rajound,Kaithal,Rajound,linked,21,28,24,0.875,shared GP names
+Kaithal,Siwan,Kaithal,Siwan,linked,38,45,46,0.826,shared GP names
+Karnal,Assandh,Karnal,Assandh,linked,38,55,56,0.679,shared GP names
+Karnal,Gharaunda,Karnal,Gharounda,linked,42,52,52,0.808,shared GP names
+Karnal,Indri,Karnal,Indri,linked,43,82,85,0.506,shared GP names
+Karnal,Nilokheri,Karnal,Indri,excluded,3,72,85,0.035,only a few common village names shared
+Karnal,Karnal,Karnal,Karnal,linked,49,63,66,0.742,shared GP names
+Karnal,Nilokheri,Karnal,Nilokheri,linked,56,72,73,0.767,shared GP names
+Karnal,Nissing,Karnal,Nissing,excluded,0,21,28,0.0,2010 parse holds 21 of the 47 GPs its Hindi printing lists; too few shared names to link
+Kurukshetra,Babain,Kurukshetra,Babain,linked,35,41,45,0.778,shared GP names
+Kurukshetra,Shahabad,Kurukshetra,Ismailabad,linked,17,91,42,0.405,"new block formed from Pehowa, Shahabad and Thanesar"
+Kurukshetra,Pehowa,Kurukshetra,Ismailabad,linked,11,80,42,0.262,"new block formed from Pehowa, Shahabad and Thanesar"
+Kurukshetra,Thanesar,Kurukshetra,Ismailabad,linked,6,106,42,0.143,"new block formed from Pehowa, Shahabad and Thanesar"
+Kurukshetra,Ladwa,Kurukshetra,Ladwa,linked,56,62,63,0.889,shared GP names
+Kurukshetra,Pehowa,Kurukshetra,Pehowa,linked,42,80,67,0.627,shared GP names
+Kurukshetra,Shahabad,Kurukshetra,Shahbad,linked,67,91,75,0.893,shared GP names
+Kurukshetra,Pehowa,Kurukshetra,Shahbad,excluded,3,80,75,0.04,only a few common village names shared
+Kurukshetra,Thanesar,Kurukshetra,Thanesar,linked,69,106,101,0.683,shared GP names
+Mahendergarh,Ateli Nangal,Mahendergarh,Ateli Nangal,linked,28,74,43,0.651,shared GP names
+Mahendergarh,Kanina,Mahendergarh,Kanina,linked,45,58,53,0.849,shared GP names
+Mahendergarh,Mahendergarh,Mahendergarh,Mahendergarh,linked,56,85,62,0.903,shared GP names
+Mahendergarh,Nangal Chaudhary,Mahendergarh,Nangal Chaudhary,linked,35,67,44,0.795,shared GP names
+Mahendergarh,Narnaul,Mahendergarh,Narnaul,linked,30,60,59,0.508,shared GP names
+Mahendergarh,Ateli Nangal,Mahendergarh,Narnaul,linked,7,74,59,0.119,shared GP names
+Mahendergarh,Nangal Chaudhary,Mahendergarh,Narnaul,linked,7,67,59,0.119,shared GP names
+Mahendergarh,Narnaul,Mahendergarh,Nizampur,linked,13,60,28,0.464,shared GP names
+Mahendergarh,Nangal Chaudhary,Mahendergarh,Nizampur,linked,10,67,28,0.357,shared GP names
+Mahendergarh,Mahendergarh,Mahendergarh,Satnali,linked,25,85,25,1.0,new 2016 block; all 25 of its GP names come from 2010 Mahendergarh
+Mahendergarh,Ateli Nangal,Mahendergarh,Sihma,linked,17,74,30,0.567,shared GP names
+Mahendergarh,Narnaul,Mahendergarh,Sihma,linked,5,60,30,0.167,shared GP names
+Mahendergarh,Kanina,Mahendergarh,Sihma,excluded,4,58,30,0.133,only a few common village names shared
+Mewat,Ferozepur Jhirka,Mewat,Firozpur Jhirka,linked,49,59,55,0.891,shared GP names
+Mewat,Nagina,Mewat,Nagina,linked,29,53,54,0.537,shared GP names
+Mewat,Nuh,Mewat,Nuh,linked,53,80,71,0.746,shared GP names
+Mewat,Nagina,Mewat,Nuh,excluded,3,53,71,0.042,only a few common village names shared
+Mewat,Punhana,Mewat,Punhana,linked,63,64,66,0.955,shared GP names
+Mewat,Taoru,Mewat,Tauru,linked,46,52,51,0.902,shared GP names
+Palwal,Hassanpur,Palwal,Hassanpur,excluded,0,0,49,0.0,2010 English notification yields no Hassanpur rows although its Hindi printing lists 32 GPs; 2016 Hassanpur stays unlinked
+Palwal,Hathin,Palwal,Hathin,linked,62,69,76,0.816,shared GP names
+Palwal,Hodal,Palwal,Hodal,linked,27,35,34,0.794,shared GP names
+Palwal,Palwal,Palwal,Palwal,linked,42,102,66,0.636,shared GP names
+Palwal,Palwal,Palwal,Prithala,linked,25,102,33,0.758,new block formed from Palwal
+Panchkula,Barwala,Panchkula,Barwala,linked,18,22,22,0.818,shared GP names
+Panchkula,Morni,Panchkula,Morni,linked,11,20,23,0.478,shared GP names
+Panchkula,Pinjore,Panchkula,Pinjore,linked,25,37,39,0.641,shared GP names
+Panchkula,Raipur Rani,Panchkula,Raipur Rani,linked,32,42,43,0.744,shared GP names
+Panipat,Bapoli,Panipat,Bapoli,linked,13,41,24,0.542,shared GP names
+Panipat,Israna,Panipat,Israna,linked,28,32,32,0.875,shared GP names
+Panipat,Madlauda,Panipat,Madlauda,linked,31,33,34,0.912,shared GP names
+Panipat,Panipat,Panipat,Panipat,linked,26,29,33,0.788,shared GP names
+Panipat,Samalkha,Panipat,Samalkha,linked,22,31,32,0.688,shared GP names
+Panipat,Bapoli,Panipat,Sanauli Khurd,linked,11,41,20,0.55,new block formed from Bapoli
+Rewari,Bawal,Rewari,Bawal,linked,64,93,95,0.674,shared GP names
+Rewari,Rewari,Rewari,Bawal,excluded,3,89,95,0.032,only a few common village names shared
+Rewari,Jatusana,Rewari,Jatusana,linked,50,64,52,0.962,shared GP names
+Rewari,Khol,Rewari,Khol,linked,43,56,57,0.754,shared GP names
+Rewari,Nahar,Rewari,Nahar,linked,27,46,46,0.587,shared GP names
+Rewari,Rewari,Rewari,Rewari,linked,62,89,94,0.66,shared GP names
+Rewari,Bawal,Rewari,Rewari,excluded,3,93,94,0.032,only a few common village names shared
+Rohtak,Kalanaur,Rohtak,Kalanaur,linked,17,24,24,0.708,shared GP names
+Rohtak,Lakhan Majra,Rohtak,Lakhan Majra,linked,11,13,13,0.846,shared GP names
+Rohtak,Meham,Rohtak,Meham,linked,17,34,34,0.5,shared GP names
+Rohtak,Rohtak,Rohtak,Rohtak,linked,30,46,47,0.638,shared GP names
+Rohtak,Sampla,Rohtak,Sampla,linked,17,22,21,0.81,shared GP names
+Sirsa,Baruguda,Sirsa,Baraguda,linked,28,41,44,0.636,shared GP names
+Sirsa,Dabwali,Sirsa,Dabwali,linked,35,47,48,0.729,shared GP names
+Sirsa,Ellenabad,Sirsa,Ellenabad,linked,27,40,44,0.614,shared GP names
+Sirsa,Nathusari Chopta,Sirsa,Nathusari Chopta,linked,33,50,39,0.846,shared GP names
+Sirsa,Odhan,Sirsa,Odhan,linked,30,36,37,0.811,shared GP names
+Sirsa,Rania,Sirsa,Rania,linked,43,54,55,0.782,shared GP names
+Sirsa,Sirsa,Sirsa,Sirsa,linked,38,55,57,0.667,shared GP names
+Sonipat,Ganaur,Sonipat,Ganaur,linked,39,66,53,0.736,shared GP names
+Sonipat,Gohana,Sonipat,Gohana,linked,17,24,35,0.486,shared GP names
+Sonipat,Kathura,Sonipat,Kathura,linked,16,19,20,0.8,shared GP names
+Sonipat,Kharkhoda,Sonipat,Kharkhoda,linked,36,45,45,0.8,shared GP names
+Sonipat,Mundlana,Sonipat,Mundlana,linked,22,34,34,0.647,shared GP names
+Sonipat,Ganaur,Sonipat,Murthal,linked,12,66,34,0.353,shared GP names
+Sonipat,Rai,Sonipat,Murthal,linked,7,55,34,0.206,shared GP names
+Sonipat,Sonepat,Sonipat,Murthal,linked,7,69,34,0.206,shared GP names
+Sonipat,Rai,Sonipat,Rai,linked,37,55,40,0.925,shared GP names
+Sonipat,Sonepat,Sonipat,Sonipat,linked,24,69,43,0.558,shared GP names
+Yamuna Nagar,Bilaspur,Yamuna Nagar,Bilaspur,linked,52,88,95,0.547,shared GP names
+Yamuna Nagar,Chhachhrauli,Yamuna Nagar,Chhachhrauli,linked,72,109,108,0.667,shared GP names
+Yamuna Nagar,Jagadhari,Yamuna Nagar,Jagadhri,linked,53,63,67,0.791,shared GP names
+Yamuna Nagar,Mustafabad,Yamuna Nagar,Jagadhri,excluded,3,68,67,0.045,only a few common village names shared
+Yamuna Nagar,Radaur,Yamuna Nagar,Jagadhri,excluded,3,62,67,0.045,only a few common village names shared
+Yamuna Nagar,Mustafabad,Yamuna Nagar,Mustafabad,linked,63,68,75,0.84,shared GP names
+Yamuna Nagar,Bilaspur,Yamuna Nagar,Mustafabad,excluded,3,88,75,0.04,only a few common village names shared
+Yamuna Nagar,Radaur,Yamuna Nagar,Radaur,linked,45,62,66,0.682,shared GP names
+Yamuna Nagar,Sadhaura,Yamuna Nagar,Sadhaura,linked,35,39,43,0.814,shared GP names
