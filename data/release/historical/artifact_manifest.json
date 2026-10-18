@@ -33,8 +33,8 @@
     },
     {
       "path": "release_receipt.json",
-      "bytes": 1909,
-      "sha256": "e361540d628e3caa9154e419c7b423949a4ff03e586ee1ec571f559d8d70d058"
+      "bytes": 1915,
+      "sha256": "7eb92df4506fe28bbf7cb9ecfc010a88d364941c833d1088742b4cd5b3557f3c"
     }
   ]
 }
