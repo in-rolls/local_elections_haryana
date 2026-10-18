@@ -5,8 +5,8 @@ units continue between the elections, and they are not regenerated.
 
 | File | Row |
 | --- | --- |
-| `district_2010_2016.csv`, `district_2016_2022.csv` | A district and the district it became (`same`, `renamed`, `split`) |
-| `block_2010_2016.csv`, `block_2016_2022.csv` | A candidate pair of an earlier and a later block, with evidence and a decision |
+| `district_2005_2010.csv`, `district_2010_2016.csv`, `district_2016_2022.csv` | A district and the district it became (`same`, `renamed`, `split`) |
+| `block_2005_2010.csv`, `block_2010_2016.csv`, `block_2016_2022.csv` | A candidate pair of an earlier and a later block, with evidence and a decision |
 
 Districts: Gurgaon became Gurugram and Mewat became Nuh. Mahendergarh is printed
 "M/garh" in 2022. Charkhi Dadri was formed from Bhiwani's Badhra, Dadri-I and
@@ -30,6 +30,19 @@ fifth of the 2022 block. Pairs sharing three common village names are
 
 `note` gives the reason for every decision. GP links in `data/linkage/` use
 only `linked` pairs.
+
+## 2005 to 2010
+
+The candidate pairs come from `uv run python -m
+local_elections_haryana.linkage.block_evidence 2005 2010`, which writes
+`evidence/block_2005_2010.csv` with the rule above as `proposed`; the reviewed
+decisions are in `block_2005_2010.csv`. Palwal district was formed in 2008 from
+Faridabad's Palwal, Hassanpur and Hodal blocks and Mewat's Hathin, so those
+three districts form one blocking group. Bond Kalan is printed Dadri-I in 2010
+(37 of 48 names shared). One proposed link was excluded on review:
+Chhachhrauli-Bilaspur shares 5 common village names, while both blocks continue
+under their own names. Hassanpur (no 2010 rows) and Bhuna (1 of about 29 2010
+rows) stay unlinked.
 
 ## 2010 to 2016
 

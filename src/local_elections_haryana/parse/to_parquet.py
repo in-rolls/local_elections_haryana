@@ -10,7 +10,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 DATA = Path(__file__).resolve().parents[3] / "data"
-YEARS = (2010, 2016, 2022)
+YEARS = (2005, 2010, 2016, 2022)
 FLAGS = {"woman_reserved", "unopposed", "vacant", "printings_agree"}
 GP_COLUMNS = (
     "district",

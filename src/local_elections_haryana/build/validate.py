@@ -32,6 +32,8 @@ OFFICIAL = {
     # SEC report on the 2010 general elections, sections 15.4-15.5: seats for
     # which elections were held.
     "2010": {"gram_panchayats": 6075, "panches": 58608, "basis": "seats"},
+    # No 2005 total has been found: the commission's 2005 statistics page is
+    # listed on its site but did not load. Coverage is reported, not tested.
 }
 
 # Haryana applies its reservations block by block, not statewide, which makes a
@@ -43,7 +45,19 @@ STATUTE = {
     "2022": {"women": 0.50, "bc_a": 0.08},
     "2016": {"women": 0.33, "bc_a": None},
     "2010": {"women": 0.33, "bc_a": None},
+    "2005": {"women": 0.33, "bc_a": None},
 }
+
+
+# Reservation categories a sarpanch row may carry. 2005 printed BC on a few
+# sarpanch rows; whether that is a seat category is reviewed per block.
+CASTES = {
+    "default": ("NONE", "SC", "ST", "BC_A"),
+    "2005": ("NONE", "SC", "BC"),
+}
+# Sarpanch rows whose printed category a source-cell review found blank or
+# ambiguous (data/2005/reviews/reservation_reviews.csv).
+REVIEWED_BLANK = {"2005": 12}
 
 
 class Report:
@@ -72,7 +86,7 @@ def pct(part, whole):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--year", default=YEAR, choices=("2010", "2016", "2022"))
+    ap.add_argument("--year", default=YEAR, choices=("2005", "2010", "2016", "2022"))
     ap.add_argument("--input-dir", type=pathlib.Path, help="directory of derived CSVs")
     ap.add_argument("--verbose", action="store_true", help="list every offending block")
     args = ap.parse_args()
@@ -274,21 +288,28 @@ def main():
     unparsed = [
         r
         for r in gp
-        if r["caste_reservation"] not in ("NONE", "SC", "ST", "BC_A")
+        if r["caste_reservation"] not in CASTES.get(args.year, CASTES["default"])
         or r["woman_reserved"] not in ("0", "1")
     ]
+    # 2005's source cells that a review found blank or ambiguous stay blank;
+    # each carries its reason in the parse's reservation review, so they are
+    # reported, and the shares below are taken over the readable rows.
+    reviewed_blank = REVIEWED_BLANK.get(args.year, 0)
     report.check(
-        not unparsed, "reservation normalised on every row", f"{len(unparsed)} rows"
+        len(unparsed) <= reviewed_blank,
+        "reservation normalised on every row",
+        f"{len(unparsed)} rows, {reviewed_blank} of them reviewed source blanks",
     )
 
     # --------------------------------------------------------------- statutory
     print("\nStatutory shares (the sharpest check: these bind per block)")
     women_share, bc_share = statute["women"], statute["bc_a"]
-    women = sum(int(r["woman_reserved"]) for r in gp)
+    known = [r for r in gp if r["woman_reserved"] in ("0", "1")]
+    women = sum(int(r["woman_reserved"]) for r in known)
     report.check(
-        abs(pct(women, len(gp)) - 100 * women_share) <= 3,
+        abs(pct(women, len(known)) - 100 * women_share) <= 3,
         f"statewide women's share is {women_share * 100:.0f}%",
-        f"{women}/{len(gp)} = {pct(women, len(gp)):.1f}%",
+        f"{women}/{len(known)} = {pct(women, len(known)):.1f}%",
     )
 
     by_block = collections.defaultdict(list)
@@ -305,6 +326,7 @@ def main():
     )
     off_women, off_bc = [], []
     for key, rows in by_block.items():
+        rows = [x for x in rows if x["woman_reserved"] in ("0", "1")]
         w = pct(sum(int(x["woman_reserved"]) for x in rows), len(rows))
         if abs(w - 100 * women_share) > 6:
             off_women.append((key, len(rows), w))
@@ -325,7 +347,7 @@ def main():
         # handful of 2016 rows labelled "Backward Class" is plausible as a
         # stray, but a real share would mean the parse is wrong.
         bc_rows = sum(
-            r["caste_reservation"] == "BC_A"
+            r["caste_reservation"] in ("BC_A", "BC")
             and (r["district"], r["block"]) not in reviewed
             for r in gp
         )
