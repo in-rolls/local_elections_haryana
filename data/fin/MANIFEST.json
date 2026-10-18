@@ -2,6 +2,203 @@
   "format_version": 1,
   "files": [
     {
+      "file": "gp_reservation_2000.parquet",
+      "source_csv": "2000/gp_reservation.csv",
+      "source_sha256": "096c62be5ec41ccc28768d461309efbd52d08b0aab1fcd7bb8444880e8d56b13",
+      "sha256": "9bf74690ef03bdaafd33df3617bb15a8de56fc2f281a8873fb4029b671671623",
+      "rows": 5932,
+      "year": 2000,
+      "seat_kind": "gp",
+      "schema": [
+        {
+          "name": "year",
+          "type": "int16",
+          "nullable": false
+        },
+        {
+          "name": "district",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "block",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "sr_no",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "gram_panchayat",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "reservation",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "caste_reservation",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "woman_reserved",
+          "type": "bool",
+          "nullable": true
+        },
+        {
+          "name": "winner",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "father_husband",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "unopposed",
+          "type": "bool",
+          "nullable": true
+        },
+        {
+          "name": "vacant",
+          "type": "bool",
+          "nullable": true
+        },
+        {
+          "name": "reservation_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "script",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "printings_agree",
+          "type": "bool",
+          "nullable": true
+        },
+        {
+          "name": "notification",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "source_pdf",
+          "type": "string",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "file": "ward_reservation_2000.parquet",
+      "source_csv": "2000/ward_reservation.csv",
+      "source_sha256": "2931083a3618b4d32b5a1f476ae9c77887a67d8b3c6d3c3a8d9407d4dbd7728b",
+      "sha256": "bbbb6ebca424931d5701994ffd447a769df6623ccdb02a851be8abeb3d47ae0e",
+      "rows": 53701,
+      "year": 2000,
+      "seat_kind": "ward",
+      "schema": [
+        {
+          "name": "year",
+          "type": "int16",
+          "nullable": false
+        },
+        {
+          "name": "district",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "block",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "sr_no",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "gram_panchayat",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "ward_no",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "reservation",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "caste_reservation",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "woman_reserved",
+          "type": "bool",
+          "nullable": true
+        },
+        {
+          "name": "winner",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "father_husband",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "unopposed",
+          "type": "bool",
+          "nullable": true
+        },
+        {
+          "name": "vacant",
+          "type": "bool",
+          "nullable": true
+        },
+        {
+          "name": "reservation_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "script",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "printings_agree",
+          "type": "bool",
+          "nullable": true
+        },
+        {
+          "name": "notification",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "source_pdf",
+          "type": "string",
+          "nullable": true
+        }
+      ]
+    },
+    {
       "file": "gp_reservation_2005.parquet",
       "source_csv": "2005/gp_reservation.csv",
       "source_sha256": "cb5ae30ee00d8b6bdc4a44be41b2771240e3d61d075d6bc83328822f5e98f068",

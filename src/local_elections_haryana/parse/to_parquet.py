@@ -10,7 +10,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 DATA = Path(__file__).resolve().parents[3] / "data"
-YEARS = (2005, 2010, 2016, 2022)
+YEARS = (2000, 2005, 2010, 2016, 2022)
 FLAGS = {"woman_reserved", "unopposed", "vacant", "printings_agree"}
 GP_COLUMNS = (
     "district",
@@ -142,8 +142,20 @@ def verify_sources(data):
             rows = list(csv.DictReader(handle))
         if not rows:
             raise ValueError(f"{year}: empty source manifest")
-        for row in rows:
-            path = directory / "pdfs" / row["saved_as"]
+        # 2000's scans (660 MB) stay in the git-ignored raw archive; its manifest
+        # names them there, with public URLs, and they are verified when held.
+        paths = [
+            data / row["archive_path"]
+            if row.get("archive_path")
+            else directory / "pdfs" / row["saved_as"]
+            for row in rows
+        ]
+        if all(row.get("archive_path") for row in rows) and not any(
+            p.exists() for p in paths
+        ):
+            print(f"{year}: {len(rows)} source PDFs not held (raw archive); skipped")
+            continue
+        for row, path in zip(rows, paths, strict=True):
             if (
                 path.stat().st_size != int(row["bytes"])
                 or sha256(path) != row["sha256"]

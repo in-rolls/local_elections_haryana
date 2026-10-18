@@ -1,0 +1,885 @@
+source_path,source_page,source_row_on_page,district_sec,block_sec,tier,body_within_page,ward,winner_raw,relation_raw,category_raw
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,1,1,KAITHAL,KAITHAL,gp_ward,,4.0,पिरथी,मंगत राम,पिछड़ी जाति
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,1,2,KAITHAL,KAITHAL,gp_ward,,5.0,,,सामान्य
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,1,3,KAITHAL,KAITHAL,gp_ward,,6.0,,,सामान्य महिला
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,1,4,KAITHAL,KAITHAL,gp_ward,,7.0,,,सामान्य महिला महिला
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,6,KAITHAL,KAITHAL,gp_head,चमरारू,,शीश पाल,भगत राम,सामान्य महिला
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,7,KAITHAL,KAITHAL,gp_ward,चमरारू,1.0,पवन,पृथ्वी चन्द,सामान्य
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,8,KAITHAL,KAITHAL,gp_ward,चमरारू,2.0,सत पाल,गुलाब,सामान्य
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,9,KAITHAL,KAITHAL,gp_ward,चमरारू,3.0,मेया सिंह,फूल सिंह,सामान्य
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,10,KAITHAL,KAITHAL,gp_ward,चमरारू,4.0,राजो,रती राम,सामान्य महिला
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,11,KAITHAL,KAITHAL,gp_ward,चमरारू,5.0,प्रेम चन्द,भगत राम,सामान्य
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,12,KAITHAL,KAITHAL,gp_ward,चमरारू,6.0,विद्या देवी,माई राम,सामान्य महिला
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,13,KAITHAL,KAITHAL,gp_ward,चमरारू,7.0,शकुन्तला,अर्जुन,सामान्य महिला
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,14,KAITHAL,KAITHAL,gp_ward,चमरारू,8.0,सुनेहरा,माई लाल,अनुसूचित जाति
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,15,KAITHAL,KAITHAL,gp_ward,चमरारू,9.0,फुल्ती,करेसन,अनुसूचित जाति महिला
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,16,KAITHAL,KAITHAL,gp_ward,चमरारू,10.0,चमेली देवी,बालू राम,पिछड़ी जाति
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,17,KAITHAL,KAITHAL,gp_ward,चमरारू,11.0,फूल सिंह,अनन्त राम,अनुसूचित जाति
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,18,KAITHAL,KAITHAL,gp_head,खेड़ी सिकन्दर,,रोशन लाल,तुंला राम,सामान्य
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,19,KAITHAL,KAITHAL,gp_ward,खेड़ी सिकन्दर,1.0,मेहर सिंह,मान सिंह,सामान्य
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,20,KAITHAL,KAITHAL,gp_ward,खेड़ी सिकन्दर,2.0,महेन्द्र,नत्थू राम,सामान्य
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,21,KAITHAL,KAITHAL,gp_ward,खेड़ी सिकन्दर,3.0,सुनीता देवी,कृष्ण चन्द्र,सामान्य महिला
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,22,KAITHAL,KAITHAL,gp_ward,खेड़ी सिकन्दर,4.0,लछमन दास,सूरज,पिछड़ी जाति
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,23,KAITHAL,KAITHAL,gp_ward,खेड़ी सिकन्दर,5.0,कृष्णा,बनवारी,अनुसूचित जाति
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,24,KAITHAL,KAITHAL,gp_ward,खेड़ी सिकन्दर,6.0,भतेरी,फूल सिंह,सामान्य महिला
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,25,KAITHAL,KAITHAL,gp_ward,खेड़ी सिकन्दर,7.0,कमला देवी,लखपत,सामान्य
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,26,KAITHAL,KAITHAL,gp_head,बुतियानी,,सुमेर सिंह,हरफूल,सामान्य
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,27,KAITHAL,KAITHAL,gp_ward,बुतियानी,1.0,ईश्वर सिंह,रणबीर सिंह,सामान्य
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,28,KAITHAL,KAITHAL,gp_ward,बुतियानी,2.0,नाथू राम,चन्दन सिंह,सामान्य
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,29,KAITHAL,KAITHAL,gp_ward,बुतियानी,3.0,महावीर,नन्हा राम,अनुसूचित जाति
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,30,KAITHAL,KAITHAL,gp_ward,बुतियानी,4.0,बलवीर सिंह,पूर्ण सिंह,पिछड़ी जाति
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,31,KAITHAL,KAITHAL,gp_ward,बुतियानी,5.0,सुरेश,जागीर सिंह,सामान्य
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,32,KAITHAL,KAITHAL,gp_ward,बुतियानी,6.0,सुल्तानी,राम दिया,सामान्य महिला
+raw/003f37f34764ecd7c703_148a1b6f5a97.pdf,18,33,KAITHAL,KAITHAL,gp_ward,बुतियानी,7.0,सरली देवी,मनोहरा,सामान्य महिला
+raw/01e4396949ac16a08e16_469743cedad3.pdf,1,1,HISAR,AGROHA,gp_ward,,8.0,नानु राम,मोमन,सामान्य
+raw/01e4396949ac16a08e16_469743cedad3.pdf,1,2,HISAR,AGROHA,gp_ward,,9.0,राज बाला,वेद पाल,सामान्य महिला
+raw/01e4396949ac16a08e16_469743cedad3.pdf,1,3,HISAR,AGROHA,gp_head,भोडा होशनाक,,छबील दास,रामपत सिंह,सामान्य
+raw/01e4396949ac16a08e16_469743cedad3.pdf,1,4,HISAR,AGROHA,gp_ward,भोडा होशनाक,1.0,शकुन्तला,दीवान सिंह,सामान्य महिला
+raw/01e4396949ac16a08e16_469743cedad3.pdf,1,5,HISAR,AGROHA,gp_ward,भोडा होशनाक,2.0,बंसी लाल,मनी राम,सामान्य
+raw/01e4396949ac16a08e16_469743cedad3.pdf,1,6,HISAR,AGROHA,gp_ward,भोडा होशनाक,3.0,लाल जी,चन्द,अनु. जाति
+raw/01e4396949ac16a08e16_469743cedad3.pdf,1,7,HISAR,AGROHA,gp_ward,भोडा होशनाक,4.0,पाई लाल,चेत राम,सामान्य
+raw/01e4396949ac16a08e16_469743cedad3.pdf,1,8,HISAR,AGROHA,gp_ward,भोडा होशनाक,5.0,प्रेम देवी,जय सिंह,सामान्य महिला
+raw/01e4396949ac16a08e16_469743cedad3.pdf,1,9,HISAR,AGROHA,gp_ward,भोडा होशनाक,6.0,लक्ष्मी,राम सिंह,सामान्य महिला
+raw/01e4396949ac16a08e16_469743cedad3.pdf,1,10,HISAR,AGROHA,gp_ward,भोडा होशनाक,7.0,चेत राम,पाई राम,पिछड़ी जाति
+raw/01e4396949ac16a08e16_469743cedad3.pdf,1,11,HISAR,AGROHA,gp_ward,भोडा होशनाक,8.0,राज कुमार,टिंकू राम,सामान्य
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,5,HISAR,AGROHA,gp_head,बनभोरी,,चन्द्रपति,देवा सिंह,अनुसूचित जाति महिला
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,6,HISAR,AGROHA,gp_ward,बनभोरी,1.0,कृष्णा,प्रेम सिंह,पिछड़ी जाति
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,7,HISAR,AGROHA,gp_ward,बनभोरी,2.0,नफे सिंह,अभी सिंह,सामान्य
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,8,HISAR,AGROHA,gp_ward,बनभोरी,3.0,कमला,रणबीर,सामान्य महिला
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,9,HISAR,AGROHA,gp_ward,बनभोरी,4.0,बीरो,जोगी राम,सामान्य
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,10,HISAR,AGROHA,gp_ward,बनभोरी,5.0,कृष्णा,वजीर,सामान्य महिला
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,11,HISAR,AGROHA,gp_ward,बनभोरी,6.0,बलदेवा,धुना,अनुसूचित जाति
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,12,HISAR,AGROHA,gp_ward,बनभोरी,7.0,पृथ्वी,हजारी,अनुसूचित जाति
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,13,HISAR,AGROHA,gp_ward,बनभोरी,8.0,राम कुमार,सुखिया,सामान्य
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,14,HISAR,AGROHA,gp_ward,बनभोरी,9.0,कृष्ण,बनवारी लाल,सामान्य
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,15,HISAR,AGROHA,gp_ward,बनभोरी,,बीरपती,जगदीश चन्द्र,सामान्य महिला
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,16,HISAR,AGROHA,gp_ward,बनभोरी,11.0,सुरता राम,छोटू राम,सामान्य
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,17,HISAR,AGROHA,gp_head,बाढोपट्टी,,चन्द्र भान,नाथु राम,सामान्य
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,18,HISAR,AGROHA,gp_ward,बाढोपट्टी,1.0,जोगी राम,बिहारी,अनुसूचित जाति
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,19,HISAR,AGROHA,gp_ward,बाढोपट्टी,2.0,सुभाष चन्द्र,राम किशन,सामान्य
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,20,HISAR,AGROHA,gp_ward,बाढोपट्टी,3.0,भतेरी,सुलतान सिंह,सामान्य महिला
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,21,HISAR,AGROHA,gp_ward,बाढोपट्टी,4.0,राजू राम,जीवन राम,सामान्य
+raw/01e4396949ac16a08e16_469743cedad3.pdf,8,22,HISAR,AGROHA,gp_ward,बाढोपट्टी,5.0,चमेली,मोहर सिंह,सामान्य महिला
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,1,BHIWANI,TOSHAM,gp_ward,,4.0,भीम सिंह,पनमेशरी लाल,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,2,BHIWANI,TOSHAM,gp_ward,,5.0,झुधर,बहादुर,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,3,BHIWANI,TOSHAM,gp_ward,,6.0,छोटा देवी,राम सरूप,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,4,BHIWANI,TOSHAM,gp_ward,,7.0,राज कुमार,हवा सिंह,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,6,BHIWANI,TOSHAM,gp_head,भारीवास,,ओम प्रकाश,राज मल,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,7,BHIWANI,TOSHAM,gp_ward,भारीवास,1.0,सुरेश देवी,बलवान,अनुसूचित जाति महिला
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,8,BHIWANI,TOSHAM,gp_ward,भारीवास,2.0,धूप सिंह,धनपत,अनुसूचित जाति
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,9,BHIWANI,TOSHAM,gp_ward,भारीवास,3.0,पारस,हरद्वारी,पिछड़ी जाति
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,10,BHIWANI,TOSHAM,gp_ward,भारीवास,4.0,हनुमान,जय करण,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,11,BHIWANI,TOSHAM,gp_ward,भारीवास,5.0,धापां,राजेन्द्र,सामान्य महिला
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,12,BHIWANI,TOSHAM,gp_ward,भारीवास,6.0,सुरेश कुमार,रामेश्वर दास,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,13,BHIWANI,TOSHAM,gp_ward,भारीवास,7.0,चन्दगी राम,जी राम,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,15,BHIWANI,TOSHAM,gp_head,सिवान,,राम फल,वजीर सिंह,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,16,BHIWANI,TOSHAM,gp_ward,सिवान,1.0,ओम प्रकाश,राज मल,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,17,BHIWANI,TOSHAM,gp_ward,सिवान,2.0,भगवानी,महावीर,सामान्य महिला
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,18,BHIWANI,TOSHAM,gp_ward,सिवान,3.0,धापा,मांगे राम,सामान्य महिला
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,19,BHIWANI,TOSHAM,gp_ward,सिवान,4.0,रामचन्द्र,जीवन राम,पिछड़ी जाति
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,20,BHIWANI,TOSHAM,gp_ward,सिवान,5.0,राज पती,बलवान,सामान्य महिला
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,21,BHIWANI,TOSHAM,gp_ward,सिवान,6.0,शीश राम,पीरदन,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,22,BHIWANI,TOSHAM,gp_ward,सिवान,7.0,जगदीश,चतरू,अनुसूचित जाति
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,1,23,BHIWANI,TOSHAM,gp_ward,सिवान,8.0,मुरारी लाल,हरनाम,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,12,15,BHIWANI,TOSHAM,gp_head,बड़वा,,ओम प्रकाश,बीरबल,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,12,16,BHIWANI,TOSHAM,gp_ward,बड़वा,1.0,गंगा राम,बीरू राम,अनुसूचित जाति
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,12,17,BHIWANI,TOSHAM,gp_ward,बड़वा,2.0,किरण देवी,पत राम,सामान्य महिला
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,12,18,BHIWANI,TOSHAM,gp_ward,बड़वा,3.0,राजेन्द्र सिंह,सुगान सिंह,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,12,19,BHIWANI,TOSHAM,gp_ward,बड़वा,4.0,अजयपाल सिंह,सरदूल सिंह,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,12,20,BHIWANI,TOSHAM,gp_ward,बड़वा,5.0,गौरी शंकर,तुलशी राम,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,12,21,BHIWANI,TOSHAM,gp_ward,बड़वा,6.0,राम चन्द्र,जय किशन,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,12,22,BHIWANI,TOSHAM,gp_ward,बड़वा,7.0,रुक्मा देवी,रामेश्वर,सामान्य महिला
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,12,23,BHIWANI,TOSHAM,gp_ward,बड़वा,8.0,राम कुमार,सोहन लाल,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,12,24,BHIWANI,TOSHAM,gp_ward,बड़वा,9.0,सावित्री,अमर सिंह,सामान्य महिला
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,12,25,BHIWANI,TOSHAM,gp_ward,बड़वा,10.0,महताब सिंह,लेख राम,सामान्य
+raw/0248a0251d5b6546d93d_f1c7d751761e.pdf,12,26,BHIWANI,TOSHAM,gp_ward,बड़वा,11.0,सारदा देवी,मोती राम,सामान्य महिला
+raw/04f07be3381d1b7d0716_020d60b04542.pdf,7,28,YAMUNA NAGAR,SADHAURA,gp_head,RATTBALA,,,,सामान्य
+raw/04f07be3381d1b7d0716_020d60b04542.pdf,7,29,YAMUNA NAGAR,SADHAURA,gp_ward,RATTBALA,1.0,,,
+raw/04f07be3381d1b7d0716_020d60b04542.pdf,7,30,YAMUNA NAGAR,SADHAURA,gp_ward,RATTBALA,2.0,,,सामान्य महिला
+raw/090cb7bfb2ac90611a87_1dceb1db36eb.pdf,14,14,FATEHABAD,FATEHABAD,gp_head,भूना,,सुदर्शना,सतीश कुमार,सामान्य महिला
+raw/090cb7bfb2ac90611a87_1dceb1db36eb.pdf,14,15,FATEHABAD,FATEHABAD,gp_ward,भूना,1.0,सुरेन्द्र कौर,सुखवेद सिंह,सामान्य महिला
+raw/090cb7bfb2ac90611a87_1dceb1db36eb.pdf,14,16,FATEHABAD,FATEHABAD,gp_ward,भूना,2.0,मोती राम,चन्द्र भान,सामान्य
+raw/090cb7bfb2ac90611a87_1dceb1db36eb.pdf,14,17,FATEHABAD,FATEHABAD,gp_ward,भूना,3.0,जय भगवान,टेक चन्द,सामान्य
+raw/090cb7bfb2ac90611a87_1dceb1db36eb.pdf,14,18,FATEHABAD,FATEHABAD,gp_ward,भूना,4.0,राजेन्द्र,दीवान चन्द,सामान्य
+raw/090cb7bfb2ac90611a87_1dceb1db36eb.pdf,14,19,FATEHABAD,FATEHABAD,gp_ward,भूना,5.0,कमला,रतन,सामान्य महिला
+raw/090cb7bfb2ac90611a87_1dceb1db36eb.pdf,14,20,FATEHABAD,FATEHABAD,gp_ward,भूना,6.0,धर्म पाल,सरदारा राम,अनुसूचित जाति
+raw/090cb7bfb2ac90611a87_1dceb1db36eb.pdf,14,21,FATEHABAD,FATEHABAD,gp_ward,भूना,7.0,सुरेन्द्र कुमार,वजीर चन्द,सामान्य
+raw/090cb7bfb2ac90611a87_1dceb1db36eb.pdf,14,22,FATEHABAD,FATEHABAD,gp_ward,भूना,8.0,रतन पाल,पूर्ण चन्द,सामान्य
+raw/090cb7bfb2ac90611a87_1dceb1db36eb.pdf,14,23,FATEHABAD,FATEHABAD,gp_ward,भूना,9.0,आशा रानी,पूर्ण चन्द,सामान्य महिला
+raw/1730c3048135cc7f9743_ecec518419de.pdf,1,1,KARNAL,INDRI,gp_ward,,3.0,सतीश कुमार,आत्मा राम,पिछड़ी जाति
+raw/1730c3048135cc7f9743_ecec518419de.pdf,1,2,KARNAL,INDRI,gp_ward,,4.0,बीर सिंह,सोरन,सामान्य
+raw/1730c3048135cc7f9743_ecec518419de.pdf,1,3,KARNAL,INDRI,gp_ward,,5.0,सुरेन्द्र कुमार,रामकिशन,सामान्य
+raw/1730c3048135cc7f9743_ecec518419de.pdf,1,4,KARNAL,INDRI,gp_ward,,6.0,छीमा रानी,सत पाल,सामान्य महिला
+raw/1730c3048135cc7f9743_ecec518419de.pdf,1,5,KARNAL,INDRI,gp_head,,,पाता राम,आत्मा राम,अनुसूचित जाति
+raw/1730c3048135cc7f9743_ecec518419de.pdf,1,6,KARNAL,INDRI,gp_ward,,1.0,कश्मीर सिंह,ज्ञान सिंह,सामान्य
+raw/1730c3048135cc7f9743_ecec518419de.pdf,1,7,KARNAL,INDRI,gp_ward,,2.0,बाला देवी,कर्म सिंह,अनुसूचित जाति महिला
+raw/1730c3048135cc7f9743_ecec518419de.pdf,1,8,KARNAL,INDRI,gp_ward,,3.0,सुरमुख,रण सिंह,सामान्य
+raw/1730c3048135cc7f9743_ecec518419de.pdf,1,9,KARNAL,INDRI,gp_ward,,4.0,राज पाल,माबू राम,पिछड़ी जाति
+raw/1730c3048135cc7f9743_ecec518419de.pdf,1,10,KARNAL,INDRI,gp_ward,,5.0,दर्शनी,रहतू राम,सामान्य महिला
+raw/1730c3048135cc7f9743_ecec518419de.pdf,1,11,KARNAL,INDRI,gp_ward,,6.0,रणबीर सिंह,बेस राज,अनुसूचित जाति
+raw/1c6c0a33253c4d2baec6_d0df9d721cb0.pdf,1,1,SONEPAT,GANAUR,gp_ward,,9.0,रोजींश,रघवीर सिंह,सामान्य
+raw/1c6c0a33253c4d2baec6_d0df9d721cb0.pdf,1,2,SONEPAT,GANAUR,gp_ward,,10.0,बलवीर सिंह,होशियार सिंह,सामान्य
+raw/1c6c0a33253c4d2baec6_d0df9d721cb0.pdf,1,3,SONEPAT,GANAUR,gp_head,उमेदगढ़,,अयूब,जुलफी,सामान्य
+raw/1c6c0a33253c4d2baec6_d0df9d721cb0.pdf,1,4,SONEPAT,GANAUR,gp_ward,उमेदगढ़,1.0,प्रकाशी,ओम प्रकाश,सामान्य महिला
+raw/1c6c0a33253c4d2baec6_d0df9d721cb0.pdf,1,5,SONEPAT,GANAUR,gp_ward,उमेदगढ़,2.0,युसुफ,यमन,पिछड़ी जाति
+raw/1c6c0a33253c4d2baec6_d0df9d721cb0.pdf,1,6,SONEPAT,GANAUR,gp_ward,उमेदगढ़,3.0,सुमन,सुभाष,सामान्य महिला
+raw/1c6c0a33253c4d2baec6_d0df9d721cb0.pdf,1,7,SONEPAT,GANAUR,gp_ward,उमेदगढ़,4.0,सुखबीर,दीप चन्द,सामान्य
+raw/1c6c0a33253c4d2baec6_d0df9d721cb0.pdf,1,8,SONEPAT,GANAUR,gp_ward,उमेदगढ़,5.0,जय नारायण,प्रेम राज,सामान्य
+raw/1c6c0a33253c4d2baec6_d0df9d721cb0.pdf,1,9,SONEPAT,GANAUR,gp_ward,उमेदगढ़,6.0,थलजीत,भरतू,अनुसूचित जाति
+raw/1c6c0a33253c4d2baec6_d0df9d721cb0.pdf,1,10,SONEPAT,GANAUR,gp_ward,उमेदगढ़,7.0,राफा,रफूर,सामान्य
+raw/1cdc907f088a02705cb5_da1f2d0dda71.pdf,1,1,KARNAL,GHARAUNDA,gp_head,उपली,,जगदीश,शिव लाल,सामान्य
+raw/1cdc907f088a02705cb5_da1f2d0dda71.pdf,1,2,KARNAL,GHARAUNDA,gp_ward,उपली,1.0,राम चन्द्र,रूप चन्द्र,सामान्य
+raw/1cdc907f088a02705cb5_da1f2d0dda71.pdf,1,3,KARNAL,GHARAUNDA,gp_ward,उपली,2.0,बाबू राम,अन्तु,सामान्य
+raw/1cdc907f088a02705cb5_da1f2d0dda71.pdf,1,4,KARNAL,GHARAUNDA,gp_ward,उपली,3.0,रणजीत,रामदिया,पिछड़ी जाति
+raw/1cdc907f088a02705cb5_da1f2d0dda71.pdf,1,5,KARNAL,GHARAUNDA,gp_ward,उपली,4.0,बिमला रानी,सोहन,सामान्य महिला
+raw/1cdc907f088a02705cb5_da1f2d0dda71.pdf,1,6,KARNAL,GHARAUNDA,gp_ward,उपली,5.0,सन्तोष,राज कुमार,सामान्य महिला
+raw/1cdc907f088a02705cb5_da1f2d0dda71.pdf,1,7,KARNAL,GHARAUNDA,gp_ward,उपली,6.0,लहणा,चन्दगी,अनुसूचित जाति
+raw/1debe9366604a06ce657_aed2a8ff8f23.pdf,1,1,KURUKSHETRA,SAHABAD,gp_ward,,12.0,अजमेर सिंह,सुन्दर लाल,अनुसूचित जाति
+raw/1debe9366604a06ce657_aed2a8ff8f23.pdf,1,2,KURUKSHETRA,SAHABAD,gp_head,यारी,,बलविन्द्र कौर,तेज पाल सिंह,सामान्य महिला
+raw/1debe9366604a06ce657_aed2a8ff8f23.pdf,1,3,KURUKSHETRA,SAHABAD,gp_ward,यारी,1.0,बलजीत,खुशवंत सिंह,सामान्य
+raw/1debe9366604a06ce657_aed2a8ff8f23.pdf,1,4,KURUKSHETRA,SAHABAD,gp_ward,यारी,2.0,सलोचना,भनी राम,अनुसूचित जाति महिला
+raw/1debe9366604a06ce657_aed2a8ff8f23.pdf,1,5,KURUKSHETRA,SAHABAD,gp_ward,यारी,3.0,करनैल सिंह,सरूपा राम,अनुसूचित जाति
+raw/1debe9366604a06ce657_aed2a8ff8f23.pdf,1,6,KURUKSHETRA,SAHABAD,gp_ward,यारी,4.0,जगदीश,चूहड़,सामान्य
+raw/1debe9366604a06ce657_aed2a8ff8f23.pdf,1,7,KURUKSHETRA,SAHABAD,gp_ward,यारी,5.0,इन्द्र सिंह,तेजा सिंह,पिछड़ी जाति
+raw/1debe9366604a06ce657_aed2a8ff8f23.pdf,1,8,KURUKSHETRA,SAHABAD,gp_ward,यारी,6.0,चन्दा,ज्योति,अनुसूचित जाति
+raw/1debe9366604a06ce657_aed2a8ff8f23.pdf,1,9,KURUKSHETRA,SAHABAD,gp_ward,यारी,7.0,परमजीत कौर,जगीर सिंह,सामान्य महिला
+raw/1f67de3963ce4d27a5ac_abdd3801e2e4.pdf,1,1,PANIPAT,ISRANA,gp_ward,,3.0,सतपाल,श्री राम,अनुसूचित जाति
+raw/1f67de3963ce4d27a5ac_abdd3801e2e4.pdf,1,2,PANIPAT,ISRANA,gp_ward,,4.0,कृष्णा,राजेन्द्र,अनुसूचित जाति महिला
+raw/1f67de3963ce4d27a5ac_abdd3801e2e4.pdf,1,3,PANIPAT,ISRANA,gp_ward,,5.0,जिले सिंह,कन्हैया लाल,सामान्य
+raw/1f67de3963ce4d27a5ac_abdd3801e2e4.pdf,1,4,PANIPAT,ISRANA,gp_ward,,6.0,बिजेन्द्र सिंह,हवा सिंह,सामान्य
+raw/1f67de3963ce4d27a5ac_abdd3801e2e4.pdf,1,5,PANIPAT,ISRANA,gp_ward,,7.0,सरोज बाला,धर्म पाल,पिछड़ी जाति महिला
+raw/1f67de3963ce4d27a5ac_abdd3801e2e4.pdf,1,6,PANIPAT,ISRANA,gp_ward,,8.0,रणबीर,रतन सिंह,सामान्य
+raw/1f67de3963ce4d27a5ac_abdd3801e2e4.pdf,1,7,PANIPAT,ISRANA,gp_ward,,9.0,सुदेश कुमार,ईश्वर सिंह,सामान्य
+raw/1f67de3963ce4d27a5ac_abdd3801e2e4.pdf,1,8,PANIPAT,ISRANA,gp_ward,,10.0,मंगत,हरि सिंह,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,1,JHAJJAR,JHAJJAR,gp_head,जहांगीरपुर,,ज्ञानो देवी,,सामान्य महिला
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,2,JHAJJAR,JHAJJAR,gp_ward,जहांगीरपुर,1.0,मुख्त्यार,संकर लाल,अनुसूचित जाति
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,3,JHAJJAR,JHAJJAR,gp_ward,जहांगीरपुर,2.0,रोशनी देवी,भरत राम,अनुसूचित जाति महिला
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,4,JHAJJAR,JHAJJAR,gp_ward,जहांगीरपुर,3.0,राम फल,गिरधारी,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,5,JHAJJAR,JHAJJAR,gp_ward,जहांगीरपुर,4.0,मुगलो,आगत,सामान्य महिला
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,6,JHAJJAR,JHAJJAR,gp_ward,जहांगीरपुर,5.0,राजबीर,सिंह राम,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,7,JHAJJAR,JHAJJAR,gp_ward,जहांगीरपुर,6.0,राम फंवर,तारा चन्द,पिछड़ी जाति
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,8,JHAJJAR,JHAJJAR,gp_ward,जहांगीरपुर,7.0,नर सिंह,मनोहर लाल,अनुसूचित जाति
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,9,JHAJJAR,JHAJJAR,gp_ward,जहांगीरपुर,8.0,कृष्ण,दीप चन्द,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,10,JHAJJAR,JHAJJAR,gp_ward,जहांगीरपुर,9.0,धर्म पाल,राजा राम,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,11,JHAJJAR,JHAJJAR,gp_ward,जहांगीरपुर,10.0,कैलाश,मांगा राम,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,12,JHAJJAR,JHAJJAR,gp_ward,जहांगीरपुर,11.0,संजीत,राज सिंह,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,13,JHAJJAR,JHAJJAR,gp_ward,जहांगीरपुर,12.0,सन्तरा,सुरेश,सामान्य महिला
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,14,JHAJJAR,JHAJJAR,gp_ward,जहांगीरपुर,13.0,शान्ति,सतपाल,सामान्य महिला
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,15,JHAJJAR,JHAJJAR,gp_ward,जहांगीरपुर,14.0,माया देवी,राम फल,सामान्य महिला
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,16,JHAJJAR,JHAJJAR,gp_head,भवानी,,धनजीत सिंह,दरियाव सिंह,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,17,JHAJJAR,JHAJJAR,gp_ward,भवानी,1.0,धर्म पाल,दलेत,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,18,JHAJJAR,JHAJJAR,gp_ward,भवानी,2.0,बलजीत,जागे राम,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,19,JHAJJAR,JHAJJAR,gp_ward,भवानी,3.0,राजबीर,इन्द्र,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,20,JHAJJAR,JHAJJAR,gp_ward,भवानी,4.0,भतेरी,सुखदेव,सामान्य महिला
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,21,JHAJJAR,JHAJJAR,gp_ward,भवानी,5.0,सुनीता,बलदीर,अनुसूचित जाति महिला
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,22,JHAJJAR,JHAJJAR,gp_ward,भवानी,6.0,सुमेर,करण सिंह,पिछड़ी जाति
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,23,JHAJJAR,JHAJJAR,gp_ward,भवानी,7.0,हरबंस,सहज राम,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,24,JHAJJAR,JHAJJAR,gp_ward,भवानी,8.0,राज बाला,आज़ाद सिंह,सामान्य महिला
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,25,JHAJJAR,JHAJJAR,gp_ward,भवानी,9.0,सतीश,भूपे,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,26,JHAJJAR,JHAJJAR,gp_ward,भवानी,10.0,खजानी,राम किशन,सामान्य महिला
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,27,JHAJJAR,JHAJJAR,gp_ward,भवानी,11.0,महावीर,चन्दन,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,28,JHAJJAR,JHAJJAR,gp_ward,भवानी,12.0,शमशेर,रिसाल सिंह,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,1,29,JHAJJAR,JHAJJAR,gp_ward,भवानी,13.0,रिक्त,,अनुसूचित जाति
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,17,20,JHAJJAR,JHAJJAR,gp_head,BHADANI,,श्री भगवान सिंह,महेन्द्र,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,17,21,JHAJJAR,JHAJJAR,gp_ward,BHADANI,1.0,ओमपती,भीखू,सामान्य महिला
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,17,22,JHAJJAR,JHAJJAR,gp_ward,BHADANI,2.0,सुमित्रा,राजपाल,सामान्य महिला
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,17,23,JHAJJAR,JHAJJAR,gp_ward,BHADANI,3.0,बजीर,छोटू राम,सामान्य
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,17,24,JHAJJAR,JHAJJAR,gp_ward,BHADANI,4.0,समा कौर,रूप चन्द,सामान्य महिला
+raw/22a1ba5bf2b5bc0e9f69_2ead89df9f34.pdf,17,25,JHAJJAR,JHAJJAR,gp_ward,BHADANI,5.0,फरतार,चन्द्र,अनुसूचित जाति
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,1,JHAJJAR,BAHADURGARH,gp_ward,,4.0,रामा नन्द,घीशा राम,अनुसूचित जाति
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,2,JHAJJAR,BAHADURGARH,gp_ward,,5.0,सुखबीर,राम फल,सामान्य
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,3,JHAJJAR,BAHADURGARH,gp_ward,,6.0,राज बाला,जय पाल,सामान्य महिला
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,4,JHAJJAR,BAHADURGARH,gp_ward,,7.0,त्रिधा देवी,फेहर सिंह,सामान्य महिला
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,5,JHAJJAR,BAHADURGARH,gp_ward,,8.0,खजान सिंह,राम सिंह,पिछड़ी जाति
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,6,JHAJJAR,BAHADURGARH,gp_ward,,9.0,रिक्त,,सामान्य महिला
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,7,JHAJJAR,BAHADURGARH,gp_ward,,10.0,जय भगवान,रामे,सामान्य
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,8,JHAJJAR,BAHADURGARH,gp_ward,,11.0,रिक्त,,सामान्य
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,9,JHAJJAR,BAHADURGARH,gp_ward,,12.0,अजीत सिंह,ओम प्रकाश,अनुसूचित जाति
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,10,JHAJJAR,BAHADURGARH,gp_head,टाण्डाहेडी,,हुकम सिंह,राम दन,सामान्य
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,11,JHAJJAR,BAHADURGARH,gp_ward,टाण्डाहेडी,1.0,फिताबो,धर्मबीर,सामान्य महिला
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,12,JHAJJAR,BAHADURGARH,gp_ward,टाण्डाहेडी,2.0,रिश,,पिछड़ी जाति
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,13,JHAJJAR,BAHADURGARH,gp_ward,टाण्डाहेडी,3.0,रत नारायण,ईश्वर सिंह,सामान्य
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,14,JHAJJAR,BAHADURGARH,gp_ward,टाण्डाहेडी,4.0,नरेन्द्र सिंह,करतार सिंह,सामान्य
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,15,JHAJJAR,BAHADURGARH,gp_ward,टाण्डाहेडी,5.0,राम किशन,भरत सिंह,अनुसूचित जाति
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,16,JHAJJAR,BAHADURGARH,gp_ward,टाण्डाहेडी,6.0,हवा सिंह,प्रताप सिंह,सामान्य
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,17,JHAJJAR,BAHADURGARH,gp_ward,टाण्डाहेडी,7.0,जीता,मनफूल,सामान्य
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,18,JHAJJAR,BAHADURGARH,gp_ward,टाण्डाहेडी,8.0,सरोज,ओम प्रकाश,सामान्य महिला
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,19,JHAJJAR,BAHADURGARH,gp_ward,टाण्डाहेडी,9.0,रिक्त,,सामान्य महिला
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,20,JHAJJAR,BAHADURGARH,gp_head,जरवगपुर गंगडवा,,चन्द्रपति,करतार सिंह,सामान्य महिला
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,21,JHAJJAR,BAHADURGARH,gp_ward,जरवगपुर गंगडवा,1.0,ओमपती,ओम प्रकाश,सामान्य महिला
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,22,JHAJJAR,BAHADURGARH,gp_ward,जरवगपुर गंगडवा,2.0,छोटी,जय सिंह,सामान्य महिला
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,23,JHAJJAR,BAHADURGARH,gp_ward,जरवगपुर गंगडवा,3.0,संजय,बलबीर,सामान्य
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,24,JHAJJAR,BAHADURGARH,gp_ward,जरवगपुर गंगडवा,4.0,राम धन,मांगे राम,अनुसूचित जाति
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,25,JHAJJAR,BAHADURGARH,gp_ward,जरवगपुर गंगडवा,5.0,रमेश,हरके राम,सामान्य
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,26,JHAJJAR,BAHADURGARH,gp_ward,जरवगपुर गंगडवा,6.0,धर्मबीर,मुरारी,पिछड़ी जाति
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,27,JHAJJAR,BAHADURGARH,gp_ward,जरवगपुर गंगडवा,7.0,कप्तान,हरफूल,सामान्य
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,28,JHAJJAR,BAHADURGARH,gp_ward,जरवगपुर गंगडवा,8.0,नेतपाल,मेहर सिंह,सामान्य
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,1,29,JHAJJAR,BAHADURGARH,gp_ward,जरवगपुर गंगडवा,9.0,रोशनी देवी,धायरिया,अनुसूचित जाति महिला
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,18,26,JHAJJAR,BAHADURGARH,gp_head,इस्लामगढ़,,बबिता,परमानन्द,सामान्य महिला
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,18,27,JHAJJAR,BAHADURGARH,gp_ward,इस्लामगढ़,1.0,धनवारी,चुन्नी लाल,सामान्य
+raw/22acfb3e26ea22de4afb_0aad022c0e2d.pdf,18,28,JHAJJAR,BAHADURGARH,gp_ward,इस्लामगढ़,2.0,होशियारी,सागत,सामान्य महिला
+raw/2606ab8d16c939322f29_97b03e7f7064.pdf,12,25,YAMUNA NAGAR,MUSTFABAD,gp_head,अहड़वाला,,मखमली देवी,तारा चन्द,सामान्य महिला
+raw/2606ab8d16c939322f29_97b03e7f7064.pdf,12,26,YAMUNA NAGAR,MUSTFABAD,gp_ward,अहड़वाला,1.0,जय सिंह,फुल सिंह,सामान्य
+raw/2606ab8d16c939322f29_97b03e7f7064.pdf,12,27,YAMUNA NAGAR,MUSTFABAD,gp_ward,अहड़वाला,2.0,माया देवी,सुरेन्द्र सिंह,सामान्य महिला
+raw/2606ab8d16c939322f29_97b03e7f7064.pdf,12,28,YAMUNA NAGAR,MUSTFABAD,gp_ward,अहड़वाला,3.0,सुरेन्द्र कुमार,रती राम,पिछड़ी जाति
+raw/29c93a576928e4dee221_fa381dd647b2.pdf,1,1,ROHTAK,SAMPLA,gp_ward,,5.0,लक्ष्मी,बनवारी,सामान्य महिला
+raw/29c93a576928e4dee221_fa381dd647b2.pdf,1,2,ROHTAK,SAMPLA,gp_ward,,6.0,आंगूरी देवी,तोख राम,सामान्य महिला
+raw/29c93a576928e4dee221_fa381dd647b2.pdf,1,3,ROHTAK,SAMPLA,gp_ward,,7.0,चान्द्रसिंह,महाबीर सिंह,सामान्य
+raw/29c93a576928e4dee221_fa381dd647b2.pdf,1,4,ROHTAK,SAMPLA,gp_ward,,8.0,सुनीता देवी,संजय कुमार,सामान्य महिला
+raw/29c93a576928e4dee221_fa381dd647b2.pdf,1,5,ROHTAK,SAMPLA,gp_ward,,9.0,सतीश कुमार,महाबीर सिंह,सामान्य
+raw/29c93a576928e4dee221_fa381dd647b2.pdf,1,6,ROHTAK,SAMPLA,gp_ward,,10.0,धर्मबीर सिंह,सूरज भान,पिछड़ी जाति
+raw/29c93a576928e4dee221_fa381dd647b2.pdf,1,7,ROHTAK,SAMPLA,gp_ward,,11.0,चमन लाल,रामधन,सामान्य
+raw/29c93a576928e4dee221_fa381dd647b2.pdf,1,8,ROHTAK,SAMPLA,gp_ward,,12.0,बिजेन्द्र,राम चन्द्र,अनुसूचित जाति
+raw/29c93a576928e4dee221_fa381dd647b2.pdf,1,9,ROHTAK,SAMPLA,gp_ward,,13.0,रतनी देवी,जागे राम,अनुसूचित जाति महिला
+raw/29c93a576928e4dee221_fa381dd647b2.pdf,1,10,ROHTAK,SAMPLA,gp_ward,,14.0,जिले सिंह,रिसाल सिंह,अनुसूचित जाति
+raw/29c93a576928e4dee221_fa381dd647b2.pdf,1,11,ROHTAK,SAMPLA,gp_ward,,15.0,किताबो,श्यो चन्द,सामान्य महिला
+raw/29c93a576928e4dee221_fa381dd647b2.pdf,1,12,ROHTAK,SAMPLA,gp_ward,,16.0,रेशम,राजबीर,सामान्य महिला
+raw/29c93a576928e4dee221_fa381dd647b2.pdf,1,13,ROHTAK,SAMPLA,gp_ward,,17.0,मांगे राम,श्रद्धा राम,सामान्य
+raw/3df32131d5a39df5390b_b8fea6ec2b50.pdf,1,1,JHAJJAR,BERI,gp_ward,,8.0,हीरा लाल,चन्द्र रूप,सामान्य
+raw/3df32131d5a39df5390b_b8fea6ec2b50.pdf,1,2,JHAJJAR,BERI,gp_ward,,9.0,दिलबाग,रती राम,सामान्य
+raw/3df32131d5a39df5390b_b8fea6ec2b50.pdf,1,3,JHAJJAR,BERI,gp_ward,,,फूलपती,साधु राम,सामान्य महिला
+raw/3df32131d5a39df5390b_b8fea6ec2b50.pdf,1,4,JHAJJAR,BERI,gp_ward,,11.0,राजबीर,कंवर सिंह,अनुसूचित जाति
+raw/3df32131d5a39df5390b_b8fea6ec2b50.pdf,1,5,JHAJJAR,BERI,gp_ward,,12.0,ईशवन्ती,करण सिंह,अनुसूचित जाति महिला
+raw/3df32131d5a39df5390b_b8fea6ec2b50.pdf,1,6,JHAJJAR,BERI,gp_ward,,13.0,करतार,गुरजे,अनुसूचित जाति
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,1,REWARI,BAWAL,gp_ward,,4.0,महाबीर,सुन्दर लाल,सामान्य
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,2,REWARI,BAWAL,gp_ward,,5.0,भतेरी,आजाद,सामान्य महिला
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,3,REWARI,BAWAL,gp_ward,,6.0,रावत सिंह,नवल सिंह,सामान्य
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,4,REWARI,BAWAL,gp_ward,,7.0,मिश्री लाल,सगरु राम,सामान्य
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,5,REWARI,BAWAL,gp_ward,,8.0,धर्म सिंह,घोहडू राम,सामान्य
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,6,REWARI,BAWAL,gp_ward,,9.0,सुनीता,विजय सिंह,सामान्य महिला
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,7,REWARI,BAWAL,gp_head,झायुबा,,रामेश्वर दयाल,शिव लाल,सामान्य
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,8,REWARI,BAWAL,gp_ward,झायुबा,1.0,रमेश,पूर्ण मल,सामान्य
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,9,REWARI,BAWAL,gp_ward,झायुबा,2.0,सुभाष,कंवल सिंह,सामान्य
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,10,REWARI,BAWAL,gp_ward,झायुबा,3.0,भीम सिंह,राम देवा,सामान्य
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,11,REWARI,BAWAL,gp_ward,झायुबा,4.0,भोली,प्रभाती,सामान्य महिला
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,12,REWARI,BAWAL,gp_ward,झायुबा,5.0,शिव चरण,बदलु राम,सामान्य
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,13,REWARI,BAWAL,gp_ward,झायुबा,6.0,मदन,राम स्वरूप,अनुसूचित जाति
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,14,REWARI,BAWAL,gp_ward,झायुबा,7.0,शिव चरण,तेज राम,पिछड़ी जाति
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,15,REWARI,BAWAL,gp_ward,झायुबा,8.0,पदमा देवी,राज कुमार,सामान्य महिला
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,16,REWARI,BAWAL,gp_ward,झायुबा,9.0,सन्तोष,प्रभु दयाल,सामान्य महिला
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,17,REWARI,BAWAL,gp_ward,झायुबा,10.0,भीम सिंह,हर लाल,सामान्य
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,18,REWARI,BAWAL,gp_head,साल्हवास (लाडुवास),,राम नारायण,शिव लाल,सामान्य
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,19,REWARI,BAWAL,gp_ward,साल्हवास (लाडुवास),1.0,शेर सिंह,सुब्बर सिंह,सामान्य
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,20,REWARI,BAWAL,gp_ward,साल्हवास (लाडुवास),2.0,हवा सिंह,जगमाल,सामान्य
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,21,REWARI,BAWAL,gp_ward,साल्हवास (लाडुवास),3.0,मुन्शी,धीरमल,सामान्य
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,22,REWARI,BAWAL,gp_ward,साल्हवास (लाडुवास),4.0,कमलेश,प्रभाती,सामान्य महिला
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,23,REWARI,BAWAL,gp_ward,साल्हवास (लाडुवास),5.0,मवासी,घन्शी,सामान्य
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,24,REWARI,BAWAL,gp_ward,साल्हवास (लाडुवास),6.0,राम रती,सम्पत,सामान्य महिला
+raw/43038c19386aa6f69530_d32caefb7445.pdf,1,25,REWARI,BAWAL,gp_ward,साल्हवास (लाडुवास),7.0,रमेश कुमार,उदमी,अनुसूचित जाति
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,1,FATEHABAD,BHATTU KALAN,gp_head,किरडान,,पत्नी,दलीप सिंह,सामान्य महिला
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,2,FATEHABAD,BHATTU KALAN,gp_ward,किरडान,1.0,सूरजा राम,राम चन्द्र,सामान्य
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,3,FATEHABAD,BHATTU KALAN,gp_ward,किरडान,2.0,हनुमान,पत राम,सामान्य
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,4,FATEHABAD,BHATTU KALAN,gp_ward,किरडान,3.0,इन्द्रा,लूना,सामान्य महिला
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,5,FATEHABAD,BHATTU KALAN,gp_ward,किरडान,4.0,तिक,,सामान्य
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,6,FATEHABAD,BHATTU KALAN,gp_ward,किरडान,5.0,रनवीर,सूरजा राम,अनुसूचित जाति
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,7,FATEHABAD,BHATTU KALAN,gp_ward,किरडान,6.0,सावित्री देवी,भजन लाल,अनुसूचित जाति महिला
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,8,FATEHABAD,BHATTU KALAN,gp_ward,किरडान,7.0,मेघा राम,हरि राम,अनुसूचित जाति
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,9,FATEHABAD,BHATTU KALAN,gp_ward,किरडान,8.0,महेन्द्र सिंह,शंकर लाल,सामान्य
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,10,FATEHABAD,BHATTU KALAN,gp_ward,किरडान,9.0,अनूप,नत्थू राम,सामान्य महिला
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,11,FATEHABAD,BHATTU KALAN,gp_ward,किरडान,10.0,शान्ती,राजू,सामान्य महिला
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,12,FATEHABAD,BHATTU KALAN,gp_ward,किरडान,11.0,चाखी,सुनी राम,सामान्य महिला
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,13,FATEHABAD,BHATTU KALAN,gp_ward,किरडान,12.0,तारा चन्द,त्रिलोक,सामान्य
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,14,FATEHABAD,BHATTU KALAN,gp_ward,किरडान,13.0,सिखपाल,जगदीश,सामान्य
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,15,FATEHABAD,BHATTU KALAN,gp_ward,किरडान,14.0,सुभाष,पहारीर,सामान्य
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,16,FATEHABAD,BHATTU KALAN,gp_ward,किरडान,15.0,राम फल,बुध राम,पिछड़ी जाति
+raw/44cb01f03d996299a8a3_2a3f4b4d3fa5.pdf,1,17,FATEHABAD,BHATTU KALAN,gp_ward,किरडान,16.0,अमर सिंह,मुख राम,सामान्य
+raw/467897762c4d2179e406_fb99b07bb8cb.pdf,1,1,HISAR,NARNAUND,gp_ward,,8.0,गोहर सिंह,मान फूल,अनुसूचित जाति
+raw/467897762c4d2179e406_fb99b07bb8cb.pdf,1,2,HISAR,NARNAUND,gp_ward,,9.0,राम रती,धर्म वीर,सामान्य महिला
+raw/467897762c4d2179e406_fb99b07bb8cb.pdf,1,3,HISAR,NARNAUND,gp_ward,,10.0,वजीर,छतर सिंह,सामान्य
+raw/467897762c4d2179e406_fb99b07bb8cb.pdf,1,4,HISAR,NARNAUND,gp_ward,,11.0,चन्द्रगी/चन्द्रपती,नानु राम,अनुसूचित जाति महिला
+raw/467897762c4d2179e406_fb99b07bb8cb.pdf,1,5,HISAR,NARNAUND,gp_ward,,12.0,कमलेश,सज्जन,सामान्य महिला
+raw/4b1a5646764592950c21_c28dcb9fec51.pdf,10,23,SONEPAT,GOHANA,gp_head,भटावल,,रणजीत,जुगलाल,सामान्य
+raw/4b1a5646764592950c21_c28dcb9fec51.pdf,10,24,SONEPAT,GOHANA,gp_ward,भटावल,1.0,सुरेश,धर्मा,सामान्य
+raw/4b1a5646764592950c21_c28dcb9fec51.pdf,10,25,SONEPAT,GOHANA,gp_ward,भटावल,2.0,वेद प्रकाश,चन्दु,अनुसूचित जाति
+raw/4b1a5646764592950c21_c28dcb9fec51.pdf,10,26,SONEPAT,GOHANA,gp_ward,भटावल,3.0,बाला,राजपाल,सामान्य महिला
+raw/4b1a5646764592950c21_c28dcb9fec51.pdf,10,27,SONEPAT,GOHANA,gp_ward,भटावल,4.0,रामनिवास,किदारा,सामान्य
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,1,KURUKSHETRA,LADWA,gp_ward,,2.0,भारत राम,श्यो राम,पिछड़ी जाति
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,2,KURUKSHETRA,LADWA,gp_ward,,3.0,विमला देवी,ज्ञान सिंह,सामान्य महिला
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,3,KURUKSHETRA,LADWA,gp_ward,,4.0,प्रीतो देवी,बल किशन,अनुसूचित जाति महिला
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,4,KURUKSHETRA,LADWA,gp_ward,,5.0,बहादुर सिंह,रुलिया राम,अनुसूचित जाति
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,5,KURUKSHETRA,LADWA,gp_ward,,6.0,अन्नु राम,तुलसी राम,अनुसूचित जाति
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,6,KURUKSHETRA,LADWA,gp_ward,,7.0,साधु सिंह,गुरचरण सिंह,सामान्य
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,7,KURUKSHETRA,LADWA,gp_head,सूरा,,राजबीर,हरि सिंह,सामान्य
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,8,KURUKSHETRA,LADWA,gp_ward,सूरा,1.0,देश राज,चुहड़ा राम,पिछड़ी जाति
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,9,KURUKSHETRA,LADWA,gp_ward,सूरा,2.0,शीला देवी,सोम पाल,अनुसूचित जाति महिला
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,10,KURUKSHETRA,LADWA,gp_ward,सूरा,3.0,धर्म पाल,रकमा,अनुसूचित जाति
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,11,KURUKSHETRA,LADWA,gp_ward,सूरा,4.0,धर्मवीर,मंसा राम,सामान्य
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,12,KURUKSHETRA,LADWA,gp_ward,सूरा,5.0,राम चन्द्र,गाय राज,सामान्य
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,13,KURUKSHETRA,LADWA,gp_ward,सूरा,6.0,बाला देवी,जय कर्ण,सामान्य महिला
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,14,KURUKSHETRA,LADWA,gp_ward,सूरा,7.0,राम पाल,टिन्डी राम,अनुसूचित जाति
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,15,KURUKSHETRA,LADWA,gp_head,अन्हेडी,,तेजा राम,मुकन्दा राम,अनुसूचित जाति
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,16,KURUKSHETRA,LADWA,gp_ward,अन्हेडी,1.0,लखी राम,मंगला राम,अनुसूचित जाति
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,17,KURUKSHETRA,LADWA,gp_ward,अन्हेडी,2.0,राम पाल,पन्नु राम,पिछड़ी जाति
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,18,KURUKSHETRA,LADWA,gp_ward,अन्हेडी,3.0,राज बीर,गुरमुख,सामान्य
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,19,KURUKSHETRA,LADWA,gp_ward,अन्हेडी,4.0,प्रकाशो देवी,बृज मोहन,सामान्य महिला
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,20,KURUKSHETRA,LADWA,gp_ward,अन्हेडी,5.0,रघुबिरा,जय सिंह,सामान्य
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,21,KURUKSHETRA,LADWA,gp_ward,अन्हेडी,6.0,बचना राम,नारायण,सामान्य
+raw/4dfb9ef5fab751810966_8a6703e0f01c.pdf,1,22,KURUKSHETRA,LADWA,gp_ward,अन्हेडी,7.0,जगौरो देवी,रुलिया,अनुसूचित जाति महिला
+raw/4fa5c83553976b721ccb_9182f13654a8.pdf,10,25,GURGAON,FARUKH NAGAR,gp_head,अभयपुर,,सुमन,बेद राम,अनुसूचित जाति महिला
+raw/4fa5c83553976b721ccb_9182f13654a8.pdf,10,26,GURGAON,FARUKH NAGAR,gp_ward,अभयपुर,1.0,हरि राम,लिखी राम,सामान्य
+raw/4fa5c83553976b721ccb_9182f13654a8.pdf,10,27,GURGAON,FARUKH NAGAR,gp_ward,अभयपुर,2.0,जिले सिंह,सीता राम,सामान्य
+raw/4fbd18a673cc42a73f2e_eaeb7dd67295.pdf,1,1,GURGAON,NUH,gp_ward,,,सागर दीन,शरफु दीन,सामान्य
+raw/4fbd18a673cc42a73f2e_eaeb7dd67295.pdf,1,2,GURGAON,NUH,gp_ward,,3.0,नजीर,जोम खां,सामान्य
+raw/4fbd18a673cc42a73f2e_eaeb7dd67295.pdf,1,3,GURGAON,NUH,gp_ward,,4.0,पात्ती,उमेद खां,सामान्य महिला
+raw/4fbd18a673cc42a73f2e_eaeb7dd67295.pdf,1,4,GURGAON,NUH,gp_ward,,5.0,लेहरू,छज्जू,पिछड़ी जाति
+raw/4fbd18a673cc42a73f2e_eaeb7dd67295.pdf,1,5,GURGAON,NUH,gp_ward,,6.0,अकबरी,मुदिन,सामान्य महिला
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,1,JHAJJAR,MATANHAIL,gp_ward,,8.0,सुखदेव,राम प्रताप,सामान्य
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,2,JHAJJAR,MATANHAIL,gp_head,सेहलंगा,,बिपला,बनवारी,सामान्य महिला
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,3,JHAJJAR,MATANHAIL,gp_ward,सेहलंगा,1.0,जिले सिंह,मोलड़,सामान्य
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,4,JHAJJAR,MATANHAIL,gp_ward,सेहलंगा,2.0,धपो,मांगे राम,अनुसूचित जाति महिला
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,5,JHAJJAR,MATANHAIL,gp_ward,सेहलंगा,3.0,राजिन्द्र,रतन,अनुसूचित जाति
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,6,JHAJJAR,MATANHAIL,gp_ward,सेहलंगा,4.0,भगवान,गुलाब,सामान्य महिला
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,7,JHAJJAR,MATANHAIL,gp_ward,सेहलंगा,5.0,ओम प्रकाश,चन्द राम,सामान्य
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,8,JHAJJAR,MATANHAIL,gp_ward,सेहलंगा,6.0,गीता देवी,रामफल,सामान्य महिला
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,9,JHAJJAR,MATANHAIL,gp_ward,सेहलंगा,7.0,राजेन्द्र,सुभाष,सामान्य
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,10,JHAJJAR,MATANHAIL,gp_ward,सेहलंगा,8.0,सन्तोष,वजीर,सामान्य महिला
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,11,JHAJJAR,MATANHAIL,gp_ward,सेहलंगा,9.0,राजेन्द्र,राजे राम,सामान्य
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,12,JHAJJAR,MATANHAIL,gp_ward,सेहलंगा,10.0,पतेन्द्र सिंह,धन सिंह,पिछड़ी जाति
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,13,JHAJJAR,MATANHAIL,gp_head,अमादल शाहपुर,,चन्द्रावती,भगवान सिंह,सामान्य महिला
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,14,JHAJJAR,MATANHAIL,gp_ward,अमादल शाहपुर,1.0,रणजीत,रामपत,पिछड़ी जाति
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,15,JHAJJAR,MATANHAIL,gp_ward,अमादल शाहपुर,2.0,निर्मला,फत्ते सिंह,सामान्य महिला
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,16,JHAJJAR,MATANHAIL,gp_ward,अमादल शाहपुर,3.0,राजपाल,भागमल,सामान्य
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,17,JHAJJAR,MATANHAIL,gp_ward,अमादल शाहपुर,4.0,अजीत सिंह,चन्द्र सिंह,सामान्य
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,18,JHAJJAR,MATANHAIL,gp_ward,अमादल शाहपुर,5.0,रत्न राम,रणधीर,सामान्य
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,19,JHAJJAR,MATANHAIL,gp_ward,अमादल शाहपुर,6.0,मुन्नी,शेर राम,अनुसूचित जाति महिला
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,20,JHAJJAR,MATANHAIL,gp_ward,अमादल शाहपुर,7.0,सविता,राम कवर,सामान्य महिला
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,21,JHAJJAR,MATANHAIL,gp_head,मुच्सा,,रत्न राम,श्री भगवान,सामान्य
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,22,JHAJJAR,MATANHAIL,gp_ward,मुच्सा,1.0,कमलेश,राम किशन,अनुसूचित जाति महिला
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,23,JHAJJAR,MATANHAIL,gp_ward,मुच्सा,2.0,भरपाई,राम सरूप,सामान्य महिला
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,24,JHAJJAR,MATANHAIL,gp_ward,मुच्सा,3.0,धर्म कौर,राम सिंह,सामान्य महिला
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,25,JHAJJAR,MATANHAIL,gp_ward,मुच्सा,4.0,रोशन,सूरज भान,पिछड़ी जाति
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,26,JHAJJAR,MATANHAIL,gp_ward,मुच्सा,5.0,धर्मवीर,तेज राम,सामान्य
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,27,JHAJJAR,MATANHAIL,gp_ward,मुच्सा,6.0,नवल,प्रभु राम,सामान्य
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,28,JHAJJAR,MATANHAIL,gp_ward,मुच्सा,7.0,मांगे राम,श्यो दत्त,सामान्य
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,1,29,JHAJJAR,MATANHAIL,gp_ward,मुच्सा,8.0,सत्यवती,रूप चन्द,सामान्य महिला
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,11,33,JHAJJAR,MATANHAIL,gp_head,बीपल,,सत्यवती,गया सिंह,सामान्य महिला
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,11,34,JHAJJAR,MATANHAIL,gp_ward,बीपल,1.0,जय सिंह,राय सिंह,सामान्य
+raw/53a2ba8afbd95e83938c_ca1294a9ff08.pdf,11,35,JHAJJAR,MATANHAIL,gp_ward,बीपल,2.0,जगबीर,जगत सिंह,सामान्य
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,1,MAHENDERGARH,NANGAL CHAUDHARY,gp_head,मोहल्ड,,राम चन्द्र,मना राम,सामान्य
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,2,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहल्ड,1.0,सन्तरा देवी,रामानंद,सामान्य महिला
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,3,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहल्ड,2.0,विजय सिंह,हजारी,पिछड़ी जाति
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,4,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहल्ड,3.0,गीता देवी,हरिराम,सामान्य महिला
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,5,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहल्ड,4.0,भगवती,मुखराम,सामान्य महिला
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,6,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहल्ड,5.0,मान सिंह,हजारी,सामान्य
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,7,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहल्ड,6.0,धर्मपाल,उमराव,सामान्य
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,8,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहल्ड,7.0,चिगन,स्योकरण,अनुसूचित जाति
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,9,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहल्ड,8.0,रामशरण,जवारा,सामान्य
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,10,MAHENDERGARH,NANGAL CHAUDHARY,gp_head,मोहम्मदपुर भुगारका,,पतासी देवी,अमर सिंह,सामान्य महिला
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,11,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहम्मदपुर भुगारका,1.0,सुपारी देवी,रोहताश,पिछड़ी जाति महिला
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,12,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहम्मदपुर भुगारका,2.0,राजबाला,अतर सिंह,सामान्य महिला
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,13,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहम्मदपुर भुगारका,3.0,जोगेन्द्र सिंह,बसती राम,सामान्य
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,14,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहम्मदपुर भुगारका,4.0,सुभाष चन्द्र,तुलसी राम,सामान्य
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,15,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहम्मदपुर भुगारका,5.0,उमराव सिंह,श्यो नारायण,सामान्य
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,16,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहम्मदपुर भुगारका,6.0,मन्जु,नरेश,सामान्य महिला
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,17,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहम्मदपुर भुगारका,7.0,अमर सिंह,राम जी लाल,सामान्य
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,18,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहम्मदपुर भुगारका,8.0,रणबीर,बाबु लाल,अनुसूचित जाति
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,19,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहम्मदपुर भुगारका,9.0,प्यारे लाल,भगयाना,सामान्य
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,20,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहम्मदपुर भुगारका,10.0,महाबीर,दीप चन्द्र,सामान्य
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,21,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहम्मदपुर भुगारका,11.0,रामोतार,दोला राम,सामान्य
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,22,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहम्मदपुर भुगारका,12.0,मोहर सिंह,भुजन लाल,सामान्य
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,1,23,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,मोहम्मदपुर भुगारका,13.0,राम प्यारी,दाता राम,सामान्य महिला
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,16,19,MAHENDERGARH,NANGAL CHAUDHARY,gp_head,सेहलग,,सन्तोष,ओम प्रकाश,सामान्य महिला
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,16,20,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,सेहलग,1.0,मिश्री,रूप राम,सामान्य महिला
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,16,21,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,सेहलग,2.0,ओम प्रकाश,सुभ राम,पिछड़ी जाति
+raw/5453811d4072abfae072_a9c49ba5bbc3.pdf,16,22,MAHENDERGARH,NANGAL CHAUDHARY,gp_ward,सेहलग,3.0,लाड़ो,होशियार सिंह,सामान्य महिला
+raw/5a85fc050ed6660c7f6a_7fb294b6284d.pdf,8,9,FATEHABAD,BHUNA,gp_head,पूर्ण माजरा,,ज्ञान सिंह,रघबीर सिंह,सामान्य
+raw/5a85fc050ed6660c7f6a_7fb294b6284d.pdf,8,10,FATEHABAD,BHUNA,gp_ward,पूर्ण माजरा,1.0,कृष्णा,पूगन,अनुसूचित जाति
+raw/5a85fc050ed6660c7f6a_7fb294b6284d.pdf,8,11,FATEHABAD,BHUNA,gp_ward,पूर्ण माजरा,2.0,शान्ती फोर,इन्द्र सिंह,सामान्य महिला
+raw/5a85fc050ed6660c7f6a_7fb294b6284d.pdf,8,12,FATEHABAD,BHUNA,gp_ward,पूर्ण माजरा,3.0,दर्शन सिंह,इन्द्र सिंह,सामान्य
+raw/5a85fc050ed6660c7f6a_7fb294b6284d.pdf,8,13,FATEHABAD,BHUNA,gp_ward,पूर्ण माजरा,4.0,गुरबख्श सिंह,उत्तम सिंह,पिछड़ी जाति
+raw/5a85fc050ed6660c7f6a_7fb294b6284d.pdf,8,14,FATEHABAD,BHUNA,gp_ward,पूर्ण माजरा,5.0,सीता सिंह,नेफ सिंह,सामान्य
+raw/5a85fc050ed6660c7f6a_7fb294b6284d.pdf,8,15,FATEHABAD,BHUNA,gp_ward,पूर्ण माजरा,6.0,धंत फोर,मस्तान सिंह,सामान्य महिला
+raw/5a85fc050ed6660c7f6a_7fb294b6284d.pdf,8,16,FATEHABAD,BHUNA,gp_head,हिन्दालवाला,,कमली बाई,जीवन दास,सामान्य महिला
+raw/5a85fc050ed6660c7f6a_7fb294b6284d.pdf,8,17,FATEHABAD,BHUNA,gp_ward,हिन्दालवाला,1.0,बहादुर चन्द,रादा राम,अनुसूचित जाति
+raw/5a85fc050ed6660c7f6a_7fb294b6284d.pdf,8,18,FATEHABAD,BHUNA,gp_ward,हिन्दालवाला,2.0,कंवल जीत सिंह,स्वर्ण सिंह,सामान्य
+raw/5a85fc050ed6660c7f6a_7fb294b6284d.pdf,8,19,FATEHABAD,BHUNA,gp_ward,हिन्दालवाला,3.0,पासो बाई,काली दास,अनुसूचित जाति महिला
+raw/5a85fc050ed6660c7f6a_7fb294b6284d.pdf,8,20,FATEHABAD,BHUNA,gp_ward,हिन्दालवाला,4.0,सुभाष चन्द,ज्ञान चन्द,अनुसूचित जाति
+raw/5a85fc050ed6660c7f6a_7fb294b6284d.pdf,8,21,FATEHABAD,BHUNA,gp_ward,हिन्दालवाला,5.0,शान्ती बाई,राम प्रकाश,अनुसूचित जाति महिला
+raw/5a85fc050ed6660c7f6a_7fb294b6284d.pdf,8,22,FATEHABAD,BHUNA,gp_ward,हिन्दालवाला,6.0,ओम प्रकाश,भवानी दास,अनुसूचित जाति
+raw/5a85fc050ed6660c7f6a_7fb294b6284d.pdf,8,23,FATEHABAD,BHUNA,gp_ward,हिन्दालवाला,7.0,अंता सिंह,चन्द सिंह,पिछड़ी जाति
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,1,KARNAL,ASSANDH,gp_ward,,13.0,नरिन्द्र,हरि राम,पिछड़ी जाति
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,2,KARNAL,ASSANDH,gp_ward,,14.0,रान्नू,गोविन्द्र,सामान्य
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,3,KARNAL,ASSANDH,gp_ward,,15.0,सुभाष,हुकमा,अनुसूचित जाति
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,4,KARNAL,ASSANDH,gp_ward,,16.0,महिन्द्र,कृष्णा,अनुसूचित जाति
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,5,KARNAL,ASSANDH,gp_ward,,17.0,सत्यवान,जिला,अनुसूचित जाति
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,6,KARNAL,ASSANDH,gp_ward,,18.0,श्री राम,वर्मा,सामान्य
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,7,KARNAL,ASSANDH,gp_ward,,19.0,राज बीर,जसमेर सिंह,सामान्य
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,8,KARNAL,ASSANDH,gp_ward,,20.0,सुनेहरी,लखी राम,सामान्य महिला
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,9,KARNAL,ASSANDH,gp_head,,,उधम सिंह,शिंगारा सिंह,सामान्य
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,10,KARNAL,ASSANDH,gp_ward,,1.0,सुरजीत कौर,भूपिन्द्र सिंह,सामान्य महिला
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,11,KARNAL,ASSANDH,gp_ward,,2.0,जसवन्त सिंह,साजन सिंह,सामान्य
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,12,KARNAL,ASSANDH,gp_ward,,3.0,हरबपाल सिंह,अरूड़ सिंह,सामान्य
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,13,KARNAL,ASSANDH,gp_ward,,4.0,भरपाई,सुनेहरा,अनुसूचित जाति महिला
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,14,KARNAL,ASSANDH,gp_ward,,5.0,प्रेम,पुन्ना राम,अनुसूचित जाति
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,15,KARNAL,ASSANDH,gp_ward,,6.0,हरफूल,झंडु,सामान्य
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,16,KARNAL,ASSANDH,gp_ward,,7.0,बलविन्द्र सिंह,मोहेन्द्र सिंह,सामान्य
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,17,KARNAL,ASSANDH,gp_ward,,8.0,चरनजीत कौर,मुखबन्त सिंह,सामान्य महिला
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,18,KARNAL,ASSANDH,gp_ward,,9.0,जसवन्त कौर,रणधीर सिंह,सामान्य महिला
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,19,KARNAL,ASSANDH,gp_ward,,10.0,राम किशन,चितर,पिछड़ी जाति
+raw/616fb7d843daf2ec25fc_bdeca8a7f1c4.pdf,1,20,KARNAL,ASSANDH,gp_ward,,11.0,राम सिंह,नेतु राम,अनुसूचित जाति
+raw/64814a0a3d6335350765_d6686c4b4fc9.pdf,1,1,BHIWANI,BAWANI KHERA,gp_ward,,1.0,दया सिंह,अणी लाल,सामान्य
+raw/64814a0a3d6335350765_d6686c4b4fc9.pdf,1,2,BHIWANI,BAWANI KHERA,gp_ward,,2.0,परमीर सिंह,राम स्वरूप,सामान्य
+raw/64814a0a3d6335350765_d6686c4b4fc9.pdf,1,3,BHIWANI,BAWANI KHERA,gp_ward,,3.0,कृष्णा देवी,पृथ्वी सिंह,अनुसूचित जाति महिला
+raw/64814a0a3d6335350765_d6686c4b4fc9.pdf,1,4,BHIWANI,BAWANI KHERA,gp_ward,,4.0,सज्जन कुमार,लोक राम,पिछड़ी जाति
+raw/64814a0a3d6335350765_d6686c4b4fc9.pdf,1,5,BHIWANI,BAWANI KHERA,gp_ward,,5.0,कलावन्ती,मुन्शी राम,सामान्य महिला
+raw/64814a0a3d6335350765_d6686c4b4fc9.pdf,1,6,BHIWANI,BAWANI KHERA,gp_ward,,6.0,ब्रह्मा देवी,सिंघ राम,सामान्य महिला
+raw/64814a0a3d6335350765_d6686c4b4fc9.pdf,1,7,BHIWANI,BAWANI KHERA,gp_ward,,7.0,राजू,अमर सिंह,सामान्य
+raw/64814a0a3d6335350765_d6686c4b4fc9.pdf,1,8,BHIWANI,BAWANI KHERA,gp_ward,,8.0,कृष्ण कुमार,राज कुमार,अनुसूचित जाति
+raw/64814a0a3d6335350765_d6686c4b4fc9.pdf,1,9,BHIWANI,BAWANI KHERA,gp_ward,,9.0,फूल सिंह,डूंगर मल,अनुसूचित जाति
+raw/64814a0a3d6335350765_d6686c4b4fc9.pdf,1,10,BHIWANI,BAWANI KHERA,gp_ward,,10.0,सुख राम,नत्थू राम,सामान्य
+raw/73acf92ef0c330f5bc0c_4346df5832b2.pdf,1,1,GURGAON,GURGAON,gp_ward,,7.0,राम प्रसाद,हरि सिंह,सामान्य
+raw/73acf92ef0c330f5bc0c_4346df5832b2.pdf,1,2,GURGAON,GURGAON,gp_ward,,8.0,तेज वती,विरेंद्र,सामान्य महिला
+raw/73acf92ef0c330f5bc0c_4346df5832b2.pdf,1,3,GURGAON,GURGAON,gp_ward,,9.0,सुमित्रा देवी,जीत राम,अनुसूचित जाति महिला
+raw/73acf92ef0c330f5bc0c_4346df5832b2.pdf,16,27,GURGAON,GURGAON,gp_head,अकलीमपुर नूंह,,फजरी,रहमत,सामान्य महिला
+raw/73acf92ef0c330f5bc0c_4346df5832b2.pdf,16,28,GURGAON,GURGAON,gp_ward,अकलीमपुर नूंह,1.0,नूर,सफेदा,सामान्य
+raw/73acf92ef0c330f5bc0c_4346df5832b2.pdf,16,29,GURGAON,GURGAON,gp_ward,अकलीमपुर नूंह,2.0,आसमीना,जफरु,सामान्य महिला
+raw/73eb6daad76bc1c828f1_f7ad10b42a8e.pdf,1,1,PANCHKULA,MORNI,gp_head,भोज नग्गाल,,सुरिन्द्र पाल,मिलखी राम,सामान्य
+raw/73eb6daad76bc1c828f1_f7ad10b42a8e.pdf,1,2,PANCHKULA,MORNI,gp_ward,भोज नग्गाल,1.0,चपली रानी,विरेन्द्र कुमार,सामान्य महिला
+raw/73eb6daad76bc1c828f1_f7ad10b42a8e.pdf,1,3,PANCHKULA,MORNI,gp_ward,भोज नग्गाल,2.0,सुनीता देवी,रमेश कुमार,सामान्य महिला
+raw/73eb6daad76bc1c828f1_f7ad10b42a8e.pdf,1,4,PANCHKULA,MORNI,gp_ward,भोज नग्गाल,3.0,शिव देवी,बाबू राम,अनुसूचित जाति महिला
+raw/73eb6daad76bc1c828f1_f7ad10b42a8e.pdf,1,5,PANCHKULA,MORNI,gp_ward,भोज नग्गाल,4.0,मदन पाल,सीता राम,पिछड़ी जाति
+raw/73eb6daad76bc1c828f1_f7ad10b42a8e.pdf,1,6,PANCHKULA,MORNI,gp_ward,भोज नग्गाल,5.0,रविन्द्र कुमार,बांकी राम,सामान्य
+raw/73eb6daad76bc1c828f1_f7ad10b42a8e.pdf,1,7,PANCHKULA,MORNI,gp_ward,भोज नग्गाल,6.0,मेहर सिंह,उदय सिंह,सामान्य
+raw/73eb6daad76bc1c828f1_f7ad10b42a8e.pdf,1,8,PANCHKULA,MORNI,gp_ward,भोज नग्गाल,7.0,धर्म पाल,खुशी राम,अनुसूचित जाति
+raw/7a7ee2f90011ade79022_3579309c51b8.pdf,1,1,SONEPAT,MUNDLANA,gp_ward,,10.0,कृष्ण,राम धन,सामान्य
+raw/7a7ee2f90011ade79022_3579309c51b8.pdf,1,2,SONEPAT,MUNDLANA,gp_ward,,11.0,देवेंद्र,बलवीर,सामान्य
+raw/7a7ee2f90011ade79022_3579309c51b8.pdf,1,3,SONEPAT,MUNDLANA,gp_ward,,12.0,जरनेल,जुगती राम,पिछड़ी जाति
+raw/7a7ee2f90011ade79022_3579309c51b8.pdf,1,4,SONEPAT,MUNDLANA,gp_ward,,13.0,रिक्त पद,,सामान्य महिला
+raw/7a7ee2f90011ade79022_3579309c51b8.pdf,1,5,SONEPAT,MUNDLANA,gp_head,तुर्कपुर,,आज़ाद सिंह,चरण सिंह,सामान्य
+raw/7a7ee2f90011ade79022_3579309c51b8.pdf,1,6,SONEPAT,MUNDLANA,gp_ward,तुर्कपुर,1.0,बिमला देवी,आज़ाद,सामान्य
+raw/7a7ee2f90011ade79022_3579309c51b8.pdf,1,7,SONEPAT,MUNDLANA,gp_ward,तुर्कपुर,2.0,धत्रो देवी,अनूप सिंह,सामान्य महिला
+raw/7a7ee2f90011ade79022_3579309c51b8.pdf,1,8,SONEPAT,MUNDLANA,gp_ward,तुर्कपुर,3.0,कमलेश,जगबीर सिंह,सामान्य महिला
+raw/7a7ee2f90011ade79022_3579309c51b8.pdf,1,9,SONEPAT,MUNDLANA,gp_ward,तुर्कपुर,4.0,राजवन्ती देवी,रिसाल सिंह,अनुसूचित जाति महिला
+raw/7a7ee2f90011ade79022_3579309c51b8.pdf,1,10,SONEPAT,MUNDLANA,gp_ward,तुर्कपुर,5.0,राजवन्ती,धर्मपाल,अनुसूचित जाति
+raw/7a7ee2f90011ade79022_3579309c51b8.pdf,1,11,SONEPAT,MUNDLANA,gp_ward,तुर्कपुर,6.0,कमला,सतबीर,पिछड़ी जाति
+raw/7a7ee2f90011ade79022_3579309c51b8.pdf,1,12,SONEPAT,MUNDLANA,gp_ward,तुर्कपुर,7.0,शाम लाल,हरी सिंह,सामान्य
+raw/7a7ee2f90011ade79022_3579309c51b8.pdf,1,13,SONEPAT,MUNDLANA,gp_ward,तुर्कपुर,8.0,सुन्दर लाल,राम्प्य सिंह,सामान्य
+raw/86957b10457323212728_575e18b0ed48.pdf,12,15,KARNAL,NISSING,gp_head,रायत खाना,,नायबो देवी,ओम प्रकाश,सामान्य महिला
+raw/86957b10457323212728_575e18b0ed48.pdf,12,16,KARNAL,NISSING,gp_ward,रायत खाना,1.0,पप्पू,कालू राम,सामान्य
+raw/86957b10457323212728_575e18b0ed48.pdf,12,17,KARNAL,NISSING,gp_ward,रायत खाना,2.0,सोम नाथ,फून सिंह,सामान्य
+raw/86957b10457323212728_575e18b0ed48.pdf,12,18,KARNAL,NISSING,gp_ward,रायत खाना,3.0,सलोचना,मुलख राज,सामान्य महिला
+raw/86957b10457323212728_575e18b0ed48.pdf,12,19,KARNAL,NISSING,gp_ward,रायत खाना,4.0,पाली,रणबीर,सामान्य महिला
+raw/86957b10457323212728_575e18b0ed48.pdf,12,20,KARNAL,NISSING,gp_ward,रायत खाना,5.0,कुशल कुमार,आशु मल,सामान्य
+raw/86957b10457323212728_575e18b0ed48.pdf,12,21,KARNAL,NISSING,gp_ward,रायत खाना,6.0,मांगे राम,धारा राम,पिछड़ी जाति
+raw/86957b10457323212728_575e18b0ed48.pdf,12,22,KARNAL,NISSING,gp_ward,रायत खाना,7.0,भाई धन,आसा राम,अनुसूचित जाति
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,1,1,ROHTAK,LAKHAN MAJRA,gp_head,लाखनमाजरा,,ओम पती,धूप सिंह,सामान्य महिला
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,1,2,ROHTAK,LAKHAN MAJRA,gp_ward,लाखनमाजरा,1.0,ओम प्रकाश,तूही राम,सामान्य
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,1,3,ROHTAK,LAKHAN MAJRA,gp_ward,लाखनमाजरा,2.0,राजेन्द्र,करण सिंह,सामान्य
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,1,ROHTAK,LAKHAN MAJRA,gp_ward,,6.0,चम्पा देवी,प्रकाश,अनुसूचित जाति महिला
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,2,ROHTAK,LAKHAN MAJRA,gp_ward,,7.0,तारा चन्द,गज्या राम,अनुसूचित जाति
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,3,ROHTAK,LAKHAN MAJRA,gp_ward,,8.0,सूरज भान,नत्थू राम,पिछड़ी जाति
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,4,ROHTAK,LAKHAN MAJRA,gp_ward,,9.0,गुगान,गुरमुख सिंह,सामान्य
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,5,ROHTAK,LAKHAN MAJRA,gp_ward,,10.0,राज कृष्ण,भगवान दास,सामान्य
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,7,ROHTAK,LAKHAN MAJRA,gp_head,गुगाहेडी,,कृष्णा,हीरा लाल,सामान्य महिला
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,8,ROHTAK,LAKHAN MAJRA,gp_ward,गुगाहेडी,1.0,नरेश कुमार,दुली चन्द,सामान्य
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,9,ROHTAK,LAKHAN MAJRA,gp_ward,गुगाहेडी,2.0,उमेद सिंह,श्यो करण,पिछड़ी जाति
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,10,ROHTAK,LAKHAN MAJRA,gp_ward,गुगाहेडी,3.0,मुख्तयार सिंह,मोलड,सामान्य
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,11,ROHTAK,LAKHAN MAJRA,gp_ward,गुगाहेडी,4.0,सोमा देवी,दिवान सिंह,सामान्य महिला
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,12,ROHTAK,LAKHAN MAJRA,gp_ward,गुगाहेडी,5.0,रघुवीर सिंह,जय किशोर,सामान्य
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,13,ROHTAK,LAKHAN MAJRA,gp_ward,गुगाहेडी,6.0,धर्मो देवी,प्रेम सिंह,सामान्य महिला
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,14,ROHTAK,LAKHAN MAJRA,gp_ward,गुगाहेडी,7.0,राष्ट्रपति,बलबीर,अनुसूचित जाति महिला
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,15,ROHTAK,LAKHAN MAJRA,gp_ward,गुगाहेडी,8.0,फूल सिंह,धनी सिंह,अनुसूचित जाति
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,17,ROHTAK,LAKHAN MAJRA,gp_head,सिसरोली,,जगवान,दुली चन्द,अनुसूचित जाति
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,18,ROHTAK,LAKHAN MAJRA,gp_ward,सिसरोली,1.0,मुकेश,सुमेर,सामान्य महिला
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,19,ROHTAK,LAKHAN MAJRA,gp_ward,सिसरोली,2.0,कृष्ण देवी,दयानन्द,सामान्य महिला
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,20,ROHTAK,LAKHAN MAJRA,gp_ward,सिसरोली,3.0,बलराज,श्री लाल,सामान्य
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,21,ROHTAK,LAKHAN MAJRA,gp_ward,सिसरोली,4.0,धर्मवीर,नफे सिंह,पिछड़ी जाति
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,22,ROHTAK,LAKHAN MAJRA,gp_ward,सिसरोली,5.0,कुलदीप,मोलू राम,सामान्य
+raw/8c27d2cc362b6e684081_42b618b26598.pdf,2,23,ROHTAK,LAKHAN MAJRA,gp_ward,सिसरोली,6.0,जगदीश,सुखे सिंह,अनुसूचित जाति
+raw/8f0ce5b3f2d9bc94071b_c6a2699f35ce.pdf,18,12,MAHENDERGARH,MAHENDERGARH,gp_head,ढेरोली अहीर,,कौशल्या,श्री कृष्ण,सामान्य महिला
+raw/8f0ce5b3f2d9bc94071b_c6a2699f35ce.pdf,18,13,MAHENDERGARH,MAHENDERGARH,gp_ward,ढेरोली अहीर,1.0,राज पाल,महावीर,सामान्य
+raw/8f0ce5b3f2d9bc94071b_c6a2699f35ce.pdf,18,14,MAHENDERGARH,MAHENDERGARH,gp_ward,ढेरोली अहीर,2.0,राजेन्द्र,जगन नाथ,सामान्य
+raw/8f0ce5b3f2d9bc94071b_c6a2699f35ce.pdf,18,15,MAHENDERGARH,MAHENDERGARH,gp_ward,ढेरोली अहीर,3.0,दुली चन्द,मेहर चन्द,सामान्य
+raw/8f0ce5b3f2d9bc94071b_c6a2699f35ce.pdf,18,16,MAHENDERGARH,MAHENDERGARH,gp_ward,ढेरोली अहीर,4.0,हनुमान,कुरडा राम,सामान्य
+raw/8f0ce5b3f2d9bc94071b_c6a2699f35ce.pdf,18,17,MAHENDERGARH,MAHENDERGARH,gp_ward,ढेरोली अहीर,5.0,रोहताश,हरदयाल,सामान्य
+raw/8f0ce5b3f2d9bc94071b_c6a2699f35ce.pdf,18,18,MAHENDERGARH,MAHENDERGARH,gp_ward,ढेरोली अहीर,6.0,ओम प्रकाश,श्यो पाल,सामान्य
+raw/8f0ce5b3f2d9bc94071b_c6a2699f35ce.pdf,18,19,MAHENDERGARH,MAHENDERGARH,gp_ward,ढेरोली अहीर,7.0,सन्तरा,लक्ष्मी नारायण,सामान्य महिला
+raw/8f0ce5b3f2d9bc94071b_c6a2699f35ce.pdf,18,20,MAHENDERGARH,MAHENDERGARH,gp_ward,ढेरोली अहीर,8.0,गीता,परमा नन्द,सामान्य महिला
+raw/8f0ce5b3f2d9bc94071b_c6a2699f35ce.pdf,18,21,MAHENDERGARH,MAHENDERGARH,gp_ward,ढेरोली अहीर,9.0,रामा नन्द,महावीर,अनुसूचित जाति
+raw/8f0ce5b3f2d9bc94071b_c6a2699f35ce.pdf,18,22,MAHENDERGARH,MAHENDERGARH,gp_ward,ढेरोली अहीर,10.0,चमेली,भोला राम,सामान्य महिला
+raw/8f0ce5b3f2d9bc94071b_c6a2699f35ce.pdf,18,23,MAHENDERGARH,MAHENDERGARH,gp_ward,ढेरोली अहीर,11.0,मनभावती,सूरज भान,पिछड़ी जाति महिला
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,1,YAMUNA NAGAR,BILASPUR,gp_ward,,4.0,मुखतियारा,रुलिया राम,सामान्य
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,2,YAMUNA NAGAR,BILASPUR,gp_ward,,5.0,भूली,फकीरिया,सामान्य महिला
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,3,YAMUNA NAGAR,BILASPUR,gp_ward,,6.0,नत्थू राम,बालू राम,पिछड़ी जाति
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,4,YAMUNA NAGAR,BILASPUR,gp_ward,,7.0,भूली,रोशन,सामान्य महिला
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,5,YAMUNA NAGAR,BILASPUR,gp_ward,,8.0,इसलाम,रशीद,सामान्य
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,6,YAMUNA NAGAR,BILASPUR,gp_head,टेहामामनान,,रान्तोष देवी,राम कुमार,सामान्य महिला
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,7,YAMUNA NAGAR,BILASPUR,gp_ward,टेहामामनान,1.0,सतिन्द्रो,प्रकाश,अनुसूचित जाति महिला
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,8,YAMUNA NAGAR,BILASPUR,gp_ward,टेहामामनान,2.0,माया राम,मुख्यारा राम,सामान्य
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,9,YAMUNA NAGAR,BILASPUR,gp_ward,टेहामामनान,3.0,सरोज बाला,मेहर चन्द,सामान्य महिलां
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,10,YAMUNA NAGAR,BILASPUR,gp_ward,टेहामामनान,4.0,अमर नाथ,सुरता राम,अनुसूचित जाति
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,11,YAMUNA NAGAR,BILASPUR,gp_ward,टेहामामनान,5.0,रोशन लाल,बखतौरा,अनुसूचित जाति
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,12,YAMUNA NAGAR,BILASPUR,gp_ward,टेहामामनान,6.0,नरेश कुमार,बलजीत राम,अनुसूचित जाति
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,13,YAMUNA NAGAR,BILASPUR,gp_ward,टेहामामनान,7.0,माम चन्द,बचन दास,पिछड़ी जाति
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,14,YAMUNA NAGAR,BILASPUR,gp_head,उधमगढ़,,सत पाल,कुड़ा राम,सामान्य
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,15,YAMUNA NAGAR,BILASPUR,gp_ward,उधमगढ़,1.0,अशोक कुमार,किशोरी लाल,सामान्य
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,16,YAMUNA NAGAR,BILASPUR,gp_ward,उधमगढ़,2.0,फूलो देवी,राज कुमार,अनुसूचित जाति महिला
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,17,YAMUNA NAGAR,BILASPUR,gp_ward,उधमगढ़,3.0,शकुन्तला,जय पाल,अनुसूचित जाति महिला
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,18,YAMUNA NAGAR,BILASPUR,gp_ward,उधमगढ़,4.0,गुरनाम,फन्नन राम,अनुसूचित जाति
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,19,YAMUNA NAGAR,BILASPUR,gp_ward,उधमगढ़,5.0,जय सिंह,रुलिया राम,अनुसूचित जाति
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,1,20,YAMUNA NAGAR,BILASPUR,gp_ward,उधमगढ़,6.0,हुकम चन्द,विशम्बर नाथ,पिछड़ी जाति
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,16,15,YAMUNA NAGAR,BILASPUR,gp_head,पाण्डो,,रमेश कुमार,ओम प्रकाश,सामान्य
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,16,16,YAMUNA NAGAR,BILASPUR,gp_ward,पाण्डो,1.0,राम कुमार,श्यो राम,पिछड़ी जाति
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,16,17,YAMUNA NAGAR,BILASPUR,gp_ward,पाण्डो,2.0,अजमेरो,ज्ञान चन्द,सामान्य महिला
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,16,18,YAMUNA NAGAR,BILASPUR,gp_ward,पाण्डो,3.0,गुरनाम सिंह,रिखी राम,सामान्य
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,16,19,YAMUNA NAGAR,BILASPUR,gp_ward,पाण्डो,4.0,अंता राम,नानक चन्द,अनुसूचित जाति
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,16,20,YAMUNA NAGAR,BILASPUR,gp_ward,पाण्डो,5.0,जयन्ती देवी,फकीर चन्द,अनुसूचित जाति महिला
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,16,21,YAMUNA NAGAR,BILASPUR,gp_ward,पाण्डो,6.0,धर्म पाल,किशना राम,अनुसूचित जाति
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,16,22,YAMUNA NAGAR,BILASPUR,gp_head,टोहरपुर,,अभी लाल,लाला राम,सामान्य
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,16,23,YAMUNA NAGAR,BILASPUR,gp_ward,टोहरपुर,1.0,जरनीलो,सुरजीत,सामान्य महिला
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,16,24,YAMUNA NAGAR,BILASPUR,gp_ward,टोहरपुर,2.0,रणबीर सिंह,फूल सिंह,सामान्य
+raw/8fb55300a166210df5df_b907a57ee82c.pdf,16,25,YAMUNA NAGAR,BILASPUR,gp_ward,टोहरपुर,3.0,मलखान,खुशी राम,सामान्य
+raw/92620076a3614417f96b_f82aec8b50a9.pdf,1,1,BHIWANI,KAIRU,gp_ward,,7.0,वीर सिंह,गाला राम,सामान्य
+raw/92620076a3614417f96b_f82aec8b50a9.pdf,1,2,BHIWANI,KAIRU,gp_ward,,8.0,राधे श्याम,निरभा राम,सामान्य
+raw/92620076a3614417f96b_f82aec8b50a9.pdf,1,3,BHIWANI,KAIRU,gp_ward,,9.0,बाला देवी,राजेन्द्र,सामान्य महिला
+raw/92620076a3614417f96b_f82aec8b50a9.pdf,1,4,BHIWANI,KAIRU,gp_ward,,10.0,धर्मबीर,फूल चन्द,सामान्य
+raw/92620076a3614417f96b_f82aec8b50a9.pdf,1,5,BHIWANI,KAIRU,gp_ward,,11.0,दया कौर,शीश राम,सामान्य महिला
+raw/92620076a3614417f96b_f82aec8b50a9.pdf,1,6,BHIWANI,KAIRU,gp_ward,,12.0,मनोहरी,सागर सिंह,सामान्य महिला
+raw/92620076a3614417f96b_f82aec8b50a9.pdf,1,7,BHIWANI,KAIRU,gp_ward,,13.0,फूल सिंह,झामर,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,1,SONEPAT,SONEPAT,gp_ward,,7.0,चन्द्र प्रकाश,लछमन सिंह,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,2,SONEPAT,SONEPAT,gp_ward,,8.0,लक्ष्मी,अखानन्द,सामान्य महिला
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,3,SONEPAT,SONEPAT,gp_ward,,9.0,साहया,मुख राम,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,4,SONEPAT,SONEPAT,gp_head,ताजपुर,,दया सिंह,चतर सिंह,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,5,SONEPAT,SONEPAT,gp_ward,ताजपुर,1.0,पित्ता,जय लाल,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,6,SONEPAT,SONEPAT,gp_ward,ताजपुर,2.0,द्रोपदी,दयानन्द,सामान्य महिला
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,7,SONEPAT,SONEPAT,gp_ward,ताजपुर,3.0,छोटो,श्यामा,सामान्य महिला
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,8,SONEPAT,SONEPAT,gp_ward,ताजपुर,4.0,राजपाल,मुरारी लाल,अनुसूचित जाति
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,9,SONEPAT,SONEPAT,gp_ward,ताजपुर,5.0,मामन,राम किशन,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,10,SONEPAT,SONEPAT,gp_ward,ताजपुर,6.0,मधु राम,कली राम,पिछड़ी जाति
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,11,SONEPAT,SONEPAT,gp_ward,ताजपुर,7.0,दिनेश,लेख राम,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,12,SONEPAT,SONEPAT,gp_ward,ताजपुर,8.0,ओम प्रकाश,गिरधारी लाल,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,13,SONEPAT,SONEPAT,gp_ward,ताजपुर,9.0,गीता,ओम दत्त,सामान्य महिला
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,14,SONEPAT,SONEPAT,gp_head,धरिया,,इस्लामुद्दीन,हतवारी,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,15,SONEPAT,SONEPAT,gp_ward,धरिया,1.0,रिक्त पद,,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,16,SONEPAT,SONEPAT,gp_ward,धरिया,2.0,राफी,नसीबू,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,17,SONEPAT,SONEPAT,gp_ward,धरिया,3.0,हमीदन,असगर,सामान्य महिला
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,18,SONEPAT,SONEPAT,gp_ward,धरिया,4.0,इमराना,अवदीश,सामान्य महिला
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,19,SONEPAT,SONEPAT,gp_ward,धरिया,5.0,हसन,सीधा अहमद,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,20,SONEPAT,SONEPAT,gp_ward,धरिया,6.0,फूल सिंह,रूपा,पिछड़ी जाति
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,1,21,SONEPAT,SONEPAT,gp_ward,धरिया,7.0,,,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,18,19,SONEPAT,SONEPAT,gp_head,जाहुलाना,,टोहर सिंह,डालु राम,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,18,20,SONEPAT,SONEPAT,gp_ward,जाहुलाना,1.0,पिंकी,राजबीर,सामान्य महिला
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,18,21,SONEPAT,SONEPAT,gp_ward,जाहुलाना,2.0,नरेश,दया नन्द,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,18,22,SONEPAT,SONEPAT,gp_ward,जाहुलाना,3.0,राज कुमार,कर्ण सिंह,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,18,23,SONEPAT,SONEPAT,gp_ward,जाहुलाना,4.0,ओम प्रकाश,जोगी राम,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,18,24,SONEPAT,SONEPAT,gp_ward,जाहुलाना,5.0,शीश राम,हरनाम,अनुसूचित जाति
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,18,25,SONEPAT,SONEPAT,gp_ward,जाहुलाना,6.0,पियाना,सिंह राम,सामान्य
+raw/92a14d488b23f8c6a9d3_4a65e031fa9d.pdf,18,26,SONEPAT,SONEPAT,gp_ward,जाहुलाना,7.0,ईश्वर,फतेह सिंह,सामान्य
+raw/93022c36bea7d821475c_53014ed17128.pdf,1,1,PANIPAT,SAMALKHA,gp_ward,,4.0,सुभाष,राम निवास,सामान्य
+raw/93022c36bea7d821475c_53014ed17128.pdf,1,2,PANIPAT,SAMALKHA,gp_ward,,5.0,शेला देवी,राम नारायण,अनुसूचित जाति महिला
+raw/93022c36bea7d821475c_53014ed17128.pdf,1,3,PANIPAT,SAMALKHA,gp_ward,,6.0,बाला देवी,राम नारायण,सामान्य महिला
+raw/93022c36bea7d821475c_53014ed17128.pdf,1,4,PANIPAT,SAMALKHA,gp_ward,,7.0,सन्तोष,जगदीश,सामान्य महिला
+raw/93022c36bea7d821475c_53014ed17128.pdf,1,5,PANIPAT,SAMALKHA,gp_ward,,8.0,महेश,बारु,सामान्य
+raw/93022c36bea7d821475c_53014ed17128.pdf,1,6,PANIPAT,SAMALKHA,gp_ward,,9.0,राम सरूप,इन्द्र,पिछड़ी जाति
+raw/93022c36bea7d821475c_53014ed17128.pdf,1,7,PANIPAT,SAMALKHA,gp_ward,,10.0,रोशन,अमर सिंह,सामान्य
+raw/93022c36bea7d821475c_53014ed17128.pdf,1,8,PANIPAT,SAMALKHA,gp_ward,,11.0,रजनी,विनोद,सामान्य महिला
+raw/93022c36bea7d821475c_53014ed17128.pdf,1,9,PANIPAT,SAMALKHA,gp_ward,,12.0,राकेश,मूल चन्द,सामान्य
+raw/93022c36bea7d821475c_53014ed17128.pdf,1,10,PANIPAT,SAMALKHA,gp_ward,,13.0,मुन्नी,नारायण,सामान्य महिला
+raw/93022c36bea7d821475c_53014ed17128.pdf,1,11,PANIPAT,SAMALKHA,gp_ward,,14.0,संजय कुमार,जय भगवान,सामान्य
+raw/93022c36bea7d821475c_53014ed17128.pdf,1,12,PANIPAT,SAMALKHA,gp_ward,,15.0,अमित,जय भगवान,सामान्य
+raw/966cc568a1ea609a6e0a_6b0f2814d028.pdf,1,1,PANCHKULA,PINJORE,gp_ward,,2.0,फुलदीप सिंह,नारायण,सामान्य
+raw/966cc568a1ea609a6e0a_6b0f2814d028.pdf,1,2,PANCHKULA,PINJORE,gp_ward,,3.0,हरभिन्द्र कौर,मेहेन्द्र सिंह,अनुसूचित जाति महिला
+raw/966cc568a1ea609a6e0a_6b0f2814d028.pdf,1,3,PANCHKULA,PINJORE,gp_ward,,4.0,कुलविन्द्र सिंह,राम सिंह,पिछड़ी जाति
+raw/966cc568a1ea609a6e0a_6b0f2814d028.pdf,1,4,PANCHKULA,PINJORE,gp_ward,,5.0,हरभजन कौर,शीतल सिंह,सामान्य महिला
+raw/966cc568a1ea609a6e0a_6b0f2814d028.pdf,1,5,PANCHKULA,PINJORE,gp_ward,,6.0,जोगिन्द्र सिंह,रामा नन्द,सामान्य
+raw/966cc568a1ea609a6e0a_6b0f2814d028.pdf,14,27,PANCHKULA,PINJORE,gp_head,बडोना कलां,,राम पाल,भूला राम,अनुसूचित जाति
+raw/966cc568a1ea609a6e0a_6b0f2814d028.pdf,14,28,PANCHKULA,PINJORE,gp_ward,बडोना कलां,1.0,जसबन्स सिंह,खुशी राम,अनुसूचित जाति
+raw/9fd77bd58a75d30237b2_6068e1cc37c4.pdf,1,1,JIND,JIND,gp_ward,,5.0,रामपाल,हवा सिंह,सामान्य
+raw/9fd77bd58a75d30237b2_6068e1cc37c4.pdf,1,2,JIND,JIND,gp_ward,,6.0,शान्ती देवी,प्रेम सिंह,सामान्य महिला
+raw/9fd77bd58a75d30237b2_6068e1cc37c4.pdf,1,3,JIND,JIND,gp_ward,,7.0,धमेली,परिया सिंह,सामान्य महिला
+raw/9fd77bd58a75d30237b2_6068e1cc37c4.pdf,1,4,JIND,JIND,gp_ward,,8.0,रोशमी,दल सिंह,अनुसूचित जाति महिला
+raw/9fd77bd58a75d30237b2_6068e1cc37c4.pdf,1,5,JIND,JIND,gp_ward,,9.0,जिले सिंह,रतिराम,अनुसूचित जाति
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,1,1,HISAR,BARWALA,gp_ward,,5.0,मेशर,ईश्वर,अनुसूचित जाति महिला
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,1,2,HISAR,BARWALA,gp_ward,,6.0,कलन्द्र सिंह,बलवीर सिंह,अनुसूचित जाति
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,1,3,HISAR,BARWALA,gp_ward,,7.0,शान्ती देवी,ईश्वर,सामान्य महिला
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,1,4,HISAR,BARWALA,gp_ward,,8.0,हरि भगवान,दलीप,सामान्य
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,1,5,HISAR,BARWALA,gp_ward,,9.0,वनस्पति,बदलू राम,सामान्य महिला
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,1,6,HISAR,BARWALA,gp_ward,,10.0,राम स्वरूप,चान्दी राम,सामान्य
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,1,7,HISAR,BARWALA,gp_ward,,11.0,राज सिंह,धूप सिंह,अनुसूचित जाति
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,1,8,HISAR,BARWALA,gp_ward,,12.0,देवा सिंह,राम जी लाल,पिछड़ी जाति
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,5,HISAR,BARWALA,gp_head,महतसरा,,कृष्णा देवी,श्यो नारायन,सामान्य महिला
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,6,HISAR,BARWALA,gp_ward,महतसरा,1.0,नरसी राम,फूल सिंह,सामान्य
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,7,HISAR,BARWALA,gp_ward,महतसरा,2.0,प्यारे लाल,जस्सू राम,सामान्य
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,8,HISAR,BARWALA,gp_ward,महतसरा,3.0,जर्मन सिंह,बनवारी लाल,सामान्य
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,9,HISAR,BARWALA,gp_ward,महतसरा,4.0,बीन्जा राम,मनफूल,सामान्य
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,10,HISAR,BARWALA,gp_ward,महतसरा,5.0,सावित्री देवी,रामसरूप,सामान्य महिला
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,11,HISAR,BARWALA,gp_ward,महतसरा,6.0,राम मुरती,अतग राम,सामान्य महिला
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,12,HISAR,BARWALA,gp_ward,महतसरा,7.0,भंवर सिंह,सीता राम,पिछड़ी जाति
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,13,HISAR,BARWALA,gp_head,मोठसरा,,बिरखा देवी,हनुमान,सामान्य महिला
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,14,HISAR,BARWALA,gp_ward,मोठसरा,1.0,राम मुरती,सुलतान,सामान्य महिला
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,15,HISAR,BARWALA,gp_ward,मोठसरा,2.0,रन्त लाल,पुरखा राम,अनुसूचित जाति
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,16,HISAR,BARWALA,gp_ward,मोठसरा,3.0,हरि सिंह,जगर,सामान्य
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,17,HISAR,BARWALA,gp_ward,मोठसरा,4.0,रिछ पाल,चुनी राम,सामान्य
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,18,HISAR,BARWALA,gp_ward,मोठसरा,5.0,हरि सिंह,रूपा राम,सामान्य
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,19,HISAR,BARWALA,gp_ward,मोठसरा,6.0,सीता राम,सुरज राम,पिछड़ी जाति
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,20,HISAR,BARWALA,gp_ward,मोठसरा,7.0,पार्वती,हवा सिंह,अनुसूचित जाति महिला
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,21,HISAR,BARWALA,gp_head,किशनगढ़,,रण सिंह,यूब राम,सामान्य
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,22,HISAR,BARWALA,gp_ward,किशनगढ़,1.0,विजय सिंह,रामप्रताप,सामान्य
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,23,HISAR,BARWALA,gp_ward,किशनगढ़,2.0,सिप राम,रतना,सामान्य
+raw/a1f2780196e62ffa8887_3e7c3062dd91.pdf,12,24,HISAR,BARWALA,gp_ward,किशनगढ़,3.0,तीनू राम,गनी राम,सामान्य
+raw/a5b5bed47e6b4cd83ce5_e49aabcf0d19.pdf,1,1,HISAR,UKLANA,gp_ward,,6.0,रापेश्वर,रिजाला राम,सामान्य
+raw/a5b5bed47e6b4cd83ce5_e49aabcf0d19.pdf,1,2,HISAR,UKLANA,gp_ward,,7.0,बलबीर सिंह,पाल सिंह,सामान्य
+raw/a5b5bed47e6b4cd83ce5_e49aabcf0d19.pdf,1,3,HISAR,UKLANA,gp_ward,,8.0,सुभाष चन्द्र,रिशाल सिंह,सामान्य
+raw/a5b5bed47e6b4cd83ce5_e49aabcf0d19.pdf,1,4,HISAR,UKLANA,gp_ward,,9.0,टेका,देई राम,सामान्य
+raw/a5b5bed47e6b4cd83ce5_e49aabcf0d19.pdf,1,5,HISAR,UKLANA,gp_ward,,10.0,रन्तरो,गुलाब सिंह,सामान्य महिला
+raw/a5b5bed47e6b4cd83ce5_e49aabcf0d19.pdf,1,6,HISAR,UKLANA,gp_ward,,11.0,बेदो,मनफूल,सामान्य महिला
+raw/a5b5bed47e6b4cd83ce5_e49aabcf0d19.pdf,1,7,HISAR,UKLANA,gp_ward,,12.0,धर्म पाल,फुलु,सामान्य
+raw/a5b5bed47e6b4cd83ce5_e49aabcf0d19.pdf,8,18,HISAR,UKLANA,gp_head,अग्रोहा,,इन्द्राज,श्री चन्द,अनुसूचित जाति
+raw/a5b5bed47e6b4cd83ce5_e49aabcf0d19.pdf,8,19,HISAR,UKLANA,gp_ward,अग्रोहा,1.0,प्रभु राम,प्यारे लाल,पिछड़ी जाति
+raw/a5b5bed47e6b4cd83ce5_e49aabcf0d19.pdf,8,20,HISAR,UKLANA,gp_ward,अग्रोहा,2.0,चन्द्रो,दरिया सिंह,अनुसूचित जाति महिला
+raw/a5b5bed47e6b4cd83ce5_e49aabcf0d19.pdf,8,21,HISAR,UKLANA,gp_ward,अग्रोहा,3.0,सुभाष,नफे सिंह,अनुसूचित जाति
+raw/a5b5bed47e6b4cd83ce5_e49aabcf0d19.pdf,8,22,HISAR,UKLANA,gp_ward,अग्रोहा,4.0,भारत सिंह,फकीर चन्द,सामान्य
+raw/a5b5bed47e6b4cd83ce5_e49aabcf0d19.pdf,8,23,HISAR,UKLANA,gp_ward,अग्रोहा,5.0,रोहताश,अमर सिंह,अनुसूचित जाति
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,1,1,SONEPAT,RAI,gp_ward,,5.0,सन्त राम,ईश्वर सिंह,सामान्य
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,1,2,SONEPAT,RAI,gp_ward,,6.0,मीना देवी,रमेश चन्द्र,अनुसूचित जाति महिला
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,1,3,SONEPAT,RAI,gp_ward,,7.0,सन्तोष,सुरेन्द्र कुमार,सामान्य महिला
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,1,4,SONEPAT,RAI,gp_ward,,8.0,सावित्री,गोरधन,सामान्य महिला
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,1,5,SONEPAT,RAI,gp_ward,,9.0,सतबीर,दयाप्रव,सामान्य
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,1,6,SONEPAT,RAI,gp_head,सैजली,,बलबीर सिंह,रूप सिंह,अनुसूचित जाति
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,1,7,SONEPAT,RAI,gp_ward,सैजली,1.0,नरसिंह,जुमन,पिछड़ी जाति
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,1,8,SONEPAT,RAI,gp_ward,सैजली,2.0,ईश्वर,छोटू राम,अनुसूचित जाति
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,1,9,SONEPAT,RAI,gp_ward,सैजली,3.0,माया,रामपाल,अनुसूचित जाति महिला
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,1,10,SONEPAT,RAI,gp_ward,सैजली,4.0,सरोज,जयभगवान,सामान्य महिला
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,1,11,SONEPAT,RAI,gp_ward,सैजली,5.0,उमेश,रामाप्रव,सामान्य
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,1,12,SONEPAT,RAI,gp_ward,सैजली,6.0,सतबीर,सरूप सिंह,सामान्य
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,1,13,SONEPAT,RAI,gp_ward,सैजली,7.0,जयनारायण,हुकम चन्द,सामान्य
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,1,14,SONEPAT,RAI,gp_ward,सैजली,8.0,संतरा,सुरेन्द्र,सामान्य
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,1,15,SONEPAT,RAI,gp_ward,सैजली,9.0,जगदीश,मांगे राम,सामान्य
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,1,16,SONEPAT,RAI,gp_ward,सैजली,10.0,सावित्री,चरण सिंह,सामान्य महिला
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,5,SONEPAT,RAI,gp_head,आंवली,,चांदतारी,राम दिया,सामान्य महिला
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,6,SONEPAT,RAI,gp_ward,आंवली,1.0,निर्मला,सुरेश,सामान्य महिला
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,7,SONEPAT,RAI,gp_ward,आंवली,2.0,सुन्दर,रघबीर,सामान्य
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,8,SONEPAT,RAI,gp_ward,आंवली,3.0,रामप्यारी,जुग लाल,सामान्य
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,9,SONEPAT,RAI,gp_ward,आंवली,4.0,होशियारी,समे सिंह,सामान्य महिला
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,10,SONEPAT,RAI,gp_ward,आंवली,5.0,महेन्द्र,हरी राम,सामान्य
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,11,SONEPAT,RAI,gp_ward,आंवली,6.0,बलबीर,भाई राम,सामान्य
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,12,SONEPAT,RAI,gp_ward,आंवली,7.0,किताबो,भेद सिंह,सामान्य महिला
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,13,SONEPAT,RAI,gp_ward,आंवली,8.0,सरजु,लहरी,सामान्य
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,14,SONEPAT,RAI,gp_ward,आंवली,9.0,नारायण सिंह,भाई राम,सामान्य
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,15,SONEPAT,RAI,gp_ward,आंवली,10.0,चन्द राम,रती राम,सामान्य
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,16,SONEPAT,RAI,gp_ward,आंवली,11.0,फूल पती,प्रताप सिंह,सामान्य महिला
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,17,SONEPAT,RAI,gp_ward,आंवली,12.0,उमेद,घेया,पिछड़ी जाति
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,18,SONEPAT,RAI,gp_ward,आंवली,13.0,रमेश,नेत राम,अनुसूचित जाति
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,19,SONEPAT,RAI,gp_ward,आंवली,14.0,सन्तोष,फूल कुमार,अनुसूचित जाति महिला
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,20,SONEPAT,RAI,gp_head,बड़ोता,,इन्द्र,मान सिंह,अनुसूचित जाति
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,21,SONEPAT,RAI,gp_ward,बड़ोता,1.0,राम फल,पिरथी,अनुसूचित जाति
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,22,SONEPAT,RAI,gp_ward,बड़ोता,2.0,निर्मला,सुरेश,अनुसूचित जाति महिला
+raw/a9c4df34a4efaa14d15e_dda05b2fe8b8.pdf,15,23,SONEPAT,RAI,gp_ward,बड़ोता,3.0,इन्द्र सिंह,सिघड़ा,अनुसूचित जाति
+raw/ae8eee0ea1f83441f3cc_51ec56551897.pdf,1,1,MAHENDERGARH,ATELI NANGAL,gp_ward,,7.0,मोहरली,राम स्वरूप,सामान्य महिला
+raw/ae8eee0ea1f83441f3cc_51ec56551897.pdf,1,2,MAHENDERGARH,ATELI NANGAL,gp_ward,,8.0,रिक्त पद,,सामान्य महिला
+raw/ae8eee0ea1f83441f3cc_51ec56551897.pdf,1,3,MAHENDERGARH,ATELI NANGAL,gp_head,रामपुरा,,लाल चन्द,भीवा राम,सामान्य
+raw/ae8eee0ea1f83441f3cc_51ec56551897.pdf,1,4,MAHENDERGARH,ATELI NANGAL,gp_ward,रामपुरा,1.0,शकुन्तला,जगदीश,सामान्य महिला
+raw/ae8eee0ea1f83441f3cc_51ec56551897.pdf,1,5,MAHENDERGARH,ATELI NANGAL,gp_ward,रामपुरा,2.0,रामोतार,ठन्डू राम,सामान्य
+raw/ae8eee0ea1f83441f3cc_51ec56551897.pdf,1,6,MAHENDERGARH,ATELI NANGAL,gp_ward,रामपुरा,3.0,कैलाश,देव कर्ण,अनुसूचित जाति
+raw/ae8eee0ea1f83441f3cc_51ec56551897.pdf,1,7,MAHENDERGARH,ATELI NANGAL,gp_ward,रामपुरा,4.0,ताती देवी,हरि सिंह,अनुसूचित जाति महिला
+raw/ae8eee0ea1f83441f3cc_51ec56551897.pdf,1,8,MAHENDERGARH,ATELI NANGAL,gp_ward,रामपुरा,5.0,सुमेर,श्योताज,सामान्य
+raw/ae8eee0ea1f83441f3cc_51ec56551897.pdf,1,9,MAHENDERGARH,ATELI NANGAL,gp_ward,रामपुरा,6.0,रामा नन्द,ताला राम,सामान्य
+raw/ae8eee0ea1f83441f3cc_51ec56551897.pdf,1,10,MAHENDERGARH,ATELI NANGAL,gp_ward,रामपुरा,7.0,सावित्री,दाता राम,पिछड़ी जाति महिला
+raw/ae8eee0ea1f83441f3cc_51ec56551897.pdf,1,11,MAHENDERGARH,ATELI NANGAL,gp_ward,रामपुरा,8.0,प्रेम कुमार,बाबू लाल,सामान्य
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,1,MAHENDERGARH,NARNAUL,gp_head,थाना,,रेशमी देवी,बुध राम,सामान्य महिला
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,2,MAHENDERGARH,NARNAUL,gp_ward,थाना,1.0,राम रती,कृष्ण कुमार,अनुसूचित जाति महिला
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,3,MAHENDERGARH,NARNAUL,gp_ward,थाना,2.0,बाबू राम,खेमा राम,अनुसूचित जाति
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,4,MAHENDERGARH,NARNAUL,gp_ward,थाना,3.0,प्रेम कुमार,मांगे राम,पिछड़ी जाति
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,5,MAHENDERGARH,NARNAUL,gp_ward,थाना,4.0,रोशन लाल,दया राम,सामान्य
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,6,MAHENDERGARH,NARNAUL,gp_ward,थाना,5.0,सुनीता,मनी राम,सामान्य महिला
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,7,MAHENDERGARH,NARNAUL,gp_ward,थाना,6.0,दलीप,छैलू राम,सामान्य
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,8,MAHENDERGARH,NARNAUL,gp_ward,थाना,7.0,राज कुमार,गणपत,सामान्य
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,9,MAHENDERGARH,NARNAUL,gp_head,मेई,,सुशीला,कनही राम,सामान्य महिला
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,10,MAHENDERGARH,NARNAUL,gp_ward,मेई,1.0,रोहताश सिंह,गोबिंद राम,अनुसूचित जाति
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,11,MAHENDERGARH,NARNAUL,gp_ward,मेई,2.0,सुशीला,कृष्ण कुमार,सामान्य महिला
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,12,MAHENDERGARH,NARNAUL,gp_ward,मेई,3.0,सरजीत,नागर मल,सामान्य
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,13,MAHENDERGARH,NARNAUL,gp_ward,मेई,4.0,भानी सहाय,लीला राम,सामान्य
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,14,MAHENDERGARH,NARNAUL,gp_ward,मेई,5.0,कपता,रामेसर,पिछड़ी जाति महिला
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,15,MAHENDERGARH,NARNAUL,gp_ward,मेई,6.0,कृष्ण कुमार,खेम चन्द्र,सामान्य
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,16,MAHENDERGARH,NARNAUL,gp_ward,मेई,7.0,जसवन्त सिंह,जय दयाल,सामान्य
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,17,MAHENDERGARH,NARNAUL,gp_head,खटोटी खुर्द,,बेग राज,किशोरी लाल,सामान्य
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,18,MAHENDERGARH,NARNAUL,gp_ward,खटोटी खुर्द,1.0,कैलाश चन्द,प्रभ दयाल,सामान्य
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,19,MAHENDERGARH,NARNAUL,gp_ward,खटोटी खुर्द,2.0,मनफूल चन्द,मोहरु राम,सामान्य
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,20,MAHENDERGARH,NARNAUL,gp_ward,खटोटी खुर्द,3.0,ऋषि सिंह,मल सिंह,सामान्य
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,21,MAHENDERGARH,NARNAUL,gp_ward,खटोटी खुर्द,4.0,निर्मला देवी,सत्या नारायण,सामान्य महिला
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,22,MAHENDERGARH,NARNAUL,gp_ward,खटोटी खुर्द,5.0,तारा चन्द,गंगा राम,अनुसूचित जाति
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,23,MAHENDERGARH,NARNAUL,gp_ward,खटोटी खुर्द,6.0,लीला देवी,बिरजू सिंह,सामान्य महिला
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,24,MAHENDERGARH,NARNAUL,gp_ward,खटोटी खुर्द,7.0,जिते सिंह,बिहारी सिंह,सामान्य
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,1,25,MAHENDERGARH,NARNAUL,gp_ward,खटोटी खुर्द,8.0,प्रेम देवी,बहादुर सिंह,सामान्य महिला
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,14,18,MAHENDERGARH,NARNAUL,gp_head,नागल दर्गु,,पूर्ण मल,बन्नी लाल,अनुसूचित जाति
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,14,19,MAHENDERGARH,NARNAUL,gp_ward,नागल दर्गु,1.0,दाता राम,जयपत,सामान्य
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,14,20,MAHENDERGARH,NARNAUL,gp_ward,नागल दर्गु,2.0,जगदीश प्रसाद,सुलतान सिंह,सामान्य S.C
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,14,21,MAHENDERGARH,NARNAUL,gp_ward,नागल दर्गु,3.0,राम शरण,सरदारा,सामान्य
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,14,22,MAHENDERGARH,NARNAUL,gp_ward,नागल दर्गु,4.0,तरविनी देवी,रामेश चन्द्र,सामान्य महिला
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,14,23,MAHENDERGARH,NARNAUL,gp_ward,नागल दर्गु,5.0,शारदा देवी,हजारी राम,अनुसूचित जाति महिला
+raw/b2d7848da2c36e978771_41d1a38639a2.pdf,14,24,MAHENDERGARH,NARNAUL,gp_ward,नागल दर्गु,6.0,जगदीश प्रसाद,श्यो राम,अनुसूचित जाति
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,1,ROHTAK,KALANAUR,gp_head,कफराना,,नन्द किशोर शर्मा,राम भगत,सामान्य
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,2,ROHTAK,KALANAUR,gp_ward,कफराना,1.0,ओम प्रकाश,सुरज भान,सामान्य
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,3,ROHTAK,KALANAUR,gp_ward,कफराना,2.0,सुरेश,प्रभु राम,सामान्य
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,4,ROHTAK,KALANAUR,gp_ward,कफराना,3.0,रिशी प्रकाश,रवी दत्त,सामान्य
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,5,ROHTAK,KALANAUR,gp_ward,कफराना,4.0,जानकी देवी,मातु राम,सामान्य महिला
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,6,ROHTAK,KALANAUR,gp_ward,कफराना,5.0,शाम सुन्दर,जय भगवान,सामान्य
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,7,ROHTAK,KALANAUR,gp_ward,कफराना,6.0,राम अवतार,राम रतन,सामान्य
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,8,ROHTAK,KALANAUR,gp_ward,कफराना,7.0,राम चन्द्र,शेर सिंह,अनुसूचित जाति
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,9,ROHTAK,KALANAUR,gp_ward,कफराना,8.0,निर्मला देवी,राम धारी,सामान्य महिला
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,10,ROHTAK,KALANAUR,gp_ward,कफराना,9.0,जगवती,लखी राम,सामान्य महिला
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,11,ROHTAK,KALANAUR,gp_ward,कफराना,10.0,रमेश,राय सिंह,पिछड़ी जाति
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,12,ROHTAK,KALANAUR,gp_head,गणबाना,,शीना,राम निवास,सामान्य महिला
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,13,ROHTAK,KALANAUR,gp_ward,गणबाना,1.0,शीला,रामबीर,अनुसूचित जाति महिला
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,14,ROHTAK,KALANAUR,gp_ward,गणबाना,2.0,उजाला,सुरत सिंह,सामान्य
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,15,ROHTAK,KALANAUR,gp_ward,गणबाना,3.0,बलबीर सिंह,जय लाल,सामान्य
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,16,ROHTAK,KALANAUR,gp_ward,गणबाना,4.0,सुरज कोर,धन्ना मल,सामान्य महिला
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,17,ROHTAK,KALANAUR,gp_ward,गणबाना,5.0,कपूर,बीरबल,सामान्य
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,18,ROHTAK,KALANAUR,gp_ward,गणबाना,6.0,हवा सिंह,रिजकू,सामान्य
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,19,ROHTAK,KALANAUR,gp_ward,गणबाना,7.0,नरेश,सूरज भान,सामान्य
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,20,ROHTAK,KALANAUR,gp_ward,गणबाना,8.0,सत्यवान,मीर सिंह,सामान्य
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,21,ROHTAK,KALANAUR,gp_ward,गणबाना,9.0,यशवन्ती,राम कुमार,सामान्य महिला
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,22,ROHTAK,KALANAUR,gp_ward,गणबाना,10.0,प्रकाश,लखी राम,सामान्य
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,23,ROHTAK,KALANAUR,gp_ward,गणबाना,11.0,राजेन्द्र,मांगे राम,अनुसूचित जाति
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,24,ROHTAK,KALANAUR,gp_ward,गणबाना,12.0,जगदीश,इन्द्र सिंह,पिछड़ी जाति
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,25,ROHTAK,KALANAUR,gp_ward,गणबाना,13.0,सोमवीर,बलदेव सिंह,सामान्य
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,26,ROHTAK,KALANAUR,gp_ward,गणबाना,14.0,शकुन्तला,ओम प्रकाश,सामान्य महिला
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,27,ROHTAK,KALANAUR,gp_ward,गणबाना,15.0,जगबीर,भीम सिंह,सामान्य
+raw/c53097edea811b30446b_d52c736e3870.pdf,1,28,ROHTAK,KALANAUR,gp_ward,गणबाना,16.0,प्यारी,राम किशन,सामान्य महिला
+raw/c88439e0af6d8bec43e6_a8f5351b0766.pdf,1,1,JIND,SAFIDON,gp_ward,,6.0,विनोद,जयपाल,अनुसूचित जाति
+raw/c88439e0af6d8bec43e6_a8f5351b0766.pdf,1,2,JIND,SAFIDON,gp_ward,,7.0,भजन कौर,सुखा सिंह,सामान्य महिला
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,1,FATEHABAD,TOHANA,gp_ward,,3.0,प्रीतम सिंह,छज्जु सिंह,सामान्य
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,2,FATEHABAD,TOHANA,gp_ward,,4.0,तेजा सिंह,मघर सिंह,पिछड़ी जाति
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,3,FATEHABAD,TOHANA,gp_ward,,5.0,नाहर सिंह,माम चन्द,सामान्य
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,4,FATEHABAD,TOHANA,gp_ward,,6.0,मेजर सिंह,करतार सिंह,सामान्य
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,5,FATEHABAD,TOHANA,gp_ward,,7.0,नत्था सिंह,अजमेर सिंह,अनुसूचित जाति
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,6,FATEHABAD,TOHANA,gp_head,घन्डछयुर्व,,पेश.राज ..,वीर सिंह,सामान्य
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,7,FATEHABAD,TOHANA,gp_ward,घन्डछयुर्व,1.0,राम लाल,हांसु राम,अनुसूचित जाति
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,8,FATEHABAD,TOHANA,gp_ward,घन्डछयुर्व,2.0,नारायण दास,मूल चन्द,सामान्य
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,9,FATEHABAD,TOHANA,gp_ward,घन्डछयुर्व,3.0,गुरजीत सिंह,भाग चन्द,अनुसूचित जाति
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,10,FATEHABAD,TOHANA,gp_ward,घन्डछयुर्व,4.0,पूर्ण,भजना,पिछड़ी जाति
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,11,FATEHABAD,TOHANA,gp_ward,घन्डछयुर्व,5.0,जीत कौर,बलजीत सिंह,सामान्य महिला
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,12,FATEHABAD,TOHANA,gp_ward,घन्डछयुर्व,6.0,फूलकली,भीरा राम,अनुसूचित जाति महिला
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,13,FATEHABAD,TOHANA,gp_head,कुदनी,,हरनाम दास,खजान दास,अनुसूचित जाति
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,14,FATEHABAD,TOHANA,gp_ward,कुदनी,1.0,साधु राम,बोता राम,अनुसूचित जाति
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,15,FATEHABAD,TOHANA,gp_ward,कुदनी,2.0,लखबीर सिंह,अमर सिंह,सामान्य
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,16,FATEHABAD,TOHANA,gp_ward,कुदनी,3.0,गुरमेज सिंह,चरण सिंह,पिछड़ी जाति
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,17,FATEHABAD,TOHANA,gp_ward,कुदनी,4.0,लाजवन्ती,भगवान दास,अनुसूचित जाति महिला
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,18,FATEHABAD,TOHANA,gp_ward,कुदनी,5.0,चन्नु राम,उत्तर सिंह,अनुसूचित जाति
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,19,FATEHABAD,TOHANA,gp_ward,कुदनी,6.0,सुरजीत कौर,राम दयाल,सामान्य महिला
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,20,FATEHABAD,TOHANA,gp_ward,कुदनी,7.0,हाकम सिंह,रूड़ सिंह,सामान्य
+raw/cc66cf6b02a0efedcf91_91dae213a71e.pdf,1,21,FATEHABAD,TOHANA,gp_ward,कुदनी,8.0,ऋमजीत कौर,जोगिन्द्र सिंह,सामान्य महिला
+raw/ce5b2392f977a53b0f56_3f15d7e5ed29.pdf,1,1,PANCHKULA,RAIPUR RANI,gp_head,टाबर,,गुरदेवी,लक्ष्मण,सामान्य महिला
+raw/ce5b2392f977a53b0f56_3f15d7e5ed29.pdf,1,2,PANCHKULA,RAIPUR RANI,gp_ward,टाबर,1.0,सुनीता देवी,राम पाल,सामान्य महिला
+raw/ce5b2392f977a53b0f56_3f15d7e5ed29.pdf,1,3,PANCHKULA,RAIPUR RANI,gp_ward,टाबर,2.0,रतन सिंह,चेते राम,सामान्य
+raw/ce5b2392f977a53b0f56_3f15d7e5ed29.pdf,1,4,PANCHKULA,RAIPUR RANI,gp_ward,टाबर,3.0,शीश पाल,भिखा राम,अनुसूचित जाति
+raw/ce5b2392f977a53b0f56_3f15d7e5ed29.pdf,1,5,PANCHKULA,RAIPUR RANI,gp_ward,टाबर,4.0,शाम कौर,जगदीश,सामान्य महिला
+raw/ce5b2392f977a53b0f56_3f15d7e5ed29.pdf,1,6,PANCHKULA,RAIPUR RANI,gp_ward,टाबर,5.0,यकील खां,अब्दुल गनी,सामान्य
+raw/ce5b2392f977a53b0f56_3f15d7e5ed29.pdf,1,7,PANCHKULA,RAIPUR RANI,gp_ward,टाबर,6.0,सन्तोष कुमार,बल कृष्ण,पिछड़ी जाति
+raw/ce5b2392f977a53b0f56_3f15d7e5ed29.pdf,1,8,PANCHKULA,RAIPUR RANI,gp_head,टिब्बी माजरा,,योग राज,रत्न सिंह,सामान्य
+raw/ce5b2392f977a53b0f56_3f15d7e5ed29.pdf,1,9,PANCHKULA,RAIPUR RANI,gp_ward,टिब्बी माजरा,1.0,कृष्ण लाल,नराता,सामान्य
+raw/ce5b2392f977a53b0f56_3f15d7e5ed29.pdf,1,10,PANCHKULA,RAIPUR RANI,gp_ward,टिब्बी माजरा,2.0,सुदेश,नायब सिंह,सामान्य महिला
+raw/ce5b2392f977a53b0f56_3f15d7e5ed29.pdf,1,11,PANCHKULA,RAIPUR RANI,gp_ward,टिब्बी माजरा,3.0,मोहन सिंह,फेहर सिंह,सामान्य
+raw/ce5b2392f977a53b0f56_3f15d7e5ed29.pdf,1,12,PANCHKULA,RAIPUR RANI,gp_ward,टिब्बी माजरा,4.0,जोगिन्द्रो,मोहन लाल,सामान्य महिला
+raw/ce5b2392f977a53b0f56_3f15d7e5ed29.pdf,1,13,PANCHKULA,RAIPUR RANI,gp_ward,टिब्बी माजरा,5.0,रोशन लाल,साधु,सामान्य
+raw/ce5b2392f977a53b0f56_3f15d7e5ed29.pdf,1,14,PANCHKULA,RAIPUR RANI,gp_ward,टिब्बी माजरा,6.0,डोगर दत्त,सोम नाथ,पिछड़ी जाति
+raw/ce5b2392f977a53b0f56_3f15d7e5ed29.pdf,1,15,PANCHKULA,RAIPUR RANI,gp_ward,टिब्बी माजरा,7.0,महेन्द्र,सन्त राम,अनुसूचित जाति
+raw/d6a88ba29adae10078b5_ea853e03a636.pdf,11,24,GURGAON,SOHNA,gp_head,अकबर पुर,,रहीसन,जान मो.,सामान्य महिला
+raw/d6a88ba29adae10078b5_ea853e03a636.pdf,11,25,GURGAON,SOHNA,gp_ward,अकबर पुर,1.0,मुबीना,हारुन खां,सामान्य महिला
+raw/d6a88ba29adae10078b5_ea853e03a636.pdf,11,26,GURGAON,SOHNA,gp_ward,अकबर पुर,2.0,बस्सी,किम्मत,सामान्य
+raw/d6a88ba29adae10078b5_ea853e03a636.pdf,11,27,GURGAON,SOHNA,gp_ward,अकबर पुर,3.0,जान मो.,दरोगा,सामान्य
+raw/d993eec7535bbe598f2d_7f24fe715623.pdf,12,22,BHIWANI,DADRI-I,gp_head,आलमपुर,,मान सिंह,रिछपाल,सामान्य
+raw/d993eec7535bbe598f2d_7f24fe715623.pdf,12,23,BHIWANI,DADRI-I,gp_ward,आलमपुर,1.0,शान्ति देवी,राम किशन,अनुसूचित जाति महिला
+raw/d993eec7535bbe598f2d_7f24fe715623.pdf,12,24,BHIWANI,DADRI-I,gp_ward,आलमपुर,2.0,अमर सिंह,डेडा राम,अनुसूचित जाति
+raw/d993eec7535bbe598f2d_7f24fe715623.pdf,12,25,BHIWANI,DADRI-I,gp_ward,आलमपुर,3.0,जोगिन्द्र सिंह,धनपती राम,पिछड़ी जाति
+raw/d993eec7535bbe598f2d_7f24fe715623.pdf,12,26,BHIWANI,DADRI-I,gp_ward,आलमपुर,4.0,सुखदेई,सुरेन्द्र,सामान्य महिला
+raw/d9f95a4c10bc9292c618_02c0d60982bc.pdf,1,1,BHIWANI,LOHARU,gp_head,गगना खुर्द,,रगा सिंह,रामजी लाल,सामान्य
+raw/d9f95a4c10bc9292c618_02c0d60982bc.pdf,1,2,BHIWANI,LOHARU,gp_ward,गगना खुर्द,1.0,जय चन्द,हंसराम,सामान्य
+raw/d9f95a4c10bc9292c618_02c0d60982bc.pdf,1,3,BHIWANI,LOHARU,gp_ward,गगना खुर्द,2.0,भानमती,माई राम,सामान्य महिला
+raw/d9f95a4c10bc9292c618_02c0d60982bc.pdf,1,4,BHIWANI,LOHARU,gp_ward,गगना खुर्द,3.0,सत्यवान,,सामान्य
+raw/d9f95a4c10bc9292c618_02c0d60982bc.pdf,1,5,BHIWANI,LOHARU,gp_ward,गगना खुर्द,4.0,जिते सिंह,मापन,पिछड़ी जाति
+raw/d9f95a4c10bc9292c618_02c0d60982bc.pdf,1,6,BHIWANI,LOHARU,gp_ward,गगना खुर्द,5.0,रतन सिंह,कुरड़ा राम,अनुसूचित जाति
+raw/d9f95a4c10bc9292c618_02c0d60982bc.pdf,1,7,BHIWANI,LOHARU,gp_ward,गगना खुर्द,6.0,राम बाई,करण सिंह,सामान्य महिला
+raw/d9f95a4c10bc9292c618_02c0d60982bc.pdf,1,8,BHIWANI,LOHARU,gp_ward,गगना खुर्द,7.0,रमेश,मनी राम,सामान्य
+raw/d9f95a4c10bc9292c618_02c0d60982bc.pdf,1,9,BHIWANI,LOHARU,gp_ward,गगना खुर्द,8.0,सुनीता,राम निवास,सामान्य महिला
+raw/da8a996aac8bff1cc419_9169a273748f.pdf,1,1,AMBALA,BARARA,gp_ward,,10.0,राजबीर सिंह,सूरत सिंह,सामान्य
+raw/da8a996aac8bff1cc419_9169a273748f.pdf,1,2,AMBALA,BARARA,gp_ward,,11.0,कौशल्या देवी,सुभाग,सामान्य महिला
+raw/da8a996aac8bff1cc419_9169a273748f.pdf,1,3,AMBALA,BARARA,gp_ward,,12.0,विक्रम सिंह,जय प्रकाश,सामान्य
+raw/da8a996aac8bff1cc419_9169a273748f.pdf,1,4,AMBALA,BARARA,gp_ward,,13.0,राजपाल,ज्ञान सिंह,सामान्य
+raw/da8a996aac8bff1cc419_9169a273748f.pdf,1,5,AMBALA,BARARA,gp_ward,,14.0,जसपाल,महावीर,अनुसूचित जाति
+raw/da8a996aac8bff1cc419_9169a273748f.pdf,1,6,AMBALA,BARARA,gp_ward,,15.0,करनैल कौर,सरदार सिंह,अनुसूचित जाति महिला
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,1,JIND,JULANA,gp_ward,,12.0,सत्य नारायण,बई राम,सामान्य
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,2,JIND,JULANA,gp_ward,,13.0,विनोद,बनी सिंह,सामान्य
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,3,JIND,JULANA,gp_ward,,14.0,ईश्वर,टेक राम,सामान्य
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,4,JIND,JULANA,gp_ward,,15.0,बिमला,महावीर,सामान्य महिला
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,5,JIND,JULANA,gp_head,किनाना,,तसवीरो,शमशेर,सामान्य महिला
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,6,JIND,JULANA,gp_ward,किनाना,1.0,ताले राम,सन्ता राम,अनुसूचित जाति
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,7,JIND,JULANA,gp_ward,किनाना,2.0,धुपती,रणजीत,सामान्य महिला
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,8,JIND,JULANA,gp_ward,किनाना,3.0,भुपेन्द्र,हरि सिंह,पिछड़ी जाति
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,9,JIND,JULANA,gp_ward,किनाना,4.0,धीरमती,बनारसी,सामान्य महिला
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,10,JIND,JULANA,gp_ward,किनाना,5.0,हरदीप,राजेन्द्र सिंह,सामान्य
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,11,JIND,JULANA,gp_ward,किनाना,6.0,राम कुमार,राम सरूप,अनुसूचित जाति
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,12,JIND,JULANA,gp_ward,किनाना,7.0,चन्द्रकला,चन्दगी राम,अनुसूचित जाति महिला
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,13,JIND,JULANA,gp_ward,किनाना,8.0,राजेन्द्र,देवी राम,सामान्य
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,14,JIND,JULANA,gp_ward,किनाना,9.0,ईश्वर,मंगत सिंह,सामान्य
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,15,JIND,JULANA,gp_ward,किनाना,10.0,तारा चन्द,रघु नाथ,सामान्य
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,16,JIND,JULANA,gp_ward,किनाना,11.0,रिछपाल,राम नारायण,सामान्य
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,17,JIND,JULANA,gp_ward,किनाना,12.0,चन्द्रो देवी,दया नन्द,सामान्य महिला
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,18,JIND,JULANA,gp_head,अनुपगढ़,,राज पति,सतवीर,सामान्य महिला
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,19,JIND,JULANA,gp_ward,अनुपगढ़,1.0,राम भज,सूरत सिंह,सामान्य
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,20,JIND,JULANA,gp_ward,अनुपगढ़,2.0,ब्रह्म दत्त,जगदीश,सामान्य
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,21,JIND,JULANA,gp_ward,अनुपगढ़,3.0,महमा,मेहर सिंह,सामान्य महिला
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,22,JIND,JULANA,gp_ward,अनुपगढ़,4.0,फूल पति,उजे,सामान्य महिला
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,23,JIND,JULANA,gp_ward,अनुपगढ़,5.0,भगत,मुन्शी राम,सामान्य
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,24,JIND,JULANA,gp_ward,अनुपगढ़,6.0,नफे सिंह,मोजी राम,सामान्य
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,25,JIND,JULANA,gp_ward,अनुपगढ़,7.0,अंगुरी,पृथ्वी सिंह,पिछड़ी जाति
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,1,26,JIND,JULANA,gp_ward,अनुपगढ़,8.0,जगमाल,प्रभु,अनुसूचित जाति
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,8,43,JIND,JULANA,gp_ward,KAMACH KHERA,7.0,PANMESHWRI,MAHENDER SINGH,General महिला
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,11,23,JIND,JULANA,gp_head,जीवनपुर,,सूरज भान,सीता राम,सामान्य
+raw/e1c6c16e8c30046d5541_f8140c080eec.pdf,11,24,JIND,JULANA,gp_ward,जीवनपुर,1.0,चन्द्र भान,अमर सिंह,अनुसूचित जाति
+raw/eddfada427493a574c43_498eb1038d80.pdf,1,1,HISAR,ADAMPUR,gp_ward,,6.0,भूप सिंह,प्यात्ती राम,सामान्य
+raw/eddfada427493a574c43_498eb1038d80.pdf,1,2,HISAR,ADAMPUR,gp_ward,,7.0,मगन लाल,दोला राम,सामान्य
+raw/eddfada427493a574c43_498eb1038d80.pdf,1,3,HISAR,ADAMPUR,gp_ward,,8.0,बिदामो,अमर चन्द,सामान्य महिला
+raw/eddfada427493a574c43_498eb1038d80.pdf,1,4,HISAR,ADAMPUR,gp_ward,,9.0,मदन लाल,किशन लाल,सामान्य
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,1,KAITHAL,GUHLA,gp_ward,,3.0,रत्न लाल,चंपता,अनुसूचित जाति
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,2,KAITHAL,GUHLA,gp_ward,,4.0,जंग सिंह,गुलाब सिंह,सामान्य
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,3,KAITHAL,GUHLA,gp_ward,,5.0,बलकार,सोनू राम,अनुसूचित जाति
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,4,KAITHAL,GUHLA,gp_ward,,6.0,लाडो,घनश्याम,अनुसूचित जाति महिला
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,5,KAITHAL,GUHLA,gp_ward,,7.0,हरवीर सिंह,दयाल सिंह,सामान्य
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,6,KAITHAL,GUHLA,gp_head,थेह बनहेडा,,जिबर कौर,हंसा राम,सामान्य महिला
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,7,KAITHAL,GUHLA,gp_ward,थेह बनहेडा,1.0,लखविन्द्र कौर,अमरीक सिंह,सामान्य महिला
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,8,KAITHAL,GUHLA,gp_ward,थेह बनहेडा,2.0,भराना,,अनुसूचित जाति
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,9,KAITHAL,GUHLA,gp_ward,थेह बनहेडा,3.0,पालो,गुरमेल,अनुसूचित जाति महिला
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,10,KAITHAL,GUHLA,gp_ward,थेह बनहेडा,4.0,,,पिछड़ी जाति
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,11,KAITHAL,GUHLA,gp_ward,थेह बनहेडा,5.0,,,सामान्य
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,12,KAITHAL,GUHLA,gp_ward,थेह बनहेडा,6.0,पिल्लू राम,पाशु राम,अनुसूचित जाति
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,13,KAITHAL,GUHLA,gp_ward,थेह बनहेडा,7.0,मेला,धारा राम,अनुसूचित जाति
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,14,KAITHAL,GUHLA,gp_ward,थेह बनहेडा,8.0,मगलो,राम सिंह,अनुसूचित जाति महिला
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,15,KAITHAL,GUHLA,gp_head,उरलाना,,चरण सिंह,नायब सिंह,सामान्य
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,16,KAITHAL,GUHLA,gp_ward,उरलाना,1.0,चारगन्द जोर,अवतार सिंह,सामान्य महिला
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,17,KAITHAL,GUHLA,gp_ward,उरलाना,2.0,गिन्नी देवी,जोगिन्द्र राम,अनुसूचित जाति महिला
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,18,KAITHAL,GUHLA,gp_ward,उरलाना,3.0,हरवीर सिंह,जरनेल सिंह,सामान्य
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,19,KAITHAL,GUHLA,gp_ward,उरलाना,4.0,सिंगारा राम,सारे राम,अनुसूचित जाति
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,20,KAITHAL,GUHLA,gp_ward,उरलाना,5.0,प्यारा राम,पूर्ण चन्द,अनुसूचित जाति
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,21,KAITHAL,GUHLA,gp_ward,उरलाना,6.0,साधु राम,रोल्तू राम,अनुसूचित जाति
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,22,KAITHAL,GUHLA,gp_ward,उरलाना,7.0,फूला राम,तोता राम,पिछड़ी जाति
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,1,23,KAITHAL,GUHLA,gp_ward,उरलाना,8.0,प्रीतम पाल कौर,भूपिन्द्र सिंह,सामान्य महिला
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,18,10,KAITHAL,GUHLA,gp_head,बर्ड नगला,,फूली,राम सरूप,अनुसूचित जाति महिला
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,18,11,KAITHAL,GUHLA,gp_ward,बर्ड नगला,1.0,जमनेल,भेरा,अनुसूचित जाति महिला
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,18,12,KAITHAL,GUHLA,gp_ward,बर्ड नगला,2.0,अवतार कौर,मिशा सिंह,सामान्य महिला
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,18,13,KAITHAL,GUHLA,gp_ward,बर्ड नगला,3.0,करमैल सिंह,मान सिंह,पिछड़ी जाति
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,18,14,KAITHAL,GUHLA,gp_ward,बर्ड नगला,4.0,करतारा,छैलू राम,अनुसूचित जाति
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,18,15,KAITHAL,GUHLA,gp_ward,बर्ड नगला,5.0,राम चन्द्र,गुरनाम,सामान्य
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,18,16,KAITHAL,GUHLA,gp_ward,बर्ड नगला,6.0,अमर,नेतू,सामान्य
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,18,17,KAITHAL,GUHLA,gp_ward,बर्ड नगला,7.0,जसवीर सिंह,सुरेन्द्र सिंह,सामान्य
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,18,18,KAITHAL,GUHLA,gp_head,पुण्डरौड़ी,,चंद पाल,राम सरूप,सामान्य
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,18,19,KAITHAL,GUHLA,gp_ward,पुण्डरौड़ी,1.0,फूल पति,गजे सिंह,अनुसूचित जाति महिला
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,18,20,KAITHAL,GUHLA,gp_ward,पुण्डरौड़ी,2.0,राज कुमार,शिंगारा,अनुसूचित जाति
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,18,21,KAITHAL,GUHLA,gp_ward,पुण्डरौड़ी,3.0,बाला,बसीरा,सामान्य
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,18,22,KAITHAL,GUHLA,gp_ward,पुण्डरौड़ी,4.0,राम सरूप,मोती राम,सामान्य
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,18,23,KAITHAL,GUHLA,gp_ward,पुण्डरौड़ी,5.0,धनमेशरी,धूपा,सामान्य महिला
+raw/f2bffdb49572982ac059_5ed19d0db79e.pdf,18,24,KAITHAL,GUHLA,gp_ward,पुण्डरौड़ी,6.0,शान्ती,राम किशन,सामान्य महिला
+raw/f377adad769226351418_f335ace53ff2.pdf,1,1,REWARI,KHOL,gp_head,पुनसिका,,हीरा सिंह,सोहन लाल,सामान्य
+raw/f377adad769226351418_f335ace53ff2.pdf,1,2,REWARI,KHOL,gp_ward,पुनसिका,1.0,कौशल्या,राजेन्द्र,सामान्य महिला
+raw/f377adad769226351418_f335ace53ff2.pdf,1,3,REWARI,KHOL,gp_ward,पुनसिका,2.0,अमर नाथ,रघु नाथ,सामान्य
+raw/f377adad769226351418_f335ace53ff2.pdf,1,4,REWARI,KHOL,gp_ward,पुनसिका,3.0,अरविन्द,रणधीर सिंह,सामान्य
+raw/f377adad769226351418_f335ace53ff2.pdf,1,5,REWARI,KHOL,gp_ward,पुनसिका,4.0,राम सिंह,बहादुर,सामान्य
+raw/f377adad769226351418_f335ace53ff2.pdf,1,6,REWARI,KHOL,gp_ward,पुनसिका,5.0,सुशीला,मही पाल,सामान्य महिला
+raw/f377adad769226351418_f335ace53ff2.pdf,1,7,REWARI,KHOL,gp_ward,पुनसिका,6.0,निहाल सिंह,भगवाना,अनुसूचित जाति
+raw/f377adad769226351418_f335ace53ff2.pdf,1,8,REWARI,KHOL,gp_ward,पुनसिका,7.0,कृष्ण कुमार,आंगना राम,पिछड़ी जाति
+raw/f5a155fe6e0780464abc_56f7afaddbf3.pdf,1,1,REWARI,JATUSANA,gp_ward,,12.0,प्रभाती लाल,जगमाल सिंह,सामान्य
+raw/f5a155fe6e0780464abc_56f7afaddbf3.pdf,1,2,REWARI,JATUSANA,gp_ward,,13.0,राम कुमार,राम जी लाल,सामान्य
+raw/f5a155fe6e0780464abc_56f7afaddbf3.pdf,1,3,REWARI,JATUSANA,gp_ward,,14.0,राज बाला,सुभाष चन्द,सामान्य महिला
+raw/f5a155fe6e0780464abc_56f7afaddbf3.pdf,1,4,REWARI,JATUSANA,gp_ward,,15.0,राम निवास,तुलसी राम,सामान्य
+raw/f5a155fe6e0780464abc_56f7afaddbf3.pdf,1,5,REWARI,JATUSANA,gp_ward,,16.0,प्रकाश सिंह,जगदीश सिंह,पिछड़ी जाति
+raw/f5a155fe6e0780464abc_56f7afaddbf3.pdf,1,6,REWARI,JATUSANA,gp_ward,,17.0,खपाती राम,कुठा राम,सामान्य

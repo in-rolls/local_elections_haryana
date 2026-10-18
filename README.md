@@ -12,10 +12,12 @@ Each row is a seat record recovered from a notification. Coverage is incomplete,
 
 | File | Rows | Each row represents |
 | --- | ---: | --- |
+| [fin/gp_reservation_2000.parquet](data/fin/gp_reservation_2000.parquet) | 5,932 | GP head seat record |
 | [fin/gp_reservation_2005.parquet](data/fin/gp_reservation_2005.parquet) | 6,198 | GP head seat record |
 | [fin/gp_reservation_2010.parquet](data/fin/gp_reservation_2010.parquet) | 5,924 | GP head seat record |
 | [fin/gp_reservation_2016.parquet](data/fin/gp_reservation_2016.parquet) | 6,090 | GP head seat record |
 | [fin/gp_reservation_2022.parquet](data/fin/gp_reservation_2022.parquet) | 6,123 | GP head seat record |
+| [fin/ward_reservation_2000.parquet](data/fin/ward_reservation_2000.parquet) | 53,701 | GP ward seat record |
 | [fin/ward_reservation_2005.parquet](data/fin/ward_reservation_2005.parquet) | 60,425 | GP ward seat record |
 | [fin/ward_reservation_2010.parquet](data/fin/ward_reservation_2010.parquet) | 57,856 | GP ward seat record |
 | [fin/ward_reservation_2016.parquet](data/fin/ward_reservation_2016.parquet) | 61,879 | GP ward seat record |
@@ -103,9 +105,11 @@ These sit beside the source exports and never change them.
 
 **2010 categories.** The 2010 notifications were recovered from Wayback captures of the SEC site (see `data/2010/manifest.csv`). In seven blocks they print far fewer women's seats than the statutory third: Palwal/Palwal, Sirsa/Nathusari Chopta, Sirsa/Baruguda, Karnal/Assandh, Rewari/Bawal, Jhajjar/Matanhail and Yamuna Nagar/Mustafabad. The Hindi printings of the same notifications agree with the English. The SEC's own reservation table and the winners' names disagree with both. [`data/2010/reference/category_defects.csv`](data/2010/reference/category_defects.csv) records each block, its evidence and the decision `reservation_unreliable`. The printed values are published unchanged.
 
+**2000 results.** The March 2000 results come from the gazette scans the SEC republished, transcribed by Muse Spark and rebuilt by [`parse_2000.py`](src/local_elections_haryana/parse/parse_2000.py), which removes repeated scans, sets aside rows spilled from neighbouring notifications, recovers printed GP serials with Tesseract and records each block's completeness against the SEC's own GP counts. 83 of 113 blocks are complete; [`data/2000/README.md`](data/2000/README.md) explains the fixes, the partial blocks and the accuracy checks.
+
 **2005 results.** The 2005 sarpanch and panch results are the SEC's 119 block result lists, recovered from Wayback captures made in 2007-2009 (see `data/2005/manifest.csv`). The lists carry a text layer and are parsed without OCR. They print no serial, so `sr_no` is a GP's order within its block file. A leading `*` on many winners is unexplained in the files; it is removed from `winner` and not read as unopposed. Four blocks print too few women's sarpanch seats and Naraingarh prints BC on 39% of its sarpanch rows; [`data/2005/reference/category_defects.csv`](data/2005/reference/category_defects.csv) records the evidence and decisions. No official 2005 total has been found, so coverage is reported rather than tested.
 
-The 2005 files cover 119 blocks in 20 districts; 2010 covers 118 blocks in 21 districts; 2016 covers 126 blocks in 21 districts; 2022 covers 143 blocks in 22 districts. Administrative boundaries and names changed between elections, including the creation of Palwal and Charkhi Dadri and the Mewat/Nuh name change. Reviewed district and block crosswalks between consecutive elections are in [`data/crosswalks/`](data/crosswalks/README.md); there is no LGD or census identifier. Exact names can differ across publications, and fuzzy matching requires review.
+The 2000 files cover 113 blocks in 19 districts; 2005 covers 119 blocks in 20 districts; 2010 covers 118 blocks in 21 districts; 2016 covers 126 blocks in 21 districts; 2022 covers 143 blocks in 22 districts. Administrative boundaries and names changed between elections, including the creation of Mewat, Palwal and Charkhi Dadri and the Mewat/Nuh name change. Reviewed district and block crosswalks between consecutive elections are in [`data/crosswalks/`](data/crosswalks/README.md); there is no LGD or census identifier. Exact names can differ across publications, and fuzzy matching requires review.
 
 The validator retains the original SEC reference totals and their different denominators. Its 2016 totals count people elected, excluding vacant seats: the data contain 6,081 non-vacant GP records and 59,980 non-vacant ward records. Its 2022 totals count seats: 6,123 of 6,220 GP seats and 60,981 of 61,993 ward seats are represented. These coverage checks do not establish that every recovered record is correct.
 
@@ -122,12 +126,13 @@ Current validation findings include:
 
 Do not deduplicate on district, block, and GP name without examining the notification. Missing ward numbers remain missing. A successful `make validate` means its required checks passed; warnings remain visible and are not recoded into successful readings.
 
-The published files cover 2005, 2010, 2016 and 2022, and exclude 2000 and later bye-elections. The 2000 gazette work, built with Muse Spark Contributor, is released separately; see [Historical 2000 gazette pipeline](#historical-2000-gazette-pipeline).
+The published files cover 2000, 2005, 2010, 2016 and 2022, and exclude later bye-elections. The 2000 samiti and zila parishad gazette work is released separately; see [Historical 2000 gazette pipeline](#historical-2000-gazette-pipeline).
 
 ## How collected
 
 | Election | Source | Extraction |
 |---|---|---|
+| 2000 | SEC gazette scans (April 2000) republished in 2022, 113 PDFs | Muse Spark transcription, Tesseract serials and page numbers ([`parse_2000.py`](src/local_elections_haryana/parse/parse_2000.py)) |
 | 2005 | SEC block result lists (`PCRESULTPDF`), 119 PDFs from Wayback captures | Offline text-layer extraction ([`parse_2005.py`](src/local_elections_haryana/parse/parse_2005.py)) with source-cell reservation reviews |
 | 2016 | [SEC fifth-general-election notifications](https://secharyana.gov.in/notifications-of-elected-candidates-of-panchayati-raj-institution-in-5th-general-elections-2016-in-the-state-of-haryana/), 21 district PDFs | Offline PDF table extraction; one printing retained per notification |
 | 2022 | [SEC notifications](https://secharyana.gov.in/orders-notifications-related-to-panchayat-elections-2021/) and [statewide index](https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2022/12/2022121338.pdf), 187 linked PDFs | Offline PDF table extraction with retained Surya OCR for 26 pages whose table grids were fragmented |
