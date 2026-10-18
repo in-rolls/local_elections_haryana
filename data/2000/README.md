@@ -59,9 +59,19 @@ present (Nagina: 93 SC panch seats in the table, 23 in the gazette and 22 in
   match the transcription row for row.
 - **Statutory share.** Women hold 33.3% of sarpanch seats statewide; two blocks
   are more than 6 points off a third.
-- **Not resolved.** 38 sarpanch categories and 36 GP names were not read.
+## Open items, deferred
 
-A frozen, hand-labelled sample of sarpanch rows is the remaining check.
+- **Blank sarpanch categories (38).** 24 of them carry a raw label that is a
+  misprint of General ("Gonoral", "Gonoral Woman", "Gen. Woman", "General
+  Womai"), so leaving them blank under-counts open seats slightly. They are not
+  missing at random. The other 14 have no label at all, spread over 24 blocks.
+- **Blank GP names (37).** They are clustered (Assandh 8, Kharkhoda 5, Palwal 4)
+  and only affect linkage, not the reservation tables.
+- **Missing blocks.** Gharaunda stops at GP 24 of 51, Radaur misses six GPs, and
+  Panchkula/Barwala is not held. These are gaps of whole blocks or pages, not
+  random GPs. Another source for those pages would close them.
+- **Hand-labelled sample.** A frozen sample of sarpanch rows, read from the
+  page images, is the remaining accuracy check before 2000 is pooled.
 
 ```sh
 uv run python -m local_elections_haryana.parse.serials_2000  # needs the archive
