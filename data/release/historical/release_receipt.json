@@ -1,8 +1,8 @@
 {
   "code_provenance": [
     {
-      "path": "src/local_elections_haryana/build_release.py",
-      "sha256": "569aca31c189a56f8b91709b13159621ab6c5b018b9e0c7b0b445a4c4c364ef0"
+      "path": "src/local_elections_haryana/build/build_release.py",
+      "sha256": "2418e70ada756a2b6d1f136703266d6f0c39c41bc65063510e4c2bb00f21e713"
     }
   ],
   "historical": {

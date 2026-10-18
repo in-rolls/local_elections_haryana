@@ -187,10 +187,20 @@ def main():
     print("\nParse correctness")
     blank = [r for r in gp if not r["gram_panchayat"] or not r["block"]]
     unread = UNREAD_HEADINGS.get(args.year, 0)
+    # names the transcription returned as control characters, blanked by the
+    # parser and listed with the original bytes
+    cells = year_dir / "reference" / "unreadable_cells.csv"
+    mangled = 0
+    if cells.exists():
+        with cells.open(encoding="utf-8") as fh:
+            mangled = sum(
+                r["table"] == "gp_reservation.csv" and r["column"] == "gram_panchayat"
+                for r in csv.DictReader(fh)
+            )
     report.check(
-        len(blank) <= unread,
+        len(blank) <= unread + mangled,
         "no blank gram panchayat or block",
-        f"{len(blank)} rows, {unread} of them GP headings not read",
+        f"{len(blank)} rows: {unread} GP headings not read, {mangled} unreadable",
     )
 
     # Kruti Dev mojibake is pure ASCII, so the script column is the only honest

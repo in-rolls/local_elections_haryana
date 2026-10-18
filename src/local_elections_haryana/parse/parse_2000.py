@@ -401,6 +401,8 @@ def build():
             ward_rows.append(
                 record | {"ward_no": "" if pd.isna(r.ward) else str(int(r.ward))}
             )
+    blank_unreadable("gp_reservation.csv", gp_rows)
+    blank_unreadable("ward_reservation.csv", ward_rows)
     return gp_rows, ward_rows, repeats, steps, basis
 
 
@@ -460,6 +462,32 @@ def continuity(gp_rows, steps, sec):
     return pd.DataFrame(out)
 
 
+# The hosted model returned a few Hindi cells with their Devanagari code points
+# mangled into control characters (Safidon's सामान्य came back as "\x05b8\x05be..."),
+# under a Latin script tag. They cannot be read back reliably, so the cell is left
+# blank, the seat is kept, and the cell is listed in reference/unreadable_cells.csv.
+CONTROL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f]")
+UNREADABLE = []
+
+
+def blank_unreadable(table, rows):
+    for i, row in enumerate(rows):
+        for column, value in row.items():
+            if isinstance(value, str) and CONTROL.search(value):
+                UNREADABLE.append(
+                    {
+                        "table": table,
+                        "row": i + 1,
+                        "district": row["district"],
+                        "block": row["block"],
+                        "source_pdf": row["source_pdf"],
+                        "column": column,
+                        "value_escaped": value.encode("unicode_escape").decode(),
+                    }
+                )
+                row[column] = ""
+
+
 def write(path, columns, rows):
     with path.open("w", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(fh, fieldnames=columns, lineterminator="\n")
@@ -492,6 +520,11 @@ def main():
     continuity(gp_rows, steps, sec_gps).to_csv(
         REFERENCE / "serial_continuity.csv", index=False
     )
+    pd.DataFrame(
+        UNREADABLE,
+        columns=["table", "row", "district", "block", "source_pdf", "column",
+                 "value_escaped"],
+    ).to_csv(REFERENCE / "unreadable_cells.csv", index=False)  # fmt: skip
     print(
         f"2000: {len(gp_rows):,} sarpanch and {len(ward_rows):,} panch rows; "
         f"{len(repeats)} repeated pages dropped; serial basis "
