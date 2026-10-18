@@ -5,8 +5,32 @@
     "name_threshold": 0.8,
     "ward_pass_threshold": 0.85
   },
-  "code_sha256": "45e52340bea808bdfaf5ee42e207b64628d7f65057f07012ea1b32ebe3786059",
+  "code_sha256": "469af6eed647d67b6ed3e379ac554ea3f83e2a4af3cdc8feb579a2f914a2c3b1",
   "pairs": {
+    "2000_2005": {
+      "inputs": {
+        "data/fin/gp_reservation_2000.parquet": "9bf74690ef03bdaafd33df3617bb15a8de56fc2f281a8873fb4029b671671623",
+        "data/fin/gp_reservation_2005.parquet": "7a34d6371ec071bfd6d8021602f6bdb96542604db7446f1817d195b4f0e7707c",
+        "data/fin/ward_reservation_2000.parquet": "bbbb6ebca424931d5701994ffd447a769df6623ccdb02a851be8abeb3d47ae0e",
+        "data/fin/ward_reservation_2005.parquet": "4a76a9969ad9ed88f5504c1b2a779826d3976c8aa67155df48136e956dcc6e3b",
+        "data/crosswalks/district_2000_2005.csv": "b4c9a55fba0e59fd1340a5a0c9df90620ba688e9cca1205bab0842f5a022d5ec",
+        "data/crosswalks/block_2000_2005.csv": "1e16a7e3235161b399d5da0d30ee5f0a494228b2309fd9bb4637bd3b4e03ca37"
+      },
+      "validation": {
+        "gps_2000": 5894,
+        "gps_2005": 6164,
+        "linked": 5624,
+        "linked_by_name": 5578,
+        "linked_by_name_and_wards": 46,
+        "ward_count_agreement_name_pass": 0.394,
+        "ward_count_agreement_shuffled_within_block": 0.159
+      },
+      "file": {
+        "path": "gp_2000_2005.parquet",
+        "rows": 5624,
+        "sha256": "f3dda2d6d1572b58b009111c2df2487079993bc8271027c3e530c6f3f89ca6e0"
+      }
+    },
     "2005_2010": {
       "inputs": {
         "data/fin/gp_reservation_2005.parquet": "7a34d6371ec071bfd6d8021602f6bdb96542604db7446f1817d195b4f0e7707c",

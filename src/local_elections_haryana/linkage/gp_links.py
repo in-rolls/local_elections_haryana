@@ -131,6 +131,12 @@ class PlaceName:
 ALLOWED: set = set()
 # Districts whose blocks moved between them share one blocking group.
 PAIRS = {
+    # Mewat district was formed in 2005 from Gurgaon's Nuh, Nagina, Punhana,
+    # Firozpur Jhirka and Taoru blocks and Faridabad's Hathin.
+    "2000_2005": {
+        "years": (2000, 2005),
+        "family": {"Mewat": "Gurgaon", "Faridabad": "Gurgaon"},
+    },
     # Palwal district was formed in 2008 from Faridabad's Palwal, Hassanpur and
     # Hodal blocks and Mewat's Hathin.
     "2005_2010": {
@@ -158,14 +164,19 @@ def crosswalks(a, b):
 
 
 def gps(year, later, to_later, family):
+    # 2000 GPs whose printed serial was not read carry no sr_no
     d = pd.read_parquet(DATA / "fin" / f"gp_reservation_{year}.parquet")
+    d[KEY] = d[KEY].fillna("")
     wards = (
         pd.read_parquet(DATA / "fin" / f"ward_reservation_{year}.parquet")
+        .fillna(dict.fromkeys(KEY, ""))
         .groupby(KEY)
         .size()
         .rename("wards")
     )
     d = d.join(wards, on=KEY)
+    # a GP whose heading was not read (2000) has no name to link on
+    d = d[d.gram_panchayat.fillna("").str.strip() != ""]
     d = d[~d.duplicated(KEY, keep=False)].copy()
     d["name"] = d["gram_panchayat"]
     if year == 2022:

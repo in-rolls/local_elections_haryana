@@ -5,8 +5,8 @@ units continue between the elections, and they are not regenerated.
 
 | File | Row |
 | --- | --- |
-| `district_2005_2010.csv`, `district_2010_2016.csv`, `district_2016_2022.csv` | A district and the district it became (`same`, `renamed`, `split`) |
-| `block_2005_2010.csv`, `block_2010_2016.csv`, `block_2016_2022.csv` | A candidate pair of an earlier and a later block, with evidence and a decision |
+| `district_2000_2005.csv`, `district_2005_2010.csv`, `district_2010_2016.csv`, `district_2016_2022.csv` | A district and the district it became (`same`, `renamed`, `split`) |
+| `block_2000_2005.csv`, `block_2005_2010.csv`, `block_2010_2016.csv`, `block_2016_2022.csv` | A candidate pair of an earlier and a later block, with evidence and a decision |
 
 Districts: Gurgaon became Gurugram and Mewat became Nuh. Mahendergarh is printed
 "M/garh" in 2022. Charkhi Dadri was formed from Bhiwani's Badhra, Dadri-I and
@@ -30,6 +30,17 @@ fifth of the 2022 block. Pairs sharing three common village names are
 
 `note` gives the reason for every decision. GP links in `data/linkage/` use
 only `linked` pairs.
+
+## 2000 to 2005
+
+Evidence from `block_evidence 2000 2005`; every proposed decision was kept.
+Mewat district was formed in 2005 from Gurgaon's Nuh, Nagina, Punhana,
+Firozpur Jhirka and Taoru blocks and Faridabad's Hathin, so the three districts
+form one blocking group. New blocks take their GPs from the parents shown:
+Ambala split into Ambala-I and Ambala-II, Saha came from Barara and Ambala,
+Behal from Loharu, Jakhal from Tohana and Siwan from Guhla and Kaithal. Dadri-I
+is printed Bond Kalan in 2005. 2000 GPs whose heading was not read have no name
+and are not linked.
 
 ## 2005 to 2010
 

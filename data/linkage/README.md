@@ -2,6 +2,7 @@
 
 | File | Row |
 | --- | --- |
+| `gp_2000_2005.parquet` | A 2000 sarpanch seat paired with its 2005 seat |
 | `gp_2005_2010.parquet` | A 2005 sarpanch seat paired with its 2010 seat |
 | `gp_2010_2016.parquet` | A 2010 sarpanch seat paired with its 2016 seat |
 | `gp_2016_2022.parquet` | A 2016 sarpanch seat paired with its 2022 seat |
@@ -26,6 +27,7 @@ makes the optimal one-to-one assignment. Two passes run:
 
 | Pair | Linked | Same ward count, name links | Same ward count, random pairs in block | Same winner name, linked | Same winner name, random pairs |
 | --- | ---: | ---: | ---: | ---: | ---: |
+| 2000→2005 | 5,624 | 39.4% | 15.9% | 0.96% | 0.16% |
 | 2005→2010 | 5,724 | 96.9% | 16.4% | 1.15% | 0.21% |
 | 2010→2016 | 5,623 | 48.3% | 14.3% | 0.76% | 0.10% |
 | 2016→2022 | 5,715 | 91.9% | 14.8% | — | — |

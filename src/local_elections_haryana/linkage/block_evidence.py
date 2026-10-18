@@ -25,6 +25,8 @@ MIN_SHARED, MIN_SHARE, MIN_LISTED = 5, 0.20, 3
 
 def names(year, to_later, family, later):
     d = pd.read_parquet(DATA / "fin" / f"gp_reservation_{year}.parquet")
+    # a GP whose heading was not read (2000) has no name to compare
+    d = d[d.gram_panchayat.fillna("").str.strip() != ""]
     district = d["district"] if year == later else d["district"].map(to_later)
     if district.isna().any():
         missing = sorted(d.loc[district.isna(), "district"].unique())
