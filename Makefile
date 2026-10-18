@@ -2,7 +2,7 @@ YEAR ?= 2022
 PY ?= uv run python
 RUFF ?= uv run ruff
 
-.PHONY: sync data harvest parse validate lint verify check data-summary historical raw-verify raw-archive \
+.PHONY: sync data harvest parse parse-2005 validate lint verify check data-summary historical raw-verify raw-archive \
 	infer link
 
 sync:
@@ -20,6 +20,9 @@ harvest:
 
 parse:
 	$(PY) -m local_elections_haryana.parse.parse --year $(YEAR)
+
+parse-2005:
+	$(PY) -m local_elections_haryana.parse.parse_2005
 
 validate:
 	$(PY) -m local_elections_haryana.build.validate --year $(YEAR)

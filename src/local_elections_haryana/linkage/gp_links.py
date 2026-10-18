@@ -131,6 +131,12 @@ class PlaceName:
 ALLOWED: set = set()
 # Districts whose blocks moved between them share one blocking group.
 PAIRS = {
+    # Palwal district was formed in 2008 from Faridabad's Palwal, Hassanpur and
+    # Hodal blocks and Mewat's Hathin.
+    "2005_2010": {
+        "years": (2005, 2010),
+        "family": {"Palwal": "Faridabad", "Mewat": "Faridabad"},
+    },
     "2010_2016": {"years": (2010, 2016), "family": {}},
     "2016_2022": {"years": (2016, 2022), "family": {"Charkhi Dadri": "Bhiwani"}},
 }

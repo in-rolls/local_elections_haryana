@@ -55,7 +55,28 @@ def header_columns(page, gp):
     return None, None
 
 
-def parse_document(path, family, layout_reviews=()):
+def wrapped_above(words, cells, anchors, index, header_bottom):
+    """The panchayat cell when a long name wraps upwards from its row.
+
+    Some block files bottom-align the panchayat cell, so a wrapped name prints
+    its first line above the row's ward number: Panipat's "GADHI SIKENDER" sits
+    on its own line with "PUR" beside "Sarpanch". Cutting rows at each ward
+    number's top edge hands that first line to the row above.
+    """
+    anchor = anchors[index]
+    above = anchors[index - 1]["bottom"] + 1 if index else header_bottom
+    left, right = cells[0][0] - 2, cells[1][0] - 2
+    chosen = [
+        w
+        for w in words
+        if left <= w["x0"] < right
+        and above < (w["top"] + w["bottom"]) / 2 <= anchor["bottom"] + 1
+    ]
+    chosen.sort(key=lambda w: (round(w["top"]), w["x0"]))
+    return " ".join(w["text"] for w in chosen).strip()
+
+
+def parse_document(path, family, layout_reviews=(), wrap="below"):
     gp = family == "gp_head_and_ward"
     records, pages = [], []
     with pdfplumber.open(path) as pdf:
@@ -120,6 +141,14 @@ def parse_document(path, family, layout_reviews=()):
                     left = cell[0] - 2
                     selected = [w for w in row_words if left <= w["x0"] < right]
                     raw_cells.append(" ".join(w["text"] for w in selected).strip())
+                if gp and wrap == "above":
+                    raw_cells[0] = wrapped_above(
+                        words,
+                        row_cells,
+                        anchors,
+                        index,
+                        header_bottom if number == 1 else 25,
+                    )
                 ward = raw_cells[offset]
                 flag = "ward_cell_contains_extra_text" if ward != anchor["text"] else ""
                 category = raw_cells[-1]

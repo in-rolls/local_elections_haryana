@@ -35,7 +35,7 @@ DATA = Path("data")
 OUT = DATA / "inferred"
 KRUTI = OUT / "kruti_dev_names_2022.csv"
 TRAINING_YEAR = 2022
-YEARS = (2010, 2016, 2022)
+YEARS = (2005, 2010, 2016, 2022)
 # Honorifics and titles stripped before the first name is read. "Smt"/"Shrimati"
 # and "Kumari" also mark a woman; the rest are uninformative here.
 FEMALE_TITLES = {"smt", "shrimati", "srimati", "kumari", "km", "mrs", "ms"}

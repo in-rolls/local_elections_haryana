@@ -6,6 +6,7 @@ keeps its inputs beside the result, and is never written back into `data/fin/`.
 | File | Row | What is inferred |
 | --- | --- | --- |
 | `kruti_dev_names_2022.csv` | A 2022 GP record printed in Kruti Dev | Unicode and romanized GP, winner and relation names |
+| `winner_female_probability_2005.parquet` | An elected 2005 sarpanch | `winner_female_probability_from_name` |
 | `winner_female_probability_2010.parquet` | An elected 2010 sarpanch | `winner_female_probability_from_name` |
 | `winner_female_probability_2016.parquet` | An elected 2016 sarpanch | `winner_female_probability_from_name` |
 | `winner_female_probability_2022.parquet` | An elected 2022 sarpanch | `winner_female_probability_from_name` |
