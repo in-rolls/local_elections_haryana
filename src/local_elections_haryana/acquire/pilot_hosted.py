@@ -4,6 +4,11 @@ Other providers belong in ../batchlane. This module owns only the Haryana
 prompt, page provenance, pilot spending gate and accuracy checks.
 """
 
+# Historical: this Muse Spark run is complete and its outputs are committed.
+# New Muse Spark work should use museclient (https://github.com/gojiplus/museclient),
+# which provides the spending cap, cache, ledger and provider pricing that this
+# module implements by hand.
+
 import argparse
 import base64
 import fcntl
