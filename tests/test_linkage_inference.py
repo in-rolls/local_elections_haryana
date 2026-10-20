@@ -10,12 +10,12 @@ from local_elections_haryana.linkage.gp_links import name_key
 def test_titles_are_removed_and_markers_read_from_the_last_word():
     assert name_parts("Smt. Sunita") == {
         "first_name": "sunita",
-        "female_marker": 0,
-        "male_marker": 0,
-        "female_title": 1,
+        "winner_woman_name_marker": 0,
+        "winner_man_name_marker": 0,
+        "winner_woman_name_title": 1,
     }
-    assert name_parts("Jasbir Kaur")["female_marker"] == 1
-    assert name_parts("Parveen Kumar")["male_marker"] == 1
+    assert name_parts("Jasbir Kaur")["winner_woman_name_marker"] == 1
+    assert name_parts("Parveen Kumar")["winner_man_name_marker"] == 1
     assert name_parts("....")["first_name"] is None
 
 

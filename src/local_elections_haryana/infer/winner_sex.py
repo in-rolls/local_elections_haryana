@@ -52,9 +52,9 @@ MALE_SURNAMES = {
 FEATURES = [
     "naampy_logit",
     "naampy_abstained",
-    "female_marker",
-    "male_marker",
-    "female_title",
+    "winner_woman_name_marker",
+    "winner_man_name_marker",
+    "winner_woman_name_title",
 ]
 
 
@@ -65,16 +65,16 @@ def tokens(name):
 def name_parts(name):
     """First name after titles, plus the markers read from the whole name."""
     words = tokens(name)
-    female_title = False
+    winner_woman_name_title = False
     while words and words[0] in FEMALE_TITLES | OTHER_TITLES:
-        female_title |= words[0] in FEMALE_TITLES
+        winner_woman_name_title |= words[0] in FEMALE_TITLES
         words = words[1:]
     last = words[-1] if len(words) > 1 else ""
     return {
         "first_name": words[0] if words else None,
-        "female_marker": int(last in FEMALE_SURNAMES),
-        "male_marker": int(last in MALE_SURNAMES),
-        "female_title": int(female_title),
+        "winner_woman_name_marker": int(last in FEMALE_SURNAMES),
+        "winner_man_name_marker": int(last in MALE_SURNAMES),
+        "winner_woman_name_title": int(winner_woman_name_title),
     }
 
 

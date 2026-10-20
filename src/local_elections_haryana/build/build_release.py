@@ -38,6 +38,22 @@ MISSING_HEADINGS = ROOT / (
 OLD_PREFIXES = {
     "caste_reservation": "reserved_caste",
     "woman_reserved": "reserved_woman",
+    "caste_before_source_review": "reserved_caste_before_source_review",
+    "woman_before_source_review": "reserved_woman_before_source_review",
+    "samiti_category_source_caste": "samiti_reserved_caste_source",
+    "samiti_category_source_woman": "samiti_reserved_woman_source",
+    "samiti_category_source_raw": "samiti_reserved_raw_source",
+    "samiti_category_printed_raw": "samiti_reserved_raw_printed",
+    "samiti_category_annotation_raw": "samiti_reserved_raw_annotation",
+    "samiti_category_authority": "samiti_reserved_authority",
+    "category_raw": "reserved_raw",
+    "category_primary_raw": "reserved_raw_primary",
+    "category_column_raw": "reserved_raw_column",
+    "category_anchor_raw": "reserved_raw_anchor",
+    "category_source_review_raw": "reserved_raw_source_review",
+    "district_review_category_source_raw": "district_review_reserved_raw_source",
+    "gp_category_authority": "gp_reserved_authority",
+    "gp_category_annotation_description": "gp_reserved_annotation_description",
 }  # old-name
 DEFAULT_OUT = ROOT / "data/release/historical"
 
@@ -140,6 +156,10 @@ def read_historical() -> tuple[pd.DataFrame, set[tuple[str, int, int]]]:
     # The pinned snapshot is frozen byte for byte, so it keeps the schema's
     # names from before the reserved_* rename; read them under the new ones.
     frame = frame.rename(columns=renamed_column)
+    # *_woman columns are 1 / 0 / null integers (NAMING.md); the snapshot has bool
+    for column in frame.columns:
+        if "woman" in column and frame[column].dropna().isin([True, False]).all():
+            frame[column] = frame[column].map({True: 1, False: 0}).astype("Int8")
     payload = json.loads(MISSING_HEADINGS.read_bytes())
     rows = payload["rows"]
     if len(rows) != 32:

@@ -11,7 +11,7 @@
     "data/fin/gp_reservation_2016.parquet": "0b9e8d17a2c5eb2e2948ad9cf46895afa0b32e8dbae7d86939eb08294a3e12ed",
     "data/fin/gp_reservation_2022.parquet": "79c656d189a9a7073146db8dddf8029340c6d8e4b4001653564cb4ae2788d586"
   },
-  "code_sha256": "c78c1c8fc47df987fb75ca95e2ec6140047e8585acb9090971c6b7c7338eef76",
+  "code_sha256": "ee9198b0c489a7d6b822eae0a8aa63f7af2d8c6b976f671394fc05ab8fcc3fbd",
   "validation": {
     "training": {
       "year": 2022,
@@ -73,9 +73,9 @@
       "intercept": -0.05070378554077848,
       "naampy_logit": 1.1542881384443875,
       "naampy_abstained": -0.7212680771430618,
-      "female_marker": 6.067796389139367,
-      "male_marker": -3.876183511432248,
-      "female_title": 1.0746873901555962
+      "winner_woman_name_marker": 6.067796389139367,
+      "winner_man_name_marker": -3.876183511432248,
+      "winner_woman_name_title": 1.0746873901555962
     },
     "mean_probability_2000_women_reserved": 0.9013,
     "mean_probability_2005_women_reserved": 0.9125,
@@ -87,27 +87,27 @@
     {
       "path": "winner_woman_probability_2000.parquet",
       "rows": 5905,
-      "sha256": "1cce8a0e3232446df58cbe173021fcd6976c51ed535fadd3def30f114de3bf72"
+      "sha256": "fb1fdfe74021c31fff65cd40c46167ddd3620c797f6cd0f9f2c77f06eb66401d"
     },
     {
       "path": "winner_woman_probability_2005.parquet",
       "rows": 6196,
-      "sha256": "fef438a3083f02c4aa5bcd170a5662223f08dc3e10b21331da0bec25bdafae65"
+      "sha256": "74a5cf36b536f6c85e1743ec359bf108806bce93d52e13436ecc0840d906b476"
     },
     {
       "path": "winner_woman_probability_2010.parquet",
       "rows": 5919,
-      "sha256": "1fb7f9eb77553d74a1b05cf8357ba6198e5de3c45732afee603a7eb1a932e63a"
+      "sha256": "d21bc2759154ec54e27f977136d059ce31634eae4aa9973710c92f7aaa7aa844"
     },
     {
       "path": "winner_woman_probability_2016.parquet",
       "rows": 6081,
-      "sha256": "f75e5715b1d1cb6a3e29d44dad6a568363ed78019b7bc5c11d7822f29cf0aea8"
+      "sha256": "ee89d3f21454321a626922c2a45e76727e5a0076119c5668f117f8dcc2ae39b0"
     },
     {
       "path": "winner_woman_probability_2022.parquet",
       "rows": 6085,
-      "sha256": "08ffb2bb420bf2c3794d41cec6e92d579577614d26decd23365bb55741221e75"
+      "sha256": "f7b3a82fd0a090140254fb4a0be51edcaf9f338f41110ed7504ea52835a97bb3"
     }
   ]
 }
