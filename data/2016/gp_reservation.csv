@@ -1,4 +1,4 @@
-district,block,sr_no,gram_panchayat,reservation,caste_reservation,woman_reserved,winner,father_husband,unopposed,vacant,reservation_raw,script,printings_agree,notification,source_pdf
+district,block,sr_no,gram_panchayat,reserved_label,reserved_caste,reserved_woman,winner,father_husband,unopposed,vacant,reserved_raw,script,printings_agree,notification,source_pdf
 Ambala,Ambala-I,1,Ado Majra,Other than Woman,NONE,0,Sarjant Singh,Joginder Singh,0,0,Unreserved,latin,,1992,Ambala.pdf
 Ambala,Ambala-I,2,Ahema,SC Other than Woman,SC,0,Ram Kumar,Gurnam Singh,0,0,Scheduled Caste,latin,,1992,Ambala.pdf
 Ambala,Ambala-I,3,Amipur,Woman,NONE,1,Sushma,Surinder Singh,0,0,Women,latin,,1992,Ambala.pdf

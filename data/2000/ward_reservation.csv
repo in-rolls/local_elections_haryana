@@ -1,4 +1,4 @@
-district,block,sr_no,gram_panchayat,ward_no,reservation,caste_reservation,woman_reserved,winner,father_husband,unopposed,vacant,reservation_raw,script,printings_agree,notification,source_pdf
+district,block,sr_no,gram_panchayat,ward_no,reserved_label,reserved_caste,reserved_woman,winner,father_husband,unopposed,vacant,reserved_raw,script,printings_agree,notification,source_pdf
 Kaithal,Kaithal,,FRASH MAJRA,1,SC Woman,SC,1,KAMLESH,SHERA,0,0,S.C. Woman,latin,,,003f37f34764ecd7c703_148a1b6f5a97.pdf
 Kaithal,Kaithal,,FRASH MAJRA,2,Woman,NONE,1,AVTAR KAUR,MISHRA SINGH,0,0,General Woman,latin,,,003f37f34764ecd7c703_148a1b6f5a97.pdf
 Kaithal,Kaithal,,FRASH MAJRA,3,BC Other than Woman,BC,0,KARNAIL SINGH,MAAN SINGH,0,0,B.C,latin,,,003f37f34764ecd7c703_148a1b6f5a97.pdf

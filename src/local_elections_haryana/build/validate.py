@@ -320,8 +320,8 @@ def main():
     unparsed = [
         r
         for r in gp
-        if r["caste_reservation"] not in CASTES.get(args.year, CASTES["default"])
-        or r["woman_reserved"] not in ("0", "1")
+        if r["reserved_caste"] not in CASTES.get(args.year, CASTES["default"])
+        or r["reserved_woman"] not in ("0", "1")
     ]
     # 2005's source cells that a review found blank or ambiguous stay blank;
     # each carries its reason in the parse's reservation review, so they are
@@ -329,15 +329,15 @@ def main():
     reviewed_blank = REVIEWED_BLANK.get(args.year, 0)
     report.check(
         len(unparsed) <= reviewed_blank,
-        "reservation normalised on every row",
+        "reserved_label normalised on every row",
         f"{len(unparsed)} rows, {reviewed_blank} of them explained in the year's notes",
     )
 
     # --------------------------------------------------------------- statutory
     print("\nStatutory shares (the sharpest check: these bind per block)")
     women_share, bc_share = statute["women"], statute["bc_a"]
-    known = [r for r in gp if r["woman_reserved"] in ("0", "1")]
-    women = sum(int(r["woman_reserved"]) for r in known)
+    known = [r for r in gp if r["reserved_woman"] in ("0", "1")]
+    women = sum(int(r["reserved_woman"]) for r in known)
     report.check(
         abs(pct(women, len(known)) - 100 * women_share) <= 3,
         f"statewide women's share is {women_share * 100:.0f}%",
@@ -358,12 +358,12 @@ def main():
     )
     off_women, off_bc = [], []
     for key, rows in by_block.items():
-        rows = [x for x in rows if x["woman_reserved"] in ("0", "1")]
-        w = pct(sum(int(x["woman_reserved"]) for x in rows), len(rows))
+        rows = [x for x in rows if x["reserved_woman"] in ("0", "1")]
+        w = pct(sum(int(x["reserved_woman"]) for x in rows), len(rows))
         if abs(w - 100 * women_share) > 6:
             off_women.append((key, len(rows), w))
         if bc_share is not None:
-            b = pct(sum(x["caste_reservation"] == "BC_A" for x in rows), len(rows))
+            b = pct(sum(x["reserved_caste"] == "BC_A" for x in rows), len(rows))
             if abs(b - 100 * bc_share) > 6:
                 off_bc.append((key, len(rows), b))
 
@@ -379,7 +379,7 @@ def main():
         # handful of 2016 rows labelled "Backward Class" is plausible as a
         # stray, but a real share would mean the parse is wrong.
         bc_rows = sum(
-            r["caste_reservation"] in ("BC_A", "BC")
+            r["reserved_caste"] in ("BC_A", "BC")
             and (r["district"], r["block"]) not in reviewed
             for r in gp
         )
@@ -403,7 +403,7 @@ def main():
 
     # ----------------------------------------------------------------- profile
     print("\nDistribution")
-    for k, v in collections.Counter(r["reservation"] for r in gp).most_common():
+    for k, v in collections.Counter(r["reserved_label"] for r in gp).most_common():
         print(f"  {v:6d}  {pct(v, len(gp)):5.1f}%  {k}")
     print(
         f"\n  {len(by_block)} blocks, {len({r['district'] for r in gp})} districts, "

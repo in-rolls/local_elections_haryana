@@ -251,8 +251,8 @@ def chair_concordance(chairs, reservations, reviews):
         aliases[old] = new
     output = []
     for row in reservations:
-        category = ("SC" if row["caste_reservation"] == "SC" else "Gen") + (
-            "(w)" if row["woman_reserved"] == "True" else ""
+        category = ("SC" if row["reserved_caste"] == "SC" else "Gen") + (
+            "(w)" if row["reserved_woman"] == "True" else ""
         )
         matches = by_body[body_key(aliases.get(row["body_raw"], row["body_raw"]))]
         method = "body_name"

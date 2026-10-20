@@ -110,8 +110,8 @@ def apply_source_samiti_reviews(records, root: Path):
             "tier": "block_member",
             "ward": review["ward"],
             "body_within_page": review["body_source_raw"],
-            "caste_reservation": review["category_source_caste"] if printed else None,
-            "woman_reserved": review["category_source_woman"] if printed else None,
+            "reserved_caste": review["category_source_caste"] if printed else None,
+            "reserved_woman": review["category_source_woman"] if printed else None,
             "is_seat_record": True,
         }
         for field, value in corrected.items():

@@ -1,4 +1,4 @@
-source_sha256,source_page,source_row_on_page,reservation_raw,caste_reservation,woman_reserved,missing_reason,review_note,review_method,reviewer,review_date
+source_sha256,source_page,source_row_on_page,reserved_raw,reserved_caste,reserved_woman,missing_reason,review_note,review_method,reviewer,review_date
 158d4545fefec3557c5fa5d608284a13f430c07c70ce82fef0d84ded8e737f73,2,47,Gen,NONE,false,,Rendered cell confirms a general/unreserved abbreviation or spelling variant.,rendered_source_cell,codex_primary,2026-09-09
 158d4545fefec3557c5fa5d608284a13f430c07c70ce82fef0d84ded8e737f73,6,18,B.C. F.,BC,true,,Rendered cell explicitly marks backward-class women/F.,rendered_source_cell,codex_primary,2026-09-09
 158d4545fefec3557c5fa5d608284a13f430c07c70ce82fef0d84ded8e737f73,8,49,UnreservedF.,NONE,true,,Rendered cell explicitly marks general/unreserved women or F in the office-category column.,rendered_source_cell,codex_primary,2026-09-09

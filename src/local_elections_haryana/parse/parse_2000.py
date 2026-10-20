@@ -152,8 +152,8 @@ def pair_printings(d):
         for block in matcher.get_matching_blocks():
             for k in range(block.size):
                 e, h = english.iloc[block.a + k], hindi.iloc[block.b + k]
-                same = (e.caste_reservation == h.caste_reservation) and (
-                    e.woman_reserved == h.woman_reserved
+                same = (e.reserved_caste == h.reserved_caste) and (
+                    e.reserved_woman == h.reserved_woman
                 )
                 agree[e.name] = int(bool(same))
     return agree
@@ -370,16 +370,16 @@ def build():
             "block": r.block_sec.title(),
             "sr_no": "" if sr is None else str(sr),
             "gram_panchayat": name,
-            "reservation": label(r.caste_reservation, r.woman_reserved),
-            "caste_reservation": r.caste_reservation
-            if isinstance(r.caste_reservation, str)
+            "reserved_label": label(r.reserved_caste, r.reserved_woman),
+            "reserved_caste": r.reserved_caste
+            if isinstance(r.reserved_caste, str)
             else "",
-            "woman_reserved": flag(r.woman_reserved),
+            "reserved_woman": flag(r.reserved_woman),
             "winner": "" if vacant else winner,
             "father_husband": text(r.relation_raw),
             "unopposed": "1" if re.search(r"[*\u2022]", text(r.ward_raw)) else "0",
             "vacant": "1" if vacant or not winner else "0",
-            "reservation_raw": text(r.category_raw),
+            "reserved_raw": text(r.category_raw),
             "script": "latin",
             "printings_agree": str(agree[r.Index]) if r.Index in agree else "",
             "notification": "",

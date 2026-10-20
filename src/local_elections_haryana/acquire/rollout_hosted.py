@@ -401,8 +401,8 @@ def _export_primary(frame):
                     "ward": int(match[1]) if match else None,
                     "tier": tier,
                     "office_normalized": normalized_office(office),
-                    "caste_reservation": caste,
-                    "woman_reserved": woman,
+                    "reserved_caste": caste,
+                    "reserved_woman": woman,
                     "quality_flags": ";".join(flags),
                     "review_status": "automated transcription; source review pending",
                 }
@@ -434,7 +434,7 @@ def _export_primary(frame):
         table = pd.DataFrame(records)
         table["source_page"] = table.source_page.astype("Int64")
         table["ward"] = table.ward.astype("Int64")
-        table["woman_reserved"] = table.woman_reserved.astype("boolean")
+        table["reserved_woman"] = table.reserved_woman.astype("boolean")
         table.to_parquet(OUT / "seat_rows.parquet", index=False)
         table[table.quality_flags.ne("")].to_csv(OUT / "review_queue.csv", index=False)
     receipts = [json.loads(p.read_text()) for p in OUT.glob("attempt_*.json")]
@@ -1064,9 +1064,9 @@ def apply_source_office_reviews(records):
             ):
                 raise ValueError("Source-reviewed identity must be nonempty text")
         if (
-            "caste_reservation" in review
+            "reserved_caste" in review
             and not unverified_category
-            and review["caste_reservation"]
+            and review["reserved_caste"]
             not in {
                 "NONE",
                 "UR",
@@ -1077,9 +1077,9 @@ def apply_source_office_reviews(records):
         ):
             raise ValueError("Unsupported source-reviewed category")
         if (
-            "woman_reserved" in review
+            "reserved_woman" in review
             and not unverified_category
-            and not isinstance(review["woman_reserved"], bool)
+            and not isinstance(review["reserved_woman"], bool)
         ):
             raise ValueError("Source-reviewed woman marker must be boolean")
         if (
@@ -1103,20 +1103,20 @@ def apply_source_office_reviews(records):
                     raise ValueError("Unsupported manual source-category normalization")
                 category_label = normalization
             caste, woman = category_for(category_label)
-            expected_caste = review.get("caste_reservation")
+            expected_caste = review.get("reserved_caste")
             if expected_caste == "UR":
                 expected_caste = "NONE"
             if (
                 caste is None
                 or woman is None
                 or (expected_caste is not None and caste != expected_caste)
-                or ("woman_reserved" in review and woman != review["woman_reserved"])
+                or ("reserved_woman" in review and woman != review["reserved_woman"])
             ):
                 raise ValueError(
                     "Reviewed category disagrees with the shared category parser"
                 )
-            review["caste_reservation"] = caste
-            review["woman_reserved"] = woman
+            review["reserved_caste"] = caste
+            review["reserved_woman"] = woman
         reviews[key] = (review, path)
     seen = set()
     for record in records:
@@ -1154,12 +1154,12 @@ def apply_source_office_reviews(records):
                 record["body_before_source_review"] = record["body_within_page"]
                 record["body_within_page"] = review["body_within_page"]
                 flags.add("body_source_reviewed_raw_preserved")
-            if "caste_reservation" in review:
-                record["caste_before_source_review"] = record["caste_reservation"]
-                record["caste_reservation"] = review["caste_reservation"]
-            if "woman_reserved" in review:
-                record["woman_before_source_review"] = record["woman_reserved"]
-                record["woman_reserved"] = review["woman_reserved"]
+            if "reserved_caste" in review:
+                record["caste_before_source_review"] = record["reserved_caste"]
+                record["reserved_caste"] = review["reserved_caste"]
+            if "reserved_woman" in review:
+                record["woman_before_source_review"] = record["reserved_woman"]
+                record["reserved_woman"] = review["reserved_woman"]
             if "category_source_raw" in review:
                 record["category_source_review_raw"] = review["category_source_raw"]
                 flags.add("category_source_reviewed_raw_preserved")
@@ -1303,8 +1303,8 @@ def export(frame):
                 caste, woman = category_for(correction["column_raw"])
                 record.update(
                     category_raw=correction["column_raw"],
-                    caste_reservation=caste,
-                    woman_reserved=woman,
+                    reserved_caste=caste,
+                    reserved_woman=woman,
                 )
                 flags.discard("category_unresolved")
                 if category_for(correction["primary_raw"]) != (caste, woman):
@@ -1333,8 +1333,8 @@ def export(frame):
             caste, woman = category_for(evidence["category_raw"])
             record.update(
                 category_raw=evidence["category_raw"],
-                caste_reservation=caste,
-                woman_reserved=woman,
+                reserved_caste=caste,
+                reserved_woman=woman,
                 office_normalized=normalized_office(evidence["office_raw"]),
                 tier=office_tier(evidence["office_raw"], record["family"]),
             )
@@ -1400,7 +1400,7 @@ def export(frame):
         record["quality_flags"] = ";".join(sorted(flags))
     if records:
         table = pd.DataFrame.from_records(records)
-        table["woman_reserved"] = pd.array(table["woman_reserved"], dtype="boolean")
+        table["reserved_woman"] = pd.array(table["reserved_woman"], dtype="boolean")
         for field in ("ward", "source_page", "source_row_on_page"):
             table[field] = pd.array(table[field], dtype="Int64")
         duplicates = table.duplicated(

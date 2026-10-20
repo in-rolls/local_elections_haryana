@@ -158,7 +158,7 @@ def build(out=OUT):
         train[readable].reset_index(drop=True),
         tf[readable].reset_index(drop=True),
     )
-    y = train["woman_reserved"].astype(int).to_numpy()
+    y = train["reserved_woman"].astype(int).to_numpy()
     groups = tf["first_name"].fillna("").to_numpy()
     cv = evaluate(tf[FEATURES], y, groups)
     naampy_only = np.where(tf["naampy_abstained"] == 1, y.mean(), tf["naampy_score"])
@@ -166,7 +166,7 @@ def build(out=OUT):
     validation = {
         "training": {
             "year": TRAINING_YEAR,
-            "label": "woman_reserved; the 2020 amendment bars women from other seats",
+            "label": "reserved_woman; the 2020 amendment bars women from other seats",
         },
         "recalibrated_cross_validated": metrics(y, cv),
         "naampy_alone": metrics(y, naampy_only),
@@ -196,18 +196,18 @@ def build(out=OUT):
         table = pd.concat([d[keep], f], axis=1)
         # Named for what they are: an inference from the printed name, never a
         # recorded sex.
-        prob = "winner_female_probability_from_name"
+        prob = "winner_woman_probability"
         table[prob] = model.predict_proba(f[FEATURES])[:, 1]
         table.loc[f["first_name"].isna(), prob] = np.nan
-        table["winner_female_probability_method"] = (
+        table["winner_woman_probability_method"] = (
             f"naampy {version('naampy')} first-name score + fixed name markers, "
             f"logistic recalibration on {TRAINING_YEAR} winners"
         )
-        reserved = d["woman_reserved"].astype(bool)
+        reserved = d["reserved_woman"].astype(bool)
         validation[f"mean_probability_{year}_women_reserved"] = round(
             table.loc[reserved, prob].mean(), 4
         )
-        path = out / f"winner_female_probability_{year}.parquet"
+        path = out / f"winner_woman_probability_{year}.parquet"
         table.to_parquet(path, index=False)
         files.append({"path": path.name, "rows": len(table), "sha256": sha(path)})
     manifest = {

@@ -381,14 +381,14 @@ def parse_pdf(path, notif_pattern=None, *, use_cached_ocr=False):
         """Interpret a buffered row once no more continuation lines can arrive."""
         if not row:
             return
-        res = normalize_reservation(row["reservation_raw"])
+        res = normalize_reservation(row["reserved_raw"])
         if not res:
             return
         caste, woman, script = res
         row.update(
             reservation=label(caste, woman),
-            caste_reservation=caste,
-            woman_reserved=woman,
+            reserved_caste=caste,
+            reserved_woman=woman,
             script=script,
         )
         yield row
@@ -449,7 +449,7 @@ def parse_pdf(path, notif_pattern=None, *, use_cached_ocr=False):
                     if pending:
                         tail = continuation_tail(cells)
                         if tail:
-                            pending["reservation_raw"] += " " + tail
+                            pending["reserved_raw"] += " " + tail
                         # a long GP name wraps onto this row at the same
                         # cell index it occupied on the seat row
                         col = pending.get("gp_column")
@@ -522,7 +522,7 @@ def parse_pdf(path, notif_pattern=None, *, use_cached_ocr=False):
                     "gram_panchayat": gp,
                     "ward_no": ward,
                     "office": kind,
-                    "reservation_raw": raw_res,
+                    "reserved_raw": raw_res,
                     "winner": name,
                     "father_husband": strip_unopposed(raw_father)[0],
                     "unopposed": int(unopposed),
@@ -542,7 +542,7 @@ def crosscheck(rows):
     seats = collections.defaultdict(dict)
     for r in rows:
         if r["office"] == "sarpanch" and r["sr_no"]:
-            seats[(r["source_pdf"], r["sr_no"])][r["script"]] = r["reservation"]
+            seats[(r["source_pdf"], r["sr_no"])][r["script"]] = r["reserved_label"]
 
     both = {k: v for k, v in seats.items() if len(v) > 1}
     disagree = {k for k, v in both.items() if len(set(v.values())) > 1}
@@ -668,14 +668,14 @@ def main(argv=None):
         "block",
         "sr_no",
         "gram_panchayat",
-        "reservation",
-        "caste_reservation",
-        "woman_reserved",
+        "reserved_label",
+        "reserved_caste",
+        "reserved_woman",
         "winner",
         "father_husband",
         "unopposed",
         "vacant",
-        "reservation_raw",
+        "reserved_raw",
         "script",
         "printings_agree",
         "notification",

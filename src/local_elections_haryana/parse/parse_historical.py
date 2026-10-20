@@ -183,10 +183,10 @@ def parse_document(path, family, layout_reviews=(), wrap="below"):
                         .startswith("*"),
                         "layout_review_note": layout_note,
                         "relation_name_raw": raw_cells[offset + 2],
-                        "reservation_raw": category,
-                        "caste_reservation": caste,
-                        "woman_reserved": woman,
-                        "winner_gender": None,
+                        "reserved_raw": category,
+                        "reserved_caste": caste,
+                        "reserved_woman": woman,
+                        "winner_woman": None,
                         "raw_cells": json.dumps(raw_cells, ensure_ascii=False),
                         "quality_flags": ";".join(flags),
                         "review_status": "automated; source_validation_pending",
@@ -213,7 +213,7 @@ def reconcile_sections(frame, reviews):
         "tier",
         "winner_name_raw",
         "relation_name_raw",
-        "reservation_raw",
+        "reserved_raw",
     ]
     for review in reviews:
         mask = frame.source_sha256.eq(
@@ -278,16 +278,16 @@ def apply_reservation_reviews(frame, reviews):
             raise ValueError("Review has duplicate or absent source occurrence")
         seen.add(identity)
         index = lookup[identity]
-        if frame.at[index, "reservation_raw"] != review["reservation_raw"]:
+        if frame.at[index, "reserved_raw"] != review["reserved_raw"]:
             raise ValueError("Reviewed reservation cell changed")
-        caste = review["caste_reservation"] or None
-        woman = {"true": True, "false": False, "": None}[review["woman_reserved"]]
+        caste = review["reserved_caste"] or None
+        woman = {"true": True, "false": False, "": None}[review["reserved_woman"]]
         if caste not in {None, "NONE", "SC", "BC"}:
             raise ValueError("Invalid reviewed caste reservation")
         if (caste is None or woman is None) != bool(review["missing_reason"]):
             raise ValueError("Missing components need an explicit source reason")
-        frame.at[index, "caste_reservation"] = caste
-        frame.at[index, "woman_reserved"] = woman
+        frame.at[index, "reserved_caste"] = caste
+        frame.at[index, "reserved_woman"] = woman
         frame.at[index, "reservation_review_note"] = review["review_note"]
         frame.at[index, "reservation_missing_reason"] = review["missing_reason"]
         frame.at[index, "reservation_review_status"] = "source_cell_reviewed"
@@ -379,8 +379,8 @@ def main():
     frame = pd.DataFrame(records)
     frame = reconcile_sections(frame, section_reviews)
     frame = apply_reservation_reviews(frame, reservation_reviews)
-    frame["woman_reserved"] = frame.woman_reserved.astype("boolean")
-    frame["winner_gender"] = frame.winner_gender.astype("string")
+    frame["reserved_woman"] = frame.reserved_woman.astype("boolean")
+    frame["winner_woman"] = frame.winner_woman.astype("string")
     key_columns = ["source_sha256", "gram_panchayat_raw", "ward_or_office_raw"]
     duplicate = frame.duplicated(key_columns, keep=False)
     frame.loc[duplicate, "quality_flags"] += ";duplicate_within_document_office_key"
@@ -398,7 +398,7 @@ def main():
             "tier",
             "winner_name_raw",
             "relation_name_raw",
-            "reservation_raw",
+            "reserved_raw",
             "section_title_raw",
             "matched_source_sha256",
             "matched_source_page",
@@ -406,7 +406,7 @@ def main():
     ].to_csv(out / "section_matches.csv", index=False)
     pd.DataFrame(pages).to_csv(out / "pages.csv", index=False)
     pd.DataFrame(documents).to_csv(out / "documents.csv", index=False)
-    frame.groupby(["tier", "reservation_raw"], dropna=False).size().reset_index(
+    frame.groupby(["tier", "reserved_raw"], dropna=False).size().reset_index(
         name="rows"
     ).to_csv(out / "reservation_profile.csv", index=False)
     (out / "schema.json").write_text(
@@ -417,9 +417,9 @@ def main():
         "pages": len(pages),
         "rows": len(frame),
         "tier_rows": frame.tier.value_counts().to_dict(),
-        "unresolved_reservation_rows": int(frame.caste_reservation.isna().sum()),
+        "unresolved_reservation_rows": int(frame.reserved_caste.isna().sum()),
         "incomplete_reservation_rows": int(
-            (frame.caste_reservation.isna() | frame.woman_reserved.isna()).sum()
+            (frame.reserved_caste.isna() | frame.reserved_woman.isna()).sum()
         ),
         "reservation_cells_reviewed": int(
             frame.reservation_review_status.eq("source_cell_reviewed").sum()

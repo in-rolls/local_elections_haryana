@@ -8,8 +8,8 @@ font encoding, so the same strings arrive as mojibake such as
 "vuqlwfpr tkfr efgyk ds flok;".
 
 Both are mapped onto two orthogonal fields:
-    caste_reservation in {SC, ST, BC_A, NONE}
-    woman_reserved    in {0, 1}
+    reserved_caste in {SC, ST, BC_A, NONE}
+    reserved_woman    in {0, 1}
 """
 
 import re
@@ -75,7 +75,7 @@ DEV_BC = "पिछड़ा"
 
 
 def normalize_reservation(raw):
-    """Return (caste_reservation, woman_reserved, script) or None if unparseable.
+    """Return (reserved_caste, reserved_woman, script) or None if unparseable.
 
     script is "latin" or "krutidev" - useful for auditing which blocks were
     read off the English table and which off the Hindi one.

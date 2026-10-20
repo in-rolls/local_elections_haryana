@@ -132,8 +132,8 @@ def apply_source_district_reviews(
             category = CATEGORIES.get(review["category_source_raw"])
             if (
                 category is None
-                or type(review["woman_reserved"]) is not bool
-                or category != (review["caste_reservation"], review["woman_reserved"])
+                or type(review["reserved_woman"]) is not bool
+                or category != (review["reserved_caste"], review["reserved_woman"])
             ):
                 raise ValueError(f"Invalid district review category: {key}")
             if any(
@@ -201,8 +201,8 @@ def apply_source_district_reviews(
             "tier": review["tier"],
             "ward": review["ward"],
             "body_within_page": review["body_source_raw"],
-            "caste_reservation": review["caste_reservation"],
-            "woman_reserved": review["woman_reserved"],
+            "reserved_caste": review["reserved_caste"],
+            "reserved_woman": review["reserved_woman"],
             "is_seat_record": True,
         }
         for field, value in updates.items():

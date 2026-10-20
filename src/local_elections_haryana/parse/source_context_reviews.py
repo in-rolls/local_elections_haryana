@@ -90,9 +90,9 @@ def validate_gp_notification_review(review: dict[str, Any], root: Path) -> None:
     elif authority == "handwritten_amendment_unverified":
         if (
             "category_source_raw" in review
-            or not {"caste_reservation", "woman_reserved"} <= review.keys()
-            or review["caste_reservation"] is not None
-            or review["woman_reserved"] is not None
+            or not {"reserved_caste", "reserved_woman"} <= review.keys()
+            or review["reserved_caste"] is not None
+            or review["reserved_woman"] is not None
             or not isinstance(review.get("category_annotation_description"), str)
             or not review["category_annotation_description"].strip()
         ):
