@@ -1,3 +1,16 @@
 .DS_Store
 __pycache__/
 .pytest_cache/
+.ruff_cache/
+.venv/
+*.egg-info/
+/build/
+dist/
+*.log
+*.part
+data/derived/
+# Raw-data archive: files ship as a tarball (see data/raw_archive/README.md)
+data/raw_archive/**
+!data/raw_archive/
+!data/raw_archive/MANIFEST.csv
+!data/raw_archive/README.md

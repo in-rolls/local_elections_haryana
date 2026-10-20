@@ -1,0 +1,108 @@
+{
+  "purpose": "Research crosswalks between sarpanch seats of consecutive elections. A link states that names agree inside a reviewed block pair, not that boundaries are unchanged.",
+  "matcher": {
+    "preclink": "1.2.0",
+    "name_threshold": 0.8,
+    "ward_pass_threshold": 0.85
+  },
+  "code_sha256": "4fa5771498b4abd864b8ad208b2d2fb7efdd1f136dd0d681037b45102cf64664",
+  "pairs": {
+    "2000_2005": {
+      "inputs": {
+        "data/fin/gp_reservation_2000.parquet": "68f711c3e0b44575d6f880625142f7e2af02a70c14c6b42cf0f36877301088da",
+        "data/fin/gp_reservation_2005.parquet": "a3995aa8b793a7e25b7dcc3a720dfef24c712ca1ebe85b558024cade90db84b3",
+        "data/fin/ward_reservation_2000.parquet": "2b95e5f1306e9c29d8a0519362e99f8cc0ee6f63f1abb9e89dd4a635bdf4828c",
+        "data/fin/ward_reservation_2005.parquet": "814415e255fbf2711de4f004cadf23cb3ad09ad6a9e46859a33a934381eeb693",
+        "data/crosswalks/district_2000_2005.csv": "b4c9a55fba0e59fd1340a5a0c9df90620ba688e9cca1205bab0842f5a022d5ec",
+        "data/crosswalks/block_2000_2005.csv": "1e16a7e3235161b399d5da0d30ee5f0a494228b2309fd9bb4637bd3b4e03ca37"
+      },
+      "validation": {
+        "gps_2000": 5892,
+        "gps_2005": 6164,
+        "linked": 5624,
+        "linked_by_name": 5578,
+        "linked_by_name_and_wards": 46,
+        "ward_count_agreement_name_pass": 0.394,
+        "ward_count_agreement_shuffled_within_block": 0.159
+      },
+      "file": {
+        "path": "gp_2000_2005.parquet",
+        "rows": 5624,
+        "sha256": "f3dda2d6d1572b58b009111c2df2487079993bc8271027c3e530c6f3f89ca6e0"
+      }
+    },
+    "2005_2010": {
+      "inputs": {
+        "data/fin/gp_reservation_2005.parquet": "a3995aa8b793a7e25b7dcc3a720dfef24c712ca1ebe85b558024cade90db84b3",
+        "data/fin/gp_reservation_2010.parquet": "ef756c8c890f3487dd7724a12c795462426df84d3e989cc9dcd758209bd21a12",
+        "data/fin/ward_reservation_2005.parquet": "814415e255fbf2711de4f004cadf23cb3ad09ad6a9e46859a33a934381eeb693",
+        "data/fin/ward_reservation_2010.parquet": "02e7618416fe88240d4ac5fa3d72d34d33f96501142c22ee13e12876216f8b6a",
+        "data/crosswalks/district_2005_2010.csv": "08b3b1c020b660985f05f9055b8c874fe61bbaaa0c65a6ba88e27de3184ee442",
+        "data/crosswalks/block_2005_2010.csv": "d76eb0919c52d06716f64123b27a2bc1518bff0f66e9a2ee9277f4406470373c"
+      },
+      "validation": {
+        "gps_2005": 6164,
+        "gps_2010": 5916,
+        "linked": 5724,
+        "linked_by_name": 5640,
+        "linked_by_name_and_wards": 84,
+        "ward_count_agreement_name_pass": 0.9691,
+        "ward_count_agreement_shuffled_within_block": 0.1637
+      },
+      "file": {
+        "path": "gp_2005_2010.parquet",
+        "rows": 5724,
+        "sha256": "956d96a9bf28ae6c15ecc694925b3d93664c53d8e67624f98dd0372b7ca42f7c"
+      }
+    },
+    "2010_2016": {
+      "inputs": {
+        "data/fin/gp_reservation_2010.parquet": "ef756c8c890f3487dd7724a12c795462426df84d3e989cc9dcd758209bd21a12",
+        "data/fin/gp_reservation_2016.parquet": "0b9e8d17a2c5eb2e2948ad9cf46895afa0b32e8dbae7d86939eb08294a3e12ed",
+        "data/fin/ward_reservation_2010.parquet": "02e7618416fe88240d4ac5fa3d72d34d33f96501142c22ee13e12876216f8b6a",
+        "data/fin/ward_reservation_2016.parquet": "7a3c59243ce59443d5907aa40ab91fc9888d64b10e6d7e9cc76b8afdfdefc893",
+        "data/crosswalks/district_2010_2016.csv": "4314171ba9e4edf32751864f158ebd1762f8e432947b35613f1eb9149cc1e802",
+        "data/crosswalks/block_2010_2016.csv": "04cd8bf617d701f7b26f1c036873cc3b656ce74221f8cbcb5e859f69da4401ea"
+      },
+      "validation": {
+        "gps_2010": 5916,
+        "gps_2016": 6090,
+        "linked": 5623,
+        "linked_by_name": 5600,
+        "linked_by_name_and_wards": 23,
+        "ward_count_agreement_name_pass": 0.4825,
+        "ward_count_agreement_shuffled_within_block": 0.1427
+      },
+      "file": {
+        "path": "gp_2010_2016.parquet",
+        "rows": 5623,
+        "sha256": "0035333d40c547114cb3f2374f89dca38df0ade44079b8658ef0f90495e929c4"
+      }
+    },
+    "2016_2022": {
+      "inputs": {
+        "data/fin/gp_reservation_2016.parquet": "0b9e8d17a2c5eb2e2948ad9cf46895afa0b32e8dbae7d86939eb08294a3e12ed",
+        "data/fin/gp_reservation_2022.parquet": "79c656d189a9a7073146db8dddf8029340c6d8e4b4001653564cb4ae2788d586",
+        "data/fin/ward_reservation_2016.parquet": "7a3c59243ce59443d5907aa40ab91fc9888d64b10e6d7e9cc76b8afdfdefc893",
+        "data/fin/ward_reservation_2022.parquet": "fc9e667819b650307fc5cd1f40e161fecda2329ef4ddd73b60e8be161f689782",
+        "data/crosswalks/district_2016_2022.csv": "652bedb43d503c477c3a1bbd6702fdc6e0bf91a90303e21cc410cb35200f4d5e",
+        "data/crosswalks/block_2016_2022.csv": "9e9d6d91a8af970fb8fa383c195a8625612e29392111eaf5e4d5aac86e340c76",
+        "data/inferred/kruti_dev_names_2022.csv": "5cec4ee897f88272d04babf1d8d0dc2242abdaddd26ad21c590ff7b4fab4dede"
+      },
+      "validation": {
+        "gps_2016": 6090,
+        "gps_2022": 6123,
+        "linked": 5715,
+        "linked_by_name": 5680,
+        "linked_by_name_and_wards": 35,
+        "ward_count_agreement_name_pass": 0.9194,
+        "ward_count_agreement_shuffled_within_block": 0.1477
+      },
+      "file": {
+        "path": "gp_2016_2022.parquet",
+        "rows": 5715,
+        "sha256": "fa3a17f4322e2cdfb8be422920f93fda7dd5c4bf60ebe60a69faf4922bb7d7e8"
+      }
+    }
+  }
+}

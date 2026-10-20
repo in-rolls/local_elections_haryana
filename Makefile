@@ -1,28 +1,56 @@
 YEAR ?= 2022
-PY   ?= python3
+PY ?= uv run python
+RUFF ?= uv run ruff
 
-.PHONY: all harvest parse validate test clean help
+.PHONY: sync data harvest parse parse-2005 parse-2000 validate lint verify check data-summary historical raw-verify raw-archive \
+	infer link
 
-help:
-	@echo "make harvest  YEAR=$(YEAR)   download index + notification PDFs, write manifest.csv"
-	@echo "make parse    YEAR=$(YEAR)   PDFs -> gp_reservation.csv, ward_reservation.csv"
-	@echo "make validate YEAR=$(YEAR)   check the CSVs; non-zero exit on failure"
-	@echo "make test                    unit tests for the normalizer and row splitter"
-	@echo "make all                     harvest, parse, validate"
+sync:
+	uv sync --frozen --group dev
 
-all: harvest parse validate
+data:
+	$(PY) -m local_elections_haryana.parse.to_parquet
+	$(MAKE) historical data-summary
+
+historical:
+	$(PY) -m local_elections_haryana.build.build_release
 
 harvest:
-	cd scripts && $(PY) harvest.py --year $(YEAR)
+	$(PY) -m local_elections_haryana.acquire.harvest --year $(YEAR)
 
 parse:
-	cd scripts && $(PY) parse.py --year $(YEAR)
+	$(PY) -m local_elections_haryana.parse.parse --year $(YEAR)
+
+parse-2005:
+	$(PY) -m local_elections_haryana.parse.parse_2005
+
+parse-2000:
+	$(PY) -m local_elections_haryana.parse.parse_2000
 
 validate:
-	cd scripts && $(PY) validate.py --year $(YEAR)
+	$(PY) -m local_elections_haryana.build.validate --year $(YEAR)
 
-test:
-	cd scripts && $(PY) -m pytest -q
+lint:
+	$(RUFF) check .
+	$(RUFF) format --check .
 
-clean:
-	rm -f data/$(YEAR)/gp_reservation.csv data/$(YEAR)/ward_reservation.csv
+verify:
+	$(PY) -m local_elections_haryana.build.release verify
+
+data-summary:
+	$(PY) -m local_elections_haryana.build.release summary
+
+check: lint verify
+
+raw-verify:
+	$(PY) -m local_elections_haryana.acquire.raw_archive verify
+
+raw-archive:
+	$(PY) -m local_elections_haryana.acquire.raw_archive pack $(if $(OUT),--out $(OUT),)
+
+infer:
+	$(PY) -m local_elections_haryana.infer.kruti_names
+	$(PY) -m local_elections_haryana.infer.winner_sex
+
+link:
+	$(PY) -m local_elections_haryana.linkage.gp_links

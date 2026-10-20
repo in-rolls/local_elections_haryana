@@ -1,0 +1,134 @@
+district_2000,block_2000,district_2005,block_2005,proposed,shared_gp_names,gps_2000,gps_2005,shared_share_of_2005
+Ambala,Ambala,Ambala,Ambala-I,linked,59,143,107,0.551
+Ambala,Ambala,Ambala,Ambala-II,linked,33,143,47,0.702
+Ambala,Ambala,Ambala,Naraingarh,excluded,4,143,84,0.048
+Ambala,Ambala,Ambala,Saha,linked,6,143,60,0.1
+Ambala,Barara,Ambala,Ambala-I,excluded,3,123,107,0.028
+Ambala,Barara,Ambala,Barara,linked,38,123,67,0.567
+Ambala,Barara,Ambala,Saha,linked,39,123,60,0.65
+Ambala,Naraingarh,Ambala,Naraingarh,linked,45,83,84,0.536
+Ambala,Naraingarh,Ambala,Saha,excluded,3,83,60,0.05
+Ambala,Shazadpur,Ambala,Barara,excluded,3,62,67,0.045
+Ambala,Shazadpur,Ambala,Shahzadpur,linked,38,62,65,0.585
+Bhiwani,Badhra,Bhiwani,Badhra,linked,37,62,62,0.597
+Bhiwani,Bawani Khera,Bhiwani,Bawani Khera,linked,25,32,32,0.781
+Bhiwani,Bhiwani,Bhiwani,Bhiwani,linked,58,75,75,0.773
+Bhiwani,Dadri-I,Bhiwani,Bond Kalan,linked,38,47,48,0.792
+Bhiwani,Dadri-Ii,Bhiwani,Dadri-II,linked,39,53,53,0.736
+Bhiwani,Kairu,Bhiwani,Kairu,linked,24,34,35,0.686
+Bhiwani,Loharu,Bhiwani,Behal,linked,18,65,28,0.643
+Bhiwani,Loharu,Bhiwani,Loharu,linked,25,65,38,0.658
+Bhiwani,Siwani,Bhiwani,Siwani,linked,31,39,40,0.775
+Bhiwani,Tosham,Bhiwani,Tosham,linked,37,49,50,0.74
+Fatehabad,Bhattu Kalan,Fatehabad,Bhattu Kalan,linked,16,27,28,0.571
+Fatehabad,Bhuna,Fatehabad,Bhuna,linked,24,27,27,0.889
+Fatehabad,Fatehabad,Fatehabad,Fatehabad,linked,33,53,56,0.589
+Fatehabad,Ratia,Fatehabad,Ratia,linked,45,61,63,0.714
+Fatehabad,Tohana,Fatehabad,Jakhal,linked,15,61,23,0.652
+Fatehabad,Tohana,Fatehabad,Tohana,linked,19,61,42,0.452
+Faridabad,Ballabgarh,Faridabad,Ballabhgarh,linked,43,63,65,0.662
+Faridabad,Faridabad,Faridabad,Faridabad,linked,34,42,45,0.756
+Faridabad,Hassanpur,Faridabad,Hassanpur,linked,23,31,33,0.697
+Faridabad,Hathin,Mewat,Hathin,linked,44,65,68,0.647
+Faridabad,Hodal,Faridabad,Hodal,linked,28,34,35,0.8
+Faridabad,Palwal,Faridabad,Palwal,linked,64,94,102,0.627
+Gurgaon,Farukh Nagar,Gurgaon,Farukh Nagar,linked,33,46,48,0.688
+Gurgaon,Firozpur Jhirka,Mewat,Ferozepur Jhirka,linked,32,49,59,0.542
+Gurgaon,Gurgaon,Gurgaon,Gurgaon,linked,37,62,64,0.578
+Gurgaon,Nagina,Mewat,Nagina,linked,33,50,53,0.623
+Gurgaon,Nagina,Mewat,Nuh,excluded,3,50,90,0.033
+Gurgaon,Nuh,Mewat,Nagina,excluded,3,77,53,0.057
+Gurgaon,Nuh,Mewat,Nuh,linked,48,77,90,0.533
+Gurgaon,Pataudi,Gurgaon,Pataudi,linked,35,66,70,0.5
+Gurgaon,Punhana,Mewat,Punhana,linked,48,58,68,0.706
+Gurgaon,Sohna,Gurgaon,Sohna,linked,36,52,55,0.655
+Gurgaon,Taoru,Mewat,Taoru,linked,21,41,42,0.5
+Hisar,Adampur,Hisar,Adampur,linked,17,23,23,0.739
+Hisar,Agroha,Hisar,Agroha,linked,23,23,23,1.0
+Hisar,Barwala,Hisar,Barwala,linked,31,40,40,0.775
+Hisar,Hansi-I,Hisar,Hansi-I,linked,44,54,58,0.759
+Hisar,Hansi-Ii,Hisar,Hansi-II,linked,20,23,23,0.87
+Hisar,Hisar-I,Hisar,Hisar-I,linked,37,48,49,0.755
+Hisar,Hisar-Ii,Hisar,Hisar-II,linked,28,40,40,0.7
+Hisar,Narnaund,Hisar,Narnaund,linked,21,30,30,0.7
+Hisar,Uklana,Hisar,Uklana,linked,18,24,24,0.75
+Jhajjar,Bahadurgarh,Jhajjar,Bahadurgarh,linked,28,61,62,0.452
+Jhajjar,Beri,Jhajjar,Beri,linked,24,36,36,0.667
+Jhajjar,Jhajjar,Jhajjar,Jhajjar,linked,42,71,70,0.6
+Jhajjar,Matanhail,Jhajjar,Matanhail,linked,24,43,43,0.558
+Jhajjar,Salhawas,Jhajjar,Salhawas,linked,24,32,36,0.667
+Jind,Alewa,Jind,Alewa,linked,16,20,21,0.762
+Jind,Jind,Jind,Jind,linked,53,65,65,0.815
+Jind,Julana,Jind,Julana,linked,23,36,38,0.605
+Jind,Narwana,Jind,Narwana,linked,35,59,59,0.593
+Jind,Pillukhera,Jind,Pillukhera,linked,20,27,27,0.741
+Jind,Safidon,Jind,Safidon,linked,36,45,44,0.818
+Jind,Uchana,Jind,Uchana,linked,30,45,45,0.667
+Kaithal,Guhla,Kaithal,Guhla,linked,32,79,58,0.552
+Kaithal,Guhla,Kaithal,Siwan,linked,16,79,43,0.372
+Kaithal,Kaithal,Kaithal,Kaithal,linked,44,71,62,0.71
+Kaithal,Kaithal,Kaithal,Siwan,linked,9,71,43,0.209
+Kaithal,Kalyat,Kaithal,Kalayat,linked,15,28,28,0.536
+Kaithal,Pundri,Kaithal,Pundri,linked,35,43,44,0.795
+Kaithal,Rajound,Kaithal,Rajound,linked,18,27,28,0.643
+Karnal,Assandh,Karnal,Assandh,linked,22,46,54,0.407
+Karnal,Gharaunda,Karnal,Gharaunda,linked,15,28,53,0.283
+Karnal,Indri,Karnal,Indri,linked,51,76,79,0.646
+Karnal,Karnal,Karnal,Karnal,linked,59,71,73,0.808
+Karnal,Nilokheri,Karnal,Nilokheri,linked,56,73,73,0.767
+Karnal,Nissing,Karnal,Nissing,linked,34,46,48,0.708
+Kurukshetra,Babain,Kurukshetra,Babain,linked,33,41,41,0.805
+Kurukshetra,Ladwa,Kurukshetra,Ladwa,linked,39,61,61,0.639
+Kurukshetra,Pehowa,Kurukshetra,Pehowa,linked,51,75,80,0.637
+Kurukshetra,Pehowa,Kurukshetra,Shahabad,excluded,3,75,90,0.033
+Kurukshetra,Sahabad,Kurukshetra,Shahabad,linked,63,87,90,0.7
+Kurukshetra,Thanesar,Kurukshetra,Thanesar,linked,74,100,105,0.705
+Mahendergarh,Ateli Nangal,Mahendergarh,Ateli Mandi,linked,60,73,73,0.822
+Mahendergarh,Ateli Nangal,Mahendergarh,Kanina,excluded,3,73,58,0.052
+Mahendergarh,Kanina,Mahendergarh,Kanina,linked,41,58,58,0.707
+Mahendergarh,Mahendergarh,Mahendergarh,Mahendergarh,linked,52,78,82,0.634
+Mahendergarh,Nangal Chaudhary,Mahendergarh,Nangal Chaudhary,linked,38,67,67,0.567
+Mahendergarh,Narnaul,Mahendergarh,Narnaul,linked,37,59,59,0.627
+Panchkula,Morni,Panchkula,Morni,linked,15,20,20,0.75
+Panchkula,Pinjore,Panchkula,Pinjore,linked,43,68,64,0.672
+Panchkula,Raipur Rani,Panchkula,Raipur Rani,linked,35,41,42,0.833
+Panipat,Bapoli,Panipat,Bapauli,linked,18,39,40,0.45
+Panipat,Israna,Panipat,Israna,linked,19,31,31,0.613
+Panipat,Madloda,Panipat,Madlauda,linked,21,33,34,0.618
+Panipat,Panipat,Panipat,Panipat,linked,27,35,35,0.771
+Panipat,Samalkha,Panipat,Samalkha,linked,20,30,30,0.667
+Rewari,Bawal,Rewari,Bawal,linked,60,86,92,0.652
+Rewari,Jatusana,Rewari,Jatusana,linked,45,62,64,0.703
+Rewari,Khol,Rewari,Khol,linked,42,56,57,0.737
+Rewari,Nahar,Rewari,Nahar,linked,30,49,46,0.652
+Rewari,Rewari,Rewari,Rewari,linked,60,91,91,0.659
+Rohtak,Kalanaur,Rohtak,Kalanaur,linked,17,24,24,0.708
+Rohtak,Lakhan Majra,Rohtak,Lakhan Majra,linked,12,13,13,0.923
+Rohtak,Meham,Rohtak,Meham,linked,14,34,34,0.412
+Rohtak,Rohtak,Rohtak,Rohtak,linked,29,53,56,0.518
+Rohtak,Sampla,Rohtak,Sampla,linked,20,25,25,0.8
+Sirsa,Baragudha,Sirsa,Baragudha,linked,35,44,44,0.795
+Sirsa,Dabwali,Sirsa,Dabwali,linked,40,46,47,0.851
+Sirsa,Ellenabad,Sirsa,Ellenabad,linked,30,40,45,0.667
+Sirsa,Nathusari Chopta,Sirsa,Nathusari Chopta,linked,40,51,52,0.769
+Sirsa,Odhan,Sirsa,Odhan,linked,30,35,37,0.811
+Sirsa,Rania,Sirsa,Rania,linked,39,51,54,0.722
+Sirsa,Sirsa,Sirsa,Sirsa,linked,41,52,54,0.759
+Sonepat,Ganaur,Sonipat,Ganaur,linked,53,65,65,0.815
+Sonepat,Gohana,Sonipat,Gohana,linked,29,35,35,0.829
+Sonepat,Kathura,Sonipat,Kathura,linked,13,19,18,0.722
+Sonepat,Kharkhoda,Sonipat,Kharkhoda,linked,22,37,44,0.5
+Sonepat,Mundlana,Sonipat,Mundlana,linked,20,33,34,0.588
+Sonepat,Rai,Sonipat,Rai,linked,40,53,55,0.727
+Sonepat,Sonepat,Sonipat,Sonipat,linked,58,68,70,0.829
+Yamuna Nagar,Bilaspur,Yamuna Nagar,Bilaspur,linked,39,78,88,0.443
+Yamuna Nagar,Chhachhrauli,Yamuna Nagar,Bilaspur,excluded,4,102,88,0.045
+Yamuna Nagar,Chhachhrauli,Yamuna Nagar,Chhachhrauli,linked,65,102,113,0.575
+Yamuna Nagar,Chhachhrauli,Yamuna Nagar,Jagadhri,excluded,3,102,90,0.033
+Yamuna Nagar,Jagadheri,Yamuna Nagar,Jagadhri,linked,68,85,90,0.756
+Yamuna Nagar,Jagadheri,Yamuna Nagar,Mustfabad,excluded,3,85,70,0.043
+Yamuna Nagar,Jagadheri,Yamuna Nagar,Radaur,excluded,3,85,67,0.045
+Yamuna Nagar,Mustfabad,Yamuna Nagar,Bilaspur,excluded,3,60,88,0.034
+Yamuna Nagar,Mustfabad,Yamuna Nagar,Mustfabad,linked,38,60,70,0.543
+Yamuna Nagar,Radaur,Yamuna Nagar,Radaur,linked,37,58,67,0.552
+Yamuna Nagar,Sadhaura,Yamuna Nagar,Sadhaura,linked,24,36,40,0.6

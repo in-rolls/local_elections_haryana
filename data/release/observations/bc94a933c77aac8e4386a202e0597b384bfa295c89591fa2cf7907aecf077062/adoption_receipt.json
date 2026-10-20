@@ -1,0 +1,33 @@
+{
+  "assignment_usable": false,
+  "central_snapshot": "data/master/observations/haryana/bc94a933c77aac8e4386a202e0597b384bfa295c89591fa2cf7907aecf077062",
+  "changed_rows": 2,
+  "copied_file": "data/master/observations/haryana/bc94a933c77aac8e4386a202e0597b384bfa295c89591fa2cf7907aecf077062/seat_rows.parquet",
+  "copied_path_resolution": "Current observations index, then snapshot provenance files[].path",
+  "data_files_rewritten": false,
+  "data_sync_previously_completed": true,
+  "export_sha256": "bb04f963b2636a1bc14e92f7342cd11b3295b9817744d43f2d79d7ae5caf204b",
+  "new_paid_api_cost_usd": 0,
+  "other_rows_unchanged": 70590,
+  "printed_vacancies_classified": 1,
+  "quality_holds_preserved": true,
+  "raw_values_checked": 423552,
+  "raw_values_modified": 0,
+  "rows": 70592,
+  "snapshot_provenance_sha256": "00265aa03f569e6df20cf792d75ae249d953965db937b1c86028048312b96027",
+  "source_evidence_pins_checked": 3,
+  "status": "validated_and_centrally_adopted",
+  "sync_rerun": false,
+  "up_source_configuration_unchanged": true,
+  "vacancy_representation": {
+    "meaning": "Explicit printed vacancy, not an unidentified person or missing OCR.",
+    "original_ocr_value_preserved": "VACCANT",
+    "source_review_status": "applied_nonperson_winner",
+    "winner_identity_usable": false,
+    "winner_ocr_text_role": "printed_vacancy_notice"
+  },
+  "validation_report": "data/source_search/national/haryana/early_cycles/gp_ps_benchmark/muse_rollout/source_sirsa_fragment_identity_adoption_20260913T021223708999Z/export_validation.json",
+  "validation_report_sha256": "4a6be6986dc52d2e2af3c46586a0232b120d61aeabf13dcb412fb68757d1a05b",
+  "verification_completed_at": "2026-09-13T04:59:23.416828+00:00",
+  "ward_and_winner_readings_corrected": 1
+}

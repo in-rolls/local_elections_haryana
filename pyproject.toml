@@ -1,0 +1,49 @@
+[project]
+name = "local-elections-haryana"
+version = "1.0.0"
+description = "Haryana gram panchayat and ward reservation data for 2016 and 2022"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "Gaurav Sood", email = "contact@gsood.com" }]
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES"]
+keywords = ["Haryana", "elections", "panchayats", "reservation", "data"]
+dependencies = [
+    "pdfplumber>=0.11",
+    "pyarrow>=21",
+    "pandas>=2.0",
+    "preclink>=1.2",
+    "requests",
+]
+
+[project.urls]
+Repository = "https://github.com/in-rolls/local_elections_haryana"
+Issues = "https://github.com/in-rolls/local_elections_haryana/issues"
+
+[tool.uv]
+package = true
+
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/local_elections_haryana"]
+
+[dependency-groups]
+dev = ["ruff>=0.14", "pytest>=8"]
+infer = ["naampy>=0.11", "scikit-learn>=1.5"]
+transliterate = ["indicate>=0.10; python_version >= '3.13'"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "C4", "UP", "RUF"]
+allowed-confusables = ["‘", "’", "‛", "–"]
+
+[tool.ruff.lint.per-file-ignores]
+# Cell-cropping closures are defined and called inside the same loop iteration,
+# so the loop variables they read are always the current ones.
+"src/local_elections_haryana/parse/{parse_annexures,parse_gazettes,parse_report}.py" = ["B023"]
