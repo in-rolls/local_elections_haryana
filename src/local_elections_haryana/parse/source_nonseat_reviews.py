@@ -19,8 +19,8 @@ RAW_FIELDS = {
 NORMALIZED_FIELDS = (
     "office_normalized",
     "tier",
-    "caste_reservation",
-    "woman_reserved",
+    "reserved_caste",
+    "reserved_woman",
 )
 
 

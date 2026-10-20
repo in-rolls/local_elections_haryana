@@ -1,4 +1,4 @@
-district,block,sr_no,gram_panchayat,reservation,caste_reservation,woman_reserved,winner,father_husband,unopposed,vacant,reservation_raw,script,printings_agree,notification,source_pdf
+district,block,sr_no,gram_panchayat,reserved_label,reserved_caste,reserved_woman,winner,father_husband,unopposed,vacant,reserved_raw,script,printings_agree,notification,source_pdf
 Ambala,Ambala-I,1,Addo Majra,Woman,NONE,1,Angoori Devi,Sahab Singh,,0,Women,latin,,,AMBALA-I.pdf
 Ambala,Ambala-I,2,Ahma,Woman,NONE,1,Dayal Kaur,Amarjeet Singh,,0,Women,latin,,,AMBALA-I.pdf
 Ambala,Ambala-I,3,Ami pur,Other than Woman,NONE,0,Malkiat Singh,Mahinder Singh,,0,Unreserved,latin,,,AMBALA-I.pdf

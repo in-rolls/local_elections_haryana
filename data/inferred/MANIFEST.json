@@ -5,17 +5,17 @@
     "scikit-learn": "1.9.1"
   },
   "inputs": {
-    "data/fin/gp_reservation_2000.parquet": "285f54124287f0da18b73cb2b0dc8a8a0e8df3b2696d13b4deb078991c123401",
-    "data/fin/gp_reservation_2005.parquet": "7a34d6371ec071bfd6d8021602f6bdb96542604db7446f1817d195b4f0e7707c",
-    "data/fin/gp_reservation_2010.parquet": "04d0262f8c6e68af3b29f6e195251ed9f0de83f43867270e9f9c7432e09d145a",
-    "data/fin/gp_reservation_2016.parquet": "d4f8e2e917c016ff9504917ba40a5efda52da41f4f5e35ffad7b1c5f87a3ad81",
-    "data/fin/gp_reservation_2022.parquet": "d10999f41c892d3bf31044972a1313dc021193ce3b7e66390cee5a85881e94eb"
+    "data/fin/gp_reservation_2000.parquet": "68f711c3e0b44575d6f880625142f7e2af02a70c14c6b42cf0f36877301088da",
+    "data/fin/gp_reservation_2005.parquet": "a3995aa8b793a7e25b7dcc3a720dfef24c712ca1ebe85b558024cade90db84b3",
+    "data/fin/gp_reservation_2010.parquet": "ef756c8c890f3487dd7724a12c795462426df84d3e989cc9dcd758209bd21a12",
+    "data/fin/gp_reservation_2016.parquet": "0b9e8d17a2c5eb2e2948ad9cf46895afa0b32e8dbae7d86939eb08294a3e12ed",
+    "data/fin/gp_reservation_2022.parquet": "79c656d189a9a7073146db8dddf8029340c6d8e4b4001653564cb4ae2788d586"
   },
-  "code_sha256": "a6abada50406634b98b7d3931408ea91cfe34fcfcb1a79fff26e00ba1b172802",
+  "code_sha256": "c78c1c8fc47df987fb75ca95e2ec6140047e8585acb9090971c6b7c7338eef76",
   "validation": {
     "training": {
       "year": 2022,
-      "label": "woman_reserved; the 2020 amendment bars women from other seats"
+      "label": "reserved_woman; the 2020 amendment bars women from other seats"
     },
     "recalibrated_cross_validated": {
       "n": 5826,
@@ -85,29 +85,29 @@
   },
   "files": [
     {
-      "path": "winner_female_probability_2000.parquet",
+      "path": "winner_woman_probability_2000.parquet",
       "rows": 5905,
-      "sha256": "234026c96e006f39cdd80dfb13c427a59ab4e1f725431c1dceac5bb210190a98"
+      "sha256": "1cce8a0e3232446df58cbe173021fcd6976c51ed535fadd3def30f114de3bf72"
     },
     {
-      "path": "winner_female_probability_2005.parquet",
+      "path": "winner_woman_probability_2005.parquet",
       "rows": 6196,
-      "sha256": "076d363edf7b403a442af6f8bf6d358edaf8c59a3d61007bbc3b35155e4cb02d"
+      "sha256": "fef438a3083f02c4aa5bcd170a5662223f08dc3e10b21331da0bec25bdafae65"
     },
     {
-      "path": "winner_female_probability_2010.parquet",
+      "path": "winner_woman_probability_2010.parquet",
       "rows": 5919,
-      "sha256": "a8ad8f160dc814bc25b9f2c352d5783ad54a8c080daba629631fd1956fa5b6b2"
+      "sha256": "1fb7f9eb77553d74a1b05cf8357ba6198e5de3c45732afee603a7eb1a932e63a"
     },
     {
-      "path": "winner_female_probability_2016.parquet",
+      "path": "winner_woman_probability_2016.parquet",
       "rows": 6081,
-      "sha256": "28d63dc1cd836a3dcaedcf8db22510734b0df2a08cd890b566cffd7c013d5cf6"
+      "sha256": "f75e5715b1d1cb6a3e29d44dad6a568363ed78019b7bc5c11d7822f29cf0aea8"
     },
     {
-      "path": "winner_female_probability_2022.parquet",
+      "path": "winner_woman_probability_2022.parquet",
       "rows": 6085,
-      "sha256": "d55f3cab9a6cac760ec417c2786dbda73fad0a509116407d5fcdde01fd0c3ea0"
+      "sha256": "08ffb2bb420bf2c3794d41cec6e92d579577614d26decd23365bb55741221e75"
     }
   ]
 }

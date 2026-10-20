@@ -1,4 +1,4 @@
-district,block,sr_no,gram_panchayat,reservation,caste_reservation,woman_reserved,winner,father_husband,unopposed,vacant,reservation_raw,script,printings_agree,notification,source_pdf
+district,block,sr_no,gram_panchayat,reserved_label,reserved_caste,reserved_woman,winner,father_husband,unopposed,vacant,reserved_raw,script,printings_agree,notification,source_pdf
 Ambala,Ambala-1,1,Adho Majra,Other than Woman,NONE,0,Sarjant Singh,Joginder Singh,0,0,Other than Women,latin,1,7241,Ambala__Ambala-1.pdf
 Ambala,Ambala-1,2,Ahema,Woman,NONE,1,Jasveer Kaur,Kaka Singh/Dalbir Singh,0,0,Women,latin,1,7241,Ambala__Ambala-1.pdf
 Ambala,Ambala-1,3,Amipur,Other than Woman,NONE,0,Narmail Singh,Rulda Ram,0,0,Other than Women,latin,1,7241,Ambala__Ambala-1.pdf

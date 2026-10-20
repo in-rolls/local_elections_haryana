@@ -4,8 +4,8 @@
     {
       "file": "gp_reservation_2000.parquet",
       "source_csv": "2000/gp_reservation.csv",
-      "source_sha256": "8d4ee84392e42a8ee16126feaf19fa2767b850dc69ea95e3726d0bae6dbc40c8",
-      "sha256": "285f54124287f0da18b73cb2b0dc8a8a0e8df3b2696d13b4deb078991c123401",
+      "source_sha256": "1d200b2bd12b8ecb2ea4cacee663dedb6c54a7dcae887ca12e67390d5aace1aa",
+      "sha256": "68f711c3e0b44575d6f880625142f7e2af02a70c14c6b42cf0f36877301088da",
       "rows": 5932,
       "year": 2000,
       "seat_kind": "gp",
@@ -36,17 +36,17 @@
           "nullable": true
         },
         {
-          "name": "reservation",
+          "name": "reserved_label",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "caste_reservation",
+          "name": "reserved_caste",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "woman_reserved",
+          "name": "reserved_woman",
           "type": "bool",
           "nullable": true
         },
@@ -71,7 +71,7 @@
           "nullable": true
         },
         {
-          "name": "reservation_raw",
+          "name": "reserved_raw",
           "type": "string",
           "nullable": true
         },
@@ -100,8 +100,8 @@
     {
       "file": "ward_reservation_2000.parquet",
       "source_csv": "2000/ward_reservation.csv",
-      "source_sha256": "d142bb95742c4d968dc6c185d9826d756551f668773230b2e293adec723ae69e",
-      "sha256": "85c7bb6c094832728fcd940cfc8de815928abfe6d295fd0b9aa7da7e3e856f30",
+      "source_sha256": "f3e879ea1881d956a27ef55774cdcc03b99138debbc386f345e2b8d4db730def",
+      "sha256": "2b95e5f1306e9c29d8a0519362e99f8cc0ee6f63f1abb9e89dd4a635bdf4828c",
       "rows": 53701,
       "year": 2000,
       "seat_kind": "ward",
@@ -137,17 +137,17 @@
           "nullable": true
         },
         {
-          "name": "reservation",
+          "name": "reserved_label",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "caste_reservation",
+          "name": "reserved_caste",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "woman_reserved",
+          "name": "reserved_woman",
           "type": "bool",
           "nullable": true
         },
@@ -172,7 +172,7 @@
           "nullable": true
         },
         {
-          "name": "reservation_raw",
+          "name": "reserved_raw",
           "type": "string",
           "nullable": true
         },
@@ -201,8 +201,8 @@
     {
       "file": "gp_reservation_2005.parquet",
       "source_csv": "2005/gp_reservation.csv",
-      "source_sha256": "cb5ae30ee00d8b6bdc4a44be41b2771240e3d61d075d6bc83328822f5e98f068",
-      "sha256": "7a34d6371ec071bfd6d8021602f6bdb96542604db7446f1817d195b4f0e7707c",
+      "source_sha256": "d243959395c48e0d9a30b24bb629e8d4881188ba8fb7c4ae58f649d1cb43d3f3",
+      "sha256": "a3995aa8b793a7e25b7dcc3a720dfef24c712ca1ebe85b558024cade90db84b3",
       "rows": 6198,
       "year": 2005,
       "seat_kind": "gp",
@@ -233,17 +233,17 @@
           "nullable": true
         },
         {
-          "name": "reservation",
+          "name": "reserved_label",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "caste_reservation",
+          "name": "reserved_caste",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "woman_reserved",
+          "name": "reserved_woman",
           "type": "bool",
           "nullable": true
         },
@@ -268,7 +268,7 @@
           "nullable": true
         },
         {
-          "name": "reservation_raw",
+          "name": "reserved_raw",
           "type": "string",
           "nullable": true
         },
@@ -297,8 +297,8 @@
     {
       "file": "ward_reservation_2005.parquet",
       "source_csv": "2005/ward_reservation.csv",
-      "source_sha256": "b13806f85d6438b93d532a041adbfde71bd1f226e98fb43921bf277696b2365b",
-      "sha256": "4a76a9969ad9ed88f5504c1b2a779826d3976c8aa67155df48136e956dcc6e3b",
+      "source_sha256": "04564e3cc115c9a74e2f73889ca7439bcbb5f4c0608c6cfa5768383f6769a504",
+      "sha256": "814415e255fbf2711de4f004cadf23cb3ad09ad6a9e46859a33a934381eeb693",
       "rows": 60425,
       "year": 2005,
       "seat_kind": "ward",
@@ -334,17 +334,17 @@
           "nullable": true
         },
         {
-          "name": "reservation",
+          "name": "reserved_label",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "caste_reservation",
+          "name": "reserved_caste",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "woman_reserved",
+          "name": "reserved_woman",
           "type": "bool",
           "nullable": true
         },
@@ -369,7 +369,7 @@
           "nullable": true
         },
         {
-          "name": "reservation_raw",
+          "name": "reserved_raw",
           "type": "string",
           "nullable": true
         },
@@ -398,8 +398,8 @@
     {
       "file": "gp_reservation_2010.parquet",
       "source_csv": "2010/gp_reservation.csv",
-      "source_sha256": "db1d6425d3d892d24a717a440701338c902ac95213be8649318bb7cf02454710",
-      "sha256": "04d0262f8c6e68af3b29f6e195251ed9f0de83f43867270e9f9c7432e09d145a",
+      "source_sha256": "a14f43b77a7f3a2aa92b15d03fd27ff28b7755f0334b11686238b96d2f042ef5",
+      "sha256": "ef756c8c890f3487dd7724a12c795462426df84d3e989cc9dcd758209bd21a12",
       "rows": 5924,
       "year": 2010,
       "seat_kind": "gp",
@@ -430,17 +430,17 @@
           "nullable": true
         },
         {
-          "name": "reservation",
+          "name": "reserved_label",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "caste_reservation",
+          "name": "reserved_caste",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "woman_reserved",
+          "name": "reserved_woman",
           "type": "bool",
           "nullable": true
         },
@@ -465,7 +465,7 @@
           "nullable": true
         },
         {
-          "name": "reservation_raw",
+          "name": "reserved_raw",
           "type": "string",
           "nullable": true
         },
@@ -494,8 +494,8 @@
     {
       "file": "ward_reservation_2010.parquet",
       "source_csv": "2010/ward_reservation.csv",
-      "source_sha256": "b70c09f0a2131acb331fa5479d602201fcf2b50b42855c8331eff7b821525419",
-      "sha256": "1d54ef4944f9b2a6cfdd570f61dc6e3de4cf64b692669c4069057190b9df828a",
+      "source_sha256": "768a5cf4194ec5b8832e49e76b6e151ca49d0f29e53978ae2429fad2157cc208",
+      "sha256": "02e7618416fe88240d4ac5fa3d72d34d33f96501142c22ee13e12876216f8b6a",
       "rows": 57856,
       "year": 2010,
       "seat_kind": "ward",
@@ -531,17 +531,17 @@
           "nullable": true
         },
         {
-          "name": "reservation",
+          "name": "reserved_label",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "caste_reservation",
+          "name": "reserved_caste",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "woman_reserved",
+          "name": "reserved_woman",
           "type": "bool",
           "nullable": true
         },
@@ -566,7 +566,7 @@
           "nullable": true
         },
         {
-          "name": "reservation_raw",
+          "name": "reserved_raw",
           "type": "string",
           "nullable": true
         },
@@ -595,8 +595,8 @@
     {
       "file": "gp_reservation_2016.parquet",
       "source_csv": "2016/gp_reservation.csv",
-      "source_sha256": "04c29db08e4ee1b851d88c46c75d367f76f1ad9111b8dd0b5d5b7eea558fdb5a",
-      "sha256": "d4f8e2e917c016ff9504917ba40a5efda52da41f4f5e35ffad7b1c5f87a3ad81",
+      "source_sha256": "a5742d4419261d2e2a6b7728dbcbb2d1be66aaeb308257485b8f3ff422188071",
+      "sha256": "0b9e8d17a2c5eb2e2948ad9cf46895afa0b32e8dbae7d86939eb08294a3e12ed",
       "rows": 6090,
       "year": 2016,
       "seat_kind": "gp",
@@ -627,17 +627,17 @@
           "nullable": true
         },
         {
-          "name": "reservation",
+          "name": "reserved_label",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "caste_reservation",
+          "name": "reserved_caste",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "woman_reserved",
+          "name": "reserved_woman",
           "type": "bool",
           "nullable": true
         },
@@ -662,7 +662,7 @@
           "nullable": true
         },
         {
-          "name": "reservation_raw",
+          "name": "reserved_raw",
           "type": "string",
           "nullable": true
         },
@@ -691,8 +691,8 @@
     {
       "file": "ward_reservation_2016.parquet",
       "source_csv": "2016/ward_reservation.csv",
-      "source_sha256": "13a9dd409a880ae1682abef5812595a378875b7a0820eddfa87e85ba076d2402",
-      "sha256": "96055f13ec187f23d4bf824348a3db76ce56727215a01cbec6ad37de423ef270",
+      "source_sha256": "5112635eeba8287af5203b3b687278713edbae3a34ae644c701a0d5ebcf49f09",
+      "sha256": "7a3c59243ce59443d5907aa40ab91fc9888d64b10e6d7e9cc76b8afdfdefc893",
       "rows": 61879,
       "year": 2016,
       "seat_kind": "ward",
@@ -728,17 +728,17 @@
           "nullable": true
         },
         {
-          "name": "reservation",
+          "name": "reserved_label",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "caste_reservation",
+          "name": "reserved_caste",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "woman_reserved",
+          "name": "reserved_woman",
           "type": "bool",
           "nullable": true
         },
@@ -763,7 +763,7 @@
           "nullable": true
         },
         {
-          "name": "reservation_raw",
+          "name": "reserved_raw",
           "type": "string",
           "nullable": true
         },
@@ -792,8 +792,8 @@
     {
       "file": "gp_reservation_2022.parquet",
       "source_csv": "2022/gp_reservation.csv",
-      "source_sha256": "bd82388b42fa6e4c0975743fb9cc409441844cce4aecd96c8a672d9fb1d6efe5",
-      "sha256": "d10999f41c892d3bf31044972a1313dc021193ce3b7e66390cee5a85881e94eb",
+      "source_sha256": "48ef2fc408bceeb21430d56dbd174602865307b8c9176a789f2665f6361bc202",
+      "sha256": "79c656d189a9a7073146db8dddf8029340c6d8e4b4001653564cb4ae2788d586",
       "rows": 6123,
       "year": 2022,
       "seat_kind": "gp",
@@ -824,17 +824,17 @@
           "nullable": true
         },
         {
-          "name": "reservation",
+          "name": "reserved_label",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "caste_reservation",
+          "name": "reserved_caste",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "woman_reserved",
+          "name": "reserved_woman",
           "type": "bool",
           "nullable": true
         },
@@ -859,7 +859,7 @@
           "nullable": true
         },
         {
-          "name": "reservation_raw",
+          "name": "reserved_raw",
           "type": "string",
           "nullable": true
         },
@@ -888,8 +888,8 @@
     {
       "file": "ward_reservation_2022.parquet",
       "source_csv": "2022/ward_reservation.csv",
-      "source_sha256": "fc67e6e77641fa8130dcb8a6133dde995bddd177b8f3d731796f0e90e230ab1d",
-      "sha256": "b82e8264d7f4886d1eaef3113a6d06e776feb4f9dbdc8828548815e61b149fad",
+      "source_sha256": "d1039dabeb0634a7edb958931053c2ae94c50d1154fd02e637a83b0beb7fe374",
+      "sha256": "fc9e667819b650307fc5cd1f40e161fecda2329ef4ddd73b60e8be161f689782",
       "rows": 60981,
       "year": 2022,
       "seat_kind": "ward",
@@ -925,17 +925,17 @@
           "nullable": true
         },
         {
-          "name": "reservation",
+          "name": "reserved_label",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "caste_reservation",
+          "name": "reserved_caste",
           "type": "string",
           "nullable": true
         },
         {
-          "name": "woman_reserved",
+          "name": "reserved_woman",
           "type": "bool",
           "nullable": true
         },
@@ -960,7 +960,7 @@
           "nullable": true
         },
         {
-          "name": "reservation_raw",
+          "name": "reserved_raw",
           "type": "string",
           "nullable": true
         },

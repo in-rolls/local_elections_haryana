@@ -126,9 +126,9 @@ def test_2010_category_defects_are_reviewed():
 
 def test_inferred_sex_columns_name_their_basis():
     for year in (2010, 2016, 2022):
-        t = pd.read_parquet(f"data/inferred/winner_female_probability_{year}.parquet")
-        assert "winner_female_probability_from_name" in t
-        assert "winner_female_probability_method" in t
-        assert not {"female_probability", "winner_gender", "gender"} & set(t)
-        p = t["winner_female_probability_from_name"].dropna()
+        t = pd.read_parquet(f"data/inferred/winner_woman_probability_{year}.parquet")
+        assert "winner_woman_probability" in t
+        assert "winner_woman_probability_method" in t
+        assert not {"female_probability", "winner_woman", "gender"} & set(t)
+        p = t["winner_woman_probability"].dropna()
         assert p.between(0, 1).all()

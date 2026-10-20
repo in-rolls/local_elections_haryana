@@ -1,4 +1,4 @@
-district,block,sr_no,gram_panchayat,ward_no,reservation,caste_reservation,woman_reserved,winner,father_husband,unopposed,vacant,reservation_raw,script,printings_agree,notification,source_pdf
+district,block,sr_no,gram_panchayat,ward_no,reserved_label,reserved_caste,reserved_woman,winner,father_husband,unopposed,vacant,reserved_raw,script,printings_agree,notification,source_pdf
 Ambala,Ambala-I,1,Adho Majra,1,SC Woman,SC,1,Amro,Pala Ram,1,0,Scheduled Caste (Women),latin,,5331,Ambala.pdf
 Ambala,Ambala-I,1,Adho Majra,2,SC Other than Woman,SC,0,Dharam Singh,Harnam Singh,1,0,Scheduled Caste,latin,,5331,Ambala.pdf
 Ambala,Ambala-I,1,Adho Majra,3,BC-A Other than Woman,BC_A,0,Jai Bhagwan,Deep Chand,1,0,Backward Class,latin,,5331,Ambala.pdf

@@ -78,8 +78,8 @@ def match_dated_presidents(heads, dated):
     heads = heads.copy()
     heads["year"] = pd.Series(pd.NA, index=heads.index, dtype="Int64")
     heads["year_basis"] = "undated_head_roster"
-    heads["caste_reservation"] = pd.Series(pd.NA, index=heads.index, dtype="string")
-    heads["woman_reserved"] = pd.Series(pd.NA, index=heads.index, dtype="boolean")
+    heads["reserved_caste"] = pd.Series(pd.NA, index=heads.index, dtype="string")
+    heads["reserved_woman"] = pd.Series(pd.NA, index=heads.index, dtype="boolean")
     heads["dated_evidence_page"] = pd.Series(pd.NA, index=heads.index, dtype="Int64")
     for index, row in heads[heads.office_raw.eq("PRESIDENT")].iterrows():
         matches = dated[
@@ -92,8 +92,8 @@ def match_dated_presidents(heads, dated):
         evidence = matches.iloc[0]
         heads.at[index, "year"] = 2000
         heads.at[index, "year_basis"] = "district_name_relation_match_to_dated_report"
-        heads.at[index, "caste_reservation"] = evidence.caste_reservation
-        heads.at[index, "woman_reserved"] = evidence.woman_reserved
+        heads.at[index, "reserved_caste"] = evidence.reserved_caste
+        heads.at[index, "reserved_woman"] = evidence.reserved_woman
         heads.at[index, "dated_evidence_page"] = evidence.source_page
     return heads
 
@@ -110,7 +110,7 @@ def main():
     frame = pd.read_parquet(path)
     key = ["source_sha256", "gram_panchayat_raw", "ward_or_office_raw"]
     repeated = frame[frame.duplicated(key, keep=False)].copy()
-    values = ["tier", "winner_name_raw", "relation_name_raw", "reservation_raw"]
+    values = ["tier", "winner_name_raw", "relation_name_raw", "reserved_raw"]
     groups = []
     for identity, group in repeated.groupby(key, dropna=False):
         distinct = len(group[values].drop_duplicates())

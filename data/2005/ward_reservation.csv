@@ -1,4 +1,4 @@
-district,block,sr_no,gram_panchayat,ward_no,reservation,caste_reservation,woman_reserved,winner,father_husband,unopposed,vacant,reservation_raw,script,printings_agree,notification,source_pdf
+district,block,sr_no,gram_panchayat,ward_no,reserved_label,reserved_caste,reserved_woman,winner,father_husband,unopposed,vacant,reserved_raw,script,printings_agree,notification,source_pdf
 Ambala,Ambala-I,1,Addo Majra,1,SC Other than Woman,SC,0,Sarwan Singh,Surta Ram,,0,S.C.,latin,,,AMBALA-I.pdf
 Ambala,Ambala-I,1,Addo Majra,2,SC Woman,SC,1,Jagiro,Sultan Singh,,0,S.C.(Women),latin,,,AMBALA-I.pdf
 Ambala,Ambala-I,1,Addo Majra,3,BC Other than Woman,BC,0,Amar Singh,Om Parkash,,0,B.C.,latin,,,AMBALA-I.pdf

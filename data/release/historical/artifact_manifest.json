@@ -13,18 +13,18 @@
     },
     {
       "path": "historical_provisional_observations.parquet",
-      "bytes": 1368305,
-      "sha256": "5cd24230018c8746f207fae44e641137dceefb62dd73332138e8504c34da13a6"
+      "bytes": 1368217,
+      "sha256": "4f596e4fdcee44195f8cd9304068613ba125e7e2ddbc31ca65255409c55eab5b"
     },
     {
       "path": "historical_quarantine.parquet",
-      "bytes": 106540,
-      "sha256": "3ec45f267c968a736b23c3832394ad30c98319eda366759f9958570a8fe6c27f"
+      "bytes": 106452,
+      "sha256": "5382dc35a258b48a774293c1a003a543484530d191a62b9fbad813644662ecea"
     },
     {
       "path": "historical_reviewed_occurrences.parquet",
-      "bytes": 405467,
-      "sha256": "512cc30cfaed8a374c86193f30d6f59a7179c6b54dbc3ccb9e63b8c294967073"
+      "bytes": 405367,
+      "sha256": "83f9fff2509517f53a38689c6c388ce5580ec3341ce76b2082065e559f7b82ae"
     },
     {
       "path": "recode_ledger.md",
@@ -34,7 +34,7 @@
     {
       "path": "release_receipt.json",
       "bytes": 1915,
-      "sha256": "7eb92df4506fe28bbf7cb9ecfc010a88d364941c833d1088742b4cd5b3557f3c"
+      "sha256": "b02d28db16c210f14d323011eabc31764ecc75de6347d32be15f4d2242de47cd"
     }
   ]
 }

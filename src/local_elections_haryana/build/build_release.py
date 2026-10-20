@@ -35,7 +35,20 @@ MISSING_HEADINGS = ROOT / (
     "data/release/inputs/missing_headings_exceptions_"
     "f5bbbf70907e340aa17b9fa7225e1d26971f869b7c7a1a97278b0b5f8990d0df.json"
 )
+OLD_PREFIXES = {
+    "caste_reservation": "reserved_caste",
+    "woman_reserved": "reserved_woman",
+}  # old-name
 DEFAULT_OUT = ROOT / "data/release/historical"
+
+
+def renamed_column(column: str) -> str:
+    for old, new in OLD_PREFIXES.items():
+        if column == old or column.startswith(old + "_"):
+            return new + column[len(old) :]
+    return column
+
+
 BUILDER = Path(__file__).resolve()
 
 EXPECTED = {
@@ -124,6 +137,9 @@ def split_flags(value: object) -> set[str]:
 def read_historical() -> tuple[pd.DataFrame, set[tuple[str, int, int]]]:
     """Read the pinned reviewed occurrences and missing-heading exception keys."""
     frame = pq.read_table(OBSERVATIONS).to_pandas()
+    # The pinned snapshot is frozen byte for byte, so it keeps the schema's
+    # names from before the reserved_* rename; read them under the new ones.
+    frame = frame.rename(columns=renamed_column)
     payload = json.loads(MISSING_HEADINGS.read_bytes())
     rows = payload["rows"]
     if len(rows) != 32:
@@ -170,7 +186,7 @@ def classify_historical(
             row_reasons.append("tier_missing")
         if row.tier in HISTORICAL_MEMBER_TIERS and pd.isna(row.ward):
             row_reasons.append("member_ward_missing")
-        if pd.isna(row.caste_reservation) or pd.isna(row.woman_reserved):
+        if pd.isna(row.reserved_caste) or pd.isna(row.reserved_woman):
             row_reasons.append("reservation_category_missing_or_unverified")
         reasons.append(";".join(row_reasons))
     result["release_exception_reason"] = reasons

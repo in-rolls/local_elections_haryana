@@ -79,14 +79,14 @@ Parquet adds `year` to the CSV fields. Empty CSV cells become null; `0`/`1` flag
 | `sr_no` | string | GP serial within a block notification; not a statewide identifier |
 | `gram_panchayat` | string | GP name recovered from the source |
 | `ward_no` | string | Printed ward number; ward export only; can be null |
-| `reservation` | string | Harmonized seat-reservation label |
-| `caste_reservation` | string | `SC`, `ST`, `BC_A`, or `NONE`; `NONE` means no caste reservation |
-| `woman_reserved` | bool | Whether the seat is reserved for a woman |
+| `reserved_label` | string | Harmonized seat-reservation label |
+| `reserved_caste` | string | `SC`, `ST`, `BC_A`, or `NONE`; `NONE` means no caste reservation |
+| `reserved_woman` | bool | Whether the seat is reserved for a woman |
 | `winner` | string | Elected person's name or the source's vacancy text |
 | `father_husband` | string | Relation-name column as printed |
 | `unopposed` | bool | Elected unopposed, indicated by a source asterisk |
 | `vacant` | bool | Source records an unfilled seat |
-| `reservation_raw` | string | Extracted category cell before normalization |
+| `reserved_raw` | string | Extracted category cell before normalization |
 | `script` | string | `latin` or `krutidev`, as identified by the category normalizer |
 | `printings_agree` | bool | Agreement on the GP reservation across printings; null when unchecked |
 | `notification`, `source_pdf` | string | Notification identifier and saved source filename |

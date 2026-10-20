@@ -1,4 +1,4 @@
-district,block,sr_no,gram_panchayat,reservation,caste_reservation,woman_reserved,winner,father_husband,unopposed,vacant,reservation_raw,script,printings_agree,notification,source_pdf
+district,block,sr_no,gram_panchayat,reserved_label,reserved_caste,reserved_woman,winner,father_husband,unopposed,vacant,reserved_raw,script,printings_agree,notification,source_pdf
 Ambala,Ambala-I,1,Adho Majra,SC Other than Woman,SC,0,Shamsher Singh,Narata Ram,0,0,Scheduled Caste,latin,,5331,Ambala.pdf
 Ambala,Ambala-I,2,Ahema,Other than Woman,NONE,0,Darshan Singh,Amarjeet Singh,0,0,Unreserved,latin,,5331,Ambala.pdf
 Ambala,Ambala-I,3,Amipur,SC Other than Woman,SC,0,Nachatar Singh,Mehar Singh,0,0,Scheduled Caste,latin,,5331,Ambala.pdf

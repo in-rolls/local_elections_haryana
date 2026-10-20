@@ -11,20 +11,20 @@ import pyarrow.parquet as pq
 
 DATA = Path(__file__).resolve().parents[3] / "data"
 YEARS = (2000, 2005, 2010, 2016, 2022)
-FLAGS = {"woman_reserved", "unopposed", "vacant", "printings_agree"}
+FLAGS = {"reserved_woman", "unopposed", "vacant", "printings_agree"}
 GP_COLUMNS = (
     "district",
     "block",
     "sr_no",
     "gram_panchayat",
-    "reservation",
-    "caste_reservation",
-    "woman_reserved",
+    "reserved_label",
+    "reserved_caste",
+    "reserved_woman",
     "winner",
     "father_husband",
     "unopposed",
     "vacant",
-    "reservation_raw",
+    "reserved_raw",
     "script",
     "printings_agree",
     "notification",
