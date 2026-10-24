@@ -20,11 +20,11 @@ import pandas as pd
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-from local_elections_haryana.paths import ROOT
+from local_elections_haryana.paths import OCCURRENCES, ROOT
 from local_elections_haryana.runlog import command
 
 OBSERVATIONS = ROOT / (
-    "data/release/observations/"
+    "data/extracted/observations/"
     "6ad3161f4b7c750e4446542bc4cf48dc5acd822c7897c4efeffdfbc56021da34/"
     "seat_rows.parquet"
 )
@@ -32,7 +32,7 @@ OBSERVATIONS = ROOT / (
 # (raw archive: early_cycles/release_readiness/20260914T032746928819Z/), kept
 # tracked so the release rebuilds without downloading the raw archive.
 MISSING_HEADINGS = ROOT / (
-    "data/release/inputs/missing_headings_exceptions_"
+    "data/manual/missing_headings_exceptions_"
     "f5bbbf70907e340aa17b9fa7225e1d26971f869b7c7a1a97278b0b5f8990d0df.json"
 )
 OLD_PREFIXES = {
@@ -55,7 +55,7 @@ OLD_PREFIXES = {
     "gp_category_authority": "gp_reserved_authority",
     "gp_category_annotation_description": "gp_reserved_annotation_description",
 }  # old-name
-DEFAULT_OUT = ROOT / "data/release/historical"
+DEFAULT_OUT = OCCURRENCES
 
 
 def renamed_column(column: str) -> str:

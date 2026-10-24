@@ -2,7 +2,7 @@
 
 No GP identifier survives between notifications, and blocks were split and
 renamed in between. Districts and blocks are therefore matched through the
-reviewed crosswalks in `data/crosswalks/`, and a GP pair is a candidate only when
+reviewed crosswalks in `data/manual/crosswalks/`, and a GP pair is a candidate only when
 its two blocks form a `linked` row there. Inside those block pairs, GP names are
 folded to absorb romanization variants and paired one-to-one with preclink.
 Numbers and compass words in a name ("Kheri-1", "Uttari") veto a pair whose
@@ -14,7 +14,7 @@ name. Ward agreement among first-pass links is reported as the check on the
 names and is not used to make them.
 
 Names the 2022 notifications printed in Kruti Dev are read in their romanized
-form from `data/inferred/kruti_dev_names_2022.csv`.
+form from `data/release/inferred/kruti_dev_names_2022.csv`.
 """
 
 import argparse
@@ -29,10 +29,12 @@ import pandas as pd
 from preclink import ExactComparison, Pipeline
 from rapidfuzz import fuzz
 
+from local_elections_haryana.paths import SEAT_TABLES
+
 DATA = Path("data")
-OUT = DATA / "linkage"
-CROSSWALKS = DATA / "crosswalks"
-KRUTI = DATA / "inferred" / "kruti_dev_names_2022.csv"
+OUT = DATA / "release" / "linkage"
+CROSSWALKS = DATA / "manual" / "crosswalks"
+KRUTI = DATA / "release" / "inferred" / "kruti_dev_names_2022.csv"
 KEY = ["district", "block", "sr_no", "gram_panchayat"]
 NAME_THRESHOLD = 0.80
 # Equal weights on name and ward count: 0.85 requires equal wards and a name
@@ -165,10 +167,10 @@ def crosswalks(a, b):
 
 def gps(year, later, to_later, family):
     # 2000 GPs whose printed serial was not read carry no sr_no
-    d = pd.read_parquet(DATA / "fin" / f"gp_reservation_{year}.parquet")
+    d = pd.read_parquet(DATA / "release" / str(year) / SEAT_TABLES["gp"])
     d[KEY] = d[KEY].fillna("")
     wards = (
-        pd.read_parquet(DATA / "fin" / f"ward_reservation_{year}.parquet")
+        pd.read_parquet(DATA / "release" / str(year) / SEAT_TABLES["ward"])
         .fillna(dict.fromkeys(KEY, ""))
         .groupby(KEY)
         .size()
@@ -269,7 +271,7 @@ def build_pair(label):
     path = OUT / f"gp_{a}_{b}.parquet"
     table.to_parquet(path, index=False)
     inputs = [
-        *(DATA / "fin" / f"{t}_reservation_{y}.parquet" for t in ("gp", "ward")
+        *(DATA / "release" / str(y) / SEAT_TABLES[t] for t in ("gp", "ward")
           for y in (a, b)),
         CROSSWALKS / f"district_{a}_{b}.csv",
         CROSSWALKS / f"block_{a}_{b}.csv",

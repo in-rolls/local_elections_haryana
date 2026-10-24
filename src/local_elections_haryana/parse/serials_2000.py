@@ -16,7 +16,7 @@ matching happens in parse_2000.
 
 It also reads each page's header, which prints the gazette's running page
 number ("913(2434)"): a number skipped within a file is a gazette page the scan
-does not hold. Writes data/2000/reference/serial_ocr.csv and page_numbers.csv.
+does not hold. Writes data/manual/2000/serial_ocr.csv and page_numbers.csv.
 Needs the raw archive and Tesseract.
 """
 
@@ -30,14 +30,16 @@ from pathlib import Path
 import pandas as pd
 from PIL import Image
 
+from local_elections_haryana import paths
 from local_elections_haryana.paths import ROOT
 
-RAW = ROOT / "data/raw_archive/national/early_cycles"
+RAW = ROOT / "data/raw/gazette_archive/national/early_cycles"
 OBSERVATIONS = (
-    ROOT / "data/release/historical/historical_provisional_observations.parquet"
+    paths.RELEASE
+    / "2000/gazette_occurrences/historical_provisional_observations.parquet"
 )
-OUT = ROOT / "data/2000/reference/serial_ocr.csv"
-PAGES_OUT = ROOT / "data/2000/reference/page_numbers.csv"
+OUT = ROOT / "data/manual/2000/serial_ocr.csv"
+PAGES_OUT = ROOT / "data/manual/2000/page_numbers.csv"
 # "913(2434) HARYANA GOVT GAZ." - issue page and running page of the gazette
 HEADER = re.compile(r"(\d{3})\s*\(\s*(\d{3,4})\s*\)")
 LINE = re.compile(r"^\W*(\d{1,3})\s*[.,)]?\s+([A-Za-z][A-Za-z .()/-]{2,})")

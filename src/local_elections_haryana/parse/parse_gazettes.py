@@ -23,7 +23,7 @@ from local_elections_haryana.paths import ROOT
 from local_elections_haryana.runlog import command
 from local_elections_haryana.source import checksum
 
-BASE = ROOT / "data/raw_archive/national/early_cycles"
+BASE = ROOT / "data/raw/gazette_archive/national/early_cycles"
 FIELDS = {
     "source_sha256": (pa.string(), "SHA256 of immutable original PDF."),
     "source_url": (pa.string(), "Official acquisition URL."),

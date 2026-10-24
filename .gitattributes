@@ -1,0 +1,2 @@
+# Data bytes are hashed by the build; git must never rewrite line endings.
+data/** -text whitespace=cr-at-eol

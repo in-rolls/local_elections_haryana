@@ -44,13 +44,14 @@ from itertools import pairwise
 
 import pandas as pd
 
+from local_elections_haryana import paths
 from local_elections_haryana.parse.to_parquet import GP_COLUMNS
-from local_elections_haryana.paths import ROOT
 
-DATA = ROOT / "data" / "2000"
-REFERENCE = DATA / "reference"
+DATA = paths.extracted(2000)
+REFERENCE = paths.manual(2000)
 OBSERVATIONS = (
-    ROOT / "data/release/historical/historical_provisional_observations.parquet"
+    paths.RELEASE
+    / "2000/gazette_occurrences/historical_provisional_observations.parquet"
 )
 WARD_COLUMNS = (*GP_COLUMNS[:4], "ward_no", *GP_COLUMNS[4:])
 REPEAT_SHARE = 0.8
@@ -379,7 +380,7 @@ def build():
             "father_husband": text(r.relation_raw),
             "unopposed": "1" if re.search(r"[*\u2022]", text(r.ward_raw)) else "0",
             "vacant": "1" if vacant or not winner else "0",
-            "reserved_raw": text(r.category_raw),
+            "reserved_raw": text(r.reserved_raw),
             "script": "latin",
             "printings_agree": str(agree[r.Index]) if r.Index in agree else "",
             "notification": "",
@@ -508,7 +509,7 @@ def main():
     SPILLED[0][
         ["source_path", "source_page", "source_row_on_page", "district_sec",
          "block_sec", "tier", "body_within_page", "ward", "winner_raw",
-         "relation_raw", "category_raw"]
+         "relation_raw", "reserved_raw"]
     ].to_csv(REFERENCE / "spilled_hindi_rows.csv", index=False)  # fmt: skip
     sec = pd.read_csv(REFERENCE / "sec_panch_reservation_2000.csv").query(
         "level == 'block'"

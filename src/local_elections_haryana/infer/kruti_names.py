@@ -1,11 +1,12 @@
 """Romanize the GP and person names that 2022 notifications printed in Kruti Dev.
 
 Two 2022 blocks (Fatehabad: Bhattu Kalan; Jhajjar: Machhrauli) were published only
-in Kruti Dev Hindi, so their names reach `data/fin` in the legacy font encoding
-("ekNjkSyh" for माछरौली). Linking and name-based inference need readable names.
+in Kruti Dev Hindi, so their names reach the released seat tables in the legacy
+font encoding ("ekNjkSyh" for माछरौली). Linking and name-based inference need
+readable names.
 This decodes them to Unicode with the vendored Kruti Dev 010 mapping, romanizes
 the result with indicate's local model, and writes one row per source record to
-`data/inferred/kruti_dev_names_2022.csv`. The source tables are not changed.
+`data/release/inferred/kruti_dev_names_2022.csv`. The source tables are not changed.
 
 Needs the `transliterate` dependency group (indicate and PyTorch).
 """
@@ -18,8 +19,10 @@ from pathlib import Path
 
 import pandas as pd
 
+from local_elections_haryana.paths import SEAT_TABLES
+
 DATA = Path("data")
-OUT = DATA / "inferred" / "kruti_dev_names_2022.csv"
+OUT = DATA / "release" / "inferred" / "kruti_dev_names_2022.csv"
 MAP = Path(__file__).with_name("kruti_dev_010.json")
 # क-ह and the precomposed nukta letters क़-य़, escaped so editors cannot decompose them.
 CONSONANTS = "\u0915-\u0939\u0958-\u095f"
@@ -59,7 +62,7 @@ def kruti_text(text):
 def build(out=OUT):
     import indicate
 
-    d = pd.read_parquet(DATA / "fin" / "gp_reservation_2022.parquet")
+    d = pd.read_parquet(DATA / "release" / "2022" / SEAT_TABLES["gp"])
     rows = d[d["script"] == "krutidev"].copy()
     names = []
     for column in NAME_COLUMNS:

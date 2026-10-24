@@ -31,7 +31,7 @@ from local_elections_haryana.paths import ROOT
 from local_elections_haryana.runlog import command
 from local_elections_haryana.source import checksum
 
-BASE = ROOT / "data/raw_archive/national/early_cycles"
+BASE = ROOT / "data/raw/gazette_archive/national/early_cycles"
 MODEL = "muse-spark-1.3-contributor"
 ENDPOINT = "https://api.meta.ai/v1"
 MAX_INPUT = 1_048_576

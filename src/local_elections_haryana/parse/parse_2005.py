@@ -24,16 +24,18 @@ from collections import Counter
 
 import pandas as pd
 
+from local_elections_haryana import paths
 from local_elections_haryana.parse.parse_historical import (
     apply_reservation_reviews,
     parse_document,
     reconcile_sections,
 )
 from local_elections_haryana.parse.to_parquet import GP_COLUMNS
-from local_elections_haryana.paths import ROOT
 
 YEAR = "2005"
-DATA = ROOT / "data" / YEAR
+RAW = paths.raw(YEAR)
+MANUAL = paths.manual(YEAR)
+EXTRACTED = paths.extracted(YEAR)
 WARD_COLUMNS = (*GP_COLUMNS[:4], "ward_no", *GP_COLUMNS[4:])
 
 
@@ -62,7 +64,7 @@ def read_block(doc, layout):
     is the one the file uses. A file with no wrapped names reads the same
     both ways.
     """
-    path = DATA / "pdfs" / doc["saved_as"]
+    path = RAW / doc["saved_as"]
     readings = {
         wrap: parse_document(path, "gp_head_and_ward", layout, wrap=wrap)[0]
         for wrap in ("below", "above")
@@ -79,8 +81,8 @@ WRAP = {}
 
 
 def parse():
-    manifest = read_csv(DATA / "manifest.csv")
-    layout = read_csv(DATA / "reviews/layout_reviews.csv")
+    manifest = read_csv(RAW / "manifest.csv")
+    layout = read_csv(MANUAL / "reviews/layout_reviews.csv")
     records = []
     for doc in manifest:
         rows = read_block(
@@ -95,10 +97,10 @@ def parse():
             )
         records += rows
     frame = pd.DataFrame(records)
-    frame = reconcile_sections(frame, read_csv(DATA / "reviews/section_reviews.csv"))
+    frame = reconcile_sections(frame, read_csv(MANUAL / "reviews/section_reviews.csv"))
     # the reviews also cover the samiti and zila parishad files, not released here
     held = {doc["sha256"] for doc in manifest}
-    reviews = read_csv(DATA / "reviews/reservation_reviews.csv")
+    reviews = read_csv(MANUAL / "reviews/reservation_reviews.csv")
     frame = apply_reservation_reviews(
         frame, [r for r in reviews if r["source_sha256"] in held]
     )
@@ -195,8 +197,8 @@ def write(path, columns, rows):
 def main():
     frame, dropped = parse()
     gp_rows, ward_rows = tables(frame)
-    write(DATA / "gp_reservation.csv", GP_COLUMNS, gp_rows)
-    write(DATA / "ward_reservation.csv", WARD_COLUMNS, ward_rows)
+    write(EXTRACTED / "gp_reservation.csv", GP_COLUMNS, gp_rows)
+    write(EXTRACTED / "ward_reservation.csv", WARD_COLUMNS, ward_rows)
     print(
         f"2005: {len(gp_rows):,} sarpanch and {len(ward_rows):,} panch rows; "
         f"{dropped} repeated Raipur Rani rows dropped from Samalkha"

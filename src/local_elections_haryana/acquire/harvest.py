@@ -22,6 +22,7 @@ import urllib.request
 
 import pdfplumber
 
+from local_elections_haryana import paths
 from local_elections_haryana.parse import index_pdf
 
 YEAR = "2022"
@@ -53,7 +54,6 @@ CDX = (
     "&fl=timestamp,original,statuscode&collapse=urlkey&limit=500"
 )
 
-DATA = pathlib.Path(__file__).resolve().parents[3] / "data"
 MANIFEST_COLUMNS = [
     "district",
     "block",
@@ -163,8 +163,8 @@ def main():
         sys.exit(f"no source known for {args.year}; have {sorted(SOURCES)}")
     source = SOURCES[args.year]
 
-    year_dir = DATA / args.year
-    pdf_dir = year_dir / "pdfs"
+    year_dir = paths.raw(args.year)
+    pdf_dir = year_dir
     pdf_dir.mkdir(parents=True, exist_ok=True)
     index_path = year_dir / "index.pdf"
 

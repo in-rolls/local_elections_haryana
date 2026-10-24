@@ -53,6 +53,8 @@ import subprocess
 import sys
 import tempfile
 
+from local_elections_haryana import paths
+
 DATA = pathlib.Path(__file__).resolve().parents[3] / "data"
 DPI = 200
 
@@ -120,12 +122,12 @@ def main():
     ap.add_argument("--only", help="substring of a filename to limit to")
     args = ap.parse_args()
 
-    year = DATA / args.year
-    plan_path = year / "ocr_plan.csv"
-    out = year / "ocr"
+    year = paths.raw(args.year)
+    plan_path = paths.extracted(args.year) / "ocr_plan.csv"
+    out = paths.extracted(args.year) / "ocr"
 
     if args.plan:
-        pdfs = sorted((year / "pdfs").glob("*.pdf"))
+        pdfs = sorted(year.glob("*.pdf"))
         if args.only:
             pdfs = [p for p in pdfs if args.only.lower() in p.name.lower()]
         rows = []
@@ -177,7 +179,7 @@ def main():
         if target.exists():
             cached += 1
             continue
-        text = ocr_page(engine, year / "pdfs" / entry["document"], page)
+        text = ocr_page(engine, year / entry["document"], page)
         if text is None:
             continue
         target.write_text(text, encoding="utf-8")

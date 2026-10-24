@@ -8,9 +8,9 @@ __pycache__/
 dist/
 *.log
 *.part
-data/derived/
-# Raw-data archive: files ship as a tarball (see data/raw_archive/README.md)
-data/raw_archive/**
-!data/raw_archive/
-!data/raw_archive/MANIFEST.csv
-!data/raw_archive/README.md
+data/build/parse/
+# Raw-data archive: files ship as a tarball (see data/raw/gazette_archive/README.md)
+data/raw/gazette_archive/**
+!data/raw/gazette_archive/
+!data/raw/gazette_archive/MANIFEST.csv
+!data/raw/gazette_archive/README.md

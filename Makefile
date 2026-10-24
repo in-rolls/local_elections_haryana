@@ -10,6 +10,7 @@ sync:
 
 data:
 	$(PY) -m local_elections_haryana.parse.to_parquet
+	$(PY) -m local_elections_haryana.build.fetch_log
 	$(MAKE) historical data-summary
 
 historical:
@@ -36,6 +37,7 @@ lint:
 
 verify:
 	$(PY) -m local_elections_haryana.build.release verify
+	$(PY) -m local_elections_haryana.build.fetch_log --check
 
 data-summary:
 	$(PY) -m local_elections_haryana.build.release summary

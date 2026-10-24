@@ -5,10 +5,10 @@ import csv
 import pandas as pd
 import pytest
 
+from local_elections_haryana import paths
 from local_elections_haryana.parse import parse_2000 as P
-from local_elections_haryana.paths import ROOT
 
-DATA = ROOT / "data" / "2000"
+DATA = paths.extracted(2000)
 
 
 @pytest.fixture(scope="module")
@@ -76,7 +76,7 @@ def test_bilingual_printings_agree_almost_always():
 
 
 def test_block_status_accounts_for_every_block():
-    status = pd.read_csv(DATA / "reference/block_status.csv")
+    status = pd.read_csv(paths.manual(2000) / "block_status.csv")
     assert len(status) == 113
     assert set(status.status) <= {"complete", "partial", "review"}
     assert (status.status == "complete").sum() >= 80

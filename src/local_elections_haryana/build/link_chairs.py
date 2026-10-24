@@ -16,7 +16,7 @@ from local_elections_haryana.paths import ROOT
 from local_elections_haryana.runlog import command
 from local_elections_haryana.source import checksum, links_from_html
 
-BASE = ROOT / "data/raw_archive/national"
+BASE = ROOT / "data/raw/gazette_archive/national"
 INDEX = BASE / "early_cycles/raw/f99f62c8bdb6807937ba_f6a1f978f6df.html"
 INDEX_SHA = "f6a1f978f6df66f5937c586b221561820a96e3161eb79410d211fbec1fbd9833"
 INDEX_URL = (

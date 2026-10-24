@@ -34,10 +34,12 @@ def test_kruti_dev_decodes_place_and_person_names():
 
 
 def test_crosswalk_decisions_are_explained_and_cover_2022():
-    blocks = pd.read_csv("data/crosswalks/block_2016_2022.csv")
+    blocks = pd.read_csv("data/manual/crosswalks/block_2016_2022.csv")
     assert set(blocks["decision"]) <= {"linked", "excluded"}
     assert blocks["note"].notna().all()
-    gp = pd.read_parquet("data/fin/gp_reservation_2022.parquet")
+    gp = pd.read_parquet(
+        "data/release/2022/gram_panchayat_head_seat_reservation.parquet"
+    )
     linked = blocks[blocks["decision"] == "linked"]
     covered = set(zip(linked["district_2022"], linked["block_2022"], strict=True))
     blocks_2022 = set(zip(gp["district"], gp["block"], strict=True))
@@ -45,11 +47,11 @@ def test_crosswalk_decisions_are_explained_and_cover_2022():
 
 
 def test_links_are_one_to_one_within_linked_block_pairs():
-    links = pd.read_parquet("data/linkage/gp_2016_2022.parquet")
+    links = pd.read_parquet("data/release/linkage/gp_2016_2022.parquet")
     keys = ["district", "block", "sr_no", "gram_panchayat"]
     for year in (2016, 2022):
         assert not links.duplicated([f"{k}_{year}" for k in keys]).any()
-    blocks = pd.read_csv("data/crosswalks/block_2016_2022.csv")
+    blocks = pd.read_csv("data/manual/crosswalks/block_2016_2022.csv")
     linked = blocks[blocks["decision"] == "linked"]
     allowed = set(
         zip(
@@ -85,11 +87,11 @@ def test_qualifiers_conflict_only_within_a_family():
 
 
 def test_2010_2016_links_stay_inside_linked_block_pairs():
-    links = pd.read_parquet("data/linkage/gp_2010_2016.parquet")
+    links = pd.read_parquet("data/release/linkage/gp_2010_2016.parquet")
     keys = ["district", "block", "sr_no", "gram_panchayat"]
     for year in (2010, 2016):
         assert not links.duplicated([f"{k}_{year}" for k in keys]).any()
-    blocks = pd.read_csv("data/crosswalks/block_2010_2016.csv")
+    blocks = pd.read_csv("data/manual/crosswalks/block_2010_2016.csv")
     assert blocks["note"].notna().all()
     linked = blocks[blocks["decision"] == "linked"]
     allowed = set(
@@ -112,21 +114,25 @@ def test_2010_2016_links_stay_inside_linked_block_pairs():
 
 
 def test_2010_category_defects_are_reviewed():
-    defects = pd.read_csv("data/2010/reference/category_defects.csv")
+    defects = pd.read_csv("data/manual/2010/category_defects.csv")
     assert set(defects["decision"]) <= {
         "reservation_unreliable",
         "keep",
         "parse_incomplete",
     }
     assert defects["reason"].notna().all()
-    gp = pd.read_parquet("data/fin/gp_reservation_2010.parquet")
+    gp = pd.read_parquet(
+        "data/release/2010/gram_panchayat_head_seat_reservation.parquet"
+    )
     blocks = set(zip(gp["district"], gp["block"], strict=True))
     assert set(zip(defects["district"], defects["block"], strict=True)) <= blocks
 
 
 def test_inferred_sex_columns_name_their_basis():
     for year in (2010, 2016, 2022):
-        t = pd.read_parquet(f"data/inferred/winner_woman_probability_{year}.parquet")
+        t = pd.read_parquet(
+            f"data/release/inferred/winner_woman_probability_{year}.parquet"
+        )
         assert "winner_woman_probability" in t
         assert "winner_woman_probability_method" in t
         assert not {"female_probability", "winner_woman", "gender"} & set(t)

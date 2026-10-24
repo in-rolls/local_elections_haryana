@@ -1,7 +1,7 @@
 """Transcribe 2010 Hindi printings where the English categories are suspect.
 
 The English notifications of seven 2010 blocks print too few women's seats
-(`data/2010/reference/category_defects.csv`). Each notification was also published
+(`data/manual/2010/category_defects.csv`). Each notification was also published
 in Hindi. The Hindi PDFs carry Kruti Dev text that the parser cannot place reliably,
 so their pages are transcribed from images with the hosted model already used for
 the 2000 gazettes. Responses, usage and request identities are kept for audit.
@@ -24,7 +24,7 @@ from local_elections_haryana.acquire import pilot_hosted as hosted
 from local_elections_haryana.paths import ROOT
 from local_elections_haryana.source import checksum
 
-BASE = ROOT / "data/discovery/2026-10-17/hindi_printings_2010"
+BASE = ROOT / "data/search_log/2026-10-17/hindi_printings_2010"
 OUT = BASE / "responses"
 PROMPT = (
     "This page is a Haryana State Election Commission notification of 2010, printed "

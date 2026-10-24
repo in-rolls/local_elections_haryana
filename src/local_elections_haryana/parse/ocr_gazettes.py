@@ -20,7 +20,7 @@ from local_elections_haryana.paths import ROOT
 from local_elections_haryana.runlog import command
 from local_elections_haryana.source import checksum
 
-BASE = ROOT / "data/raw_archive/national/early_cycles"
+BASE = ROOT / "data/raw/gazette_archive/national/early_cycles"
 
 
 def read_page(source, page, out, settings):

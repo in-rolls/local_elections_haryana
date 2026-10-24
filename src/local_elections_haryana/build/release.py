@@ -10,7 +10,7 @@ import pyarrow.parquet as pq
 
 from local_elections_haryana.build.build_release import DEFAULT_OUT, build
 from local_elections_haryana.parse.to_parquet import export, verify_sources
-from local_elections_haryana.paths import ROOT, digest, inside
+from local_elections_haryana.paths import ROOT, SEAT_TABLES, digest, inside
 
 DATA = ROOT / "data"
 UNITS = {
@@ -31,8 +31,10 @@ UNITS = {
 
 def summary():
     lines = ["<!-- datasets:start -->", ""]
-    published = sorted([*DATA.glob("fin/*.parquet"), *DEFAULT_OUT.glob("*.parquet")])
-    snapshots = sorted(DATA.glob("release/observations/*/*.parquet"))
+    published = sorted(
+        [*DATA.glob("release/[0-9]*/*.parquet"), *DEFAULT_OUT.glob("*.parquet")]
+    )
+    snapshots = sorted(DATA.glob("extracted/observations/*/*.parquet"))
     for paths, archived in [(published, False), (snapshots, True)]:
         if archived:
             lines.extend(
@@ -51,9 +53,9 @@ def summary():
                 label = f"observations/{path.parent.name[:12]}/{path.name}"
             unit = (
                 "GP head seat record"
-                if path.name.startswith("gp_reservation_")
+                if path.name == SEAT_TABLES["gp"]
                 else "GP ward seat record"
-                if path.name.startswith("ward_reservation_")
+                if path.name == SEAT_TABLES["ward"]
                 else UNITS[path.name]
             )
             rows = pq.ParquetFile(path).metadata.num_rows
@@ -70,9 +72,13 @@ def summary():
 
 
 def verify():
-    export(DATA, DATA / "fin", check=True)
+    export(DATA, check=True)
     verify_sources(DATA)
-    for manifest in sorted((DATA / "release").rglob("SHA256SUMS")):
+    retained = [
+        *DATA.glob("release/**/SHA256SUMS"),
+        *DATA.glob("extracted/**/SHA256SUMS"),
+    ]
+    for manifest in sorted(retained):
         for line in manifest.read_text().splitlines():
             expected, name = line.split(maxsplit=1)
             path = inside(manifest.parent, name)

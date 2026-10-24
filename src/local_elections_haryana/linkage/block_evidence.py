@@ -1,6 +1,6 @@
 """Candidate block pairs between two elections, for review by hand.
 
-The block crosswalks in `data/crosswalks/` are decisions, not outputs, so they
+The block crosswalks in `data/manual/crosswalks/` are decisions, not outputs, so they
 are never regenerated. This writes the evidence a reviewer reads before making
 them: for every earlier and later block in the same blocking group (a district,
 or districts whose blocks moved between them), how many folded GP names they
@@ -10,7 +10,7 @@ blocks sharing common village names look like.
 
     uv run python -m local_elections_haryana.linkage.block_evidence 2005 2010
 
-Writes `data/crosswalks/evidence/block_<a>_<b>.csv`.
+Writes `data/build/crosswalk_evidence/block_<a>_<b>.csv`.
 """
 
 import argparse
@@ -19,12 +19,13 @@ from pathlib import Path
 import pandas as pd
 
 from local_elections_haryana.linkage.gp_links import CROSSWALKS, DATA, PAIRS, name_key
+from local_elections_haryana.paths import SEAT_TABLES
 
 MIN_SHARED, MIN_SHARE, MIN_LISTED = 5, 0.20, 3
 
 
 def names(year, to_later, family, later):
-    d = pd.read_parquet(DATA / "fin" / f"gp_reservation_{year}.parquet")
+    d = pd.read_parquet(DATA / "release" / str(year) / SEAT_TABLES["gp"])
     # a GP whose heading was not read (2000) has no name to compare
     d = d[d.gram_panchayat.fillna("").str.strip() != ""]
     district = d["district"] if year == later else d["district"].map(to_later)
@@ -68,7 +69,7 @@ def evidence(a, b):
                         f"shared_share_of_{b}": round(share, 3),
                     }
                 )
-    out = CROSSWALKS / "evidence" / f"block_{a}_{b}.csv"
+    out = DATA / "build" / "crosswalk_evidence" / f"block_{a}_{b}.csv"
     out.parent.mkdir(exist_ok=True)
     table = pd.DataFrame(rows)
     table.to_csv(out, index=False)

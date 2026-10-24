@@ -3,9 +3,9 @@
 The State Election Commission published one results PDF per block under
 `secharyana.nic.in/html/PCRESULTPDF/`. Those files survive only as Wayback
 captures from 2007 to 2009, which the raw archive already holds with their
-fetch receipts. This copies the 119 block files into `data/2005/pdfs/`, together
+fetch receipts. This copies the 119 block files into `data/raw/2005/`, together
 with the source-cell reviews made when they were first parsed, and writes
-`data/2005/manifest.csv`. After that the year rebuilds from tracked files alone.
+`data/raw/2005/manifest.csv`. After that the year rebuilds from tracked files alone.
 
 The captures predate the July 2010 general election, and the winners repeat
 2000's and 2010's no more often than any two elections do (about 1% of linked
@@ -24,10 +24,12 @@ import hashlib
 import re
 import shutil
 
+from local_elections_haryana import paths
 from local_elections_haryana.paths import ROOT
 
-ARCHIVE = ROOT / "data/raw_archive/national/gap_recovery"
-OUT = ROOT / "data/2005"
+ARCHIVE = ROOT / "data/raw/gazette_archive/national/gap_recovery"
+OUT = paths.raw(2005)
+REVIEWS = paths.manual(2005) / "reviews"
 REVIEWS = ("layout_reviews.csv", "section_reviews.csv", "reservation_reviews.csv")
 # file name -> (district, block, why the printed heading is not used)
 HEADING_OVERRIDES = {
@@ -82,7 +84,7 @@ def main():
         documents = [
             row for row in csv.DictReader(fh) if row["family"] == "gp_head_and_ward"
         ]
-    (OUT / "pdfs").mkdir(parents=True, exist_ok=True)
+    OUT.mkdir(parents=True, exist_ok=True)
     rows = []
     for doc in documents:
         name = doc["original_url"].rsplit("/", 1)[-1]
@@ -93,7 +95,7 @@ def main():
             district, block, note = HEADING_OVERRIDES[name]
         else:
             district, block, note = (*heading(doc["title_raw"]), "")
-        target = OUT / "pdfs" / name
+        target = OUT / name
         if target.exists():
             raise ValueError(f"Two archived files are named {name}")
         shutil.copyfile(source, target)
@@ -115,9 +117,9 @@ def main():
         writer = csv.DictWriter(fh, fieldnames=FIELDS, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
-    (OUT / "reviews").mkdir(exist_ok=True)
+    REVIEWS.mkdir(parents=True, exist_ok=True)
     for name in REVIEWS:
-        shutil.copyfile(ARCHIVE / name, OUT / "reviews" / name)
+        shutil.copyfile(ARCHIVE / name, REVIEWS / name)
     print(f"{len(rows)} block files -> {OUT.relative_to(ROOT)}")
 
 

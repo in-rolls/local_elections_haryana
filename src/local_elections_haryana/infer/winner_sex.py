@@ -2,8 +2,8 @@
 
 The notifications record no sex for an elected person. This module infers it from
 the printed name and keeps the inference separate from the source tables: the
-outputs live in `data/inferred/`, carry every input beside the probability, and
-are never written back into `data/fin/`.
+outputs live in `data/release/inferred/`, carry every input beside the probability, and
+are never written back into the released seat tables.
 
 The evidence is a first-name score from naampy (electoral-roll first-name
 composition) plus fixed surname and honorific markers, because Haryana names often
@@ -31,8 +31,10 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import brier_score_loss, log_loss, roc_auc_score
 from sklearn.model_selection import GroupKFold
 
+from local_elections_haryana.paths import SEAT_TABLES
+
 DATA = Path("data")
-OUT = DATA / "inferred"
+OUT = DATA / "release" / "inferred"
 KRUTI = OUT / "kruti_dev_names_2022.csv"
 TRAINING_YEAR = 2022
 YEARS = (2000, 2005, 2010, 2016, 2022)
@@ -97,8 +99,8 @@ def features(winners):
 
 def seats(year):
     """Elected seats. Winner names printed in Kruti Dev are replaced by their
-    romanization from `data/inferred/kruti_dev_names_2022.csv`."""
-    d = pd.read_parquet(DATA / "fin" / f"gp_reservation_{year}.parquet")
+    romanization from `data/release/inferred/kruti_dev_names_2022.csv`."""
+    d = pd.read_parquet(DATA / "release" / str(year) / SEAT_TABLES["gp"])
     elected = d["winner"].notna() & ~d["vacant"].fillna(False).astype(bool)
     d = d[elected].reset_index(drop=True)
     d["winner_read"] = d["winner"]
@@ -217,8 +219,8 @@ def build(out=OUT):
         ),
         "packages": {p: version(p) for p in ("naampy", "scikit-learn")},
         "inputs": {
-            f"data/fin/gp_reservation_{y}.parquet": sha(
-                DATA / "fin" / f"gp_reservation_{y}.parquet"
+            f"data/release/{y}/{SEAT_TABLES['gp']}": sha(
+                DATA / "release" / str(y) / SEAT_TABLES["gp"]
             )
             for y in YEARS
         },

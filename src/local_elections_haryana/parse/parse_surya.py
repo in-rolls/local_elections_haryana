@@ -18,7 +18,7 @@ from local_elections_haryana.paths import ROOT
 from local_elections_haryana.runlog import command
 from local_elections_haryana.source import checksum
 
-BASE = ROOT / "data/raw_archive/national/early_cycles/gp_ps_benchmark"
+BASE = ROOT / "data/raw/gazette_archive/national/early_cycles/gp_ps_benchmark"
 
 
 class TableReader(HTMLParser):

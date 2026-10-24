@@ -5,7 +5,7 @@
     python -m local_elections_haryana.acquire.raw_archive pack
     python -m local_elections_haryana.acquire.raw_archive pack --out /Volumes/External
 
-Raw source material is too large for git, so it lives in data/raw_archive/,
+Raw source material is too large for git, so it lives in data/raw/gazette_archive/,
 git-ignored except for MANIFEST.csv and README.md, and is shared as a tarball
 (on Google Drive; the link is in README.md). MANIFEST.csv is the contract: a
 download is correct only if `verify` passes on it.

@@ -18,7 +18,7 @@ from local_elections_haryana.paths import ROOT
 from local_elections_haryana.runlog import command
 from local_elections_haryana.source import checksum
 
-SOURCE = ROOT / "data/raw_archive/national/gap_recovery"
+SOURCE = ROOT / "data/raw/gazette_archive/national/gap_recovery"
 REPORT = SOURCE / "raw/f425f720471d64267d6a.pdf"
 REPORT_SHA256 = "35d9fc129b10c10b04f7bd12fc2d196971725f50dbf4d067d9c000af0f070116"
 REPORT_URL = (

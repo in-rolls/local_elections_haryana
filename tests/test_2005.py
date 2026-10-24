@@ -5,10 +5,10 @@ import csv
 import pandas as pd
 import pytest
 
+from local_elections_haryana import paths
 from local_elections_haryana.parse import parse_2005 as P
-from local_elections_haryana.paths import ROOT
 
-DATA = ROOT / "data" / "2005"
+DATA = paths.extracted(2005)
 
 
 @pytest.fixture(scope="module")
@@ -17,9 +17,13 @@ def tables():
     return (*P.tables(frame), dropped)
 
 
-def committed(name):
-    with (DATA / name).open(encoding="utf-8") as fh:
+def read(path):
+    with path.open(encoding="utf-8") as fh:
         return list(csv.DictReader(fh))
+
+
+def committed(name):
+    return read(DATA / name)
 
 
 def test_committed_tables_reproduce_from_the_pdfs(tables):
@@ -54,7 +58,7 @@ def test_page_break_mending_needs_consecutive_offices():
 
 
 def test_headings_overridden_on_review():
-    manifest = {r["saved_as"]: r for r in committed("manifest.csv")}
+    manifest = {r["saved_as"]: r for r in read(paths.raw(2005) / "manifest.csv")}
     assert (manifest["SIWAN.pdf"]["district"], manifest["SIWAN.pdf"]["block"]) == (
         "Kaithal",
         "Siwan",

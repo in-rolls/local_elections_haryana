@@ -27,6 +27,7 @@ import sys
 
 import pdfplumber
 
+from local_elections_haryana import paths
 from local_elections_haryana.parse.normalize import (
     is_vacant,
     label,
@@ -148,7 +149,9 @@ def ocr_rows(path, page_no):
     their fully-ruled seven-column grid as two tables - see the ocr module.
     The reading is committed, so a re-parse never needs the model.
     """
-    cached = path.parent.parent / "ocr" / f"{path.stem}-{page_no:03d}.html"
+    cached = (
+        paths.extracted(path.parent.name) / "ocr" / f"{path.stem}-{page_no:03d}.html"
+    )
     if not cached.exists():
         return []
     text = cached.read_text(encoding="utf-8")
@@ -616,11 +619,11 @@ def main(argv=None):
     if args.limit is not None and args.limit < 1:
         ap.error("--limit must be positive")
 
-    source = DATA / args.year
-    out = args.out or DATA / "derived" / args.year
-    if args.limit is not None and out.resolve() == source.resolve():
+    source = paths.raw(args.year)
+    out = args.out or paths.BUILD / "parse" / args.year
+    if args.limit is not None and out.resolve() == paths.extracted(args.year).resolve():
         ap.error("a limited parse cannot replace the published CSVs")
-    pdf_dir = source / "pdfs"
+    pdf_dir = source
     pdfs = sorted(pdf_dir.glob("*.pdf"))[: args.limit]
     if not pdfs:
         sys.exit(f"no PDFs in {pdf_dir} - run harvest.py first")

@@ -12,7 +12,9 @@ import csv
 import pathlib
 import sys
 
-DATA = pathlib.Path(__file__).resolve().parents[3] / "data"
+from local_elections_haryana import paths
+
+DATA = paths.DATA
 YEAR = "2022"
 
 # Official totals published by the State Election Commission.
@@ -33,7 +35,7 @@ OFFICIAL = {
     # which elections were held.
     "2010": {"gram_panchayats": 6075, "panches": 58608, "basis": "seats"},
     # SEC, panch reservation table for the March 2000 elections (block rows in
-    # data/2000/reference/sec_panch_reservation_2000.csv): seats to be filled.
+    # data/manual/2000/sec_panch_reservation_2000.csv): seats to be filled.
     "2000": {"gram_panchayats": 6035, "panches": 54764, "basis": "seats"},
     # No 2005 total has been found: the commission's 2005 statistics page is
     # listed on its site but did not load. Coverage is reported, not tested.
@@ -61,11 +63,11 @@ CASTES = {
     "2000": ("NONE", "SC", "BC"),
 }
 # Sarpanch rows without a readable category: 2005's were found blank or
-# ambiguous by a source-cell review (data/2005/reviews/reservation_reviews.csv);
+# ambiguous by a source-cell review (data/manual/2005/reviews/reservation_reviews.csv);
 # 2000's are cells the transcription could not resolve.
 REVIEWED_BLANK = {"2005": 12, "2000": 38}
 # 2000 sarpanch rows whose GP heading neither the transcription nor Tesseract
-# read (data/2000/reference/sarpanch_provenance.csv, name_basis heading_unread);
+# read (data/manual/2000/sarpanch_provenance.csv, name_basis heading_unread);
 # 2000's unresolved categories are transcription gaps, listed in the same file.
 UNREAD_HEADINGS = {"2000": 36}
 
@@ -103,8 +105,8 @@ def main():
     ap.add_argument("--verbose", action="store_true", help="list every offending block")
     args = ap.parse_args()
 
-    year_dir = DATA / args.year
-    inputs = args.input_dir or year_dir
+    year_dir = paths.raw(args.year)
+    inputs = args.input_dir or paths.extracted(args.year)
     gp = read_csv(inputs / "gp_reservation.csv")
     ward = read_csv(inputs / "ward_reservation.csv")
     manifest = (
@@ -177,7 +179,7 @@ def main():
             print(f"  [INFO] source PDFs kept in the raw archive - {held} of "
                   f"{len(manifest)} held locally")  # fmt: skip
         else:
-            present = {p.name for p in (year_dir / "pdfs").glob("*.pdf")}
+            present = {p.name for p in year_dir.glob("*.pdf")}
             absent = {r["saved_as"] for r in manifest} - present
             report.check(
                 not absent, "manifest files present on disk", f"{len(absent)} missing"
@@ -189,7 +191,7 @@ def main():
     unread = UNREAD_HEADINGS.get(args.year, 0)
     # names the transcription returned as control characters, blanked by the
     # parser and listed with the original bytes
-    cells = year_dir / "reference" / "unreadable_cells.csv"
+    cells = paths.manual(args.year) / "unreadable_cells.csv"
     mangled = 0
     if cells.exists():
         with cells.open(encoding="utf-8") as fh:
@@ -350,7 +352,7 @@ def main():
 
     # Blocks whose printed categories were reviewed and found defective in the
     # source itself are reported, not failed; an unreviewed block still fails.
-    defects_path = year_dir / "reference" / "category_defects.csv"
+    defects_path = paths.manual(args.year) / "category_defects.csv"
     reviewed = (
         {(r["district"], r["block"]): r["decision"] for r in read_csv(defects_path)}
         if defects_path.exists()

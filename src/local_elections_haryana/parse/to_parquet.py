@@ -9,6 +9,8 @@ from pathlib import Path
 import pyarrow as pa
 import pyarrow.parquet as pq
 
+from local_elections_haryana.paths import SEAT_TABLES
+
 DATA = Path(__file__).resolve().parents[3] / "data"
 YEARS = (2000, 2005, 2010, 2016, 2022)
 FLAGS = {"reserved_woman", "unopposed", "vacant", "printings_agree"}
@@ -88,13 +90,13 @@ def write_atomic(path, table):
         temporary.unlink(missing_ok=True)
 
 
-def export(data, out, check=False):
-    """Build or verify four Parquet snapshots and their source manifest."""
+def export(data, check=False):
+    """Build or verify the released seat tables and data/MANIFEST.json."""
     entries = []
     for year in YEARS:
         for kind in ("gp", "ward"):
-            source = data / str(year) / f"{kind}_reservation.csv"
-            target = out / f"{kind}_reservation_{year}.parquet"
+            source = data / "extracted" / str(year) / f"{kind}_reservation.csv"
+            target = data / "release" / str(year) / SEAT_TABLES[kind]
             table = read_snapshot(source, year, kind)
             if check:
                 if not target.exists():
@@ -105,7 +107,7 @@ def export(data, out, check=False):
                 write_atomic(target, table)
             entries.append(
                 {
-                    "file": target.name,
+                    "file": target.relative_to(data).as_posix(),
                     "source_csv": source.relative_to(data).as_posix(),
                     "source_sha256": sha256(source),
                     "sha256": sha256(target),
@@ -118,9 +120,9 @@ def export(data, out, check=False):
                     ],
                 }
             )
-            print(f"{target.name}: {table.num_rows:,} rows")
+            print(f"{target.relative_to(data)}: {table.num_rows:,} rows")
     manifest = {"format_version": 1, "files": entries}
-    path = out / "MANIFEST.json"
+    path = data / "MANIFEST.json"
     if check:
         if json.loads(path.read_text()) != manifest:
             raise ValueError(f"{path}: hashes or metadata differ from the files")
@@ -137,7 +139,7 @@ def export(data, out, check=False):
 def verify_sources(data):
     """Verify downloaded PDF bytes against the retained acquisition manifests."""
     for year in YEARS:
-        directory = data / str(year)
+        directory = data / "raw" / str(year)
         with (directory / "manifest.csv").open(newline="", encoding="utf-8") as handle:
             rows = list(csv.DictReader(handle))
         if not rows:
@@ -147,7 +149,7 @@ def verify_sources(data):
         paths = [
             data / row["archive_path"]
             if row.get("archive_path")
-            else directory / "pdfs" / row["saved_as"]
+            else directory / row["saved_as"]
             for row in rows
         ]
         if all(row.get("archive_path") for row in rows) and not any(
@@ -167,11 +169,10 @@ def verify_sources(data):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data", type=Path, default=DATA)
-    parser.add_argument("--out", type=Path)
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
     try:
-        export(args.data, args.out or args.data / "fin", check=args.check)
+        export(args.data, check=args.check)
         if args.check:
             verify_sources(args.data)
     except (ValueError, OSError) as exc:
