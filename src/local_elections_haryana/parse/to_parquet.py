@@ -80,6 +80,33 @@ def read_snapshot(path, year, kind):
     return pa.Table.from_pylist(rows, schema=contract)
 
 
+def with_block_review(table, data, year):
+    """Add each GP seat's block review decision from manual/<year>/.
+
+    `category_defects.csv` records blocks whose printed reservations were
+    reviewed against the SEC's own counts (`reservation_unreliable`,
+    `caste_unreliable`, `parse_incomplete`, `keep`); blank where a block was
+    not reviewed.
+    """
+    path = data / "manual" / str(year) / "category_defects.csv"
+    decisions = {}
+    if path.exists():
+        with path.open(encoding="utf-8", newline="") as handle:
+            decisions = {
+                (r["district"], r["block"]): r["decision"]
+                for r in csv.DictReader(handle)
+            }
+    places = zip(
+        table.column("district").to_pylist(),
+        table.column("block").to_pylist(),
+        strict=True,
+    )
+    column = pa.array([decisions.get(place) for place in places], pa.string())
+    return table.append_column(
+        pa.field("block_reservation_review", pa.string()), column
+    )
+
+
 def write_atomic(path, table):
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(path.suffix + ".part")
@@ -98,6 +125,8 @@ def export(data, check=False):
             source = data / "extracted" / str(year) / f"{kind}_reservation.csv"
             target = data / "release" / str(year) / SEAT_TABLES[kind]
             table = read_snapshot(source, year, kind)
+            if kind == "gp":
+                table = with_block_review(table, data, year)
             if check:
                 if not target.exists():
                     raise ValueError(f"Missing export: {target}")

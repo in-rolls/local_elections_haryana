@@ -5,7 +5,7 @@
       "file": "release/2000/gram_panchayat_head_seat_reservation.parquet",
       "source_csv": "extracted/2000/gp_reservation.csv",
       "source_sha256": "1d200b2bd12b8ecb2ea4cacee663dedb6c54a7dcae887ca12e67390d5aace1aa",
-      "sha256": "68f711c3e0b44575d6f880625142f7e2af02a70c14c6b42cf0f36877301088da",
+      "sha256": "f321c794edbe7328b49646a9aa05692326d6a944905e824b20e1352d4df861ad",
       "rows": 5932,
       "year": 2000,
       "seat_kind": "gp",
@@ -92,6 +92,11 @@
         },
         {
           "name": "source_pdf",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "block_reservation_review",
           "type": "string",
           "nullable": true
         }
@@ -202,7 +207,7 @@
       "file": "release/2005/gram_panchayat_head_seat_reservation.parquet",
       "source_csv": "extracted/2005/gp_reservation.csv",
       "source_sha256": "d243959395c48e0d9a30b24bb629e8d4881188ba8fb7c4ae58f649d1cb43d3f3",
-      "sha256": "a3995aa8b793a7e25b7dcc3a720dfef24c712ca1ebe85b558024cade90db84b3",
+      "sha256": "cce286df344d06964f5abf89c96b25cf16b0fb352bb90b3f89c95382f03e16af",
       "rows": 6198,
       "year": 2005,
       "seat_kind": "gp",
@@ -289,6 +294,11 @@
         },
         {
           "name": "source_pdf",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "block_reservation_review",
           "type": "string",
           "nullable": true
         }
@@ -399,7 +409,7 @@
       "file": "release/2010/gram_panchayat_head_seat_reservation.parquet",
       "source_csv": "extracted/2010/gp_reservation.csv",
       "source_sha256": "a14f43b77a7f3a2aa92b15d03fd27ff28b7755f0334b11686238b96d2f042ef5",
-      "sha256": "ef756c8c890f3487dd7724a12c795462426df84d3e989cc9dcd758209bd21a12",
+      "sha256": "e6ac04a0a96bcf71f02e6273e914026d471903f235e3cb45233de50b29686f1e",
       "rows": 5924,
       "year": 2010,
       "seat_kind": "gp",
@@ -486,6 +496,11 @@
         },
         {
           "name": "source_pdf",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "block_reservation_review",
           "type": "string",
           "nullable": true
         }
@@ -596,7 +611,7 @@
       "file": "release/2016/gram_panchayat_head_seat_reservation.parquet",
       "source_csv": "extracted/2016/gp_reservation.csv",
       "source_sha256": "a5742d4419261d2e2a6b7728dbcbb2d1be66aaeb308257485b8f3ff422188071",
-      "sha256": "0b9e8d17a2c5eb2e2948ad9cf46895afa0b32e8dbae7d86939eb08294a3e12ed",
+      "sha256": "5c8031fd83bb98dd9a2d899124e518771deeea8ed8224b561aedba2a66c1b9c3",
       "rows": 6090,
       "year": 2016,
       "seat_kind": "gp",
@@ -683,6 +698,11 @@
         },
         {
           "name": "source_pdf",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "block_reservation_review",
           "type": "string",
           "nullable": true
         }
@@ -793,7 +813,7 @@
       "file": "release/2022/gram_panchayat_head_seat_reservation.parquet",
       "source_csv": "extracted/2022/gp_reservation.csv",
       "source_sha256": "48ef2fc408bceeb21430d56dbd174602865307b8c9176a789f2665f6361bc202",
-      "sha256": "79c656d189a9a7073146db8dddf8029340c6d8e4b4001653564cb4ae2788d586",
+      "sha256": "35599594e5298a0c6f75e3a3d8ad439da3121bd25d5d80b3bd1ba6e6b563c514",
       "rows": 6123,
       "year": 2022,
       "seat_kind": "gp",
@@ -880,6 +900,11 @@
         },
         {
           "name": "source_pdf",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "block_reservation_review",
           "type": "string",
           "nullable": true
         }
