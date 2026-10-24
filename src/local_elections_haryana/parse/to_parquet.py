@@ -107,6 +107,31 @@ def with_block_review(table, data, year):
     )
 
 
+def with_source_path(table, data, year):
+    """Add each seat's source PDF path, relative to the repository root.
+
+    PDFs sit in data/raw/<year>/ under their saved names, except 2000's
+    gazettes, which stay in the git-ignored archive that raw/2000/manifest.csv
+    names in `archive_path`.
+    """
+    with (data / "raw" / str(year) / "manifest.csv").open(
+        encoding="utf-8", newline=""
+    ) as handle:
+        archived = {
+            r["saved_as"]: f"data/{r['archive_path']}"
+            for r in csv.DictReader(handle)
+            if r.get("archive_path")
+        }
+    column = pa.array(
+        [
+            archived.get(name) or f"data/raw/{year}/{name}" if name else None
+            for name in table.column("source_pdf").to_pylist()
+        ],
+        pa.string(),
+    )
+    return table.append_column(pa.field("source_path", pa.string()), column)
+
+
 def write_atomic(path, table):
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(path.suffix + ".part")
@@ -125,6 +150,7 @@ def export(data, check=False):
             source = data / "extracted" / str(year) / f"{kind}_reservation.csv"
             target = data / "release" / str(year) / SEAT_TABLES[kind]
             table = read_snapshot(source, year, kind)
+            table = with_source_path(table, data, year)
             if kind == "gp":
                 table = with_block_review(table, data, year)
             if check:
