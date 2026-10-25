@@ -3,10 +3,10 @@ PY ?= uv run python
 RUFF ?= uv run ruff
 
 .PHONY: sync data harvest parse parse-2005 parse-2000 validate lint verify check data-summary historical raw-verify raw-archive \
-	infer link
+	infer link test
 
 sync:
-	uv sync --frozen --group dev
+	uv sync --frozen --group dev --group infer
 
 data:
 	$(PY) -m local_elections_haryana.parse.to_parquet
@@ -42,7 +42,10 @@ verify:
 data-summary:
 	$(PY) -m local_elections_haryana.build.release summary
 
-check: lint verify
+test:
+	uv run --frozen python -m pytest -q
+
+check: lint test verify
 
 raw-verify:
 	$(PY) -m local_elections_haryana.acquire.raw_archive verify
