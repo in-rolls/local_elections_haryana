@@ -102,9 +102,7 @@ def with_block_review(table, data, year):
         strict=True,
     )
     column = pa.array([decisions.get(place) for place in places], pa.string())
-    return table.append_column(
-        pa.field("block_reservation_review", pa.string()), column
-    )
+    return table.append_column(pa.field("reserved_block_review", pa.string()), column)
 
 
 def with_source_path(table, data, year):

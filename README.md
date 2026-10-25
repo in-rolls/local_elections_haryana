@@ -91,7 +91,7 @@ Parquet adds `year` to the CSV fields. Empty CSV cells become null; `0`/`1` flag
 | `printings_agree` | bool | Agreement on the GP reservation across printings; null when unchecked |
 | `notification`, `source_pdf` | string | Notification identifier and saved source filename |
 | `source_path` | string | The source PDF, relative to the repository root; 2000's gazettes point into the git-ignored archive (`data/raw/gazette_archive/`) |
-| `block_reservation_review` | string | GP tables only: the review of the block's printed reservations against the SEC's counts (`reservation_unreliable`, `caste_unreliable`, `parse_incomplete`, `keep`), from `data/manual/<year>/category_defects.csv`; null where the block was not reviewed |
+| `reserved_block_review` | string | GP tables only: the review of the block's printed reservations against the SEC's counts (`reservation_unreliable`, `caste_unreliable`, `parse_incomplete`, `keep`), from `data/manual/<year>/category_defects.csv`; null where the block was not reviewed |
 
 Caste and women's reservations are separate dimensions. An SC-reserved seat can also be woman-reserved. Seat reservation is not the elected person's caste or gender. `printings_agree` is a GP-level comparison propagated to its ward rows; it does not establish independent agreement on each ward's category.
 
