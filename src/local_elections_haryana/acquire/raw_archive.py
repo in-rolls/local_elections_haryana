@@ -19,8 +19,8 @@ import sys
 import tarfile
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
-ARCHIVE = ROOT / "data" / "raw_archive"
+from local_elections_haryana.paths import ARCHIVE, ROOT
+
 MANIFEST = ARCHIVE / "MANIFEST.csv"
 TRACKED = {"MANIFEST.csv", "README.md"}
 JUNK = {".DS_Store", "Desktop.ini", "Thumbs.db"}
