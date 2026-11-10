@@ -357,3 +357,9 @@ data/raw/2022/index.pdf,https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aa
 data/raw/2022/manifest.csv,,7a755edc6ca23dd4a1ae0ffced6c60cf51a59c5066b499dcc1db075e31227981,41939,,unknown
 data/raw/gazette_archive/MANIFEST.csv,,7e4fec28929349787fde583d35488061b43c04f10c2564072579bfc8ea8f9dfd,7124342,,unknown
 data/raw/gazette_archive/README.md,,7de0b74e720558198e376a5bf3596ca6fe246c949840f8a7be21bbb2bfc295ea,1449,,unknown
+data/raw/urban_expansion/publications_catalog.html,https://secharyana.gov.in/publications/,b860b81b1647963863ac1e92a57eb3904f8e3b1d283d4dbf65f881bad4324363,132533,2026-11-10T03:12:40.004782+00:00,live
+data/raw/urban_expansion/publications_catalog.html.receipt.json,,8624d6464f0d9e57bbbaaac6ee5700d0f7204e818514ff62910cb2f9c9afed25,477,,unknown
+data/raw/urban_expansion/ulb_report_2013.pdf,https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2023/05/2023050228.pdf,a9a6631f71dd38cc3c66a4b3bd27a7b5038a146dfdbe9f1846757425ad239283,3310935,2026-11-10T03:13:35.591997+00:00,live
+data/raw/urban_expansion/ulb_report_2013.pdf.receipt.json,,482872cf9b035396138d3f744425a65c36d375897ded0d7df435016bb50b29e3,578,,unknown
+data/raw/urban_expansion/ulb_report_2016_2018.pdf,https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2023/05/2023050283.pdf,410803e49a3b96c754da4826d984dc3a7d2caa7d9b4edbf692a010ee7ac6da2e,5887060,2026-11-10T03:13:35.592238+00:00,live
+data/raw/urban_expansion/ulb_report_2016_2018.pdf.receipt.json,,1a5aba5b727aa58fbb3339cb64ba51c20330f13b7524ea931954d78d754f8193,588,,unknown

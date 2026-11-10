@@ -14,6 +14,7 @@ log never invents one.
 import argparse
 import csv
 import io
+import json
 import subprocess
 import sys
 
@@ -64,14 +65,21 @@ def rows():
         if name == LOG.relative_to(ROOT).as_posix():
             continue
         path = ROOT / name
-        url = known.get(name, "")
+        receipt_path = path.with_name(path.name + ".receipt.json")
+        receipt = json.loads(receipt_path.read_text()) if receipt_path.exists() else {}
+        sha = digest(path)
+        if receipt and (
+            receipt["sha256"] != sha or receipt["bytes"] != path.stat().st_size
+        ):
+            raise ValueError(f"{name}: differs from its source receipt")
+        url = receipt.get("url", known.get(name, ""))
         out.append(
             {
                 "path": name,
                 "url": url,
-                "sha256": digest(path),
+                "sha256": sha,
                 "bytes": path.stat().st_size,
-                "fetched_at_utc": "",
+                "fetched_at_utc": receipt.get("retrieved_at", ""),
                 "method": method(url),
             }
         )

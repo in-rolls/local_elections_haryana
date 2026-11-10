@@ -1,0 +1,11 @@
+{
+  "url": "https://secharyana.gov.in/publications/",
+  "retrieved_at": "2026-11-10T03:12:40.004782+00:00",
+  "repository": "local_elections_haryana",
+  "requested_path": "data/raw/urban_expansion/publications_catalog.html",
+  "response": "200\nhttps://secharyana.gov.in/publications/",
+  "bytes": 132533,
+  "sha256": "b860b81b1647963863ac1e92a57eb3904f8e3b1d283d4dbf65f881bad4324363",
+  "status": "downloaded",
+  "path": "data/raw/urban_expansion/publications_catalog.html"
+}

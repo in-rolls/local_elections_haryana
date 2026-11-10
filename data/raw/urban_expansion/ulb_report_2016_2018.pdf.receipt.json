@@ -1,0 +1,11 @@
+{
+  "url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2023/05/2023050283.pdf",
+  "retrieved_at": "2026-11-10T03:13:35.592238+00:00",
+  "repository": "local_elections_haryana",
+  "requested_path": "data/raw/urban_expansion/ulb_report_2016_2018.pdf",
+  "response": "200\nhttps://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2023/05/2023050283.pdf",
+  "bytes": 5887060,
+  "sha256": "410803e49a3b96c754da4826d984dc3a7d2caa7d9b4edbf692a010ee7ac6da2e",
+  "status": "downloaded",
+  "path": "data/raw/urban_expansion/ulb_report_2016_2018.pdf"
+}
