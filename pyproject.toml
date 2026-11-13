@@ -47,3 +47,8 @@ allowed-confusables = ["‘", "’", "‛", "–"]
 # Cell-cropping closures are defined and called inside the same loop iteration,
 # so the loop variables they read are always the current ones.
 "src/local_elections_haryana/parse/{parse_annexures,parse_gazettes,parse_report}.py" = ["B023"]
+
+[tool.codespell]
+builtin = "clear,rare,en-GB_to_en-US"
+skip = "*.pdf,*.png,*.jpg,*.jpeg,*.gif,*.csv,*.tsv,*.json,*.geojson,*.graphml,*.ipynb,*.html,*.svg,*.bib,*.bbl,*.lock,*.parquet,*.rda,*.rds,*.RData,*.dta,*.xlsx,*.xml,*.min.js,*.map,*.log,*.aux"
+ignore-words-list = "neighbouring,neighbours,normalised,pash,stoped,unparseable"

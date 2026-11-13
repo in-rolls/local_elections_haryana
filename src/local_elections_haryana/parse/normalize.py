@@ -1,4 +1,4 @@
-"""Normalise the reservation column.
+"""Normalize the reservation column.
 
 The gazette is not internally consistent: the same category appears as
 "Other than Women" / "Other Than Women" / "Other than Woman", as

@@ -117,7 +117,7 @@ def office_step(previous, current):
 
 
 def mend_page_breaks(frame):
-    """Give a name cut off at a page break the full name its neighbours print.
+    """Give a name cut off at a page break the full name its neighbors print.
 
     A wrapped panchayat name loses its overflow line when its row is the last on
     a page, so Palwal's ward 20 reads "Palwal Rural Urf" while wards 1-19 read

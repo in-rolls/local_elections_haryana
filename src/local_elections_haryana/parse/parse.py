@@ -115,7 +115,7 @@ def clean(cell):
 #   2. Fall back where most panch rows lack a ward. Fired too widely and cost
 #      365 rows of 2016 while fixing 2022.
 #   3. Read both ways, keep whichever finds more numbered wards. 2022 improved;
-#      2016 still lost 357 rows and colliding keys tripled. Maximising one
+#      2016 still lost 357 rows and colliding keys tripled. Maximizing one
 #      number let the others move.
 #   4. Drop find_tables and always read positionally. Measurably worse: only
 #      747 of 2,040 rows on Bhiwani come out identical, because a line-based
@@ -442,7 +442,7 @@ def parse_pdf(path, notif_pattern=None, *, use_cached_ocr=False):
                     # which exists for tails that really do belong to the
                     # row above, then attached this row's category to the
                     # *previous* seat. 1,014 rows of Kaithal, Mewat and
-                    # Sirsa 2016 carried the neighbouring seat's
+                    # Sirsa 2016 carried the neighboring seat's
                     # reservation, which is worse than carrying none.
                     lone = [c for c in cells if c]
                     if lone and ward_number(lone[0]) is not None:
@@ -551,7 +551,7 @@ def crosscheck(rows):
     disagree = {k for k, v in both.items() if len(set(v.values())) > 1}
 
     # flag the seats where the two printings do not agree, so the doubt travels
-    # with the data instead of being silently resolved in favour of English
+    # with the data instead of being silently resolved in favor of English
     for r in rows:
         key = (r["source_pdf"], r["sr_no"])
         r["printings_agree"] = "" if key not in both else int(key not in disagree)
