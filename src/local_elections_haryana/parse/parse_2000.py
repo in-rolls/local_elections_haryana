@@ -223,7 +223,7 @@ def segments(reads):
             current, start, last, pending = offset, pending[0][0], k, []
     if current is not None:
         out.append((start, last, current))
-    # A run whose offset differs from equal neighbours on both sides by a whole
+    # A run whose offset differs from equal neighbors on both sides by a whole
     # multiple of ten is a run of the same digit misread (40s read as 30s, or
     # 34 read as 343), not GPs that vanished and reappeared.
     changed = True
@@ -505,7 +505,7 @@ def main():
     pd.DataFrame(PROVENANCE).to_csv(REFERENCE / "sarpanch_provenance.csv", index=False)
     # Hindi rows on English pages: the tail of the notification printed before,
     # so not seats of the file's own block. Most repeat a GP printed in English
-    # elsewhere; the rest await review against the neighbouring blocks' gaps.
+    # elsewhere; the rest await review against the neighboring blocks' gaps.
     SPILLED[0][
         ["source_path", "source_page", "source_row_on_page", "district_sec",
          "block_sec", "tier", "body_within_page", "ward", "winner_raw",

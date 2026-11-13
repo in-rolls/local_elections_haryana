@@ -378,7 +378,7 @@ def main():
     )
     if bc_share is None:
         # Panchayat BC(A) reservation only arrived with the 2021 amendment, so a
-        # handful of 2016 rows labelled "Backward Class" is plausible as a
+        # handful of 2016 rows labeled "Backward Class" is plausible as a
         # stray, but a real share would mean the parse is wrong.
         bc_rows = sum(
             r["reserved_caste"] in ("BC_A", "BC")
